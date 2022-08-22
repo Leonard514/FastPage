@@ -6,7 +6,7 @@ categories: [markdown]
 title: Tools/Equipment Submission
 ---
 
-##Hi!
+## Hi!
 
 This is a submission for the Tools/Equipment hack. If you want to see index.html, you might as well check out home.
 
@@ -16,14 +16,17 @@ https://github.com/Leonard514/FastPage/pulse
 
 Oh yeah, you also wanted to see me using VSCode, which is how I'm writing this page.
 
+## VSCODE
 ![]({{ site.baseurl }}/images/VSCODE.PNG "Me writing my about me page")
 
+## Notebook
 And then there's my Jupyter notebook, which is found at this link: https://leonard514.github.io/FastPage/2022/08/22/print_test.html
 and also in the posts. Yeah, I know it has the default title. Going to have to ask around to figure out how that stuff works.
 
 Anyways that's all the submission-related stuff, but I think it's also a good idea to keep a journal... of what I've done, and what I have left to do.
 
-Here is a table of my progress.
+## Here is a table of my progress.
+
 | Date | Activities completed |
 |-|-|
 | August 17 | Class started. Installed VSCode and the windows version of a bunch of programs (oops)|
@@ -31,4 +34,6 @@ Here is a table of my progress.
 | August 19 | Fastpages development begins. Created the repository and did basic edits |
 | August 21 (night) | Fastpages development continues with this post, index.html, and about me. Make the Jupyter notebook. Used VSCode with my fastpages development (including this page)|
 
-Remaining tasks:
+## Remaining tasks:
+- Refine the Jupyter Notebook (having a title, markdown integration)
+- Protect the Master branch before it gets destroyed
