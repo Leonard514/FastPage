@@ -17,8 +17,7 @@ https://github.com/Leonard514/FastPage/pulse
 Oh yeah, you also wanted to see me using VSCode, which is how I'm writing this page.
 
 ## VSCODE
-![]({{ site.baseurl }}/images/VSCODE.PNG "Me writing my about me page")
-
+![]({{site.baseurl}}/images/VSCODE.PNG "Me writing my about me page")
 ## Notebook
 And then there's my Jupyter notebook, which is found at this link: https://leonard514.github.io/FastPage/2022/08/22/print_test.html
 and also in the posts. Yeah, I know it has the default title. Going to have to ask around to figure out how that stuff works.
@@ -36,3 +35,4 @@ Anyways that's all the submission-related stuff, but I think it's also a good id
 
 ## Remaining tasks:
 - Refine the Jupyter Notebook (having a title, markdown integration)
+- Image integration working fine, although I need a way to control resolution (since some images are massive)
