@@ -36,4 +36,3 @@ Anyways that's all the submission-related stuff, but I think it's also a good id
 
 ## Remaining tasks:
 - Refine the Jupyter Notebook (having a title, markdown integration)
-- Protect the Master branch before it gets destroyed
