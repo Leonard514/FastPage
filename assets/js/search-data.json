@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Title",
-            "content": ". toc: false layout: post description: Print test script! categories: [markdown, jupyter, Comp-Sci] . Title: A print test script! . BEGIN TEST HERE . print(&quot;Hello World!&quot;) print(&quot;But that&#39;s boring. Let&#39;s try something different&quot;) print(&quot;Supercalifragilisticexpialidocious!!!&quot;) print(&quot;Pneumonoultramicroscopicsilicovolcanoconiosis!!!&quot;) print(&quot;Now that&#39;s better.&quot;) . Hello World! But that&#39;s boring. Let&#39;s try something different Supercalifragilisticexpialidocious!!! Pneumonoultramicroscopicsilicovolcanoconiosis!!! Now that&#39;s better. .",
-            "url": "https://leonard514.github.io/FastPage/2022/08/22/print_test.html",
-            "relUrl": "/2022/08/22/print_test.html",
+            "title": "A Print Test Script",
+            "content": "print(&quot;Hello World!&quot;) print(&quot;But that&#39;s boring. Let&#39;s try something different&quot;) print(&quot;Supercalifragilisticexpialidocious!!!&quot;) print(&quot;Pneumonoultramicroscopicsilicovolcanoconiosis!!!&quot;) print(&quot;Now that&#39;s better.&quot;) . Hello World! But that&#39;s boring. Let&#39;s try something different Supercalifragilisticexpialidocious!!! Pneumonoultramicroscopicsilicovolcanoconiosis!!! Now that&#39;s better. .",
+            "url": "https://leonard514.github.io/FastPage/markdown/jupyter/comp-sci/2022/08/22/print_test.html",
+            "relUrl": "/markdown/jupyter/comp-sci/2022/08/22/print_test.html",
             "date": " • Aug 22, 2022"
         }
         
