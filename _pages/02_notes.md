@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: Comp Sci Vocabulary/Note (includes bullets and tables)
 categories: [markdown, Comp Sci]
-title: Vocabulary/Notes for various hacks
+title: Notes
 ---
 # Week 1 Focus and Habits Hack (WIP)
 
@@ -30,3 +30,28 @@ title: Vocabulary/Notes for various hacks
 1. Become wealthy... in terms of *time*. Time famine is being too busy... and time affluence is the opposite. People maximizing time affluence are happier.
 
 ## Gratitude Note Experience (WIP)
+
+#### Letter to someone on campus
+I wrote my letter to my teacher, Mr. Yeung. I was having a problem working with a group member, as I was helping him along every step of the way through setup. This left me with no time to do my own work in class. So I emailed him about the issue, and he told me to tell my partner three things:
+
+1. Consult the blog/guide and read through the steps
+1. If confused, ask me for help. Ask after 5 minutes of attempts to resolve the issue.
+1. If I was too busy or didn't know how to help, ask Mr. Yeung for help.
+
+This allowed me to spend time during class working on my computer projects, and it also helped my partner gain some degree of independence during the learning process. I especially saw value in having group members consult a guide. This was very reassuring for me, especially since I tend to have anxiety during the early parts of a class (due to familiarization with class format and the like). So to thank him, I wrote him my letter. I already gave the letter to him at the time of writing, so I can't copy the contents... but I can paraphrase from memory
+
+In the letter, I thanked him for replying to the email, and told him all the good things that stemmed from this reply: having more time to work on the project, my partner being able to learn with a degree of independence (that is, not fully relying on my help), an understanding that I can refer confused group members to guides so I can continue to help in other ways, and a boost in my collaboration skills which will be important for college and the workforce. I also admitted that working in groups has been a challenge for me, and afterwards thanked him for helping me address it.
+
+When I finished reading the letter to him, he told me he was glad to help with my issue. As far as I remember, the happiness I experienced was not a rush... but more deep inside, like a calm. This could have been my anxiety/stress dissipating.
+
+During the next class, I thought of an application of his advice in a context outside of school. I know that the practice in groups I will get in this class will be invaluable in the future.
+
+#### Letter to someone at home
+
+I wrote my letter to my mother. I thanked her for helping me with an extracurricular activity last week, and I thanked her for helping me write an email about a concern with work in this class. She proceeded to give me all the credit for writing the email. I also thanked her for giving me good food and transporting me to school and other activities so that I can work with a clear mind, work in groups, and ask students and teachers for help with my work. I also thanked her for lending me her phone to ask my sister for help in AP Calculus BC, a tough course. I finally thanked her for her support in my efforts, especially any support that I haven't given enough attention to.
+
+My mother smiled and hugged me, and she asked why I was thanking her. When she asked if it was due to her help with improving my anxiety about this class (and other things), I nodded.
+
+I felt it was nice that I made her happy by giving attention to everything she does to support me. Perhaps I can do this with other people as well.
+# Week 1 Python Vocab
+- 
