@@ -1,6 +1,6 @@
 ---
 layout: post
 categories: [word]
-published: false
+published: true
 permalink: /word/
 ---
