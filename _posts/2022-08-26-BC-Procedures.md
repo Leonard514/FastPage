@@ -5,6 +5,7 @@ description: The show your work guides are here
 categories: [Calc BC]
 title: BC Procedures
 permalink: /classes/BC/procedures
+hide: true
 ---
 
 ### Writing your work: Arrows
