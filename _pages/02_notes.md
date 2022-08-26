@@ -56,6 +56,7 @@ I felt it was nice that I made her happy by giving attention to everything she d
 
 
 # Week 1 Python Vocab
+
 | Term | Definition |
 |-|-|
 | Variable | An abstraction in a program that can hold one value/string at a time |
