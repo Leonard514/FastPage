@@ -1,3 +1,5 @@
 ---
 layout: post
+categories: [word]
+published: false
 ---
