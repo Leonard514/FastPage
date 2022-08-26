@@ -4,23 +4,21 @@ layout: post
 description: Includes links/images for all parts
 categories: [markdown, Comp Sci]
 title: Tools/Equipment Submission
+permalink: /submissions/Week_0_Submission
 ---
 
 ## Hi!
 
 This is a submission for the Tools/Equipment hack. If you want to see index.html, you might as well check out home.
 
-Anyways, better start showing you my stuff. My main github is at https://github.com/Leonard514/FastPage. You were probably interested in seeing the insights page as well, so I'll stick it in here.
-
-https://github.com/Leonard514/FastPage/pulse
+Anyways, better start showing you my stuff. My main github is [here](https://github.com/Leonard514/FastPage). You were probably interested in seeing the insights page as well, so I'll stick it in [here](https://github.com/Leonard514/FastPage/pulse).
 
 Oh yeah, you also wanted to see me using VSCode, which is how I'm writing this page.
 
 ## VSCODE
 ![]({{site.baseurl}}/images/VSCODE.png "Me writing my about me page")
 ## Notebook
-And then there's my Jupyter notebook, which is found at this link: https://leonard514.github.io/FastPage/2022/08/22/print_test.html
-and also in the posts. Yeah, I know it has the default title. Going to have to ask around to figure out how that stuff works.
+And then there's my Jupyter notebook, which is found at this [link](https://leonard514.github.io/FastPage/2022/08/22/print_test.html). Yeah, I know it has the default title. Going to have to ask around to figure out how that stuff works.
 
 Anyways that's all the submission-related stuff, but I think it's also a good idea to keep a journal... of what I've done, and what I have left to do.
 
