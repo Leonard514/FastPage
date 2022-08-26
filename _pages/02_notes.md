@@ -5,7 +5,7 @@ description: Comp Sci Vocabulary/Note (includes bullets and tables)
 categories: [markdown, Comp Sci]
 title: Notes
 ---
-# Week 1 Focus and Habits Hack (WIP)
+# Week 1 Focus and Habits Hack
 
 ## Video Notes (includes 10 insights)
 
@@ -29,7 +29,7 @@ title: Notes
 1. Mindfulness (be in the present). Mindfulness is being aware of present sensory input (ex: how your feet feel when you stand, the room temperature, any sounds perceived, the color of your dish, etc.). More time spend in mindfulness is correlated with greater happiness, even compared to thinking about pleasant but non-present things.
 1. Become wealthy... in terms of *time*. Time famine is being too busy... and time affluence is the opposite. People maximizing time affluence are happier.
 
-## Gratitude Note Experience (WIP)
+## Gratitude Note Experience
 
 ### Letter to someone on campus
 I wrote my letter to my teacher, Mr. Yeung. I was having a problem working with a group member, as I was helping him along every step of the way through setup. This left me with no time to do my own work in class. So I emailed him about the issue, and he told me to tell my partner three things:
@@ -53,6 +53,8 @@ I wrote my letter to my mother. I thanked her for helping me with an extracurric
 My mother smiled and hugged me, and she asked why I was thanking her. When she asked if it was due to her help with improving my anxiety about this class (and other things), I nodded.
 
 I felt it was nice that I made her happy by giving attention to everything she does to support me. Perhaps I can do this with other people as well.
+
+
 # Week 1 Python Vocab
 | Term | Definition |
 |-|-|
@@ -66,11 +68,14 @@ I felt it was nice that I made her happy by giving attention to everything she d
 | String | A sequence of characters/words, often enclosed in quotation marks |
 | Parameter | A variable which serves as input for a command/program |
 | function | Similar to a variable, but for commands. A function is defined with the def command (or other defining command), and afterwards the name of the function. The commands after the function name are then associated with the function throughout the entire script |
-| Procedural abstraction | 
+| Procedural abstraction | Grouping a series of repeatedly-used commands |
 | library | a collection of code/functions that a program uses to optimize code execution. The program can refer to many parts of the library using importation commands to call certain functions/commands. |
 | String concatenation | When a string is printed to the terminal |
 
-Python commands
+## Python commands
+
+| Command | Result |
+|-|-|
 | print(TEXT) | prints TEXT to the terminal |
 | def definition_name(commands here)| defines a function, which is a group of commands defined under a name|
 | definition_name(commands here) | execution of the function |
@@ -78,3 +83,7 @@ Python commands
 | import | imports functions from a running environment |
 | if | if a specified condition is satisfied, the associated command(s) are run|
 | else | if the if condition is not satisfied, the command(s) associated with this are run instead |
+| list_name = [item1, item2, item3...] | Makes a list. Very useful if you are executing the same commands over and over and just want to modify an input. |
+| for | Does two things: cycles through a list, and executes a set of commands once for every item in that list. Each item in the list will be set equal to a variable (most commonly i) for input. |
+| iteration_name = iter(list_name) | Takes a list and turns it into an iteration (defining it as a variable). Required to run next. |
+| next(iteration) | Cycles to the next item in an iteration when executed... without re-executing any commands. |
