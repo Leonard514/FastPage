@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -103,6 +103,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#limits-and-known-rules">Limits and known rules</a></li>
 <li class="toc-entry toc-h3"><a href="#one-sided-limits">One-sided limits</a></li>
 <li class="toc-entry toc-h3"><a href="#direct-substitution-fails-due-to-division-by-zero-not-indeterminate">Direct Substitution fails due to division by zero: not indeterminate</a></li>
+<li class="toc-entry toc-h3"><a href="#piecewise-functions-conventions">Piecewise Functions: Conventions</a></li>
 <li class="toc-entry toc-h3"><a href="#squeeze-theorem-sign-of-appended-functions">Squeeze Theorem: Sign of appended functions</a></li>
 <li class="toc-entry toc-h3"><a href="#using-a-creative-one">Using a creative one</a></li>
 <li class="toc-entry toc-h3"><a href="#using-a-unique-creative-one-as-part-of-a-limit-to-infinitynegative-infinity">Using a unique creative one as part of a limit to infinity/negative infinity</a></li>
@@ -141,6 +142,11 @@ window.onload = wrap_img;
 
 <p>If a direct substitution fails due to division by zero, and the numerator is not zero, <strong>do not</strong> skip ahead to Does not Exist (infinity or negative infinity). You must first take the left and right limits, and if the infinities have the opposite signs (like in 1/x), then the Does not Exist reasoning is actually that the left limit is not equal to the right limit.</p>
 
+<h3 id="piecewise-functions-conventions">
+<a class="anchor" href="#piecewise-functions-conventions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Piecewise Functions: Conventions</h3>
+
+<p>When listing a piecewise function, the piece with the least domain is listed first, and the piece with the greatest domain last. As for the domains, there will always be a greater than/equal to, and never a less than/equal to. That is, the lower bound of the domain (if not negative infinity) is included, and the upper bound is excluded. Also, when stating the domain, x always has to be listed first if it is strictly less than a value or strictly greater than a value (ex: x &lt; 4, NOT 4 &gt; x). This is likely in place to establish consistency in defining piecewise functions.</p>
+
 <h3 id="squeeze-theorem-sign-of-appended-functions">
 <a class="anchor" href="#squeeze-theorem-sign-of-appended-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Squeeze Theorem: Sign of appended functions</h3>
 
@@ -159,7 +165,9 @@ window.onload = wrap_img;
 <h3 id="using-a-unique-creative-one-as-part-of-a-limit-to-infinitynegative-infinity">
 <a class="anchor" href="#using-a-unique-creative-one-as-part-of-a-limit-to-infinitynegative-infinity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using a unique creative one as part of a limit to infinity/negative infinity</h3>
 
-<p>When taking a limit to infinity/negative infinity and an indeterminate result is yielded(infinity over infinity… and the like), it is possible to multiply the entire rule by a unique creative one. Typically, this will involve multiplying both sides of the fraction by something like (1/x^2). There are special parameters, however. The denominator must not equal zero, and its limit must also exist. This essentially means in general cases, we multiply by (1/x^a), where a is the greatest power an x in the denominator is raised to. Occasionally,</p>
+<p>When taking a limit to infinity/negative infinity and an indeterminate result is yielded(infinity over infinity… and the like), it is possible to multiply the entire rule by a unique creative one. Typically, this will involve multiplying both sides of the fraction by something like (1/x^2). There are special parameters, however. The denominator must not equal zero, and its limit must also exist. This essentially means in general cases, we multiply by (1/x^a), where a is the greatest power an x in the denominator is raised to. Occasionally, both sides of the fraction will be multiplied by (1/sqrt(x^2)) or some other root of a polynomial. This can happen if one side of the fraction is under a root (and the other isn’t). In this case, the side under the root can have x^2 divided as normal, but the other side of the fraction must take into account that sqrt(x^2) is the absolute value of x, which is a piecewise function. Any roots which start out being even roots but having odd powers at the end will deal with absolute value. The sign of that part of the creative one then depends on what x is approaching (can be positive/negative depending on which piece’s domain the value x is approaching falls on).</p>
+
+<p><strong>Now,</strong> what I haven’t seen yet is the x approaching the value of the piecewise function where x=0. It is very difficult to guess how I would be expected to react to this. It is likely I will be asked to go with the piece where the non-opposite function in the absolute value is so that I can follow conventions.</p>
 
   </div><a class="u-url" href="/FastPage/classes/BC/procedures" hidden></a>
 </article>
