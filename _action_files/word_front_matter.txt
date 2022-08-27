@@ -1,5 +1,5 @@
 ---
 layout: post
 categories: [word]
-published: true
+hide: true
 ---
