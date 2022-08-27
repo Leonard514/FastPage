@@ -36,6 +36,10 @@ One sided limits should always have the +/- superscripts of whatever value x is 
 
 If a direct substitution fails due to division by zero, and the numerator is not zero, **do not** skip ahead to Does not Exist (infinity or negative infinity). You must first take the left and right limits, and if the infinities have the opposite signs (like in 1/x), then the Does not Exist reasoning is actually that the left limit is not equal to the right limit.
 
+### Piecewise Functions: Conventions
+
+When listing a piecewise function, the piece with the least domain is listed first, and the piece with the greatest domain last. As for the domains, there will always be a greater than/equal to, and never a less than/equal to. That is, the lower bound of the domain (if not negative infinity) is included, and the upper bound is excluded. Also, when stating the domain, x always has to be listed first if it is strictly less than a value or strictly greater than a value (ex: x < 4, NOT 4 > x). This is likely in place to establish consistency in defining piecewise functions.
+
 ### Squeeze Theorem: Sign of appended functions
 
 When using the squeeze theorem on a limit, any appended functions/actions (like x+1, or taking the reciprocal of all terms) must have their signs checked for the x being approached. 
@@ -49,4 +53,6 @@ When there is two of the same term on the denominator, there is a creative one. 
 
 ### Using a unique creative one as part of a limit to infinity/negative infinity
 
-When taking a limit to infinity/negative infinity and an indeterminate result is yielded(infinity over infinity... and the like), it is possible to multiply the entire rule by a unique creative one. Typically, this will involve multiplying both sides of the fraction by something like (1/x^2). There are special parameters, however. The denominator must not equal zero, and its limit must also exist. This essentially means in general cases, we multiply by (1/x^a), where a is the greatest power an x in the denominator is raised to. Occasionally, 
+When taking a limit to infinity/negative infinity and an indeterminate result is yielded(infinity over infinity... and the like), it is possible to multiply the entire rule by a unique creative one. Typically, this will involve multiplying both sides of the fraction by something like (1/x^2). There are special parameters, however. The denominator must not equal zero, and its limit must also exist. This essentially means in general cases, we multiply by (1/x^a), where a is the greatest power an x in the denominator is raised to. Occasionally, both sides of the fraction will be multiplied by (1/sqrt(x^2)) or some other root of a polynomial. This can happen if one side of the fraction is under a root (and the other isn't). In this case, the side under the root can have x^2 divided as normal, but the other side of the fraction must take into account that sqrt(x^2) is the absolute value of x, which is a piecewise function. Any roots which start out being even roots but having odd powers at the end will deal with absolute value. The sign of that part of the creative one then depends on what x is approaching (can be positive/negative depending on which piece's domain the value x is approaching falls on).
+
+**Now,** what I haven't seen yet is the x approaching the value of the piecewise function where x=0. It is very difficult to guess how I would be expected to react to this. It is likely I will be asked to go with the piece where the non-opposite function in the absolute value is so that I can follow conventions.
