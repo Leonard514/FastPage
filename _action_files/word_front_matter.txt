@@ -1,6 +1,6 @@
 ---
 layout: post
 categories: [word]
-hide: true
+hide: false
 comments: true
 ---
