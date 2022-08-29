@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Bash Test Script! | Leonard Wright</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Bash Test Script!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bash Script which checks installations and installs if the installations are detected as missing." />
+<meta property="og:description" content="Bash Script which checks installations and installs if the installations are detected as missing." />
+<link rel="canonical" href="https://leonard514.github.io/FastPage/scripts/bash_test" />
+<meta property="og:url" content="https://leonard514.github.io/FastPage/scripts/bash_test" />
+<meta property="og:site_name" content="Leonard Wright" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-25T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bash Test Script!" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-25T00:00:00-05:00","datePublished":"2022-08-25T00:00:00-05:00","description":"Bash Script which checks installations and installs if the installations are detected as missing.","headline":"Bash Test Script!","mainEntityOfPage":{"@type":"WebPage","@id":"https://leonard514.github.io/FastPage/scripts/bash_test"},"url":"https://leonard514.github.io/FastPage/scripts/bash_test"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/FastPage/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://leonard514.github.io/FastPage/feed.xml" title="Leonard Wright" /><link rel="shortcut icon" type="image/x-icon" href="/FastPage/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/FastPage/">Leonard Wright</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/FastPage/search/">Search</a><a class="page-link" href="/FastPage/_pages/02_notes.html">Notes</a><a class="page-link" href="/FastPage/categories/">Tags</a><a class="page-link" href="/FastPage/about/">About Me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Bash Test Script!</h1><p class="page-description">Bash Script which checks installations and installs if the installations are detected as missing.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-25T00:00:00-05:00" itemprop="datePublished">
+        Aug 25, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/FastPage/categories/#Comp Sci">Comp Sci</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#scripts">scripts</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Leonard514/FastPage/tree/master/_notebooks/2022-08-25-bash_test.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/FastPage/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Leonard514/FastPage/master?filepath=_notebooks%2F2022-08-25-bash_test.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/FastPage/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Leonard514/FastPage/blob/master/_notebooks/2022-08-25-bash_test.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/FastPage/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FLeonard514%2FFastPage%2Fblob%2Fmaster%2F_notebooks%2F2022-08-25-bash_test.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/FastPage/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-08-25-bash_test.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hi! Welcome to my first bash notebook. There will be two scripts featured here: An installation verification script and a github updating script. Below is the installation verification script.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Check-Installation-Script">Check Installation Script<a class="anchor-link" href="#Check-Installation-Script"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-bash"><pre><span></span><span class="c1"># The bullet of updating a repository is addressed in the next script below</span>
+<span class="nb">echo</span> Basic Python Installation Check
+python --version
+python2 --version
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+
+<span class="nb">echo</span> Basic Conda Installation Check
+conda --version
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+
+<span class="nb">echo</span> Basic Jupyter Installation check
+jupyter --version
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span> Basic Checks Complete
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+
+<span class="nb">echo</span> Check Conda Installation using Conda
+<span class="nv">conda</span><span class="o">=</span><span class="s2">&quot;conda&quot;</span> <span class="c1">#conda variable</span>
+<span class="nv">checkconda</span><span class="o">=</span><span class="k">$(</span>conda list <span class="p">|</span> grep <span class="nv">$conda</span><span class="k">)</span> <span class="c1">#Get conda Packages and version</span>
+<span class="nv">nconda</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$checkconda</span><span class="s2">&quot;</span> <span class="p">|</span> wc -l <span class="k">)</span>
+
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$nconda</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>  <span class="c1"># if there&#39;s conda or if there was output for the grep command</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$conda</span><span class="s2"> found!&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$checkconda</span><span class="s2">&quot;</span>
+<span class="k">else</span> <span class="c1"># No conda... installs conda and exits the script so the base prompt appears.</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$conda</span><span class="s2"> not found. Installing so the script doesn&#39;t break!&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+    <span class="nb">cd</span> /tmp
+    wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+    chmod +x Anaconda3-2022.05-Linux-x86_64.sh
+    <span class="nb">echo</span> <span class="s2">&quot;Make sure that you reply yes to the final prompt about the conda (the default is no).&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;After this, the script will exit and you must reload Windows Subsystem Linux to make sure the base prompt is present.&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Then, run this script again.&quot;</span>
+    ./Anaconda3-2022.05-Linux-x86_64.sh
+    <span class="nb">exit</span>
+    
+<span class="k">fi</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+
+<span class="nb">echo</span> Check Jupyter Installation using Conda
+<span class="nv">jupyter</span><span class="o">=</span><span class="s2">&quot;jupyter&quot;</span> <span class="c1">#Jupyter variable</span>
+<span class="nv">checkjupyter</span><span class="o">=</span><span class="k">$(</span>conda list <span class="p">|</span> grep <span class="nv">$jupyter</span><span class="k">)</span> <span class="c1">#Get jupyter Packages and version</span>
+<span class="nv">njupyter</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$checkjupyter</span><span class="s2">&quot;</span> <span class="p">|</span> wc -l <span class="k">)</span> 
+
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$njupyter</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>  <span class="c1"># if there&#39;s jupyter or if there was output for the grep command</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$jupyter</span><span class="s2"> found!&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$checkjupyter</span><span class="s2">&quot;</span>
+<span class="k">else</span> <span class="c1"># No jupyter, install jupyter</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$jupyter</span><span class="s2"> not found, installing&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+    conda install jupyter
+<span class="k">fi</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+
+<span class="nb">echo</span> Check Python Installation using Conda
+<span class="nv">python</span><span class="o">=</span><span class="s2">&quot;python&quot;</span> <span class="c1">#python variable</span>
+<span class="nv">checkpython</span><span class="o">=</span><span class="k">$(</span>conda list <span class="p">|</span> grep <span class="nv">$python</span><span class="k">)</span> <span class="c1">#Get Python Packages and version</span>
+<span class="nv">npython</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$checkpython</span><span class="s2">&quot;</span> <span class="p">|</span> wc -l<span class="k">)</span>
+
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$npython</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>  <span class="c1"># if there&#39;s python or if there was output for the grep command</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$python</span><span class="s2"> found!&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$checkpython</span><span class="s2">&quot;</span>
+<span class="k">else</span> <span class="c1"># No python</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$python</span><span class="s2"> not found, installing!&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+    sudo apt install python2 python3 python3-pip
+    pip install bash_kernel
+    python -m bash_kernel.install
+    conda list <span class="p">|</span> grep <span class="nv">$python</span>
+    jupyter kernelspec list
+    
+<span class="k">fi</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Basic Python Installation Check
+Python 3.9.12
+Python 2.7.18
+
+
+Basic Conda Installation Check
+conda 4.13.0
+
+
+Basic Jupyter Installation check
+Selected Jupyter core packages...
+IPython          : 8.4.0
+ipykernel        : 6.15.1
+ipywidgets       : not installed
+jupyter_client   : 7.3.4
+jupyter_core     : 4.11.1
+jupyter_server   : not installed
+jupyterlab       : not installed
+nbclient         : not installed
+nbconvert        : not installed
+nbformat         : not installed
+notebook         : not installed
+qtconsole        : not installed
+traitlets        : 5.3.0
+
+
+Basic Checks Complete
+
+Check Conda Installation using Conda
+conda found!
+
+
+# packages in environment at /home/leonardw48247/anaconda3:
+anaconda                  2022.05                  py39_0  
+anaconda-client           1.9.0            py39h06a4308_0  
+anaconda-navigator        2.1.4            py39h06a4308_0  
+anaconda-project          0.10.2             pyhd3eb1b0_0  
+conda                     4.13.0           py39h06a4308_0  
+conda-build               3.21.8           py39h06a4308_2  
+conda-content-trust       0.1.1              pyhd3eb1b0_0  
+conda-env                 2.6.0                         1  
+conda-pack                0.6.0              pyhd3eb1b0_0  
+conda-package-handling    1.8.1            py39h7f8727e_0  
+conda-repo-cli            1.0.4              pyhd3eb1b0_0  
+conda-token               0.3.0              pyhd3eb1b0_0  
+conda-verify              3.4.2                      py_1  
+
+
+Check Jupyter Installation using Conda
+jupyter found!
+
+
+jupyter                   1.0.0            py39h06a4308_7  
+jupyter_client            6.1.12             pyhd3eb1b0_0  
+jupyter_console           6.4.0              pyhd3eb1b0_0  
+jupyter_core              4.9.2            py39h06a4308_0  
+jupyter_server            1.13.5             pyhd3eb1b0_0  
+jupyterlab                3.3.2              pyhd3eb1b0_0  
+jupyterlab_pygments       0.1.2                      py_0  
+jupyterlab_server         2.10.3             pyhd3eb1b0_1  
+jupyterlab_widgets        1.0.0              pyhd3eb1b0_1  
+
+
+Check Python Installation using Conda
+python found!
+
+
+ipython                   8.2.0            py39h06a4308_0  
+ipython_genutils          0.2.0              pyhd3eb1b0_1  
+msgpack-python            1.0.2            py39hff7bd54_1  
+python                    3.9.12               h12debd9_0  
+python-dateutil           2.8.2              pyhd3eb1b0_0  
+python-fastjsonschema     2.15.1             pyhd3eb1b0_0  
+python-libarchive-c       2.9                pyhd3eb1b0_1  
+python-lsp-black          1.0.0              pyhd3eb1b0_0  
+python-lsp-jsonrpc        1.0.0              pyhd3eb1b0_0  
+python-lsp-server         1.2.4              pyhd3eb1b0_0  
+python-slugify            5.0.2              pyhd3eb1b0_0  
+python-snappy             0.6.0            py39h2531618_3  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Github-Script">Github Script<a class="anchor-link" href="#Github-Script"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Using conditional statement to create a project directory and project&quot;</span>
+
+<span class="c1"># Variable section</span>
+<span class="nb">export</span> <span class="nv">project_dir</span><span class="o">=</span>/mnt/c/project_repository  <span class="c1"># set project directory.</span>
+<span class="nb">export</span> <span class="nv">project</span><span class="o">=</span><span class="nv">$project_dir</span>/FastPage  <span class="c1"># Makes final folder where fastpage project will be imported</span>
+<span class="nb">export</span> <span class="nv">project_repo</span><span class="o">=</span><span class="s2">&quot;https://github.com/Leonard514/FastPage.git&quot;</span>  <span class="c1"># Import repository (case-sensitive)</span>
+
+<span class="nb">cd</span> ~    <span class="c1"># start in home directory</span>
+
+<span class="c1"># Conditional block to make a project directory</span>
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$project_dir</span> <span class="o">]</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$project_dir</span><span class="s2"> does not exist... making directory </span><span class="nv">$project_dir</span><span class="s2">&quot;</span>
+    mkdir -p <span class="nv">$project_dir</span>
+<span class="k">fi</span>
+<span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$project_dir</span><span class="s2"> exists.&quot;</span> 
+
+<span class="c1"># Conditional block to git clone a project from project_repo</span>
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$project</span> <span class="o">]</span>
+<span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$project</span><span class="s2"> does not exist... cloning </span><span class="nv">$project_repo</span><span class="s2">&quot;</span>
+    <span class="nb">cd</span> <span class="nv">$project_dir</span>
+    git clone <span class="nv">$project_repo</span>
+    <span class="nb">cd</span> ~
+<span class="k">fi</span>
+<span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$project</span><span class="s2"> exists.&quot;</span>
+
+<span class="c1"># This is meant to export a local repository to GitHub (online)</span>
+<span class="nb">cd</span> <span class="nv">$project</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Using conditional statement to create a project directory and project
+Directory /mnt/c/project_repository does not exist... making directory /mnt/c/project_repository
+Directory /mnt/c/project_repository exists.
+Directory /mnt/c/project_repository/FastPage does not exist... cloning https://github.com/Leonard514/FastPage.git
+Cloning into &#39;FastPage&#39;...
+remote: Enumerating objects: 1780, done.
+remote: Counting objects: 100% (1578/1578), done.
+remote: Compressing objects: 100% (606/606), done.
+remote: Total 1780 (delta 828), reused 1428 (delta 761), pack-reused 202
+Receiving objects: 100% (1780/1780), 14.78 MiB | 13.10 MiB/s, done.
+Resolving deltas: 100% (858/858), done.
+Directory /mnt/c/project_repository/FastPage exists.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Leonard514/FastPage"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/FastPage/scripts/bash_test" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/FastPage/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/FastPage/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/FastPage/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Fastpages blog tracking progress in AP Computer Science Principles</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/Leonard514" target="_blank" title="Leonard514"><svg class="svg-icon grey"><use xlink:href="/FastPage/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.youtube.com/channel/UCNy-EIC-T3dV6In5aIC04DQ" target="_blank" title="YouTube"><svg class="svg-icon grey"><use xlink:href="/FastPage/assets/minima-social-icons.svg#youtube"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
