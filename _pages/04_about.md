@@ -2,6 +2,7 @@
 layout: page
 title: About Me
 permalink: /about/
+comments: true
 ---
 
 Hi! I'm Leonard Wright, and I am a student at Del Norte High School.
