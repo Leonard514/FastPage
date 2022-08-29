@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      10 min read
     
 </span></p>
 
@@ -154,40 +154,48 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span> <span class="c1">#Imports stuff necessary to run the script</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span> 
 
-<span class="k">def</span> <span class="nf">question_and_answer</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span> <span class="c1">#defines question and answer: a prompt variable goes in the parenthesis</span>
+<span class="c1">#defines question and answer: a prompt variable goes in the parenthesis. It essentially spits out user input.</span>
+<span class="k">def</span> <span class="nf">question_and_answer</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span> 
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c1">#input is mapped to the msg variable</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Answer: &quot;</span> <span class="o">+</span> <span class="n">msg</span><span class="p">)</span> <span class="c1">#the input is spat back out of the terminal</span>
-    
-<span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span> <span class="c1">#defines question_with_response: collects the questions with prompt</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span> <span class="c1">#prints the question</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c1">#input collection of user in answering quiz question</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Answer: &quot;</span> <span class="o">+</span> <span class="n">msg</span><span class="p">)</span>
+
+<span class="c1">#defines question_with_response: collects the questions from a list with prompt, prints it, collects input, and stores it.</span>
+<span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">msg</span>
 
+<span class="c1">#variables for number of questions and number of correct answers</span>
 <span class="n">questions</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi &#39;</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">())</span> <span class="c1">#getpass.getuser() gets the username;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You will be asked &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; questions.&quot;</span><span class="p">)</span> <span class="c1">#lots of printing here</span>
-<span class="n">question_and_answer</span><span class="p">(</span><span class="s2">&quot;Are you ready to take a test?&quot;</span><span class="p">)</span> <span class="c1">#the question_and_answer function is called, which as a reminder spits out whatever the user inputted.</span>
+<span class="c1">#initial prompt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi &#39;</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You will be asked &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; questions.&quot;</span><span class="p">)</span>
+<span class="n">question_and_answer</span><span class="p">(</span><span class="s2">&quot;Are you ready to take a test?&quot;</span><span class="p">)</span>
 
-<span class="n">Question_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Is your answer input or output?&quot;</span><span class="p">,</span> <span class="s2">&quot;What command is used to include other functions that are developed?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is the collection of these functions called?&quot;</span><span class="p">,</span> <span class="s2">&quot;What command was used to make the function that gave you this question?&quot;</span><span class="p">,</span> <span class="s2">&quot;what is Answer_list in iter(Answer_list)?&quot;</span><span class="p">,</span> <span class="s2">&quot;What command in this example is used to evaluate a response?&quot;</span><span class="p">,</span><span class="s2">&quot;Each &#39;if&#39; command contains an &#39;_________&#39; to determine a true or false condition?&quot;</span><span class="p">,</span> <span class="s2">&quot;What type of text is the variable called &#39;correct&#39; in this script?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is it called to print a string (as output) to terminal?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is a group of commands defined under a name?&quot;</span><span class="p">]</span> <span class="c1">#Big list of the questions, very long.</span>
-<span class="n">Answer_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="s2">&quot;import&quot;</span><span class="p">,</span> <span class="s2">&quot;library&quot;</span><span class="p">,</span> <span class="s2">&quot;def&quot;</span><span class="p">,</span> <span class="s2">&quot;parameter&quot;</span><span class="p">,</span> <span class="s2">&quot;if&quot;</span><span class="p">,</span> <span class="s2">&quot;expression&quot;</span><span class="p">,</span> <span class="s2">&quot;dynamic text&quot;</span><span class="p">,</span> <span class="s2">&quot;string concatenation&quot;</span><span class="p">,</span> <span class="s2">&quot;function&quot;</span><span class="p">]</span> <span class="c1">#List of the answers!</span>
-<span class="n">Answer_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">Answer_list</span><span class="p">)</span> <span class="c1">#creates iteration to cycle through for answers.</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">Question_list</span><span class="p">:</span> <span class="c1">#cycles the questions from the list, repeats  question commands after each question until the end.</span>
-    <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="c1">#a rsp variable is made to collect input for the question. We also see the question_with_response function being called. str(i) prints the question.</span>
-    <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">Answer_iter</span><span class="p">)):</span> <span class="c1">#this checks if the correct answer is provided. The str part ensures the answer in the list is outputted (not to terminal) to check if it matched the input answer. The next command is what cycles through my iteration, Answer_cycle</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is correct!&quot;</span><span class="p">)</span> <span class="c1">#Tells the test-taker that he/she answered correctly.</span>
-        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1">#adds one to the correct answer counter</span>
+<span class="c1">#list of questions and answers. Also converts answer list into iteration so next command works.</span>
+<span class="n">Question_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Is your answer input or output?&quot;</span><span class="p">,</span> <span class="s2">&quot;What command is used to include other functions that are developed?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is the collection of these functions called?&quot;</span><span class="p">,</span> <span class="s2">&quot;What command was used to make the function that gave you this question?&quot;</span><span class="p">,</span> <span class="s2">&quot;what is Answer_list in iter(Answer_list)?&quot;</span><span class="p">,</span> <span class="s2">&quot;What command in this example is used to evaluate a response?&quot;</span><span class="p">,</span><span class="s2">&quot;Each &#39;if&#39; command contains an &#39;_________&#39; to determine a true or false condition?&quot;</span><span class="p">,</span> <span class="s2">&quot;What type of text is the variable called &#39;correct&#39; in this script?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is it called to print a string (as output) to terminal?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is a group of commands defined under a name?&quot;</span><span class="p">]</span>
+<span class="n">Answer_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="s2">&quot;import&quot;</span><span class="p">,</span> <span class="s2">&quot;library&quot;</span><span class="p">,</span> <span class="s2">&quot;def&quot;</span><span class="p">,</span> <span class="s2">&quot;parameter&quot;</span><span class="p">,</span> <span class="s2">&quot;if&quot;</span><span class="p">,</span> <span class="s2">&quot;expression&quot;</span><span class="p">,</span> <span class="s2">&quot;dynamic text&quot;</span><span class="p">,</span> <span class="s2">&quot;string concatenation&quot;</span><span class="p">,</span> <span class="s2">&quot;function&quot;</span><span class="p">]</span>
+<span class="n">Answer_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">Answer_list</span><span class="p">)</span>
+
+<span class="c1">#cycles through this set of command for each set of question and answer. Also accepts correct answers and rejects bad answers.</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">Question_list</span><span class="p">:</span>
+    <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">Answer_iter</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is correct!&quot;</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is incorrect!&quot;</span><span class="p">)</span>
             
-
-<span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="n">questions</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> <span class="c1">#Calculates percent correct answers.</span>
+<span class="c1">#Calculates percent correct answers.</span>
+<span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="n">questions</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> 
     
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You scored &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;%!&#39;</span><span class="p">)</span> <span class="c1">#Prints accuracy of answers to terminal</span>
+<span class="c1">#Prints accuracy of answers to terminal</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You scored &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;%!&#39;</span><span class="p">)</span> 
 </pre></div>
 
     </div>

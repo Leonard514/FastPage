@@ -159,17 +159,21 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-bash"><pre><span></span><span class="c1"># The bullet of updating a repository is addressed in the next script below</span>
+
+<span class="c1">#uses basic version commands</span>
 <span class="nb">echo</span> Basic Python Installation Check
 python --version
 python2 --version
 <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
 <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
 
+<span class="c1">#uses basic version commands</span>
 <span class="nb">echo</span> Basic Conda Installation Check
 conda --version
 <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
 <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
 
+<span class="c1">#uses basic version commands</span>
 <span class="nb">echo</span> Basic Jupyter Installation check
 jupyter --version
 <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
@@ -177,18 +181,21 @@ jupyter --version
 <span class="nb">echo</span> Basic Checks Complete
 <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
 
+<span class="c1">#sets up variables to check conda installation.</span>
 <span class="nb">echo</span> Check Conda Installation using Conda
-<span class="nv">conda</span><span class="o">=</span><span class="s2">&quot;conda&quot;</span> <span class="c1">#conda variable</span>
-<span class="nv">checkconda</span><span class="o">=</span><span class="k">$(</span>conda list <span class="p">|</span> grep <span class="nv">$conda</span><span class="k">)</span> <span class="c1">#Get conda Packages and version</span>
+<span class="nv">conda</span><span class="o">=</span><span class="s2">&quot;conda&quot;</span> 
+<span class="nv">checkconda</span><span class="o">=</span><span class="k">$(</span>conda list <span class="p">|</span> grep <span class="nv">$conda</span><span class="k">)</span>
 <span class="nv">nconda</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$checkconda</span><span class="s2">&quot;</span> <span class="p">|</span> wc -l <span class="k">)</span>
 
-<span class="k">if</span> <span class="o">[[</span> <span class="nv">$nconda</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>  <span class="c1"># if there&#39;s conda or if there was output for the grep command</span>
+<span class="c1">#checks if conda is there or if the grep command had output</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$nconda</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>
 <span class="k">then</span> 
     <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$conda</span><span class="s2"> found!&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$checkconda</span><span class="s2">&quot;</span>
-<span class="k">else</span> <span class="c1"># No conda... installs conda and exits the script so the base prompt appears.</span>
+<span class="c1"># If there&#39;s no conda... installs conda and exits the script so the base prompt appears.</span>
+<span class="k">else</span>
     <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$conda</span><span class="s2"> not found. Installing so the script doesn&#39;t break!&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
@@ -206,18 +213,21 @@ jupyter --version
 <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
 <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
 
+<span class="c1">#sets up variables to check jupyter installation with conda</span>
 <span class="nb">echo</span> Check Jupyter Installation using Conda
-<span class="nv">jupyter</span><span class="o">=</span><span class="s2">&quot;jupyter&quot;</span> <span class="c1">#Jupyter variable</span>
-<span class="nv">checkjupyter</span><span class="o">=</span><span class="k">$(</span>conda list <span class="p">|</span> grep <span class="nv">$jupyter</span><span class="k">)</span> <span class="c1">#Get jupyter Packages and version</span>
+<span class="nv">jupyter</span><span class="o">=</span><span class="s2">&quot;jupyter&quot;</span> 
+<span class="nv">checkjupyter</span><span class="o">=</span><span class="k">$(</span>conda list <span class="p">|</span> grep <span class="nv">$jupyter</span><span class="k">)</span>
 <span class="nv">njupyter</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$checkjupyter</span><span class="s2">&quot;</span> <span class="p">|</span> wc -l <span class="k">)</span> 
 
-<span class="k">if</span> <span class="o">[[</span> <span class="nv">$njupyter</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>  <span class="c1"># if there&#39;s jupyter or if there was output for the grep command</span>
+<span class="c1">#checks if jupyter is present</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$njupyter</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>  
 <span class="k">then</span> 
     <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$jupyter</span><span class="s2"> found!&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$checkjupyter</span><span class="s2">&quot;</span>
-<span class="k">else</span> <span class="c1"># No jupyter, install jupyter</span>
+<span class="c1"># jupyter not present, installs jupyter</span>
+<span class="k">else</span> 
     <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$jupyter</span><span class="s2"> not found, installing&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
@@ -227,18 +237,21 @@ jupyter --version
 <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
 <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
 
+<span class="c1">#sets up variables to check python with conda</span>
 <span class="nb">echo</span> Check Python Installation using Conda
-<span class="nv">python</span><span class="o">=</span><span class="s2">&quot;python&quot;</span> <span class="c1">#python variable</span>
-<span class="nv">checkpython</span><span class="o">=</span><span class="k">$(</span>conda list <span class="p">|</span> grep <span class="nv">$python</span><span class="k">)</span> <span class="c1">#Get Python Packages and version</span>
+<span class="nv">python</span><span class="o">=</span><span class="s2">&quot;python&quot;</span>
+<span class="nv">checkpython</span><span class="o">=</span><span class="k">$(</span>conda list <span class="p">|</span> grep <span class="nv">$python</span><span class="k">)</span>
 <span class="nv">npython</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$checkpython</span><span class="s2">&quot;</span> <span class="p">|</span> wc -l<span class="k">)</span>
 
-<span class="k">if</span> <span class="o">[[</span> <span class="nv">$npython</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>  <span class="c1"># if there&#39;s python or if there was output for the grep command</span>
+<span class="c1">#checks if python is present</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$npython</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>
 <span class="k">then</span> 
     <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$python</span><span class="s2"> found!&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$checkpython</span><span class="s2">&quot;</span>
-<span class="k">else</span> <span class="c1"># No python</span>
+<span class="c1"># No python, installs python and related stuff</span>
+<span class="k">else</span>
     <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$python</span><span class="s2"> not found, installing!&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
     <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
@@ -365,14 +378,14 @@ python-snappy             0.6.0            py39h2531618_3
     <div class="input_area">
 <div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Using conditional statement to create a project directory and project&quot;</span>
 
-<span class="c1"># Variable section</span>
-<span class="nb">export</span> <span class="nv">project_dir</span><span class="o">=</span>/mnt/c/project_repository  <span class="c1"># set project directory.</span>
-<span class="nb">export</span> <span class="nv">project</span><span class="o">=</span><span class="nv">$project_dir</span>/FastPage  <span class="c1"># Makes final folder where fastpage project will be imported</span>
-<span class="nb">export</span> <span class="nv">project_repo</span><span class="o">=</span><span class="s2">&quot;https://github.com/Leonard514/FastPage.git&quot;</span>  <span class="c1"># Import repository (case-sensitive)</span>
+<span class="c1"># Variable section for setting project directory, the folder where the repository will be imported, and importation of repository</span>
+<span class="nb">export</span> <span class="nv">project_dir</span><span class="o">=</span>/mnt/c/project_repository  
+<span class="nb">export</span> <span class="nv">project</span><span class="o">=</span><span class="nv">$project_dir</span>/FastPage  
+<span class="nb">export</span> <span class="nv">project_repo</span><span class="o">=</span><span class="s2">&quot;https://github.com/Leonard514/FastPage.git&quot;</span> 
 
 <span class="nb">cd</span> ~    <span class="c1"># start in home directory</span>
 
-<span class="c1"># Conditional block to make a project directory</span>
+<span class="c1"># Conditional block to make a project directory... if it doesn&#39;t exist yet</span>
 <span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$project_dir</span> <span class="o">]</span>
 <span class="k">then</span> 
     <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$project_dir</span><span class="s2"> does not exist... making directory </span><span class="nv">$project_dir</span><span class="s2">&quot;</span>
