@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -96,6 +96,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#gotta-knows">Gotta Knows</a></li>
 <li class="toc-entry toc-h3"><a href="#writing-your-work-arrows">Writing your work: Arrows</a></li>
 <li class="toc-entry toc-h3"><a href="#using-methods-taught-in-class">Using methods taught in class</a></li>
 <li class="toc-entry toc-h3"><a href="#writing-the-domain">Writing the domain</a></li>
@@ -103,11 +104,19 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#limits-and-known-rules">Limits and known rules</a></li>
 <li class="toc-entry toc-h3"><a href="#one-sided-limits">One-sided limits</a></li>
 <li class="toc-entry toc-h3"><a href="#direct-substitution-fails-due-to-division-by-zero-not-indeterminate">Direct Substitution fails due to division by zero: not indeterminate</a></li>
+<li class="toc-entry toc-h3"><a href="#direct-substitution-infinity">Direct Substitution: infinity</a></li>
 <li class="toc-entry toc-h3"><a href="#piecewise-functions-conventions">Piecewise Functions: Conventions</a></li>
 <li class="toc-entry toc-h3"><a href="#squeeze-theorem-sign-of-appended-functions">Squeeze Theorem: Sign of appended functions</a></li>
 <li class="toc-entry toc-h3"><a href="#using-a-creative-one">Using a creative one</a></li>
 <li class="toc-entry toc-h3"><a href="#using-a-unique-creative-one-as-part-of-a-limit-to-infinitynegative-infinity">Using a unique creative one as part of a limit to infinity/negative infinity</a></li>
-</ul><h3 id="writing-your-work-arrows">
+<li class="toc-entry toc-h3"><a href="#limit-of-a-composite-function">Limit of a composite function</a></li>
+<li class="toc-entry toc-h3"><a href="#definition-of-differentiability">Definition of differentiability</a></li>
+</ul><h3 id="gotta-knows">
+<a class="anchor" href="#gotta-knows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gotta Knows</h3>
+
+<p>(Know them.)[https://leonard514.github.io/FastPage/classes/BC/gotta_know]</p>
+
+<h3 id="writing-your-work-arrows">
 <a class="anchor" href="#writing-your-work-arrows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Writing your work: Arrows</h3>
 
 <p>When showing work, minimize arrows. Instead attempt to stick to a up to down model, then left to right.</p>
@@ -142,6 +151,11 @@ window.onload = wrap_img;
 
 <p>If a direct substitution fails due to division by zero, and the numerator is not zero, <strong>do not</strong> skip ahead to Does not Exist (infinity or negative infinity). You must first take the left and right limits, and if the infinities have the opposite signs (like in 1/x), then the Does not Exist reasoning is actually that the left limit is not equal to the right limit.</p>
 
+<h3 id="direct-substitution-infinity">
+<a class="anchor" href="#direct-substitution-infinity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Direct Substitution: infinity</h3>
+
+<p>If there is a limit as x approaches infinity, <strong>do not</strong> directly substitute infinity like it is a variable or a number, because it is neither of those.</p>
+
 <h3 id="piecewise-functions-conventions">
 <a class="anchor" href="#piecewise-functions-conventions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Piecewise Functions: Conventions</h3>
 
@@ -169,7 +183,30 @@ window.onload = wrap_img;
 
 <p><strong>Now,</strong> what I haven’t seen yet is the x approaching the value of the piecewise function where x=0. It is very difficult to guess how I would be expected to react to this. It is likely I will be asked to go with the piece where the non-opposite function in the absolute value is so that I can follow conventions.</p>
 
-  </div><a class="u-url" href="/FastPage/classes/BC/procedures" hidden></a>
+<h3 id="limit-of-a-composite-function">
+<a class="anchor" href="#limit-of-a-composite-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Limit of a composite function</h3>
+
+<p>There are times when you are asked to take the limit of f(g(x)) as x approaches c. There are two approaches you can take for this limit</p>
+
+<ol>
+  <li>Limit inside composite function: to use this strategy, you must <strong>first</strong> verify that g(x) is continuous at x=c, and that f(x) is continuous at x=g(c). If this works, then f(g(x)) is continuous and lim(f(g(x))) = f(lim(g(x))). If this is not the case, you must use a different method. The use of this different method is likely to prevent writing infinity/negative infinity as a number/variable, and/or to circumvent complications if there is a hole or if the function’s output at a certain point is not equal to the limit (in which case f may be undefined or output the wrong value, since this is a limit we’re taking (not where the function f is defined))</li>
+  <li>Input-output method: this accounts for the fact that as the definition of a composite function f(g(x)), x serves as the input to g(x), and the output serves as the input to f(x), which then gives the final input. To do this, show a separate step where the limit of the inside function is taken (as x approaches c, g(x) approaches [value]). Then, take the limit as the inside function approaches the limit you calculated, and write out f(g(x)) as usual. That inside function is your input to f. Then, get your solution.</li>
+</ol>
+
+<h3 id="definition-of-differentiability">
+<a class="anchor" href="#definition-of-differentiability" aria-hidden="true"><span class="octicon octicon-link"></span></a>Definition of differentiability</h3>
+
+<p>Differentiability is not the same thing as continuity. Differentiability is defined as when the limit that serves as the definition of the derivative exists. Nothing more.</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Leonard514/FastPage"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/FastPage/classes/BC/procedures" hidden></a>
 </article>
 
       </div>
