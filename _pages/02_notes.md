@@ -4,6 +4,7 @@ layout: post
 description: Comp Sci Vocabulary/Note (includes bullets and tables)
 categories: [markdown, Comp Sci]
 title: Notes
+comments: true
 ---
 # Week 1 Focus and Habits Hack
 
