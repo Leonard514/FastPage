@@ -5,6 +5,7 @@ description: Includes links/images for all parts
 categories: [markdown, Comp Sci]
 title: Tools/Equipment Submission
 permalink: /submissions/Week_0_Submission
+comments: true
 ---
 
 ## Hi!

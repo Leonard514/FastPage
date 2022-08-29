@@ -6,6 +6,7 @@ categories: [Calc BC]
 title: BC Gotta Knows!
 permalink: /classes/BC/gotta_know
 hide: true
+comments: true
 ---
 
 ## Special Trig Limits + Squeeze Theorem
@@ -16,3 +17,6 @@ hide: true
 
 ## Continuity Properties + Composite Continuity
 ![]({{site.baseurl}}/images/gotta_know/know-3.PNG "A composite function must be continuous before a limit of a composite function can be used.")
+
+## Differentiability Definition
+![]({{site.baseurl}}/images/gotta_know/know-4.PNG "Differentiability and Continuity are not interchangeable terms.")
