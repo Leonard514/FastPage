@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Python Quiz Script! | Leonard Wright</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Python Quiz Script!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Python Quiz using lists, iterations, and for loops!" />
+<meta property="og:description" content="Python Quiz using lists, iterations, and for loops!" />
+<link rel="canonical" href="https://leonard514.github.io/FastPage/scripts/python_quiz" />
+<meta property="og:url" content="https://leonard514.github.io/FastPage/scripts/python_quiz" />
+<meta property="og:site_name" content="Leonard Wright" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-24T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Python Quiz Script!" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-24T00:00:00-05:00","datePublished":"2022-08-24T00:00:00-05:00","description":"Python Quiz using lists, iterations, and for loops!","headline":"Python Quiz Script!","mainEntityOfPage":{"@type":"WebPage","@id":"https://leonard514.github.io/FastPage/scripts/python_quiz"},"url":"https://leonard514.github.io/FastPage/scripts/python_quiz"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/FastPage/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://leonard514.github.io/FastPage/feed.xml" title="Leonard Wright" /><link rel="shortcut icon" type="image/x-icon" href="/FastPage/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/FastPage/">Leonard Wright</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/FastPage/search/">Search</a><a class="page-link" href="/FastPage/_pages/02_notes.html">Notes</a><a class="page-link" href="/FastPage/categories/">Tags</a><a class="page-link" href="/FastPage/about/">About Me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Python Quiz Script!</h1><p class="page-description">Python Quiz using lists, iterations, and for loops!</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-24T00:00:00-05:00" itemprop="datePublished">
+        Aug 24, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      11 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/FastPage/categories/#Comp Sci">Comp Sci</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#scripts">scripts</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Leonard514/FastPage/tree/master/_notebooks/2022-08-24-python_quiz.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/FastPage/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Leonard514/FastPage/master?filepath=_notebooks%2F2022-08-24-python_quiz.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/FastPage/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Leonard514/FastPage/blob/master/_notebooks/2022-08-24-python_quiz.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/FastPage/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FLeonard514%2FFastPage%2Fblob%2Fmaster%2F_notebooks%2F2022-08-24-python_quiz.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/FastPage/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-08-24-python_quiz.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hi! I'm here to show you my Python script. But first for the hacks... I got an image and a link. The link is <a href="https://leonard514.github.io/FastPage/_pages/02_notes.html#week-1-python-vocab">for my vocab table</a>, and the image is below.</p>
+<p><img src="/FastPage/images/copied_from_nb/images/python.png" alt="" /></p>
+<p>Ok, enough of that. I'll show you the code in its full beauty first, and if you need help understanding how any part of it works, I'll explain as thoroughly as I can.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span> <span class="c1">#Imports stuff necessary to run the script</span>
+
+<span class="k">def</span> <span class="nf">question_and_answer</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span> <span class="c1">#defines question and answer: a prompt variable goes in the parenthesis</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c1">#input is mapped to the msg variable</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Answer: &quot;</span> <span class="o">+</span> <span class="n">msg</span><span class="p">)</span> <span class="c1">#the input is spat back out of the terminal</span>
+    
+<span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span> <span class="c1">#defines question_with_response: collects the questions with prompt</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span> <span class="c1">#prints the question</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c1">#input collection of user in answering quiz question</span>
+    <span class="k">return</span> <span class="n">msg</span>
+
+<span class="n">questions</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi &#39;</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">())</span> <span class="c1">#getpass.getuser() gets the username;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You will be asked &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; questions.&quot;</span><span class="p">)</span> <span class="c1">#lots of printing here</span>
+<span class="n">question_and_answer</span><span class="p">(</span><span class="s2">&quot;Are you ready to take a test?&quot;</span><span class="p">)</span> <span class="c1">#the question_and_answer function is called, which as a reminder spits out whatever the user inputted.</span>
+
+<span class="n">Question_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Is your answer input or output?&quot;</span><span class="p">,</span> <span class="s2">&quot;What command is used to include other functions that are developed?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is the collection of these functions called?&quot;</span><span class="p">,</span> <span class="s2">&quot;What command was used to make the function that gave you this question?&quot;</span><span class="p">,</span> <span class="s2">&quot;what is Answer_list in iter(Answer_list)?&quot;</span><span class="p">,</span> <span class="s2">&quot;What command in this example is used to evaluate a response?&quot;</span><span class="p">,</span><span class="s2">&quot;Each &#39;if&#39; command contains an &#39;_________&#39; to determine a true or false condition?&quot;</span><span class="p">,</span> <span class="s2">&quot;What type of text is the variable called &#39;correct&#39; in this script?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is it called to print a string (as output) to terminal?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is a group of commands defined under a name?&quot;</span><span class="p">]</span> <span class="c1">#Big list of the questions, very long.</span>
+<span class="n">Answer_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="s2">&quot;import&quot;</span><span class="p">,</span> <span class="s2">&quot;library&quot;</span><span class="p">,</span> <span class="s2">&quot;def&quot;</span><span class="p">,</span> <span class="s2">&quot;parameter&quot;</span><span class="p">,</span> <span class="s2">&quot;if&quot;</span><span class="p">,</span> <span class="s2">&quot;expression&quot;</span><span class="p">,</span> <span class="s2">&quot;dynamic text&quot;</span><span class="p">,</span> <span class="s2">&quot;string concatenation&quot;</span><span class="p">,</span> <span class="s2">&quot;function&quot;</span><span class="p">]</span> <span class="c1">#List of the answers!</span>
+<span class="n">Answer_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">Answer_list</span><span class="p">)</span> <span class="c1">#creates iteration to cycle through for answers.</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">Question_list</span><span class="p">:</span> <span class="c1">#cycles the questions from the list, repeats  question commands after each question until the end.</span>
+    <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="c1">#a rsp variable is made to collect input for the question. We also see the question_with_response function being called. str(i) prints the question.</span>
+    <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">Answer_iter</span><span class="p">)):</span> <span class="c1">#this checks if the correct answer is provided. The str part ensures the answer in the list is outputted (not to terminal) to check if it matched the input answer. The next command is what cycles through my iteration, Answer_cycle</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is correct!&quot;</span><span class="p">)</span> <span class="c1">#Tells the test-taker that he/she answered correctly.</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1">#adds one to the correct answer counter</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is incorrect!&quot;</span><span class="p">)</span>
+            
+
+<span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="n">questions</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> <span class="c1">#Calculates percent correct answers.</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You scored &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;%!&#39;</span><span class="p">)</span> <span class="c1">#Prints accuracy of answers to terminal</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hi leonardw48247
+You will be asked 10 questions.
+Question: Are you ready to take a test?
+Answer: 
+Question: Is your answer input or output?
+input is correct!
+Question: What command is used to include other functions that are developed?
+import is correct!
+Question: What is the collection of these functions called?
+library is correct!
+Question: What command was used to make the function that gave you this question?
+def is correct!
+Question: what is Answer_list in iter(Answer_list)?
+parameter is correct!
+Question: What command in this example is used to evaluate a response?
+if is correct!
+Question: Each &#39;if&#39; command contains an &#39;_________&#39; to determine a true or false condition?
+expression is correct!
+Question: What type of text is the variable called &#39;correct&#39; in this script?
+expression is incorrect!
+Question: What is it called to print a string (as output) to terminal?
+string concatenation is correct!
+Question: What is a group of commands defined under a name?
+function is correct!
+You scored 90.0%!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Explanation-Portion">Explanation Portion<a class="anchor-link" href="#Explanation-Portion"> </a></h2><p>Alright... where to start... oh, the import commands would be a good start!</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span>
+</pre></div>
+<p>This imports the functions getpass and sys into the script, making them executable. <em>Where did those functions come from?</em> They came from the libraries, which is essentially a collection of functions that comes with your python installation. Pretty neat!. Next, we got our own function.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">question_and_answer</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Answer: &quot;</span> <span class="o">+</span> <span class="n">msg</span><span class="p">)</span>
+</pre></div>
+<ul>
+<li>On the first line, we got the <strong>def</strong> command, which defines our function. The function's name is question_and_answer (fairly intuitive since it asks you a question and requests for an answer), and there is a <em>prompt</em> in the parenthesis. This prompt is a variable, and whenever this function is called (this should look like question_and_answer("insert text here")), the variable prompt is set to whatever is within the parenthesis. The colon is there for syntax purposes and should be kept.</li>
+<li>On the second line, the print() command is used. Within the parenthesis is "Question: " to ensure that a question prompt is printed when the file is executed, along with <strong>+ prompt</strong>. The <strong>+</strong> concatenates/prints whatever text/string is stored in the prompt variable. The output to the terminal is <strong>Question: (prompt text here)</strong></li>
+<li>On the third line, a variable named <strong>msg</strong> is set equal to the result of the command input(). As the name implies, the function will collect user input and set it equal to a variable. This also means the script will pause when user input is being collected.</li>
+<li>On the fourth line, the print() command is used again, this time with the string <strong>Answer:</strong> to proceed the text of the variable <strong>msg</strong>, which was set equal to the input on the third line.</li>
+</ul>
+<p>So to sum it up, this function collects an input string from a user and re-prints it to the terminal. Let's move on to the other function.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span> 
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">msg</span>
+</pre></div>
+<p>If you paid attention, the first three lines of this function question_with_response were very similar to the first three lines of the question_with_answer function. The last line is what we want to look at. The return command ends the execution of the function and sends the contents of <strong>msg</strong> to the main script in execution. The contents of msg can therefore be used outside the function.</p>
+<div class="highlight"><pre><span></span><span class="n">questions</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+<p>These are more variables. The variable <strong>questions</strong> lets Python know how many questions there are, because knowledge of how many questions there are is necessary for score calculation. <strong>correct</strong>, the number of correct answers, is 0 since no questions have been answered yet.</p>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi &#39;</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You will be asked &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; questions.&quot;</span><span class="p">)</span> 
+<span class="n">question_and_answer</span><span class="p">(</span><span class="s2">&quot;Are you ready to take a test?&quot;</span><span class="p">)</span>
+</pre></div>
+<ul>
+<li>The first line prints to the prompt, and this is the first line of code executed. <strong>getpass.getuser()</strong> is linked to that function we imported at the beginning, and it essentially is a placeholder for the username of the person running the script. Might as well say hi and call the test-taker by his/her name!</li>
+<li>The second line prints about being asked questions. <strong>str(questions)</strong> must be used to print the number of questions since <strong>questions</strong> is set equal to a number (it must be set equal to a string to print, and the str() command converts it into such).</li>
+<li>The third line is our question_and_answer function from before! If you remember what it does, it prints out the prompt in the parenthesis, collects a user input, and prints that input into the prompt.</li>
+</ul>
+<p>Now for the next bit of code!</p>
+<div class="highlight"><pre><span></span><span class="n">Question_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Is your answer input or output?&quot;</span><span class="p">,</span> <span class="s2">&quot;What command is used to include other functions that are developed?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is the collection of these functions called?&quot;</span><span class="p">,</span> <span class="s2">&quot;What command was used to make the function that gave you this question?&quot;</span><span class="p">,</span> <span class="s2">&quot;what is Answer_list in iter(Answer_list)?&quot;</span><span class="p">,</span> <span class="s2">&quot;What command in this example is used to evaluate a response?&quot;</span><span class="p">,</span><span class="s2">&quot;Each &#39;if&#39; command contains an &#39;_________&#39; to determine a true or false condition?&quot;</span><span class="p">,</span> <span class="s2">&quot;What type of text is the variable called &#39;correct&#39; in this script?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is it called to print a string (as output) to terminal?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is a group of commands defined under a name?&quot;</span><span class="p">]</span>
+<span class="n">Answer_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="s2">&quot;import&quot;</span><span class="p">,</span> <span class="s2">&quot;library&quot;</span><span class="p">,</span> <span class="s2">&quot;def&quot;</span><span class="p">,</span> <span class="s2">&quot;parameter&quot;</span><span class="p">,</span> <span class="s2">&quot;if&quot;</span><span class="p">,</span> <span class="s2">&quot;expression&quot;</span><span class="p">,</span> <span class="s2">&quot;dynamic text&quot;</span><span class="p">,</span> <span class="s2">&quot;string concatenation&quot;</span><span class="p">,</span> <span class="s2">&quot;function&quot;</span><span class="p">]</span>
+<span class="n">Answer_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">Answer_list</span><span class="p">)</span>
+</pre></div>
+<p>The first two lines are relatively self-explanatory (though lengthy). I made a list called Question_list that has a list of all the questions of the quiz, and Answer_list has all the answers. The first items on the lists will be the ones to appear on the quiz first, but more on that later. The third line is less self-explanatory. I essentially converted my answer list into an iteration. <em>Why would I do that?</em> Well really it's because there's a command in the next bit of code that doesn't work if I don't convert the list into an iteration. That's just the way it is. Now it's time for the exciting part.</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">Question_list</span><span class="p">:</span>
+    <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">Answer_iter</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is correct!&quot;</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is incorrect!&quot;</span><span class="p">)</span>
+</pre></div>
+<p>I know this is a lot to take in. Bear with me for a little while.</p>
+<ul>
+<li>The first line is a for loop. The <strong>i</strong> is a variable used to count how many items are in the related list, <strong>Question_list</strong>, and how many times the commands within the for loop are executed. You could use any variable, though i is the most common (probably since the word "iteration" starts with an i, though I could be wrong). All commands connected to the for loop (which is this entire chunk of code) is executed once for every question in Question_List. Why would I want to do that? Let's move to Line 2.</li>
+<li>In the second line, we set a <strong>rsp</strong> variable. We call the question_with_response function, which if you remember prints a question prompt and collects input, sending it to the main script. This input will be set equal to the rsp variable. Notice what is inside the function's parenthesis: str(i). Remember i is the variable from the for loop which is going over each question in Question_list. So every time this is executed, the prompt will be the next question in the list.</li>
+<li>In the third line, there is an <strong>if statement</strong>. If the condition of the if statement is satisfied, any connected code is executed. In this case, the condition is that the input variable <strong>rsp</strong> is equal to... let's deconstruct that code.<ul>
+<li><strong>str()</strong>, as mentioned before, turns a number/value into a string. In my tests, the printing of the answer was being picky, so I used this command even though there's no numbers involved.</li>
+<li><strong>next(Answer_iter)</strong> is the way that the next answer on the list will be used every time the command is executed. <strong>next()</strong> moves on to the next item in the iteration whenever executed. For some reason, next() doesn't accept lists, which is why we made Answer_iter.</li>
+</ul>
+</li>
+<li>So back to what I was saying... the condition is that the input variable <strong>rsp</strong> be equivalent to the correct answer of the question in the prompt. If this condition is satisfied, appropriate code is executed for a correct answer:</li>
+<li>In line 4, we print their input (still stored in rsp) and also that it's correct.</li>
+<li>In line 5, we increase the <strong>correct</strong> variable by one since a correct answer was given.</li>
+<li>Line 6 is <strong>else</strong>. If the condition of the if statement is not fulfilled, any code connected to the else statement is executed instead. That would mean getting a question wrong.</li>
+<li>So line 7 prints that the input was incorrect.</li>
+</ul>
+<p>These 7 lines execute 10 times for the 10 questions. Doing this makes the code more concise than typing out the same commands 10 times in a script. Now, the rest of the script should be a breeze.</p>
+<div class="highlight"><pre><span></span><span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="n">questions</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+</pre></div>
+<p>This line, as implies, calculates the percentage of questions correctly answered. It takes the number of questions correctly answered and divides by total number of questions (these are all variables by the way, which are set equal to values/numbers), then multiplies by 100. This number is set equal to the <strong>percent</strong> variable.</p>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You scored &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;%!&#39;</span><span class="p">)</span>
+</pre></div>
+<p>This line prints the percent score. Keep in mind that since the variable <strong>percent</strong> has a numeric value that the str() command must be used to convert it to a string.</p>
+<p>That's the end of the script! I hope you had a good time learning about how this works, and I hope you will use some of these techniques in your future work.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Leonard514/FastPage"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/FastPage/scripts/python_quiz" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/FastPage/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/FastPage/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/FastPage/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Fastpages blog tracking progress in AP Computer Science Principles</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/Leonard514" target="_blank" title="Leonard514"><svg class="svg-icon grey"><use xlink:href="/FastPage/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.youtube.com/channel/UCNy-EIC-T3dV6In5aIC04DQ" target="_blank" title="YouTube"><svg class="svg-icon grey"><use xlink:href="/FastPage/assets/minima-social-icons.svg#youtube"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
