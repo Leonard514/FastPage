@@ -89,3 +89,27 @@ I felt it was nice that I made her happy by giving attention to everything she d
 | for | Does two things: cycles through a list, and executes a set of commands once for every item in that list. Each item in the list will be set equal to a variable (most commonly i) for input. |
 | iteration_name = iter(list_name) | Takes a list and turns it into an iteration (defining it as a variable). Required to run next. |
 | next(iteration) | Cycles to the next item in an iteration when executed... without re-executing any commands. |
+
+# Week 2 Python Terms Notes
+
+| Term | Definition |
+|-|-|
+| Type | A form/variant of variable, being either a string (Ex: var = "john walked"), integer (ex: int = 18), float (ex: num = 100.0, notice the decimal), list (ex: cars = [SUV, sports car, sedan], notice square brackets), or a dictionary (includes curly brackets and several variables) |
+| Key | Another word for variable |
+| index | essentially the function of the common i variable in a for loop (cycles through entries in a list) | 
+| Procedural Abstraction | Multiple HTML fragments <html></html> used, which are put together into a website |
+
+# Week 2 HTML Notes
+Pictures say a thousand words. Therefore, I've integrated pictures to explain what's going on with my site.
+
+I attempted to integrate the midnight theme into my fastpages (at _config.yml). It looks like this:
+
+![]({{site.baseurl}}/images/HTML_Change/theme1.png "First attempt at adding the Midnight theme to fastpages.")
+
+Upon uploading the modified _config.yml theme to my FastPage repository, I found out that there was no changes occurring. It was only some time later that I found that the CI task was consistently failing due to syntax errors in my _config.yml file.
+
+![]({{site.baseurl}}/images/HTML_Change/error.png "CI Error in Github Actions")
+
+Every CI task was failing when I did the commit. The syntax error in _config.yml effectively made it impossible to update my website. It was then that I was told that I was not supposed to put `midnight`, but rather `pages-themes/midnight@v0.2.0` in the remote theme configuration of _config.yml.
+
+![]({{site.baseurl}}/images/HTML_Change/theme2.png "Second attempt at adding Midnight theme to fastpages")
