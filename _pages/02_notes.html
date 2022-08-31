@@ -81,7 +81,7 @@
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -122,6 +122,8 @@
 <li class="toc-entry toc-h2"><a href="#python-commands">Python commands</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#week-2-python-terms-notes">Week 2 Python Terms Notes</a></li>
+<li class="toc-entry toc-h1"><a href="#week-2-html-notes">Week 2 HTML Notes</a></li>
 </ul><h1 id="week-1-focus-and-habits-hack">
 <a class="anchor" href="#week-1-focus-and-habits-hack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Week 1 Focus and Habits Hack</h1>
 
@@ -310,6 +312,52 @@
     </tr>
   </tbody>
 </table>
+
+<h1 id="week-2-python-terms-notes">
+<a class="anchor" href="#week-2-python-terms-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Week 2 Python Terms Notes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type</td>
+      <td>A form/variant of variable, being either a string (Ex: var = “john walked”), integer (ex: int = 18), float (ex: num = 100.0, notice the decimal), list (ex: cars = [SUV, sports car, sedan], notice square brackets), or a dictionary (includes curly brackets and several variables)</td>
+    </tr>
+    <tr>
+      <td>Key</td>
+      <td>Another word for variable</td>
+    </tr>
+    <tr>
+      <td>index</td>
+      <td>essentially the function of the common i variable in a for loop (cycles through entries in a list)</td>
+    </tr>
+    <tr>
+      <td>Procedural Abstraction</td>
+      <td>Multiple HTML fragments &lt;html&gt;&lt;/html&gt; used, which are put together into a website</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="week-2-html-notes">
+<a class="anchor" href="#week-2-html-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Week 2 HTML Notes</h1>
+<p>Pictures say a thousand words. Therefore, I’ve integrated pictures to explain what’s going on with my site.</p>
+
+<p>I attempted to integrate the midnight theme into my fastpages (at _config.yml). It looks like this:</p>
+
+<p><img src="/FastPage/images/HTML_Change/theme1.png" alt="" title="First attempt at adding the Midnight theme to fastpages."></p>
+
+<p>Upon uploading the modified _config.yml theme to my FastPage repository, I found out that there was no changes occurring. It was only some time later that I found that the CI task was consistently failing due to syntax errors in my _config.yml file.</p>
+
+<p><img src="/FastPage/images/HTML_Change/error.png" alt="" title="CI Error in Github Actions"></p>
+
+<p>Every CI task was failing when I did the commit. The syntax error in _config.yml effectively made it impossible to update my website. It was then that I was told that I was not supposed to put <code class="language-plaintext highlighter-rouge">midnight</code>, but rather <code class="language-plaintext highlighter-rouge">pages-themes/midnight@v0.2.0</code> in the remote theme configuration of _config.yml.</p>
+
+<p><img src="/FastPage/images/HTML_Change/theme2.png" alt="" title="Second attempt at adding Midnight theme to fastpages"></p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
