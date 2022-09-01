@@ -1,0 +1,1242 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Python Loop Scripts! | Leonard Wright</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Python Loop Scripts!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Lists, iterations, and for loops… again!!" />
+<meta property="og:description" content="Lists, iterations, and for loops… again!!" />
+<link rel="canonical" href="https://leonard514.github.io/FastPage/scripts/loop_scripts" />
+<meta property="og:url" content="https://leonard514.github.io/FastPage/scripts/loop_scripts" />
+<meta property="og:site_name" content="Leonard Wright" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-30T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Python Loop Scripts!" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-30T00:00:00-05:00","datePublished":"2022-08-30T00:00:00-05:00","description":"Lists, iterations, and for loops… again!!","headline":"Python Loop Scripts!","mainEntityOfPage":{"@type":"WebPage","@id":"https://leonard514.github.io/FastPage/scripts/loop_scripts"},"url":"https://leonard514.github.io/FastPage/scripts/loop_scripts"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/FastPage/assets/css/style.css?v=">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/FastPage/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/FastPage/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/FastPage/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <ul>
+            <li class="fork"><a href="">View On GitHub</a></li>
+            
+          </ul>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Leonard Wright</h1>
+          <p>Fastpages blog tracking progress in AP Computer Science Principles</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href=""></a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
+        </div>
+
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Python Loop Scripts!</h1><p class="page-description">Lists, iterations, and for loops... again!!</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-30T00:00:00-05:00" itemprop="datePublished">
+        Aug 30, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      20 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/FastPage/categories/#Comp Sci">Comp Sci</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#scripts">scripts</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Leonard514/FastPage/tree/master/_notebooks/2022-08-30-Lists_dictionaries.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/FastPage/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Leonard514/FastPage/master?filepath=_notebooks%2F2022-08-30-Lists_dictionaries.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/FastPage/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Leonard514/FastPage/blob/master/_notebooks/2022-08-30-Lists_dictionaries.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/FastPage/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FLeonard514%2FFastPage%2Fblob%2Fmaster%2F_notebooks%2F2022-08-30-Lists_dictionaries.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/FastPage/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Hi!">Hi! </a></li>
+<li class="toc-entry toc-h1"><a href="#Defining-a-function">Defining a function </a></li>
+<li class="toc-entry toc-h1"><a href="#The-For-Loop">The For Loop </a></li>
+<li class="toc-entry toc-h1"><a href="#The-While-Loop-+-Backwards-output">The While Loop + Backwards output </a></li>
+<li class="toc-entry toc-h1"><a href="#Recursive-Loops">Recursive Loops </a></li>
+<li class="toc-entry toc-h1"><a href="#Making-a-Quiz-using-a-List-of-Dictionaries!">Making a Quiz using a List of Dictionaries! </a></li>
+<li class="toc-entry toc-h1"><a href="#Append-to-a-list-with-user-input">Append to a list with user input </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-08-30-Lists_dictionaries.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hi!">
+<a class="anchor" href="#Hi!" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hi!<a class="anchor-link" href="#Hi!"> </a>
+</h2>
+<p>On this page I will demonstrate loops... again like I did on my python quiz. But first we have to make a dictionary within a list. This will store a lot of information.. Most of the variable names are self-explanatory... DOB stands for Date of Birth</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<span class="c1"># Append my info</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Leonard"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Wright"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"December 13"</span><span class="p">,</span>
+    <span class="s2">"Highest School"</span><span class="p">:</span> <span class="s2">"Del Norte High School"</span><span class="p">,</span>
+    <span class="s2">"Favorite Course"</span><span class="p">:</span> <span class="s2">"AP Comp Sci Principles"</span><span class="p">,</span>
+    <span class="s2">"Occupation"</span><span class="p">:</span> <span class="s2">"Student"</span><span class="p">,</span>
+    <span class="s2">"Favorite Food"</span><span class="p">:</span> <span class="s2">"Panko Chicken"</span><span class="p">,</span>
+    <span class="s2">"Favorite Color"</span><span class="p">:</span> <span class="s2">"Brown"</span><span class="p">,</span>
+    <span class="s2">"Favorite Movie"</span><span class="p">:</span> <span class="s2">"Back to the Future"</span><span class="p">,</span>
+    <span class="s2">"Favorite Activity"</span><span class="p">:</span> <span class="s2">"Experimenting with Computers"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="c1"># Append my sister's info</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Lindsay"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Wright"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"December 3"</span><span class="p">,</span>
+    <span class="s2">"Highest School"</span><span class="p">:</span> <span class="s2">"Rice University"</span><span class="p">,</span>
+    <span class="s2">"Favorite Course"</span><span class="p">:</span> <span class="s2">"Fluid Mechanics"</span><span class="p">,</span>
+    <span class="s2">"Occupation"</span><span class="p">:</span> <span class="s2">"Student, Research Intern, Systems Engineer"</span><span class="p">,</span>
+    <span class="s2">"Favorite Food"</span><span class="p">:</span> <span class="s2">"Wonton"</span><span class="p">,</span>
+    <span class="s2">"Favorite Color"</span><span class="p">:</span> <span class="s2">"Green"</span><span class="p">,</span>
+    <span class="s2">"Favorite Movie"</span><span class="p">:</span> <span class="s2">"The Martian"</span><span class="p">,</span>
+    <span class="s2">"Favorite Activity"</span><span class="p">:</span> <span class="s2">"Hiking"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="c1"># Appends my mother's info</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Marilyn"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Wright"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"June 12"</span><span class="p">,</span>
+    <span class="s2">"Highest School"</span><span class="p">:</span> <span class="s2">"San Beda Law School"</span><span class="p">,</span>
+    <span class="s2">"Favorite Course"</span><span class="p">:</span> <span class="s2">"Constitutional Law"</span><span class="p">,</span>
+    <span class="s2">"Occupation"</span><span class="p">:</span> <span class="s2">"Lawyer, Mother"</span><span class="p">,</span>
+    <span class="s2">"Favorite Food"</span><span class="p">:</span> <span class="s2">"Rice"</span><span class="p">,</span>
+    <span class="s2">"Favorite Color"</span><span class="p">:</span> <span class="s2">"Green"</span><span class="p">,</span>
+    <span class="s2">"Favorite Movie"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"Favorite Activity"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="c1"># Appends my father's info</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Leonard"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Wright"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"June 24"</span><span class="p">,</span>
+    <span class="s2">"Highest School"</span><span class="p">:</span> <span class="s2">"Cal State Fullerton"</span><span class="p">,</span>
+    <span class="s2">"Favorite Course"</span><span class="p">:</span> <span class="s2">"Marketing"</span><span class="p">,</span>
+    <span class="s2">"Occupation"</span><span class="p">:</span> <span class="s2">"CPA, Father"</span><span class="p">,</span>
+    <span class="s2">"Favorite Food"</span><span class="p">:</span> <span class="s2">"Salmon"</span><span class="p">,</span>
+    <span class="s2">"Favorite Color"</span><span class="p">:</span> <span class="s2">"Blue"</span><span class="p">,</span>
+    <span class="s2">"Favorite Movie"</span><span class="p">:</span> <span class="s2">"Gone with the Wind"</span><span class="p">,</span>
+    <span class="s2">"Favorite Activity"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="c1"># Appends a friend's info</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Kevin"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Vu"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"November 2"</span><span class="p">,</span>
+    <span class="s2">"Highest School"</span><span class="p">:</span> <span class="s2">"Del Norte High School"</span><span class="p">,</span>
+    <span class="s2">"Favorite Course"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"Occupation"</span><span class="p">:</span> <span class="s2">"student, "</span><span class="p">,</span>
+    <span class="s2">"Favorite Food"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"Favorite Color"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"Favorite Movie"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"Favorite Activity"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="c1"># Appends info of John Smith, a fictitious individual</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Smith"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"February 29"</span><span class="p">,</span>
+    <span class="s2">"Highest School"</span><span class="p">:</span> <span class="s2">"UC San Diego"</span><span class="p">,</span>
+    <span class="s2">"Favorite Course"</span><span class="p">:</span> <span class="s2">"Differential Calculus"</span><span class="p">,</span>
+    <span class="s2">"Occupation"</span><span class="p">:</span> <span class="s2">"Professor"</span><span class="p">,</span>
+    <span class="s2">"Favorite Food"</span><span class="p">:</span> <span class="s2">"Beef Stew"</span><span class="p">,</span>
+    <span class="s2">"Favorite Color"</span><span class="p">:</span> <span class="s2">"Red"</span><span class="p">,</span>
+    <span class="s2">"Favorite Movie"</span><span class="p">:</span> <span class="s2">"Star Wars: The Empire Strikes Back"</span><span class="p">,</span>
+    <span class="s2">"Favorite Activity"</span><span class="p">:</span> <span class="s2">"Swimming"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="c1"># We're not using the print command anymore because what it spits out is a mess.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Defining-a-function">
+<a class="anchor" href="#Defining-a-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Defining a function<a class="anchor-link" href="#Defining-a-function"> </a>
+</h1>
+<p>Now that I have everything compiled into a nice dictionary, it's time to demonstrate the power of the loops. But before I do that, I'll define a function to make life easier. I'll name it <strong>print_data</strong>. That way, I can call <strong>print_data</strong> instead of having to re-type all of those print commands.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This special d_rec parameter essentially references the dictionary we just created.</span>
+<span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"LastName"</span><span class="p">])</span>
+<span class="c1">#these \t print indents, which are usually inserted with a tab.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Birth Day:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"DOB"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Highest School:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Highest School"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Occupation:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Occupation"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Favorite Course:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Favorite Course"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Favorite Food:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Favorite Food"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Favorite Color:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Favorite Color"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Favorite Movie:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Favorite Movie"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Favorite Activity:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Favorite Activity"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-For-Loop">
+<a class="anchor" href="#The-For-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>The For Loop<a class="anchor-link" href="#The-For-Loop"> </a>
+</h1>
+<p>Now that the function is defined, I can demonstrate the first loop: the for loop.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># It will execute this set of commands for each individual</span>
+<span class="c1"># who's information is stored in InfoDb</span>
+<span class="c1"># InfoDb is a dictionary in a list.</span>
+<span class="k">def</span> <span class="nf">for_loop</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"For loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">InfoDb</span><span class="p">:</span> <span class="c1">#index variable is "record"</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+
+<span class="n">for_loop</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>For loop output
+
+Leonard Wright
+	 Birth Day: December 13
+	 Highest School: Del Norte High School
+	 Occupation: Student
+	 Favorite Course: AP Comp Sci Principles
+	 Favorite Food: Panko Chicken
+	 Favorite Color: Brown
+	 Favorite Movie: Back to the Future
+	 Favorite Activity: Experimenting with Computers
+
+
+Lindsay Wright
+	 Birth Day: December 3
+	 Highest School: Rice University
+	 Occupation: Student, Research Intern, Systems Engineer
+	 Favorite Course: Fluid Mechanics
+	 Favorite Food: Wonton
+	 Favorite Color: Green
+	 Favorite Movie: The Martian
+	 Favorite Activity: Hiking
+
+
+Marilyn Wright
+	 Birth Day: June 12
+	 Highest School: San Beda Law School
+	 Occupation: Lawyer, Mother
+	 Favorite Course: Constitutional Law
+	 Favorite Food: Rice
+	 Favorite Color: Green
+	 Favorite Movie: 
+	 Favorite Activity: 
+
+
+Leonard Wright
+	 Birth Day: June 24
+	 Highest School: Cal State Fullerton
+	 Occupation: CPA, Father
+	 Favorite Course: Marketing
+	 Favorite Food: Salmon
+	 Favorite Color: Blue
+	 Favorite Movie: Gone with the Wind
+	 Favorite Activity: 
+
+
+Kevin Vu
+	 Birth Day: November 2
+	 Highest School: Del Norte High School
+	 Occupation: student, 
+	 Favorite Course: 
+	 Favorite Food: 
+	 Favorite Color: 
+	 Favorite Movie: 
+	 Favorite Activity: 
+
+
+John Smith
+	 Birth Day: February 29
+	 Highest School: UC San Diego
+	 Occupation: Professor
+	 Favorite Course: Differential Calculus
+	 Favorite Food: Beef Stew
+	 Favorite Color: Red
+	 Favorite Movie: Star Wars: The Empire Strikes Back
+	 Favorite Activity: Swimming
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I first define the <strong>for_loop</strong> function. It prints the string in parenthesis to the terminal. Then:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">InfoDb</span><span class="p">:</span>
+</pre></div>
+<p><strong>for</strong> has a function: it cycles through all items in a list, and for each cycle the commands associated with the loop are executed. Keep in mind that <strong>InfoDb</strong> is a list of dictionary entires, and the items in this list are each person (ex: Leonard Wright, Lindsay Wright), etc.</p>
+<p><strong>record</strong> serves as an <strong>index variable</strong>. Index variables can be named anything, but have a very specialized function. They work with a loop (whether this be a for loop, a while loop, or a recursive loop) to iterate through each item in a list. There is a nuance to index variables: they assign a value to each item in a list, but it starts counting from 0 rather than 1 (since 0 is the number with the least value). So the first entry in the list will be associated with 0, etc. This nuance will be important in explaining the while loop.</p>
+<p>print_data(record) then prints the information of each user. Keep in mind the index variable <strong>record</strong>.</p>
+<p>If you really want another example and explanation of a for loop, you should check out my <a href="https://leonard514.github.io/FastPage/scripts/python_quiz">first python quiz script.</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-While-Loop-+-Backwards-output">
+<a class="anchor" href="#The-While-Loop-+-Backwards-output" aria-hidden="true"><span class="octicon octicon-link"></span></a>The While Loop + Backwards output<a class="anchor-link" href="#The-While-Loop-+-Backwards-output"> </a>
+</h1>
+<p>You already saw the output of my for loop. I will now demonstrate a while loop while reversing the output of the list.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">while_loop</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"While loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1">#Starts on last entry</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="c1">#Ensures the first entry (where i = 0) is printed</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span> <span class="c1">#Goes to previous entry (rather than next entry)</span>
+    <span class="k">return</span>
+
+<span class="n">while_loop</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>While loop output
+
+John Smith
+	 Birth Day: February 29
+	 Highest School: UC San Diego
+	 Occupation: Professor
+	 Favorite Course: Differential Calculus
+	 Favorite Food: Beef Stew
+	 Favorite Color: Red
+	 Favorite Movie: Star Wars: The Empire Strikes Back
+	 Favorite Activity: Swimming
+
+
+Kevin Vu
+	 Birth Day: November 2
+	 Highest School: Del Norte High School
+	 Occupation: student, 
+	 Favorite Course: 
+	 Favorite Food: 
+	 Favorite Color: 
+	 Favorite Movie: 
+	 Favorite Activity: 
+
+
+Leonard Wright
+	 Birth Day: June 24
+	 Highest School: Cal State Fullerton
+	 Occupation: CPA, Father
+	 Favorite Course: Marketing
+	 Favorite Food: Salmon
+	 Favorite Color: Blue
+	 Favorite Movie: Gone with the Wind
+	 Favorite Activity: 
+
+
+Marilyn Wright
+	 Birth Day: June 12
+	 Highest School: San Beda Law School
+	 Occupation: Lawyer, Mother
+	 Favorite Course: Constitutional Law
+	 Favorite Food: Rice
+	 Favorite Color: Green
+	 Favorite Movie: 
+	 Favorite Activity: 
+
+
+Lindsay Wright
+	 Birth Day: December 3
+	 Highest School: Rice University
+	 Occupation: Student, Research Intern, Systems Engineer
+	 Favorite Course: Fluid Mechanics
+	 Favorite Food: Wonton
+	 Favorite Color: Green
+	 Favorite Movie: The Martian
+	 Favorite Activity: Hiking
+
+
+Leonard Wright
+	 Birth Day: December 13
+	 Highest School: Del Norte High School
+	 Occupation: Student
+	 Favorite Course: AP Comp Sci Principles
+	 Favorite Food: Panko Chicken
+	 Favorite Color: Brown
+	 Favorite Movie: Back to the Future
+	 Favorite Activity: Experimenting with Computers
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So we first define a function and print how there's output...</p>
+<p>Then you notice that i is defined. The <strong>len(list_name)</strong> command will become the number of entries in the list named <strong>list_name</strong>. Now, let me paste the actual line.</p>
+<div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+</pre></div>
+<p>Noticed how I subtracted 1 from the <strong>len(InfoDb)</strong>? Well that's because the final entry in the list will have a value one less than the number of entries in the list, since <em>the first entry is assigned a 0 instead of a 1</em>. You will see that the next line of code takes this into account as well. This also means that we will print the final entry of the list first.</p>
+<div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</pre></div>
+<p>The <strong>while</strong> command will execute all associated commands as long as a statement is true. When iterating through lists, this typically involves setting the index variable (in this case, <strong>i</strong>) equal to a value, then adding a value until it reaches a value such that all entries in a list have been cycled through the commands. The condition is typically that <strong>i</strong> is less than or greater than a certain value. Now notice that my condition is that i is greater than negative one. This is because I want my first entry of the list, where i is set to 0, to print. Then,</p>
+<div class="highlight"><pre><span></span><span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+     <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+     <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+</pre></div>
+<p>This makes a record variable, which is equal to entry i (whatever value i is for that execution cycle is). It then executes the print_data function on that entry of the list of dictionaries. Finally, the value of i decreases by 1. This ensures that the entry in the list before the previously printed entry is printed next. This essentially makes it so the entries are printed backwards.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Recursive-Loops">
+<a class="anchor" href="#Recursive-Loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursive Loops<a class="anchor-link" href="#Recursive-Loops"> </a>
+</h1>
+<p>Recursive loops are quite similar to while loops in terms of structure. What is interesting about them is that a function is defined, and the list of commands within the function includes the function.</p>
+<p>Now, I will also try to do something fun. I will try to randomize the order which the entries in the list are printed. The nature of the command which randomizes entry order overrides the list the command is performed on. I wish to preserve the original list, so I'll make a copy of the original list.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># makes copy of InfoDb list</span>
+<span class="n">InfoDb_random</span> <span class="o">=</span> <span class="n">InfoDb</span>
+
+<span class="c1"># randomizes order of entries in InfoDb_random</span>
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">InfoDb_random</span><span class="p">)</span>
+
+<span class="c1">#The actual recursive loop starts here</span>
+<span class="k">def</span> <span class="nf">recursive_loop</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb_random</span><span class="p">):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb_random</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="n">recursive_loop</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Recursive loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">recursive_loop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Recursive loop output
+
+Lindsay Wright
+	 Birth Day: December 3
+	 Highest School: Rice University
+	 Occupation: Student, Research Intern, Systems Engineer
+	 Favorite Course: Fluid Mechanics
+	 Favorite Food: Wonton
+	 Favorite Color: Green
+	 Favorite Movie: The Martian
+	 Favorite Activity: Hiking
+
+
+Leonard Wright
+	 Birth Day: December 13
+	 Highest School: Del Norte High School
+	 Occupation: Student
+	 Favorite Course: AP Comp Sci Principles
+	 Favorite Food: Panko Chicken
+	 Favorite Color: Brown
+	 Favorite Movie: Back to the Future
+	 Favorite Activity: Experimenting with Computers
+
+
+John Smith
+	 Birth Day: February 29
+	 Highest School: UC San Diego
+	 Occupation: Professor
+	 Favorite Course: Differential Calculus
+	 Favorite Food: Beef Stew
+	 Favorite Color: Red
+	 Favorite Movie: Star Wars: The Empire Strikes Back
+	 Favorite Activity: Swimming
+
+
+Kevin Vu
+	 Birth Day: November 2
+	 Highest School: Del Norte High School
+	 Occupation: student, 
+	 Favorite Course: 
+	 Favorite Food: 
+	 Favorite Color: 
+	 Favorite Movie: 
+	 Favorite Activity: 
+
+
+Marilyn Wright
+	 Birth Day: June 12
+	 Highest School: San Beda Law School
+	 Occupation: Lawyer, Mother
+	 Favorite Course: Constitutional Law
+	 Favorite Food: Rice
+	 Favorite Color: Green
+	 Favorite Movie: 
+	 Favorite Activity: 
+
+
+Leonard Wright
+	 Birth Day: June 24
+	 Highest School: Cal State Fullerton
+	 Occupation: CPA, Father
+	 Favorite Course: Marketing
+	 Favorite Food: Salmon
+	 Favorite Color: Blue
+	 Favorite Movie: Gone with the Wind
+	 Favorite Activity: 
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I hope the comments were enough to explain everything but the recursive loop.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">recursive_loop</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb_random</span><span class="p">):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb_random</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="n">recursive_loop</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Recursive loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">recursive_loop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+<ol>
+<li>In the first line, we define our <strong>recursive_loop</strong>. Notice that the parameter is the index variable, <strong>i</strong>
+</li>
+<li>In the second line, we give an if statement. The condition is that <strong>i</strong> is less than the number of entries in the list <strong>InfoDb_random</strong>, or that not all entries in the list have been cycled through the loop. This should show you that we are cycling the entries in order of first, second, third... then last. Also remember that the order of entries of <strong>InfoDb_random</strong> are a randomized version of that of <strong>InfoDb</strong>.</li>
+<li>Makes a <strong>record</strong> variable, which is set equal to the entry in the <strong>InfoDb_random</strong> list which is associated with the value of <strong>i</strong>
+</li>
+<li>Executes the <strong>print_data</strong> function with <strong>record</strong> (or an entry in the list <strong>InfoDb_random</strong>) as the parameter</li>
+<li>The function calls itself, essentially looping back to the top of the list of associated commands, but adding 1 to the index variable.</li>
+<li>
+<strong>return</strong> stores all the output in the main script so that it can be used outside of the function</li>
+</ol>
+<p>Then notice the <strong>recursive_loop(0)</strong>. It tells the script to start with i=0, or essentially the first entry in <strong>InfoDb_random</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Making-a-Quiz-using-a-List-of-Dictionaries!">
+<a class="anchor" href="#Making-a-Quiz-using-a-List-of-Dictionaries!" aria-hidden="true"><span class="octicon octicon-link"></span></a>Making a Quiz using a List of Dictionaries!<a class="anchor-link" href="#Making-a-Quiz-using-a-List-of-Dictionaries!"> </a>
+</h1>
+<p>You probably saw my <a href="https://leonard514.github.io/FastPage/scripts/python_quiz">first python quiz</a>. All the questions were collected onto a single list, which ultimately made that list a very long line. That's messy and disorganized. Let's use a list of dictionaries to make it more organized. But first, let's define the list, or the questions and answers... and the function, question_with_response.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">random</span>
+
+<span class="c1">#Makes a new list for our quiz</span>
+<span class="n">QuizDB</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1">#Appends all the quiz questions into our list.</span>
+<span class="c1">#This quiz will be a relatively simple geography quiz.</span>
+<span class="c1">#Notice that I use the database_name.append.</span>
+
+<span class="n">QuizDB</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Country"</span><span class="p">:</span> <span class="s2">"Uruguay"</span><span class="p">,</span>
+    <span class="s2">"Continent"</span><span class="p">:</span> <span class="s2">"South America"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">QuizDB</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Country"</span><span class="p">:</span> <span class="s2">"Austria"</span><span class="p">,</span>
+    <span class="s2">"Continent"</span><span class="p">:</span> <span class="s2">"Europe"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">QuizDB</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Country"</span><span class="p">:</span> <span class="s2">"United Arab Emirates"</span><span class="p">,</span>
+    <span class="s2">"Continent"</span><span class="p">:</span> <span class="s2">"Asia"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">QuizDB</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Country"</span><span class="p">:</span> <span class="s2">"Sweden"</span><span class="p">,</span>
+    <span class="s2">"Continent"</span><span class="p">:</span> <span class="s2">"Europe"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">QuizDB</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Country"</span><span class="p">:</span> <span class="s2">"Tanzania"</span><span class="p">,</span>
+    <span class="s2">"Continent"</span><span class="p">:</span> <span class="s2">"Africa"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">QuizDB</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Country"</span><span class="p">:</span> <span class="s2">"Yemen"</span><span class="p">,</span>
+    <span class="s2">"Continent"</span><span class="p">:</span> <span class="s2">"Asia"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">QuizDB</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Country"</span><span class="p">:</span> <span class="s2">"Mauritania"</span><span class="p">,</span>
+    <span class="s2">"Continent"</span><span class="p">:</span> <span class="s2">"Africa"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">QuizDB</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Country"</span><span class="p">:</span> <span class="s2">"Peru"</span><span class="p">,</span>
+    <span class="s2">"Continent"</span><span class="p">:</span> <span class="s2">"South America"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">QuizDB</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Country"</span><span class="p">:</span> <span class="s2">"South Korea"</span><span class="p">,</span>
+    <span class="s2">"Continent"</span><span class="p">:</span> <span class="s2">"Asia"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">QuizDB</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Country"</span><span class="p">:</span> <span class="s2">"Singapore"</span><span class="p">,</span>
+    <span class="s2">"Continent"</span><span class="p">:</span> <span class="s2">"Asia"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="c1">#Define question_with_response to give question prompts and collect input</span>
+<span class="c1">#As a reminder, print() prints the parameter (in parenthesis) into terminal</span>
+<span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Question: What continent is "</span> <span class="o">+</span> <span class="n">prompt</span> <span class="o">+</span> <span class="s2">" in?"</span><span class="p">)</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">msg</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Then I'll make the quiz.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">QuizDB</span><span class="p">)</span>
+
+<span class="c1">#Define variables</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1">#I'll take some personal liberties with the initial prompt</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Hi! Welcome to my Python Geography quiz! Please capitalize the names of continents."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"You got 15 nanoseconds to prepare for this quiz. Say yes!"</span><span class="p">)</span>
+
+<span class="c1">#Disables input and output for 15 seconds.</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="c1">#Cycles through the quiz questions</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">QuizDB</span><span class="p">:</span>
+    <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">"Country"</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="n">i</span><span class="p">[</span><span class="s2">"Continent"</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is correct!"</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is incorrect! The answer was"</span><span class="p">,</span> <span class="n">i</span><span class="p">[</span><span class="s2">"Continent"</span><span class="p">])</span>
+        
+<span class="c1">#Calculates percent correct answers.</span>
+<span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="n">questions</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> 
+    
+<span class="c1">#Prints accuracy of answers to terminal</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"You scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'%!'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hi! Welcome to my Python Geography quiz! Please capitalize the names of continents.
+You got 15 nanoseconds to prepare for this quiz. Say yes!
+Question: What continent is Singapore in?
+Asia
+Asia is correct!
+Question: What continent is Sweden in?
+Europe
+Europe is correct!
+Question: What continent is Yemen in?
+Asia
+Asia is correct!
+Question: What continent is South Korea in?
+Asia
+Asia is correct!
+Question: What continent is Uruguay in?
+South America
+South America is correct!
+Question: What continent is Mauritania in?
+Africa
+Africa is correct!
+Question: What continent is United Arab Emirates in?
+Asia
+Asia is correct!
+Question: What continent is Austria in?
+Europe
+Europe is correct!
+Question: What continent is Peru in?
+South America
+South America is correct!
+Question: What continent is Tanzania in?
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I think the code that needs the most explaining here is the for loop. I'll bring it down here.</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">QuizDB</span><span class="p">:</span>
+    <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">"Country"</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="n">i</span><span class="p">[</span><span class="s2">"Continent"</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is correct!"</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is incorrect! The answer was"</span><span class="p">,</span> <span class="n">i</span><span class="p">[</span><span class="s2">"Continent"</span><span class="p">])</span>
+</pre></div>
+<ol>
+<li>Line 1: For each entry in the list of dictionaries QuizDB, the associated commands will be executed</li>
+<li>Make a <strong>rsp</strong> variable. It is set equal to the input garnered from the <strong>question_with_response</strong> function. Notice the parameter of <strong>question_with_response</strong> is <strong>i["country"]</strong>. <strong>i</strong> is the index variable. For the current associated item in the list, the string associated with "Country" will be used as the parameter to <strong>question_with_response</strong>
+</li>
+<li>An if statement with the condition that the input collected is equal to the string associated with "Continent" for that list. The string associated with "Continent" in this case is the correct answer, or the continent that the associated country is in.</li>
+<li>If the condition is satisfied, then the fact that the answer was correct is outputted to the terminal and</li>
+<li>The variable <strong>correct</strong> (which is the number of questions answered correctly) is increased by one</li>
+<li>An else statement (if the if condition is not satisfied, associated commands are executed)</li>
+<li>prints to the terminal that the question was answered incorrectly, and also shows the correct answer.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Append-to-a-list-with-user-input">
+<a class="anchor" href="#Append-to-a-list-with-user-input" aria-hidden="true"><span class="octicon octicon-link"></span></a>Append to a list with user input<a class="anchor-link" href="#Append-to-a-list-with-user-input"> </a>
+</h1>
+<p>There is one more thing I want to do for hacks, and that is appending to a list with user input. From my experience, collecting variables will be very helpful. I will be appending to the QuizDB list to make things simpler. Let me demonstrate below:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">append_input</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Do you want to add a new country/continent question? [y/n]"</span><span class="p">)</span>
+    <span class="n">yesno</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="c1">#Starts appending sequence</span>
+    <span class="k">if</span> <span class="n">yesno</span> <span class="o">==</span> <span class="s2">"y"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">"What country do you want to append?"</span><span class="p">)</span>
+        <span class="n">country_app</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"What continent do you want to append?"</span><span class="p">)</span>
+        <span class="n">continent_app</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+        <span class="n">QuizDB</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s2">"Country"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">country_app</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+            <span class="s2">"Continent"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">continent_app</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+        <span class="p">})</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="n">append_input</span><span class="p">()</span>
+<span class="c1">#exits function if n is given</span>
+    <span class="k">elif</span> <span class="n">yesno</span> <span class="o">==</span> <span class="s2">"n"</span><span class="p">:</span>
+        <span class="k">return</span>
+<span class="c1">#Prevents issues if initial input was something other than y or n.</span>
+<span class="c1">#Re-executes the first command</span>
+    <span class="k">else</span><span class="p">:</span> <span class="n">append_input</span><span class="p">()</span>
+        
+<span class="n">append_input</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Do you want to add a new country/continent question? [y/n]
+a
+Do you want to add a new country/continent question? [y/n]
+s
+Do you want to add a new country/continent question? [y/n]
+y
+
+What country do you want to append?
+United States
+
+What continent do you want to append?
+North America
+
+Do you want to add a new country/continent question? [y/n]
+y
+
+What country do you want to append?
+Japan
+
+What continent do you want to append?
+Asia
+
+Do you want to add a new country/continent question? [y/n]
+y
+
+What country do you want to append?
+Ukraine
+
+What continent do you want to append?
+Europe
+
+Do you want to add a new country/continent question? [y/n]
+y
+
+What country do you want to append?
+Mexico
+
+What continent do you want to append?
+Europe
+
+Do you want to add a new country/continent question? [y/n]
+y
+
+What country do you want to append?
+Atlantis
+
+What continent do you want to append?
+Atlantic Ocean
+
+Do you want to add a new country/continent question? [y/n]
+y
+
+What country do you want to append?
+Tennessee
+
+What continent do you want to append?
+United States
+
+Do you want to add a new country/continent question? [y/n]
+n
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notice that you can input anything into the list, including fictitious places or incorrect information. This python code does not know fact from fiction. It will just store whatever you give it. That's how it works.</p>
+<p>Now, I didn't put comments on the part where the if statement is satisfied. I did that since that would lead to a bit of confusion with what the associated command are, etc. I'll paste the commands associated with the if condition right here</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">yesno</span> <span class="o">==</span> <span class="s2">"y"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">"What country do you want to append?"</span><span class="p">)</span>
+        <span class="n">country_app</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"What continent do you want to append?"</span><span class="p">)</span>
+        <span class="n">continent_app</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+        <span class="n">QuizDB</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s2">"Country"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">country_app</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+            <span class="s2">"Continent"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">continent_app</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+        <span class="p">})</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="n">append_input</span><span class="p">()</span>
+</pre></div>
+<ul>
+<li>Line 1 is the if statement itself. If a user wants to append questions, he/she would have given a y response.</li>
+<li>The question of which country to input is then given in the terminal.</li>
+<li>Line 4 collects this input and stores it as <strong>country_app</strong>. app is the first three letters of "append."</li>
+<li>The notice to input the continent is printed into the terminal. This input is collected as <strong>continent_app</strong>
+</li>
+<li>The inputted information is appended into QuizDB.</li>
+<li>Notice how Country is associated with f"{country_app}". The f, or <strong>format</strong> command is essentially used to bypass all of those issues with quotation marks. This and the curly brackets allows the value of the input (instead of country_app as a string) to be stored into the dictionary. A similar process is used for continents.</li>
+<li>Finally, the function append_input() calls itself again to give the user a chance to input another country/continent set.</li>
+</ul>
+<p>Now, to test to see that the information is actually appended, we will take the quiz... again! And see me "mess up" on all the questions I intentionally misconfigured.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">QuizDB</span><span class="p">)</span>
+
+<span class="c1">#Define variables</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1">#Cycles through the quiz questions</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">QuizDB</span><span class="p">:</span>
+    <span class="n">questions</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">"Country"</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="n">i</span><span class="p">[</span><span class="s2">"Continent"</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is correct!"</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is incorrect! The answer was"</span><span class="p">,</span> <span class="n">i</span><span class="p">[</span><span class="s2">"Continent"</span><span class="p">])</span>
+        
+<span class="c1">#Calculates percent correct answers.</span>
+<span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="n">questions</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> 
+    
+<span class="c1">#Prints accuracy of answers to terminal</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"You scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'%!'</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Question: What continent is Tennessee in?
+North America
+North America is incorrect! The answer was United States
+Question: What continent is United States in?
+North America
+North America is correct!
+Question: What continent is Peru in?
+South America
+South America is correct!
+Question: What continent is South Korea in?
+Asia
+Asia is correct!
+Question: What continent is Mexico in?
+North America
+North America is incorrect! The answer was Europe
+Question: What continent is Yemen in?
+Asia
+Asia is correct!
+Question: What continent is Atlantis in?
+what
+what is incorrect! The answer was Atlantic Ocean
+Question: What continent is Singapore in?
+Asia
+Asia is correct!
+Question: What continent is Japan in?
+Asia
+Asia is correct!
+Question: What continent is Tanzania in?
+Africa
+Africa is correct!
+Question: What continent is United Arab Emirates in?
+Asia
+Asia is correct!
+Question: What continent is Sweden in?
+Europe
+Europe is correct!
+Question: What continent is Mauritania in?
+Africa
+Africa is correct!
+Question: What continent is Ukraine in?
+Europe
+Europe is correct!
+Question: What continent is Austria in?
+Europe
+Europe is correct!
+Question: What continent is Uruguay in?
+South America
+South America is correct!
+You scored 81.25%!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There was one notable change I made. I initially set the <strong>questions</strong> variable to 0, and automated the increase of the question variable. See the for loop:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">QuizDB</span><span class="p">:</span>
+    <span class="n">questions</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">"Country"</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="n">i</span><span class="p">[</span><span class="s2">"Continent"</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is correct!"</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is incorrect! The answer was"</span><span class="p">,</span> <span class="n">i</span><span class="p">[</span><span class="s2">"Continent"</span><span class="p">])</span>
+</pre></div>
+<p>Notice that the first command associated with the for loop is increasing the value of <strong>questions</strong> by 1. That way, the number of questions is automated and I don't have to count to make a pre-set value.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Leonard514/FastPage"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/FastPage/scripts/loop_scripts" hidden></a>
+</article>
+
+
+      </section>
+
+    </div>
+  </body>
+</html>
