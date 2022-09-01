@@ -78,7 +78,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      11 min read
     
 </span></p>
 
@@ -352,9 +352,16 @@ window.onload = wrap_img;
 
 <p><img src="/FastPage/images/HTML_Change/error.png" alt="" title="CI Error in Github Actions"></p>
 
-<p>Every CI task was failing when I did the commit. The syntax error in _config.yml effectively made it impossible to update my website. It was then that I was told that I was not supposed to put <code class="language-plaintext highlighter-rouge">midnight</code>, but rather <code class="language-plaintext highlighter-rouge">pages-themes/midnight@v0.2.0</code> in the remote theme configuration of _config.yml.</p>
+<p>Every CI task was failing when I did the commit. The syntax error in _config.yml effectively made it impossible to update my website. It was then that I was told that I was not supposed to put <code class="language-plaintext highlighter-rouge">midnight</code>, but rather <code class="language-plaintext highlighter-rouge">pages-themes/midnight@v0.2.0</code> in the remote theme configuration of _config.yml. Upon adding the fix, the CI tasks worked again.</p>
 
 <p><img src="/FastPage/images/HTML_Change/theme2.png" alt="" title="Second attempt at adding Midnight theme to fastpages"></p>
+
+<p>This fix was a success. The midnight theme was applied. I have some before/after images.</p>
+
+<p><img src="/FastPage/images/HTML_Change/before.PNG" alt="" title='")
+![](/FastPage/images/HTML_Change/after.PNG "'></p>
+
+<p>There is a very noteworthy change that comes with implementation of the midnight theme: the top bar of the website is removed. This top bar includes my most crucial pages (the search page, the tags page, this page, and my about me). Removal of easy access to the tags page is a special concern, since this serves as the backbone of organization for my website. As a result, the theme change is temporary.</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
