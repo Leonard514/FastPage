@@ -110,6 +110,13 @@ Upon uploading the modified _config.yml theme to my FastPage repository, I found
 
 ![]({{site.baseurl}}/images/HTML_Change/error.png "CI Error in Github Actions")
 
-Every CI task was failing when I did the commit. The syntax error in _config.yml effectively made it impossible to update my website. It was then that I was told that I was not supposed to put `midnight`, but rather `pages-themes/midnight@v0.2.0` in the remote theme configuration of _config.yml.
+Every CI task was failing when I did the commit. The syntax error in _config.yml effectively made it impossible to update my website. It was then that I was told that I was not supposed to put `midnight`, but rather `pages-themes/midnight@v0.2.0` in the remote theme configuration of _config.yml. Upon adding the fix, the CI tasks worked again.
 
 ![]({{site.baseurl}}/images/HTML_Change/theme2.png "Second attempt at adding Midnight theme to fastpages")
+
+This fix was a success. The midnight theme was applied. I have some before/after images.
+
+![]({{site.baseurl}}/images/HTML_Change/before.PNG "")
+![]({{site.baseurl}}/images/HTML_Change/after.PNG "")
+
+There is a very noteworthy change that comes with implementation of the midnight theme: the top bar of the website is removed. This top bar includes my most crucial pages (the search page, the tags page, this page, and my about me). Removal of easy access to the tags page is a special concern, since this serves as the backbone of organization for my website. As a result, the theme change is temporary.
