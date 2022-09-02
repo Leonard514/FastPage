@@ -13,14 +13,6 @@ html, body, input, textarea, select, button {
   background-color: $dark-grey !important;
 }
 
-div {
-   color: #FFFFFF
-}
-
-.wrapper {
-    background-color: $navy-blue !important;
-}
-
 a {
     color: rgb(75, 186, 255) !important;
 }
@@ -39,7 +31,7 @@ a:hover {
 }
 
 * {
-    scrollbar-color: $dark-grey $overlay-light;
+    scrollbar-color: $navy-blue $overlay-light;
 }
 
 pre, code {
