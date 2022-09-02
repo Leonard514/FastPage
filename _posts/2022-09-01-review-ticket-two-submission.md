@@ -36,5 +36,6 @@ I also had an adventure modifying the theme of my website. For notes about that 
 | August 31 |  Attempted to make a python quiz using a new list of dictionaries QuizDB, but got stuck due to various issues within the for loop and since I was appending my question/answer pairs to InfoDb instead of QuizDB. Also tried to append to a list using input and had trouble due to quotation issues. I eventually fixed the issue using f"{var_name}", which allowed printing of any variable value inside the quotation marks. Also learned about how I inputted my website theme wrong in a lesson, and revised that. Had trouble customizing dark mode example code. |
 | September 1 | Was able to customize dark mode, making all parts of the website except the top bar navy blue (the top bar is the default dark-mode color) |
 | September 2 | Customized the text color to contrast sufficiently with the background. |
+
 ## Remaining tasks
 - Figure out how to control site status (when it's up and down) 
