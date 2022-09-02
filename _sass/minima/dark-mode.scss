@@ -7,6 +7,9 @@ $navy-blue : #181438;
 $overlay: mix($dark-grey, white, 95%);
 $overlay-light: mix($dark-grey, white, 86%);
 
+.site-header {
+    background-color: $navy-blue !important;
+}
 
 html, body, input, textarea, select, button {   
   color: $high-emph !important;
@@ -31,7 +34,7 @@ a:hover {
 }
 
 * {
-    scrollbar-color: $navy-blue $overlay-light;
+    scrollbar-color: $dark-grey $overlay-light;
 }
 
 pre, code {
