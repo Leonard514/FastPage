@@ -116,7 +116,8 @@ Every CI task was failing when I did the commit. The syntax error in _config.yml
 
 This fix was a success. The midnight theme was applied. I have some before/after images.
 
-![]({{site.baseurl}}/images/HTML_Change/before.PNG "")
+![]({{site.baseurl}}/images/HTML_Change/before.png "")
+
 ![]({{site.baseurl}}/images/HTML_Change/after.PNG "")
 
 There is a very noteworthy change that comes with implementation of the midnight theme: the top bar of the website is removed. This top bar includes my most crucial pages (the search page, the tags page, this page, and my about me). Removal of easy access to the tags page is a special concern, since this serves as the backbone of organization for my website. As a result, the theme change is temporary.
