@@ -16,7 +16,9 @@ Here is a table of my activities.
         <th>Week</th>
         <th>Activities Completed</th>
     </tr>
+    {% capture home_dict %}
     {% include_relative dict/dictionary.yml %}
+    {% endcapture %}
     {% for i in home_dict %}
     <tr>
         <td>{{ Trimester[i] }}</td>
