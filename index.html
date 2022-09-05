@@ -21,9 +21,9 @@ Here is a table of my activities.
     {% assign Description = "Installed essential programs, got this website up;Made notes page, integrated school contents, made python and bash scripts;Made loops in python (for loops, while loops, recursive loops). Made a list of dictionaries. Customized my fastpages site." | split: ';' %}
     {% for i in 0..2 %}
     <tr>
-        <td>{{Trimester[i]}}</td>
-        <td>{{Week[i]}}</td>
-        <td>{{Description[i]}}</td>
+        <td>{{ Trimester[i] }}</td>
+        <td>{{ Week[i] }}</td>
+        <td>{{ Description[i] }}</td>
     </tr>
     {% endfor %}
 </table>
