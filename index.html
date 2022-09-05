@@ -16,12 +16,12 @@ Here is a table of my activities.
         <th>Week</th>
         <th>Activities Completed</th>
     </tr>
-    {% include_relative dict/dictionary.md %}
+    {% include_relative dict/dictionary.yml %}
     {% for i in home_dict %}
     <tr>
-        <td>i[Trimester]</td>
-        <td>i[Week]</td>
-        <td>i[Description]</td>
+        <td>Trimester[i]</td>
+        <td>Week[i]</td>
+        <td>Description[i]</td>
     </tr>
     {% endfor %}
 </table>
