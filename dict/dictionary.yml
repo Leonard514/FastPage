@@ -1,4 +1,4 @@
-home_dict = [
+{"home_dict":  [
     {
         "Trimester":1,
         "Week":1,
@@ -14,4 +14,4 @@ home_dict = [
         "Week":3,
         "Description": Made loops in python (for loops, while loops, recursive loops). Made a list of dictionaries. Customized my fastpages site.
     },
-]
+]}
