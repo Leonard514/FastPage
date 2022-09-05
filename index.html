@@ -10,6 +10,23 @@ Hi! I'm Leonard Wright and I am a student at Del Norte High School. You should c
 
 Here is a table of my activities.
 
+<table>
+    <tr>
+        <th>Trimester</th>
+        <th>Week</th>
+        <th>Activities Completed</th>
+    </tr>
+    {% include_relative dict/dictionary.md %}
+    {% for i in home_dict}
+    <tr>
+        <td>i[Trimester]</td>
+        <td>i[Week]</td>
+        <td>i[Description]</td>
+    </tr>
+</table>
+
+
+
 | Trimester | Week | Activities Completed |
 |-|-|-|
 | Trimester 1 | Week 0 | Installed essential programs, got this website up |
