@@ -21,9 +21,9 @@ Here is a table of my activities.
     {% endcapture %}
     {% for i in home_dict %}
     <tr>
-        <td>{{ Trimester[i] }}</td>
-        <td>{{ Week[i] }}</td>
-        <td>{{ Description[i] }}</td>
+        <td>{{i.Trimester}}</td>
+        <td>{{i.Week}}</td>
+        <td>{{i.Description}}</td>
     </tr>
     {% endfor %}
 </table>
