@@ -153,14 +153,13 @@ I will not lie to you. This portion of the HTML hacks... with little sample code
 
 ![]({{site.baseurl}}/images/HTML_Change/liquid.png)
 
-
 Now, what's going on here? This is meant for the table on my front page `index.html`.
 
 The first few lines are a bunch of HTML tags. The funny thing is, every time you make a tag (ex: <table>), you have to close it later (</table>). So you got <table>, <tr> (which probably stands for "table row"), and <th> (likely "table heading," appropriately named since the first row is bolded and has its own background color). Then we close everything.
 
 This is where the liquid starts. It took forever for me to get this right... mostly because I tried *many* things. But so you don't have to go through all that, I'll just explain what's in front of you.
 
-In liquid, your commands must go in {% command %}. That's how it was made.
+In liquid, your commands must go in `{% command %}`. That's how it was made.
 
 `{% assign = var_name %}` makes a variable. But then you see `{% assign Trimester = "1; 1; 1" | split: ';' %}` Liquid has this funny thing about arrays, so in order to make one you have to put the whole thing in quotes, with each entry separated by a certain character... then you have to pipe it to a **split** command to tell liquid what character separates each entry (in this case, it was semicolon). I defined the other lists in a similar manner..
 
