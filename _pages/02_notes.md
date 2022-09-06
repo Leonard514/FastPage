@@ -159,11 +159,11 @@ The first few lines are a bunch of HTML tags. The funny thing is, every time you
 
 This is where the liquid starts. It took forever for me to get this right... mostly because I tried *many* things. But so you don't have to go through all that, I'll just explain what's in front of you.
 
-In liquid, your commands must go in `{% command %}`. That's how it was made.
+In liquid, your commands must go in percents and curly braces. That's how it was made. Now the reason why I'm not going to actually type out any percents and curly braces is because the website will immediately think I'm running actual code and return errors when I take my liberties. This would effectively make it impossible to update this page... so whenever you see a command assume they are in curly braces and percents.
 
-`{% assign = var_name %}` makes a variable. But then you see `{% assign Trimester = "1; 1; 1" | split: ';' %}` Liquid has this funny thing about arrays, so in order to make one you have to put the whole thing in quotes, with each entry separated by a certain character... then you have to pipe it to a **split** command to tell liquid what character separates each entry (in this case, it was semicolon). I defined the other lists in a similar manner..
+`assign = var_name` makes a variable. But then you see `assign Trimester = "1; 1; 1" | split: ';'` Liquid has this funny thing about arrays, so in order to make one you have to put the whole thing in quotes, with each entry separated by a certain character... then you have to pipe it to a **split** command to tell liquid what character separates each entry (in this case, it was semicolon). I defined the other lists in a similar manner..
 
-Next is the for loop, which as a reminder executes all associated commands for each iteration. In this case, we get `{% for i in (0..2) %}`. Conceptually, it's not much different than the python for loops. It cycles through three values (0, 1, and 2), and executes the commands for each. It's mostly the syntax that was a bother. You have to put the numbers in parenthesis, otherwise it just doesn't work. You also separate the numbers with two periods.
+Next is the for loop, which as a reminder executes all associated commands for each iteration. In this case, we get `for i in (0..2)`. Conceptually, it's not much different than the python for loops. It cycles through three values (0, 1, and 2), and executes the commands for each. It's mostly the syntax that was a bother. You have to put the numbers in parenthesis, otherwise it just doesn't work. You also separate the numbers with two periods.
 
 We'll then take a look at one of the associated commands.
 ```
@@ -172,7 +172,7 @@ We'll then take a look at one of the associated commands.
 ```
 This simply says that for each iteration (or cycle, the word I've used in my other posts so far), the item in the array associated with the value of the index variable will be used. Remember, the first item is associated with 0, the second item with 1, etc... in the Trimester list, the items are all **1**. The other commands are similar to this one, except for the **Week** and **Description** lists instead.
 
-Unlike python, we have to tell liquid where the for loop is going to end. Because apparently the tabbing scheme doesn't cut it. That's what `{% endfor %}` is for.
+Unlike python, we have to tell liquid where the for loop is going to end. Because apparently the tabbing scheme doesn't cut it. That's what `endfor` is for.
 
 
 I guess there's one last thing... I need to tell you where I got all this info from.
