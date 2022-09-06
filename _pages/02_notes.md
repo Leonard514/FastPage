@@ -151,25 +151,8 @@ Using this, I found out that the site-header and site-nav parts of the site were
 
 I will not lie to you. This portion of the HTML hacks... with little sample code... was extremely difficult for me. It took me around 6 hours, searching through many websites... many reuploads of the page in question (which was index.html)... but onto the code...
 
-```shell
-<table>
-    <tr>
-        <th>Trimester</th>
-        <th>Week</th>
-        <th>Activities Completed</th>
-    </tr>
-    {% assign Trimester = "1; 1; 1" | split: ';' %}
-    {% assign Week = "0; 1; 2" | split: ';' %}
-    {% assign Description = "Installed essential programs, got this website up; Made notes page, integrated school contents, made python and bash scripts; Made loops in python (for loops, while loops, recursive loops). Made a list of dictionaries. Customized my fastpages site." | split: ';' %}
-    {% for i in (0..2) %}
-    <tr>
-        <td>{{ Trimester[i] }}</td>
-        <td>{{ Week[i] }}</td>
-        <td>{{ Description[i] }}</td>
-    </tr>
-    {% endfor %}
-</table>
-```
+![]({{site.baseurl}}/images/HTML_Change/liquid.png)
+
 
 Now, what's going on here? This is meant for the table on my front page `index.html`.
 
