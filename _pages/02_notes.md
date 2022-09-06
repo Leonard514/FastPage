@@ -100,6 +100,8 @@ I felt it was nice that I made her happy by giving attention to everything she d
 | Procedural Abstraction | Multiple HTML fragments <html></html> used, which are put together into a website |
 
 # Week 2 HTML Notes
+
+### Importing a Theme
 Pictures say a thousand words. Therefore, I've integrated pictures to explain what's going on with my site.
 
 I attempted to integrate the midnight theme into my fastpages (at _config.yml). It looks like this:
@@ -121,3 +123,79 @@ This fix was a success. The midnight theme was applied. I have some before/after
 ![]({{site.baseurl}}/images/HTML_Change/after.PNG)
 
 There is a very noteworthy change that comes with implementation of the midnight theme: the top bar of the website is removed. This top bar includes my most crucial pages (the search page, the tags page, this page, and my about me). Removal of easy access to the tags page is a special concern, since this serves as the backbone of organization for my website. As a result, the theme change is temporary.
+
+### Modifying dark mode
+
+This one was interesting. I imported all the sample code, then had to modify it. The default code made the background of the website all-black, but something just wasn't right. The top bar had the same color as the rest of the page. Therefore, I had two goals:
+1. Make the color of the top bar different from the body
+1. Define a second color to use.
+
+Now of course the file in question was `/sass/minima/dark-mode.scss`. Now of course I had to define the second color first. I thought navy blue would fit, so I made a new color named **navy-blue**. Now the nice thing is that if you mouse-over the square of the color, a color picker opens up. That made changing the color very easy.
+
+![]({{site.baseurl}}/images/HTML_Change/color.png)
+
+Then I had to figure out how to make the top bar a different color. Since I wanted navy-blue to be my main color, I replaced all instances in the code where the background was **dark-grey** (the default color) with **navy-blue**.
+
+![]({{site.baseurl}}/images/HTML_Change/change.png)
+
+The last thing I had to do was figure out which parts of the page constituted the top bar. A little use of inspect element on my own page helped a lot.
+
+![]({{site.baseurl}}/images/HTML_Change/header.png)
+
+Using this, I found out that the site-header and site-nav parts of the site were in the top bar. So I set their background color to **dark-grey.**
+
+![]({{site.baseurl}}/images/HTML_Change/grey.PNG)
+
+
+### Tables in Liquid
+
+I will not lie to you. This portion of the HTML hacks... with little sample code... was extremely difficult for me. It took me around 6 hours, searching through many websites... many reuploads of the page in question (which was index.html)... but onto the code...
+
+```
+<table>
+    <tr>
+        <th>Trimester</th>
+        <th>Week</th>
+        <th>Activities Completed</th>
+    </tr>
+    {% assign Trimester = "1; 1; 1" | split: ';' %}
+    {% assign Week = "0; 1; 2" | split: ';' %}
+    {% assign Description = "Installed essential programs, got this website up; Made notes page, integrated school contents, made python and bash scripts; Made loops in python (for loops, while loops, recursive loops). Made a list of dictionaries. Customized my fastpages site." | split: ';' %}
+    {% for i in (0..2) %}
+    <tr>
+        <td>{{ Trimester[i] }}</td>
+        <td>{{ Week[i] }}</td>
+        <td>{{ Description[i] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+```
+
+Now, what's going on here? This is meant for the table on my front page `index.html`.
+
+The first few lines are a bunch of HTML tags. The funny thing is, every time you make a tag (ex: <table>), you have to close it later (</table>). So you got <table>, <tr> (which probably stands for "table row"), and <th> (likely "table heading," appropriately named since the first row is bolded and has its own background color). Then we close everything.
+
+This is where the liquid starts. It took forever for me to get this right... mostly because I tried *many* things. But so you don't have to go through all that, I'll just explain what's in front of you.
+
+In liquid, your commands must go in {% command %}. That's how it was made.
+
+`{% assign = var_name %}` makes a variable. But then you see `{% assign Trimester = "1; 1; 1" | split: ';' %}` Liquid has this funny thing about arrays, so in order to make one you have to put the whole thing in quotes, with each entry separated by a certain character... then you have to pipe it to a **split** command to tell liquid what character separates each entry (in this case, it was semicolon). I defined the other lists in a similar manner..
+
+Next is the for loop, which as a reminder executes all associated commands for each iteration. In this case, we get `{% for i in (0..2) %}`. Conceptually, it's not much different than the python for loops. It cycles through three values (0, 1, and 2), and executes the commands for each. It's mostly the syntax that was a bother. You have to put the numbers in parenthesis, otherwise it just doesn't work. You also separate the numbers with two periods.
+
+We'll then take a look at one of the associated commands.
+```
+<tr>
+        <td>{{ Trimester[i] }}</td>
+```
+This simply says that for each iteration (or cycle, the word I've used in my other posts so far), the item in the array associated with the value of the index variable will be used. Remember, the first item is associated with 0, the second item with 1, etc... in the Trimester list, the items are all **1**. The other commands are similar to this one, except for the **Week** and **Description** lists instead.
+
+Unlike python, we have to tell liquid where the for loop is going to end. Because apparently the tabbing scheme doesn't cut it. That's what `{% endfor %}` is for.
+
+
+I guess there's one last thing... I need to tell you where I got all this info from.
+
+- [Assigning a variable (includes split command)](https://www.codeshopify.com/blog_posts/building-arrays-with-liquid-in-shopify)
+- [For loop syntax](https://github.com/Emaad-Mir/emaad-fastpages/blob/master/_pages/01_timebox.html)
+
+Yes, the second one is someone else's submission. I personally think looking at someone else's code is a bit of a grey area in terms of academic honesty, and straight up copying it is prohibited. But then again the syntax is a bit rigid, so there's not an easy way to make code without the syntax matching up. So to make myself feel a bit better about using someone's submission as a reference, you can see there are a few differences (this student referenced some variables placed in _config.yml... which I don't see as a suitable place to store variables, so I placed them in the related code instead). Gotta give credit where credit is due. Because honestly, this is all the example code I got. Mr. Yeung told me the more important part of the class is understanding how the code works, so if you think the explanation above was fair, then I guess I might be doing this right.
