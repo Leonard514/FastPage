@@ -151,7 +151,7 @@ Using this, I found out that the site-header and site-nav parts of the site were
 
 I will not lie to you. This portion of the HTML hacks... with little sample code... was extremely difficult for me. It took me around 6 hours, searching through many websites... many reuploads of the page in question (which was index.html)... but onto the code...
 
-```
+```shell
 <table>
     <tr>
         <th>Trimester</th>
