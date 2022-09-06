@@ -141,7 +141,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      16 min read
     
 </span></p>
 
@@ -183,7 +183,13 @@ document.onkeydown = (e) => {
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#week-2-python-terms-notes">Week 2 Python Terms Notes</a></li>
-<li class="toc-entry toc-h1"><a href="#week-2-html-notes">Week 2 HTML Notes</a></li>
+<li class="toc-entry toc-h1"><a href="#week-2-html-notes">Week 2 HTML Notes</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#importing-a-theme">Importing a Theme</a></li>
+<li class="toc-entry toc-h3"><a href="#modifying-dark-mode">Modifying dark mode</a></li>
+<li class="toc-entry toc-h3"><a href="#tables-in-liquid">Tables in Liquid</a></li>
+</ul>
+</li>
 </ul><h1 id="week-1-focus-and-habits-hack">
 <a class="anchor" href="#week-1-focus-and-habits-hack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Week 1 Focus and Habits Hack</h1>
 
@@ -405,6 +411,9 @@ document.onkeydown = (e) => {
 
 <h1 id="week-2-html-notes">
 <a class="anchor" href="#week-2-html-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Week 2 HTML Notes</h1>
+
+<h3 id="importing-a-theme">
+<a class="anchor" href="#importing-a-theme" aria-hidden="true"><span class="octicon octicon-link"></span></a>Importing a Theme</h3>
 <p>Pictures say a thousand words. Therefore, I’ve integrated pictures to explain what’s going on with my site.</p>
 
 <p>I attempted to integrate the midnight theme into my fastpages (at _config.yml). It looks like this:</p>
@@ -426,6 +435,67 @@ document.onkeydown = (e) => {
 <p><img src="/FastPage/images/HTML_Change/after.PNG" alt=""></p>
 
 <p>There is a very noteworthy change that comes with implementation of the midnight theme: the top bar of the website is removed. This top bar includes my most crucial pages (the search page, the tags page, this page, and my about me). Removal of easy access to the tags page is a special concern, since this serves as the backbone of organization for my website. As a result, the theme change is temporary.</p>
+
+<h3 id="modifying-dark-mode">
+<a class="anchor" href="#modifying-dark-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modifying dark mode</h3>
+
+<p>This one was interesting. I imported all the sample code, then had to modify it. The default code made the background of the website all-black, but something just wasn’t right. The top bar had the same color as the rest of the page. Therefore, I had two goals:</p>
+<ol>
+  <li>Make the color of the top bar different from the body</li>
+  <li>Define a second color to use.</li>
+</ol>
+
+<p>Now of course the file in question was <code class="language-plaintext highlighter-rouge">/sass/minima/dark-mode.scss</code>. Now of course I had to define the second color first. I thought navy blue would fit, so I made a new color named <strong>navy-blue</strong>. Now the nice thing is that if you mouse-over the square of the color, a color picker opens up. That made changing the color very easy.</p>
+
+<p><img src="/FastPage/images/HTML_Change/color.png" alt=""></p>
+
+<p>Then I had to figure out how to make the top bar a different color. Since I wanted navy-blue to be my main color, I replaced all instances in the code where the background was <strong>dark-grey</strong> (the default color) with <strong>navy-blue</strong>.</p>
+
+<p><img src="/FastPage/images/HTML_Change/change.png" alt=""></p>
+
+<p>The last thing I had to do was figure out which parts of the page constituted the top bar. A little use of inspect element on my own page helped a lot.</p>
+
+<p><img src="/FastPage/images/HTML_Change/header.png" alt=""></p>
+
+<p>Using this, I found out that the site-header and site-nav parts of the site were in the top bar. So I set their background color to <strong>dark-grey.</strong></p>
+
+<p><img src="/FastPage/images/HTML_Change/grey.PNG" alt=""></p>
+
+<h3 id="tables-in-liquid">
+<a class="anchor" href="#tables-in-liquid" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tables in Liquid</h3>
+
+<p>I will not lie to you. This portion of the HTML hacks… with little sample code… was extremely difficult for me. It took me around 6 hours, searching through many websites… many reuploads of the page in question (which was index.html)… but onto the code…</p>
+
+<p><img src="/FastPage/images/HTML_Change/liquid.png" alt=""></p>
+
+<p>Now, what’s going on here? This is meant for the table on my front page <code class="language-plaintext highlighter-rouge">index.html</code>.</p>
+
+<p>The first few lines are a bunch of HTML tags. The funny thing is, every time you make a tag (ex: &lt;table&gt;), you have to close it later (&lt;/table&gt;). So you got &lt;table&gt;, &lt;tr&gt; (which probably stands for “table row”), and &lt;th&gt; (likely “table heading,” appropriately named since the first row is bolded and has its own background color). Then we close everything.</p>
+
+<p>This is where the liquid starts. It took forever for me to get this right… mostly because I tried <em>many</em> things. But so you don’t have to go through all that, I’ll just explain what’s in front of you.</p>
+
+<p>In liquid, your commands must go in percents and curly braces. That’s how it was made. Now the reason why I’m not going to actually type out any percents and curly braces is because the website will immediately think I’m running actual code and return errors when I take my liberties. This would effectively make it impossible to update this page… so whenever you see a command assume they are in curly braces and percents.</p>
+
+<p><code class="language-plaintext highlighter-rouge">assign = var_name</code> makes a variable. But then you see <code class="language-plaintext highlighter-rouge">assign Trimester = "1; 1; 1" | split: ';'</code> Liquid has this funny thing about arrays, so in order to make one you have to put the whole thing in quotes, with each entry separated by a certain character… then you have to pipe it to a <strong>split</strong> command to tell liquid what character separates each entry (in this case, it was semicolon). I defined the other lists in a similar manner..</p>
+
+<p>Next is the for loop, which as a reminder executes all associated commands for each iteration. In this case, we get <code class="language-plaintext highlighter-rouge">for i in (0..2)</code>. Conceptually, it’s not much different than the python for loops. It cycles through three values (0, 1, and 2), and executes the commands for each. It’s mostly the syntax that was a bother. You have to put the numbers in parenthesis, otherwise it just doesn’t work. You also separate the numbers with two periods.</p>
+
+<p>We’ll then take a look at one of the associated commands.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;
+</code></pre></div></div>
+<p>This simply says that for each iteration (or cycle, the word I’ve used in my other posts so far), the item in the array associated with the value of the index variable will be used. Remember, the first item is associated with 0, the second item with 1, etc… in the Trimester list, the items are all <strong>1</strong>. The other commands are similar to this one, except for the <strong>Week</strong> and <strong>Description</strong> lists instead.</p>
+
+<p>Unlike python, we have to tell liquid where the for loop is going to end. Because apparently the tabbing scheme doesn’t cut it. That’s what <code class="language-plaintext highlighter-rouge">endfor</code> is for.</p>
+
+<p>I guess there’s one last thing… I need to tell you where I got all this info from.</p>
+
+<ul>
+  <li><a href="https://www.codeshopify.com/blog_posts/building-arrays-with-liquid-in-shopify">Assigning a variable (includes split command)</a></li>
+  <li><a href="https://github.com/Emaad-Mir/emaad-fastpages/blob/master/_pages/01_timebox.html">For loop syntax</a></li>
+</ul>
+
+<p>Yes, the second one is someone else’s submission. I personally think looking at someone else’s code is a bit of a grey area in terms of academic honesty, and straight up copying it is prohibited. But then again the syntax is a bit rigid, so there’s not an easy way to make code without the syntax matching up. So to make myself feel a bit better about using someone’s submission as a reference, you can see there are a few differences (this student referenced some variables placed in _config.yml… which I don’t see as a suitable place to store variables, so I placed them in the related code instead). Gotta give credit where credit is due. Because honestly, this is all the example code I got. Mr. Yeung told me the more important part of the class is understanding how the code works, so if you think the explanation above was fair, then I guess I might be doing this right.</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
