@@ -33,6 +33,7 @@ Below I describe the procedures that I and Abdullah took to make the quiz. We be
 
 <details>
 <summary>Full Code</summary>
+```
 var correct = 0;
 onEvent("StartButton", "click", function( ) {
   setScreen("Question1");
@@ -83,6 +84,7 @@ console.log(correct);
 onEvent("Results", "mouseover", function( ) {
   setText("scorereport", "Congratulations!!! You got " + ((correct + "/3") + " correct!!!"));
 });
+```
 </details>
 
 
