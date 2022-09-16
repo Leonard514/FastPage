@@ -30,6 +30,7 @@ Below I describe the procedures that I and Abdullah took to make the quiz. We be
 
 ## Coding
 
+I should probably [link](https://studio.code.org/projects/applab/n7kKec8z4iNy3PKAgzi1qygEPeoeeARpkLgAGYgRVlg) the project first.
 
 <details>
 <summary>Full Code</summary>
