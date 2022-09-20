@@ -6,10 +6,9 @@ categories: [markdown, Comp Sci]
 title: Week 3 Create Performance Task
 permalink: /notes/performance_plan
 comments: true
-hide: true
 ---
 
-# The Project Idea:
+# The Project Idea
 
 My sister and I had this idea a while back of creating an app to monitor mental health. We didn't make any progress, but the concept was fair. So I'll have a go at it with the Create Performance Task. Here are a few ideas. 
 

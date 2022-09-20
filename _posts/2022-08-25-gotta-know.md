@@ -5,7 +5,6 @@ description: Very basic knowledge here... stuff you need to know. If you want th
 categories: [Calc BC]
 title: BC Gotta Knows!
 permalink: /classes/BC/gotta_know
-hide: true
 comments: true
 ---
 
