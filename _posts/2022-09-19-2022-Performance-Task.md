@@ -4,7 +4,7 @@ layout: post
 description: Includes planning of the Create Performance Task
 categories: [markdown, Comp Sci]
 title: Week 3 Create Performance Task
-permalink: /notes/javascript_quiz
+permalink: /notes/performance_plan
 comments: true
 ---
 
