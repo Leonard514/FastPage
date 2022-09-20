@@ -6,6 +6,7 @@ categories: [markdown, Comp Sci]
 title: Week 3 Javascript Quiz Blog
 permalink: /notes/javascript_quiz
 comments: true
+hide: true
 ---
 
 Below I describe the procedures that I and Abdullah took to make the quiz. We began with planning a topic, then made the actual questions. The questions are given with correct answers in **bold**. 

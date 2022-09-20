@@ -6,6 +6,7 @@ categories: [markdown, Comp Sci]
 title: Week 3 Create Performance Task
 permalink: /notes/performance_plan
 comments: true
+hide: true
 ---
 
 # The Project Idea:
