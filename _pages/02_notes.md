@@ -280,3 +280,7 @@ Consulting with other people is important for diverse perspectives
 - Prevents self-absorption into programming from getting in the way of seeing issues with programs
 
 Use online tools
+
+##### Proof I did the MCQ
+
+![]({{site.baseurl}}/images/notes/CB-9-21.PNG)
