@@ -55,6 +55,19 @@ My mother smiled and hugged me, and she asked why I was thanking her. When she a
 
 I felt it was nice that I made her happy by giving attention to everything she does to support me. Perhaps I can do this with other people as well.
 
+### NEW: Personal Goals (these are long-term)
+
+- Quit using grades as a measure of success, find some way to stop discrediting my own efforts
+- Get decent amounts of sleep while being able to do all my schoolwork
+- Be more open to talking with trusted individuals when seized with a major panic attack
+- Learn how to better work in groups
+- Remove the assumption that I can only trust myself to take responsibility
+
+### Gratitude List
+
+- I thank my mother for patiently helping me improve for the past 17.75 years and helping me through all of my problems
+- I thank Mr. Yeung for helping me with advice in working with groups in this class
+
 
 # Week 1 Python Vocab
 

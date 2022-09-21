@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Includes python, bash, web development, and personal development
-categories: [markdown, Comp Sci]
+categories: [markdown, Comp Sci, Review Tickets]
 title: Week 1 Review Ticket
 permalink: /submissions/Week_1_Submission
 comments: true

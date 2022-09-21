@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Includes links/images for all parts
-categories: [markdown, Comp Sci]
+categories: [markdown, Comp Sci, Review Tickets]
 title: Week 0 Review Ticket
 permalink: /submissions/Week_0_Submission
 comments: true

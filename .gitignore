@@ -12,3 +12,13 @@ _notebooks/.ipynb_checkpoints
 .netlify
 .tweet-cache
 __pycache__
+# Ignore from local build
+settings.ini
+Gemfile.lock
+images/copied_from_nb/
+_posts/2022-08-25-Op-Ed-Rubric.md
+_posts/2022-08-25-Writing-an-Op-Ed-Piece.md
+_posts/2022-08-22-print_test.md
+_posts/2022-08-24-python_quiz.md
+_posts/2022-08-25-bash_test.md
+_posts/2022-08-30-Lists_dictionaries.md

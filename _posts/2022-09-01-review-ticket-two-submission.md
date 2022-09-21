@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Includes python for loops and web development notes
-categories: [markdown, Comp Sci]
+categories: [markdown, Comp Sci, Review Tickets]
 title: Week 2 Review Ticket
 permalink: /submissions/Week_2_Submission
 comments: true
