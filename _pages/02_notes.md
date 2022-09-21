@@ -194,3 +194,89 @@ I guess there's one last thing... I need to tell you where I got all this info f
 - [For loop syntax](https://github.com/Emaad-Mir/emaad-fastpages/blob/master/_pages/01_timebox.html)
 
 Yes, the second one is someone else's submission. I personally think looking at someone else's code is a bit of a grey area in terms of academic honesty, and straight up copying it is prohibited. But then again the syntax is a bit rigid, so there's not an easy way to make code without the syntax matching up. So to make myself feel a bit better about using someone's submission as a reference, you can see there are a few differences (this student referenced some variables placed in _config.yml... which I don't see as a suitable place to store variables, so I placed them in the related code instead). Gotta give credit where credit is due. Because honestly, this is all the example code I got. Mr. Yeung told me the more important part of the class is understanding how the code works, so if you think the explanation above was fair, then I guess I might be doing this right.
+
+# Week 4 Collaboration Notes
+
+### Video 1: Why collaborate?
+
+##### Facebook
+Facebook Visit: a coworker's son got the instructor in, and there are many meeting rooms and space to get together and collaborate.
+
+Facebook owns social media entities, which requires collaboration
+
+Main Point: Collaboration --> computing innovation reflecting diversity of talents of designers
+
+- Includes program; can be physical (self-driving car), non-physical (computer programs) or concept
+
+##### Video Games
+
+Super Mario Brothers (2 and 3)
+
+SMB2 was a reskin of SMB. 
+
+Kensuke Tanabe made a vertical game with a collaborative element to the level design. Shigeru Miyamoto wanted horizontal game. They had a conflict.
+
+- SMB 2 had differing versions, which was either vertical or horizontal (but not both simultaneously)
+
+- SMB 3 had both vertical and horizontal designs
+
+Main point: Collaboration with diverse perspectives avoids bias
+
+##### Practice
+
+What are the benefits of collaborating with peers?
+
+Answer: Effective collaboration produces computing innovations reflecting diversity of talents/perspectives of the designers
+
+##### Key takeaways
+
+Collaboration skills
+- Communication
+- Building a consensus
+- Negotiating
+- Resolving Conflicts
+
+### Video 2: How to collaborate
+
+##### Pair Programming
+
+- One (the driver) writes the program, the other (the observer) reviews each line of code as it's typed
+- The observer is not a back-seat programmer who complains over every minor error of the driver. The observer just provides a different perspective
+- It is recommended for people to switch roles
+
+##### Think-Pair-Share
+
+1. Student attempts problem individually
+1. Student shares ideas with a partner
+1. Students share results with class (or with a larger group)
+
+Analogy: Play charades
+- Interpreting other player's communications can be difficult, it may eventually make sense
+- Working independently is similar to playing charades
+
+##### Leaving Comments in the Code
+
+1. Allows to communicate to other people what the code does
+1. Makes sure you don't forget what your code does
+1. Allows to cite code segments from other sources
+1. Cite media (audio/video) used from other sources
+1. Mark which partner did what code
+1. Clarify how the code works
+
+If comments are not possible in the programming language, use a PDF or word editor
+
+##### Tools for Collaboration
+
+- repl.it (multiplayer)
+- GitHub (repositories)
+- Shared documents/folders (Google Drive, media, etc.)
+- Asking friends/family/teachers to test programs, get feedback
+
+DISCLAIMER: Only collaborate with a partner for the Create Performance Task (not anyone else)
+
+##### Key Takeaways
+
+Consulting with other people is important for diverse perspectives
+- Prevents self-absorption into programming from getting in the way of seeing issues with programs
+
+Use online tools
