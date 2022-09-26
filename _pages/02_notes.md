@@ -284,3 +284,189 @@ Use online tools
 ##### Proof I did the MCQ
 
 ![]({{site.baseurl}}/images/notes/CB-9-21.PNG)
+
+
+# Week 5 JavaScript Notes
+
+there are "number" instead of integer
+
+There are still functions and such, though they are defined with **function** instead
+
+JSON (JavaScript Object Notation) allows for transmission of data (similar to Python lists and dictionaries) between files. A function can be used to put input into the data. The JSON makes the data a *string*
+
+```
+function Person(name, ghID, classOf) {
+    this.name = name;
+    this.ghID = ghID;
+    this.classOf = classOf;
+    this.role = "";
+}
+```
+
+Can make an array using a variable like in Python, though making an array is significantly easier:
+
+```
+var var_name = [
+        new OBJECT("Param1", "Param2", "Param3", "2022")
+]
+```
+
+Output may not always be need, so use _toHTML. Use
+
+```
+var style = (
+        :display:inline-block;" +
+        "border: 2 px solid grey;" +
+
+)
+```
+
+In for loops, the iteration variable must be defined with var
+
+```
+for (var row of compsci.classroom) {
+        associated commands
+        }
+```
+
+# Week 5 Program Purpose/Function Notes
+
+### Video 1: Purpose of Computing Innovations
+
+- Purpose of computing innovations is for problem solving/creative expression
+
+Computing Innovations Ex: apps (games, social media), devices (computers, smart phones), systems (E-mail, cloud services)
+
+##### Guiding Questions
+
+- Why do computing innovations exist
+- What problems (not negative, just an issue) are solved
+- What new things does the innovation allow us to do?
+
+##### Practice: Social media
+
+- Social media exists to allow for communication between close and distant individuals, both in terms of geography and in terms of relationships. This also provides easy access to a history of social activities
+- Social media addresses the issue of the speed and distance of communication between individuals. Specifically, communication is faster and can happen from longer geographical distance.
+- Social media allows for a more public form of communication where information spreads quickly. It also allows for approval/disapproval of opinions in a public space.
+
+##### Practice: E-commerce
+
+- E-commerce exists to allow for purchase of items which are not available over a short distance (specifically in a nearby retail store). This prevents the purchaser from having to travel long distances to pick up an item, which in term saves time and money.
+- This also allows ease of finding the best price for a certain item
+- E-commerce also helps with organizing products into a website, allowing customers to purchase products more quickly than in a physical store.
+
+##### Practice: Digital Assistant Device
+
+- Allows for easy web searches using voice rather than having to open up a web browser and type in a search query
+- Allows for easy automation of certain tasks at home without using hands; allows for multitasking, especially in situations like driving (ex: calling people while driving)
+
+### Video 2: Input/Output
+
+- events provide input to a program, and events can be triggered by things like key presses
+- Input and output in variety of forms (text, audio, images, etc.)
+
+Programs accept many forms of input
+1. Tactile (touch using keyboard, touchpads, mice)
+1. audio (voice-controlled for digital assistant devices)
+1. Visual
+1. text (including numerical values)
+
+##### Types of input devices accept
+- Smart phones have touch screens, buttons, voice-activated siri assistant, QR code scan/facial recognition, text
+- Laptop: mouse, trackpad, keyboards
+- Gaming Console: all the buttons, remote control
+
+##### How do programs receive input:
+- programs in an event-driven environment
+- events triggered by actions, which sends input
+- events = mouse clicks, screen taps, force touch, swipes, button clicks/press, keyboard entries, audio (voice-controlled smart device)
+
+##### What input accomplishes
+
+- Usually affects output (though if the device is powered off, input does nothing other than the power-on button)
+- Device outputs: visual, audio, tactile, text
+- ex: smartphone: visual (screen changes), audio (the sounds of the smart speaker), tactile (device vibrates); text (displayed on the screen)
+- ex: laptop: visual (what's on the screen); audio (all the sounds); text (displayed on the screen)
+- ex: gaming console: remote vibrates on certain in-game events
+
+##### How program knows what to do by events
+
+- Actions trigger events (initiated by user or a program)
+- Program jumps to code associated with event, executes it --> output/events triggered
+
+Program code not necessarily executed in order, **they are executed as called**
+
+### Video 3: Program/Code Function
+
+- Program = collection of program statements performing a specific task when executed
+- Code segment = collection of program statements, part of program
+- Program needs to collect variety of input
+- Behavior = how program functions during execution
+- Can be described broadly or by what program does and how it does it
+
+##### Programs
+
+- Program/software = collection of statements
+- Statement = 1 command
+- Group of statements = code segment
+ - Code segments executed according to rules of programing language
+ - Can be seen in text or with blocky
+
+##### Example code
+
+```
+min <-- aList[1]
+FOR EACH item IN aList
+{
+        IF (item < min)
+        {
+                min <-- item
+        }
+}
+DISPLAY ("The minimum number is in the list is")
+DISPLAY (min)
+```
+Arrow is an assignment, value of **aList[1]** assigned to min
+list groups together data
+
+FOR EACH item IN aList: looks through each number, repeat associated commands
+
+If the item is less than the minimum, then the item is the new minimum. After done for all elements, print the text
+
+This program finds the minimum value in a list
+ - Needs to work for a variety of lists
+ - Out-of-order numbers, 
+ - negative numbers, 
+ - larger numbers (especially a problem with 32-bit integer limit), 
+ - decimals (some languages separate decimals from integers)
+ - Can be put in larger program
+
+Describing code segments
+- Describe what it does so it could be re-used in a larger program
+- Include how it does what it does
+ - Explain how it functions
+ - Allows people to make it better
+
+# Week 5 Agile Methodology Notes
+
+Vocabulary:
+
+| Term | Definition |
+|-|-|
+| Standup Meeting | Weekly planning meeting where the scrum team plans and assigns tasks, sets pacing, and sets priorities |
+| Scrum Master | Essentially a team manager. Responsible for managing the Scrum Board and assigning tasks |
+| Scrum Board | An organization table in GitHub Projects containing a list of tasks to be completed, common to-dos, and completed tasks. Helps with team organization |
+| DevOps | The main student responsible for deploying finished code to AWS, making sure that the team doesn't push to GitHub at the same time, etc. |
+| Frontend Developer | Student that works with applications that users see; for example, the FastPages server or the group Flask server |
+| Backend Developer | Student working with code and server-side functions (including Python) which are not visible in a web browser |
+| Sprint | The period of time a team plans, completes, and deploys a project. Usually 2 weeks. |
+
+##### 7 Important Skills
+
+1. Creativity: Problem-Solving skills (including improvising, using skills outside the usual curriculum). Making connections/inferences
+1. Critical thinking: thinking of ways to improve projects or thinking of potential pitfalls ahead of time. Aggressive problem-solving methodology
+1. Communication: Addressing people with appropriate levels of vocabulary and taking feedback without offense
+1. Leadership: Leaders do task delegation, teach group members about important concepts, and are always the ones to resolve conflict.
+1. Teamwork: The primary component is trust in the other individuals. Also includes completing tasks while meeting checkpoints, all while exercising time management skills
+1. Research: Does include searching the Internet, but also asking for help from team members or teachers
+1. Technical understanding: Includes being knowledgeable about the software, and also being willing to learn about coding and troubleshooting.
