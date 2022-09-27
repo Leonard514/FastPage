@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A JavaScript Test! | Leonard Wright</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="A JavaScript Test!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A basic script as a test… including Hello World and an improvised random number generator" />
+<meta property="og:description" content="A basic script as a test… including Hello World and an improvised random number generator" />
+<link rel="canonical" href="https://leonard514.github.io/FastPage/scripts/js_test" />
+<meta property="og:url" content="https://leonard514.github.io/FastPage/scripts/js_test" />
+<meta property="og:site_name" content="Leonard Wright" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-27T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A JavaScript Test!" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-27T00:00:00-05:00","datePublished":"2022-09-27T00:00:00-05:00","description":"A basic script as a test… including Hello World and an improvised random number generator","headline":"A JavaScript Test!","mainEntityOfPage":{"@type":"WebPage","@id":"https://leonard514.github.io/FastPage/scripts/js_test"},"url":"https://leonard514.github.io/FastPage/scripts/js_test"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/FastPage/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://leonard514.github.io/FastPage/feed.xml" title="Leonard Wright" /><link rel="shortcut icon" type="image/x-icon" href="/FastPage/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/FastPage/">Leonard Wright</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/FastPage/search/">Search</a><a class="page-link" href="/FastPage/_pages/02_notes.html">Notes</a><a class="page-link" href="/FastPage/categories/">Tags</a><a class="page-link" href="/FastPage/about/">About Me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <script type="text/javascript">
+// If you're seeing this, I'm letting you know that you're not supposed to be here.
+// I put a bunch of commands in here limiting certain functionalities of the website.
+// So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+// Namely preventing YOU from copying my code and cheating.
+// Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+// modifying the website's code as you please.
+// And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+// Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+
+// But if you're malicious and will cheat using my code, things will get bad quickly.
+// Life with an academic dishonesty infraction is not fun.
+// And unlike some people who wouldn't have a way to defend themselves, I do.
+// It's this code. Unlike most people, I went out of my way to stop cheaters.
+// This code is evidence of my sincerity.
+// Which will make your intentions undeniable if you copy my code. SO DON'T.
+  document.oncontextmenu = new Function("return false");
+  document.oncut = new Function("return false");
+  document.oncopy = new Function("return false");
+  document.onafterprint = new Function("return false");
+  document.onbeforeprint = new Function("return false");
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('copy', (e) => e.preventDefault());
+document.addEventListener('cut', (e) => e.preventDefault());
+document.addEventListener('afterprint', (e) => e.preventDefault());
+document.addEventListener('beforeprint', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+  )
+    return false;
+};
+</script>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" onmousedown="return false" onselectstart="return false" onkeydown="return false">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">A JavaScript Test!</h1><p class="page-description">A basic script as a test... including Hello World and an improvised random number generator</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-27T00:00:00-05:00" itemprop="datePublished">
+        Sep 27, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/FastPage/categories/#scripts">scripts</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#jupyter">jupyter</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#Comp Sci">Comp Sci</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Leonard514/FastPage/tree/master/_notebooks/2022-09-27-JavaScript-Test.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/FastPage/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Leonard514/FastPage/master?filepath=_notebooks%2F2022-09-27-JavaScript-Test.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/FastPage/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Leonard514/FastPage/blob/master/_notebooks/2022-09-27-JavaScript-Test.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/FastPage/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FLeonard514%2FFastPage%2Fblob%2Fmaster%2F_notebooks%2F2022-09-27-JavaScript-Test.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/FastPage/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-09-27-JavaScript-Test.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hi! Welcome to the JavaScript Test! Some basic stuff here.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello World!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Yeah, that's basic. I need to try a Random number generator. This will actually be a test for part of my Night at the Museum concept, specifically the one where there's a 5% chance for any question to be doubled points.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// Makes a list, declares variables</span>
+<span class="kd">var</span> <span class="nx">rng</span> 
+<span class="kd">var</span> <span class="nx">number</span>
+<span class="nx">rng</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">,</span> <span class="mf">4</span><span class="p">,</span> <span class="mf">5</span><span class="p">,</span> <span class="mf">6</span><span class="p">,</span> <span class="mf">7</span><span class="p">,</span> <span class="mf">8</span><span class="p">,</span> <span class="mf">9</span><span class="p">,</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">11</span><span class="p">,</span> <span class="mf">12</span><span class="p">,</span> <span class="mf">13</span><span class="p">,</span> <span class="mf">14</span><span class="p">,</span> <span class="mf">15</span><span class="p">,</span> <span class="mf">16</span><span class="p">,</span> <span class="mf">17</span><span class="p">,</span> <span class="mf">18</span><span class="p">,</span> <span class="mf">19</span><span class="p">,</span> <span class="mf">20</span><span class="p">];</span>
+
+<span class="c1">// Fisher-Yates Shuffle, grabbed from https://bost.ocks.org/mike/shuffle/. Very useful.</span>
+<span class="c1">// In the theoretical jeopardy program, this script would be run every time</span>
+<span class="c1">// the user clicks on a question.</span>
+<span class="kd">function</span> <span class="nx">shuffle</span><span class="p">(</span><span class="nx">rng</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="nx">rng</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">i</span><span class="p">;</span>
+
+  <span class="c1">// While there remain elements to shuffle…</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">m</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// Pick a remaining element…</span>
+    <span class="nx">i</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">m</span><span class="o">--</span><span class="p">);</span>
+    <span class="c1">// And swap it with the current element.</span>
+    <span class="nx">t</span> <span class="o">=</span> <span class="nx">rng</span><span class="p">[</span><span class="nx">m</span><span class="p">];</span>
+    <span class="nx">rng</span><span class="p">[</span><span class="nx">m</span><span class="p">]</span> <span class="o">=</span> <span class="nx">rng</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="nx">rng</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">t</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">rng</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">shuffle</span><span class="p">(</span><span class="nx">rng</span><span class="p">)</span>
+
+<span class="c1">// sets number, prints values of variables to verify everything is working properly</span>
+<span class="nx">number</span> <span class="o">=</span> <span class="nx">rng</span><span class="p">[</span><span class="mf">11</span><span class="p">]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rng</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>
+
+<span class="c1">// This is the random number generator</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">number</span> <span class="o">==</span> <span class="mf">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;The number 10 was picked, in the Jeopardy this would be daily double&quot;</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;The number 10 was not picked, this is no daily double&quot;</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[ 19, 3, 13, 11, 15, 5, 14, 17, 16, 4, 1, 9, 20, 18, 10, 7, 8, 12, 2, 6 ]
+9
+The number 10 was not picked, this is no daily double
+9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A few things to talk about. First, variables must be declared in Java. This looks like</p>
+
+<pre><code>var rng
+var number
+rng = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];</code></pre>
+<p>In this case, <strong>rng</strong> and <strong>number</strong> are declared. They do not have values yet. Then, I set rng equal to a list with all numbers from 1 to 20. Then I defined a function called <strong>shuffle</strong>, with the list as the parameter using <code>function shuffle(rng) {</code>. Here's what it does:</p>
+
+<pre><code>var m = rng.length, t, i;</code></pre>
+<p>This declares variables <strong>m</strong>, <strong>t</strong>, and <strong>i</strong>, and sets variable m equal to the number of entries in the list <strong>rng</strong></p>
+
+<pre><code>while (m)</code></pre>
+<p>This executes associated commands on all items in the <strong>rng</strong></p>
+
+<pre><code>i = Math.floor(Math.random() * m--);</code></pre>
+<p>This sets i equal to a value. <strong>Math.floor</strong> rounds any number down. <strong>Math.random()</strong> picks a random number between 0 and 1. And <strong>m--</strong> decreases <strong>m</strong> by 1. Then:</p>
+
+<pre><code>t = rng[m];
+rng[m] = rng[i];
+rng[i] = t;</code></pre>
+<p>This sets t equal to the mth value of <strong>rng</strong>, then sets that equal to the ith value of <strong>rng</strong>, which is then set equal to t.</p>
+<p>That's a little unclear, so I'll state that in simpler terms. This code goes to the back entry in the list and collects its value. Then, this entry is set equal to the entry randomly selected in the while loop. Then, the entry selected in the list is set equal to the former value of the last entry. Given that <strong>m--</strong> is used for each entry, the loop effectively then repeats this process but for the second-to-last entry in the list, then the third-to-last, etc.</p>
+<p><strong>return rng;</strong> takes the value of the list outside the function, allowing it to be used in later commands.</p>
+<p><strong>number = rng[11]</strong> sets the variable <strong>number</strong> equal to the 11th entry in <strong>rng</strong>. It really doesn't matter which entry is picked since the list is randomized anyways. Then:</p>
+
+<pre><code>if (number == 10) {
+    console.log("The number 10 was picked, in the Jeopardy project the given question would be daily double")
+} else {
+    console.log("The number 10 was not picked, this is no daily double")
+    console.log(number)
+}</code></pre>
+<p>The if statement: Essentially checks if the value of the variable <strong>number</strong>, or the 11th entry in <strong>rng</strong>, is equal to 10. Any number from 1 to 20 can be checked since all those numbers are in the list. If this is satisfied, it prints that the question in a jeopardy project would be a daily double. The function of this code is essentially a random number generator so that there's a 5% chance that a condition be satisfied. In the real jeopardy project, another command would be associated with the if statement which would double the value of a variable serving as the base number of points if a question is answered correctly.</p>
+<p>If the condition is not satisfied, it prints that there will be no daily double.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+
+<script type="text/javascript">
+        // If you're seeing this, I'm letting you know that you're not supposed to be here.
+        // I put a bunch of commands in here limiting certain functionalities of the website.
+        // So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+        // Namely preventing YOU from copying my code and cheating.
+        // Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+        // modifying the website's code as you please.
+        // And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+        // Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+        
+        // But if you're malicious and will cheat using my code, things will get bad quickly.
+        // Life with an academic dishonesty infraction is not fun.
+        // And unlike some people who wouldn't have a way to defend themselves, I do.
+        // It's this code. Unlike most people, I went out of my way to stop cheaters.
+        // This code is evidence of my sincerity.
+        // Which will make your intentions undeniable if you copy my code. SO DON'T.
+          document.oncontextmenu = new Function("return false");
+          document.oncut = new Function("return false");
+          document.oncopy = new Function("return false");
+          document.onafterprint = new Function("return false");
+          document.onbeforeprint = new Function("return false");
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+        document.addEventListener('cut', (e) => e.preventDefault());
+        document.addEventListener('afterprint', (e) => e.preventDefault());
+        document.addEventListener('beforeprint', (e) => e.preventDefault());
+        
+        function ctrlShiftKey(e, keyCode) {
+          return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
+        
+        document.onkeydown = (e) => {
+          if (
+            event.keyCode === 123 ||
+            ctrlShiftKey(e, 'I') ||
+            ctrlShiftKey(e, 'J') ||
+            ctrlShiftKey(e, 'C') ||
+            (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+          )
+            return false;
+        };
+</script>
+
+<script src="https://utteranc.es/client.js"
+        repo="Leonard514/FastPage"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/FastPage/scripts/js_test" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/FastPage/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/FastPage/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/FastPage/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Fastpages blog tracking progress in AP Computer Science Principles</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/Leonard514" target="_blank" title="Leonard514"><svg class="svg-icon grey"><use xlink:href="/FastPage/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.youtube.com/channel/UCNy-EIC-T3dV6In5aIC04DQ" target="_blank" title="YouTube"><svg class="svg-icon grey"><use xlink:href="/FastPage/assets/minima-social-icons.svg#youtube"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
