@@ -470,3 +470,120 @@ Vocabulary:
 1. Teamwork: The primary component is trust in the other individuals. Also includes completing tasks while meeting checkpoints, all while exercising time management skills
 1. Research: Does include searching the Internet, but also asking for help from team members or teachers
 1. Technical understanding: Includes being knowledgeable about the software, and also being willing to learn about coding and troubleshooting.
+
+# Week 6 Program Design/Development Notes
+
+### Video 1
+
+- Use a development process
+- Design program and user interface
+
+##### Program Development
+
+- Starts with an idea about what the purpose is
+- Developers follow steps in a plan
+ - Steps can be changed based on what happens (good/bad)
+  - Ex: AI (personal assistant): developers tried to figure out what they could do
+  - Once project succeeded, newer projects tried to customize AI to users
+- Developers investigate the purpose/requirements of the program (what should be accomplished?)
+- Come up with constraints (what should not be done?)
+ - Ex: personal assistant has no screen or button, only use voice commands
+ - Ex: deadlines (time)
+ - What does the user care about?
+- Investigate using surveys, interviews, public beta/released prototype, observations, etc.
+- Developers design program through 
+ - Brainstorming (review investigation results)
+ - Storyboard what the program looks like, what the user would do
+ - Plan user experience (how user interacts, output, etc.)
+ - Make user interface
+ - Make modules (program components developed separately, then integrated)
+ - Have testing strategy
+- Developers then decide on requirements
+ - Program behavior
+ - Potential user interactions
+- Requirements outlined on specifications
+- Then prototyping, which is incremental to refine modules (small parts of the program)
+- Then lots of testing (test every step, at small and large scope)
+- Refine through testing, reflection, and feedback from other people
+
+### Video 2
+
+- Programs written by multiple groups; groups acknowledge code from other sources or developed collaboratively
+- Acknowledgements can be in the documentation
+
+- Program is rarely individual, usually developed in teams
+- Individuals/teams work on different components
+- Each member deserves credit for the work in the documentation (with the contributions of each) (ex: asking a friend for help)
+ - Also use comments for credit of code. If the language doesn't allow comments, there needs to be a workaround
+ - Allows the developers to know which people can fix what parts of the program
+ - Also useful when users find bugs in the published version of the program
+- Developers also use code written by others (ex: making a second program re-using assets from a previous program)
+ - The developers of that previous project should be given credit (similar to using a concrete detail in an essay)
+ - Code is the intellectual property of the author
+ - Documentation should include author's name and source of recycled code (similar to bibliography)
+
+ ##### Practice
+
+- Use of code segments from another person's program require's citing the author and source program.
+- Use of original code segments do not require a citation of the author
+- Use of an algorithm written by someone else requires citing the author and source program.
+- Use of code segments written in collaboration with others requires all collaborators to be cited.
+
+### Video 3: Documentation
+
+- Documentation is description of code segment/program
+- Comments = in-program documentations
+- Document throughout development to help maintain correct programs
+
+- Program Documentation purpose:
+ - Describe the program
+ - List specifications
+ - Describe functions or code segments
+ - Events with corresponding outputs
+ - Program development, how other programs interact with that program
+ - Cite authors
+- Documentation throughout development process
+ - Beginning: specifications/purpose
+ - During development: Tracking progress
+ - After development: Explain development process, cite authors
+- Improves efficiency, improve ability to test/refine program, responding to bugs
+
+How to document while programs
+ - Some languages offer commenting (developers write text that's not executed)
+  - Comments read by developer
+ - If there's no commenting, maybe copy code into txt document
+
+##### Examples
+
+- Python
+
+```python
+# this is a comment
+```
+
+- Java
+
+```
+// this is a comment
+/* this is also a comment */
+/** this is documentation comment */
+```
+
+- Javascript, C/C++, Swift similar to Java
+
+- XML/HTML; can be multi-line
+
+```
+<!--This is a comment-->
+```
+
+- Applescript/Pascal
+
+```
+(* THIS IS A COMMENT *)
+```
+
+- Block-based languages (comments can be expanded/collapsed)
+ - Scratch
+ - MIT AppInventor
+
