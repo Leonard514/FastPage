@@ -12,3 +12,5 @@ Hi! This is supplemental content for my Week 6 Review Ticket. I will first provi
 
 
 ![]({{site.baseurl}}/images/MCQ-complete.png "College Board MCQ 1.1-1.3")
+
+Second, I will present my website, which is not here. That's a live presentation.
