@@ -587,3 +587,125 @@ How to document while programs
  - Scratch
  - MIT AppInventor
 
+# Week 7 Troubleshooting Video Notes
+
+### Video 1: Identifying errors
+
+4 types
+1. Logic error: mistake in algorithm causing unexpected behavior
+1. Syntax error: rules of language not followed
+1. Run-Time: Occurs during execution, special to each program languages
+1. Overflow: Comptuer handles a number outside defined range of values
+
+Errors are common enough to be part of the process. Programmers identify the type of errors.
+
+- Logic error ex: code segment intended to display letter grade corresponding to percentage
+ - Grade represents percentage
+ - A series of an if statements (ex: if grade > 89; if grade > 79)
+  - Results in outputs of A, B, C, D for an A grade
+
+```
+grade ← INPUT("Enter a grade")
+IF (grade > 89) {
+        DISPLAY ("A")}
+IF (grade > 79) {
+        DISPLAY ("B")}
+IF (grade > 69) {
+        DISPLAY ("C")}
+IF (grade > 59) {
+        DISPLAY ("D")}
+ELSE {
+        DISPLAY ("F")}
+```
+
+
+- Syntax error: due to typos breaking rules of language
+ - Program fails to run
+ - Ex: forgetting colon/semicolon, parenthesis, curly braces, indents, quotes, defining variables
+
+```
+grade ← INPUT("Enter a grade")
+IF (grade > 89 {  # needs closed parenthesis after 89
+        DISPLAY ("A")}
+IF (grade > 79) {
+        DISPLAY ("B") #needs closed curly brace
+IF (grade > 69) {
+        DISPLAY ("C)} #needs close quotes after C
+IF (grade > 59) {
+        DISPLAY ("D")}
+ELSE #needs open curly brace
+        DISPLAY ("F")}
+```
+- Run-time error: program fails while running (crashes); "bugs"
+- Program runs initially but doesn't finish processes
+ - May result from division by zero or inappropriate data types (ex: number entered where there should be a word)
+ - Inputs which are not numerical (strings) or using the wrong data type (integer, decimal, etc.) could result in run-time error below
+
+ ```
+grade ← INPUT("Enter a grade")
+IF (grade > 89) {
+        DISPLAY ("A")}
+IF (grade > 79) {
+        DISPLAY ("B")}
+IF (grade > 69) {
+        DISPLAY ("C")}
+IF (grade > 59) {
+        DISPLAY ("D")}
+ELSE {
+        DISPLAY ("F")}
+```
+
+- Overflow error: program has to perform calculation outside of defined range
+ - Memory constraints make some numbers too large for programs to calculate
+ - Ex: 4 digit calculator, calculator can display 9999. If 100*100 is calculated, that is 10000, but there's no display room, so there's an overflow error
+
+ ##### Video 2: Correcting Errors
+
+ Effective ways to correct errors:
+  - Test Cases
+  - Hand Tracing
+  - Visualizations
+  - Debuggers
+  - Adding outputs
+
+Correcting syntax errors: Most Integrated Development Environments display info about syntax error (the line with the syntax error)
+ - ex: bad input on line 2 in main.py
+
+Correcting logic errors (program runs but not as intended)
+ - Use test cases
+ - Example code below; use test cases like numbers 95, 82, 76, 61, 58... etc.
+ - Use border cases (ex: 89.5 vs 89.4)
+
+```
+grade ← INPUT("Enter a grade")
+IF (grade > 89) {
+        DISPLAY ("A")}
+IF (grade > 79) {
+        DISPLAY ("B")}
+IF (grade > 69) {
+        DISPLAY ("C")}
+IF (grade > 59) {
+        DISPLAY ("D")}
+ELSE {
+        DISPLAY ("F")}
+```
+
+- Corrected code segment below
+
+```
+grade ← INPUT("Enter a grade")
+IF (grade ≥ 89.5) {
+        DISPLAY ("A")}
+ELSE {
+        IF (grade ≥ 79.5) {
+                DISPLAY ("B")}
+        ELSE {
+                IF (grade ≥ 69.5) {
+                       DISPLAY ("C")}
+                ELSE {
+                        IF (grade ≥ 59.5) {
+                                DISPLAY ("D")}   
+                        ELSE {
+                                DISPLAY ("F")}
+} } }
+```
