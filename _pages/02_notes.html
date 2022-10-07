@@ -141,7 +141,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      28 min read
+      33 min read
     
 </span></p>
 
@@ -257,6 +257,16 @@ document.onkeydown = (e) => {
 <li class="toc-entry toc-h3"><a href="#video-3-documentation">Video 3: Documentation</a>
 <ul>
 <li class="toc-entry toc-h5"><a href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#week-7-troubleshooting-video-notes">Week 7 Troubleshooting Video Notes</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#video-1-identifying-errors">Video 1: Identifying errors</a></li>
+<li class="toc-entry toc-h3"><a href="#video-2-correcting-errors">Video 2: Correcting Errors</a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#video-3-identifying-inputs-and-expected-outputs">Video 3: Identifying inputs and expected outputs</a></li>
 </ul>
 </li>
 </ul>
@@ -1114,6 +1124,286 @@ list groups together data</p>
   <li>MIT AppInventor</li>
 </ul>
 
+<h1 id="week-7-troubleshooting-video-notes">
+<a class="anchor" href="#week-7-troubleshooting-video-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Week 7 Troubleshooting Video Notes</h1>
+
+<h3 id="video-1-identifying-errors">
+<a class="anchor" href="#video-1-identifying-errors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Video 1: Identifying errors</h3>
+
+<p>4 types</p>
+<ol>
+  <li>Logic error: mistake in algorithm causing unexpected behavior</li>
+  <li>Syntax error: rules of language not followed</li>
+  <li>Run-Time: Occurs during execution, special to each program languages</li>
+  <li>Overflow: Comptuer handles a number outside defined range of values</li>
+</ol>
+
+<p>Errors are common enough to be part of the process. Programmers identify the type of errors.</p>
+
+<ul>
+  <li>Logic error ex: code segment intended to display letter grade corresponding to percentage</li>
+  <li>Grade represents percentage</li>
+  <li>A series of an if statements (ex: if grade &gt; 89; if grade &gt; 79)</li>
+  <li>Results in outputs of A, B, C, D for an A grade</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grade ← INPUT("Enter a grade")
+IF (grade &gt; 89) {
+        DISPLAY ("A")}
+IF (grade &gt; 79) {
+        DISPLAY ("B")}
+IF (grade &gt; 69) {
+        DISPLAY ("C")}
+IF (grade &gt; 59) {
+        DISPLAY ("D")}
+ELSE {
+        DISPLAY ("F")}
+</code></pre></div></div>
+
+<ul>
+  <li>Syntax error: due to typos breaking rules of language</li>
+  <li>Program fails to run</li>
+  <li>Ex: forgetting colon/semicolon, parenthesis, curly braces, indents, quotes, defining variables</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grade ← INPUT("Enter a grade")
+IF (grade &gt; 89 {  # needs closed parenthesis after 89
+        DISPLAY ("A")}
+IF (grade &gt; 79) {
+        DISPLAY ("B") #needs closed curly brace
+IF (grade &gt; 69) {
+        DISPLAY ("C)} #needs close quotes after C
+IF (grade &gt; 59) {
+        DISPLAY ("D")}
+ELSE #needs open curly brace
+        DISPLAY ("F")}
+</code></pre></div></div>
+<ul>
+  <li>Run-time error: program fails while running (crashes); “bugs”</li>
+  <li>Program runs initially but doesn’t finish processes</li>
+  <li>May result from division by zero or inappropriate data types (ex: number entered where there should be a word)</li>
+  <li>Inputs which are not numerical (strings) or using the wrong data type (integer, decimal, etc.) could result in run-time error below</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grade ← INPUT("Enter a grade")
+IF (grade &gt; 89) {
+        DISPLAY ("A")}
+IF (grade &gt; 79) {
+        DISPLAY ("B")}
+IF (grade &gt; 69) {
+        DISPLAY ("C")}
+IF (grade &gt; 59) {
+        DISPLAY ("D")}
+ELSE {
+        DISPLAY ("F")}
+</code></pre></div></div>
+
+<ul>
+  <li>Overflow error: program has to perform calculation outside of defined range</li>
+  <li>Memory constraints make some numbers too large for programs to calculate</li>
+  <li>Ex: 4 digit calculator, calculator can display 9999. If 100*100 is calculated, that is 10000, but there’s no display room, so there’s an overflow error</li>
+</ul>
+
+<h3 id="video-2-correcting-errors">
+<a class="anchor" href="#video-2-correcting-errors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Video 2: Correcting Errors</h3>
+
+<p>Effective ways to correct errors:</p>
+<ul>
+  <li>Test Cases</li>
+  <li>Hand Tracing</li>
+  <li>Visualizations</li>
+  <li>Debuggers</li>
+  <li>Adding outputs</li>
+</ul>
+
+<p>Correcting syntax errors: Most Integrated Development Environments display info about syntax error (the line with the syntax error)</p>
+<ul>
+  <li>ex: bad input on line 2 in main.py</li>
+</ul>
+
+<p>Correcting logic errors (program runs but not as intended)</p>
+<ul>
+  <li>Use test cases</li>
+  <li>Example code below; use test cases like numbers 95, 82, 76, 61, 58… etc.</li>
+  <li>Use border cases (ex: 89.5 vs 89.4)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grade ← INPUT("Enter a grade")
+IF (grade &gt; 89) {
+        DISPLAY ("A")}
+IF (grade &gt; 79) {
+        DISPLAY ("B")}
+IF (grade &gt; 69) {
+        DISPLAY ("C")}
+IF (grade &gt; 59) {
+        DISPLAY ("D")}
+ELSE {
+        DISPLAY ("F")}
+</code></pre></div></div>
+
+<ul>
+  <li>Corrected code segment below</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grade ← INPUT("Enter a grade")
+IF (grade ≥ 89.5) {
+        DISPLAY ("A")}
+ELSE {
+        IF (grade ≥ 79.5) {
+                DISPLAY ("B")}
+        ELSE {
+                IF (grade ≥ 69.5) {
+                       DISPLAY ("C")}
+                ELSE {
+                        IF (grade ≥ 59.5) {
+                                DISPLAY ("D")}   
+                        ELSE {
+                                DISPLAY ("F")}
+} } }
+</code></pre></div></div>
+
+<ul>
+  <li>Hand Tracing (for iteration/loops)</li>
+  <li>Write out values of variables in loop as it iterates</li>
+  <li>Useful for smaller segments; larger segments need debuggers</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list ← [2, -3, 5, 1, 10, 8]
+min ← list[1]
+index ← 1
+REPEAT (LENGTH(list) - 1) TIMES{
+        IF (list[index] &lt; list[index + 1]) {
+                min ← list[index]
+        }
+        index ← index + 1
+}
+DISPLAY(min)
+</code></pre></div></div>
+
+<p>Table copied from video</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>min</th>
+      <th>Index</th>
+      <th>list[index]</th>
+      <th>list[index + 1]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>-3</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+      <td>-3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>-3</td>
+      <td>3</td>
+      <td>5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>-3</td>
+      <td>4</td>
+      <td>1</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>5</td>
+      <td>10</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Algorithm displays list time number was less than next number in list</li>
+  <li>Test case [1, 4, 0, 3, 2] would not have found the issue</li>
+  <li>Correction: min &lt; list[index] rather than list[index] &lt; list[index + 1]</li>
+  <li>
+    <p>Repeat LENGTH(list) times</p>
+  </li>
+  <li>Extra output statements</li>
+  <li>Removed once error corrected</li>
+  <li>
+    <p>Similar to hand tracing, though computer does the work</p>
+  </li>
+  <li>IDEs can also use visualizations (graphs, images, colors; determine if program works)</li>
+  <li>Debuggers use program software, allowing the program to be tested during execution</li>
+</ul>
+
+<h5 id="video-3-identifying-inputs-and-expected-outputs">
+<a class="anchor" href="#video-3-identifying-inputs-and-expected-outputs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Video 3: Identifying inputs and expected outputs</h5>
+
+<ul>
+  <li>
+    <p>Testing involves using inputs and expecting an output. Inputs may be used at the extremes, and deviations from expectations are used to improve code</p>
+  </li>
+  <li>Planning for testing begin at the beginning of the process</li>
+  <li>
+    <p>Think about program specifications, know how program is working properly</p>
+  </li>
+  <li>Specification list behaviors/events and outputs of the program</li>
+  <li>Inputs to be defined</li>
+</ul>
+
+<p>Example</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list ← ?
+min ← list[1]
+index ← 1
+REPEAT (LENGTH(list) - 1) TIMES {
+        IF (list[index] &lt; list[index + 1]) {
+                min ← list[index]
+        }
+        index ← index + 1
+}
+DISPLAY(min)
+</code></pre></div></div>
+<p>The following lists will show the algorithm doesn’t work as intended:</p>
+
+<ul>
+  <li>[1, 2, 3, 4, 5]</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>temp ← INPUT("Enter the temperature")
+IF (temp &lt; 32) {
+        DISPLAY ("Watch out for snow!")}
+ELSE {
+        IF (temp &gt; 90) {
+                DISPLAY ("Turn on AC!")}
+        ELSE {
+                DISPLAY ("Enjoy the weather.")}
+                }
+</code></pre></div></div>
+
+<ul>
+  <li>This should output “Watch out for snow!” for 32 degrees or less</li>
+  <li>Therefore, the algorithm does not work as intended for 32 degrees</li>
+</ul>
+
+<p>Influence of errors on program development</p>
+<ul>
+  <li>Once inputs and outputs are planned, there’s testing</li>
+  <li>Results used to improve code</li>
+  <li>Programmers and users test</li>
+  <li>Then programs released, bugs found, updates released</li>
+</ul>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
