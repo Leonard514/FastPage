@@ -659,7 +659,7 @@ ELSE {
  - Memory constraints make some numbers too large for programs to calculate
  - Ex: 4 digit calculator, calculator can display 9999. If 100*100 is calculated, that is 10000, but there's no display room, so there's an overflow error
 
- ##### Video 2: Correcting Errors
+### Video 2: Correcting Errors
 
  Effective ways to correct errors:
   - Test Cases
@@ -709,3 +709,93 @@ ELSE {
                                 DISPLAY ("F")}
 } } }
 ```
+
+- Hand Tracing (for iteration/loops)
+ - Write out values of variables in loop as it iterates
+ - Useful for smaller segments; larger segments need debuggers
+
+```
+list ← [2, -3, 5, 1, 10, 8]
+min ← list[1]
+index ← 1
+REPEAT (LENGTH(list) - 1) TIMES{
+        IF (list[index] < list[index + 1]) {
+                min ← list[index]
+        }
+        index ← index + 1
+}
+DISPLAY(min)
+```
+
+Table copied from video
+
+| min | Index | list[index] | list[index + 1]
+|-|-|-|-|
+| 2 | 1 | 2 | -3 |
+| 2 | 2 | -3 | 5 |
+| -3 | 3 | 5 | 1 |
+| -3 | 4 | 1 | 10 |
+| 1 | 5 | 10 | 8 |
+| 1 | | | |
+
+- Algorithm displays list time number was less than next number in list
+ - Test case [1, 4, 0, 3, 2] would not have found the issue
+ - Correction: min < list[index] rather than list[index] < list[index + 1]
+ - Repeat LENGTH(list) times
+
+ - Extra output statements
+  - Removed once error corrected
+  - Similar to hand tracing, though computer does the work
+
+- IDEs can also use visualizations (graphs, images, colors; determine if program works)
+ - Debuggers use program software, allowing the program to be tested during execution
+
+##### Video 3: Identifying inputs and expected outputs
+
+- Testing involves using inputs and expecting an output. Inputs may be used at the extremes, and deviations from expectations are used to improve code
+
+- Planning for testing begin at the beginning of the process
+ - Think about program specifications, know how program is working properly
+
+- Specification list behaviors/events and outputs of the program
+ - Inputs to be defined
+
+Example
+
+```
+list ← ?
+min ← list[1]
+index ← 1
+REPEAT (LENGTH(list) - 1) TIMES {
+        IF (list[index] < list[index + 1]) {
+                min ← list[index]
+        }
+        index ← index + 1
+}
+DISPLAY(min)
+```
+The following lists will show the algorithm doesn't work as intended:
+
+- [1, 2, 3, 4, 5]
+
+```
+temp ← INPUT("Enter the temperature")
+IF (temp < 32) {
+        DISPLAY ("Watch out for snow!")}
+ELSE {
+        IF (temp > 90) {
+                DISPLAY ("Turn on AC!")}
+        ELSE {
+                DISPLAY ("Enjoy the weather.")}
+                }
+```
+
+- This should output "Watch out for snow!" for 32 degrees or less
+- Therefore, the algorithm does not work as intended for 32 degrees
+
+
+Influence of errors on program development
+ - Once inputs and outputs are planned, there's testing
+ - Results used to improve code
+ - Programmers and users test
+ - Then programs released, bugs found, updates released
