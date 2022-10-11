@@ -799,3 +799,68 @@ Influence of errors on program development
  - Results used to improve code
  - Programmers and users test
  - Then programs released, bugs found, updates released
+
+ # MyAP MCQ 1.4
+
+ This will be published the day of review to prevent compromise of integrity. If this is published beforehand, this is unintentional.
+
+1) `score` and `penalty` are positive integers. `penalty` is supposed to subtract from `score`, but `score` can't be negative.
+
+```
+IF(score - penalty < 0)
+{
+        score ← score - penalty
+}
+ELSE
+{
+        score ← 0
+}
+```
+What change can be made so the code segment works?
+- Switch lines 3 and 7 
+
+2) The procedure needs to return `true` if a list has only positive numbers, or else it returns `false`.
+
+```
+PROCEDURE allPositive(mylist)
+{
+        index ← 1
+        len ← LENGTH(myList)
+        REPEAT len TIMES
+        {
+                IF(myList[index] > 0)
+                {
+                        RETURN(true)
+                }
+                index ← index + 1
+        }
+        RETURN(false)
+}
+```
+
+For which contents of myList doesthe procedure not return the result as intended?
+
+- RETURN will exit the procedure with the output in the parenthesis
+- Therefore, the first time a list encounters a positive number it will exit the procedure with a code of true, regardless of if any other numbers are negative. If no positive numbers are encountered, `false` is outputted.
+- Therefore, the list [-1, 0, 1] will show the procedure does not work as intended
+
+
+3) Homework assignment has 10 questions
+
+| Number answers correct | Grade |
+|-|-|
+| At least 9 | Check Plus |
+| 7-8 | Check |
+| Less than 7 | Check minus |
+
+`numCorrect` is the number of correct answers. The code is supposed to display the grade
+![]({{site.baseurl}}/images/notes/CB-10-21.png)
+
+Which values of `numCorrect` makes the code fail to display intended grade?
+
+- Code checks if the grade is greater than 7
+- If it is, it checks if it is at least 9. If so, then **check plus** is displayed. This works as intended
+- If not, **check minus** is displayed. According to this code, 8 will display **check minus** (it should be **check**)
+- Any grades of 7 or less get **check**. Therefore, grades of 0-6 get **check** even though they should get **check minus**
+
+- Available MCQ answers: 8, 6
