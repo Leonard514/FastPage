@@ -141,7 +141,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      33 min read
+      35 min read
     
 </span></p>
 
@@ -1403,6 +1403,92 @@ ELSE {
   <li>Results used to improve code</li>
   <li>Programmers and users test</li>
   <li>Then programs released, bugs found, updates released</li>
+</ul>
+
+<p># MyAP MCQ 1.4</p>
+
+<p>This will be published the day of review to prevent compromise of integrity. If this is published beforehand, this is unintentional.</p>
+
+<p>1) <code class="language-plaintext highlighter-rouge">score</code> and <code class="language-plaintext highlighter-rouge">penalty</code> are positive integers. <code class="language-plaintext highlighter-rouge">penalty</code> is supposed to subtract from <code class="language-plaintext highlighter-rouge">score</code>, but <code class="language-plaintext highlighter-rouge">score</code> can’t be negative.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IF(score - penalty &lt; 0)
+{
+        score ← score - penalty
+}
+ELSE
+{
+        score ← 0
+}
+</code></pre></div></div>
+<p>What change can be made so the code segment works?</p>
+<ul>
+  <li>Switch lines 3 and 7</li>
+</ul>
+
+<p>2) The procedure needs to return <code class="language-plaintext highlighter-rouge">true</code> if a list has only positive numbers, or else it returns <code class="language-plaintext highlighter-rouge">false</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PROCEDURE allPositive(mylist)
+{
+        index ← 1
+        len ← LENGTH(myList)
+        REPEAT len TIMES
+        {
+                IF(myList[index] &gt; 0)
+                {
+                        RETURN(true)
+                }
+                index ← index + 1
+        }
+        RETURN(false)
+}
+</code></pre></div></div>
+
+<p>For which contents of myList doesthe procedure not return the result as intended?</p>
+
+<ul>
+  <li>RETURN will exit the procedure with the output in the parenthesis</li>
+  <li>Therefore, the first time a list encounters a positive number it will exit the procedure with a code of true, regardless of if any other numbers are negative. If no positive numbers are encountered, <code class="language-plaintext highlighter-rouge">false</code> is outputted.</li>
+  <li>Therefore, the list [-1, 0, 1] will show the procedure does not work as intended</li>
+</ul>
+
+<p>3) Homework assignment has 10 questions</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number answers correct</th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>At least 9</td>
+      <td>Check Plus</td>
+    </tr>
+    <tr>
+      <td>7-8</td>
+      <td>Check</td>
+    </tr>
+    <tr>
+      <td>Less than 7</td>
+      <td>Check minus</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">numCorrect</code> is the number of correct answers. The code is supposed to display the grade
+<img src="/FastPage/images/notes/CB-10-21.png" alt=""></p>
+
+<p>Which values of <code class="language-plaintext highlighter-rouge">numCorrect</code> makes the code fail to display intended grade?</p>
+
+<ul>
+  <li>Code checks if the grade is greater than 7</li>
+  <li>If it is, it checks if it is at least 9. If so, then <strong>check plus</strong> is displayed. This works as intended</li>
+  <li>If not, <strong>check minus</strong> is displayed. According to this code, 8 will display <strong>check minus</strong> (it should be <strong>check</strong>)</li>
+  <li>
+    <p>Any grades of 7 or less get <strong>check</strong>. Therefore, grades of 0-6 get <strong>check</strong> even though they should get <strong>check minus</strong></p>
+  </li>
+  <li>Available MCQ answers: 8, 6</li>
 </ul>
 
   </div><!-- from https://github.com/utterance/utterances -->
