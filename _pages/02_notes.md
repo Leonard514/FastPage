@@ -864,3 +864,87 @@ Which values of `numCorrect` makes the code fail to display intended grade?
 - Any grades of 7 or less get **check**. Therefore, grades of 0-6 get **check** even though they should get **check minus**
 
 - Available MCQ answers: 8, 6
+
+
+# Week 8 Topic 4.1: The Internet
+
+### Video 1: How computing devices interact
+
+- Computers were at first room-sized (still room-sized around 1975)
+- Computers start decreasing in size (ex: PC, routers, sensors)
+- Collaboration was needed (using floppy disks was too hard)
+- Computers communicate through electrons (in binary)
+ - Packets are used to communicate. Packets are small amounts of information, including source and destination
+ - Computer systems (computers work together for purpose) joined in networks
+- Packet switching: A packet is spliced into fragment, which are sent along a network path
+ - Routers help with packet switching and guide packets along their paths to destinations
+ - Bandwidth: Maximum data that can be sent in fixed amount of time through a path/network (measured in bits/second)
+
+ Vocabulary
+
+ | Term | Definition |
+ |-|-|
+ | Path | sequence of directly connected computing devices beginning at sender and ending at receiver |
+ | Route | Process of finding a path from sender to receiver |
+ | Computer System | Group of computing devices/programs working towards common purpose |
+ | Computer Device | A physical artifact that can run a program (ex: computers, tablets, servers, routers, smart sensors) |
+ | Bandwidth | Maximum amount of data that can be sent in a fixed amount of time |
+ | Computer Network | Group of interconnected computing devices capable of sending/receiving data |
+
+### Video 2: Internet VS World Wide Web, Protocols, etc.
+
+Packet Review
+- Packet = small amount of data sent over network (with source and destination information)
+- Protocol = set of rules specifying system behaviors
+
+Protocols written by Internet Engineering Task Force (IETF)
+ - Made OSI (Open Systems Interconnect) model, connects through 7 layers
+ -TCP (Transmission Control Protocol) - TCP/IP Model
+
+TCP/IP Model
+- Network Access Layer (Data link, Fiber, MAC, Ethernet cable, Network Internet Card, etc.)
+ - Related to hardware
+ - Each piece of hardware has a unique Media Access Control (MAC) address
+ - Packets hop between NICs
+- Internet Layer (IP)
+ - Packets have source and destination IPs, metadata, and MAC Addresses
+ - Packets go through sequence of routers
+ - Multiple paths are possible
+ - Internet is scalable, can change size to meet demands
+ - IP address required
+  - IPv4 address has 4 octets, each 8 bits long
+  - Has network bits and device bits; the 32 bits are shared between these two parts
+- Transport Layer (TCP/UDP)
+ - TCP is stricter, does 3-way handshake
+  - Think about "certified mail" - you learn when/if the recipient received the mail
+ - UDP less strict, there's no verification if the packet reached the destination
+ - TCP only uses unicasts, UDP uses unicasts, multicasts, and broadcasts
+ - Unicasts = 1 destination
+ - Multicasts = multiple destinations (range of IP addresses)
+ - Broadcasts = all computers in a LAN are destinations
+- Application Layer (HTTP, DNS)
+ - DNS (Domain Name Service) is database mapping IP addresses to domain names (with languages)
+  - uses .edu, .com, .org
+ - World Wide Web is **not** the Internet, but rather linked datapages
+  - Use HTTP (port 80) or HTTPS (port 443) to access web pages
+
+Scalability
+ - Lowest layer = Local Area Network (LAN; home level or school level)
+ - Multiple LANs make an Intranet; they communicate using Autonomous Systems (AS) controlled by Internet providers
+ - The Internet is made up of Autonomous Systems
+
+
+The Process
+- Computer joins a network, gets IP address from DHCP (Dynamic Host Configuration Protocol)
+- URL (ex: ibm.com) is converted to IP using DNS
+- Packets sent to the router, which can send packets to other routers or web server
+ - Use TCP or UDP
+
+Quiz!!!
+- Open standards and protocols **do** enable manufacturers/developers to build hardware/software that communicates with the Internet
+- IETF is a task force, but it **doesn't** enforce laws to keep manufacturers out of the Internet. It writes protocols.
+- Routes are **not** necessarily determined in advance, so they can be flexible.
+- A protocol **is** an agreed-upon set of rules specifying system behaviors.
+- UDP does **not** guarantee transfers, though it is faster than TCP.
+- The World Wide Web is **not** the Internet.
+- HTTP **is** a protocol used by the World Wide Web.
