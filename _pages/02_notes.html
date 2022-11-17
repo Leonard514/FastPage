@@ -141,7 +141,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      35 min read
+      38 min read
     
 </span></p>
 
@@ -272,6 +272,12 @@ document.onkeydown = (e) => {
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#myap-mcq-14">MyAP MCQ 1.4</a></li>
+<li class="toc-entry toc-h1"><a href="#week-8-topic-41-the-internet">Week 8 Topic 4.1: The Internet</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#video-1-how-computing-devices-interact">Video 1: How computing devices interact</a></li>
+<li class="toc-entry toc-h3"><a href="#video-2-internet-vs-world-wide-web-protocols-etc">Video 2: Internet VS World Wide Web, Protocols, etc.</a></li>
+</ul>
+</li>
 </ul><h1 id="week-1-focus-and-habits-hack">
 <a class="anchor" href="#week-1-focus-and-habits-hack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Week 1 Focus and Habits Hack</h1>
 
@@ -1493,6 +1499,131 @@ ELSE
   <li>Available MCQ answers: 8, 6</li>
 </ul>
 
+<h1 id="week-8-topic-41-the-internet">
+<a class="anchor" href="#week-8-topic-41-the-internet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Week 8 Topic 4.1: The Internet</h1>
+
+<h3 id="video-1-how-computing-devices-interact">
+<a class="anchor" href="#video-1-how-computing-devices-interact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Video 1: How computing devices interact</h3>
+
+<ul>
+  <li>Computers were at first room-sized (still room-sized around 1975)</li>
+  <li>Computers start decreasing in size (ex: PC, routers, sensors)</li>
+  <li>Collaboration was needed (using floppy disks was too hard)</li>
+  <li>Computers communicate through electrons (in binary)</li>
+  <li>Packets are used to communicate. Packets are small amounts of information, including source and destination</li>
+  <li>Computer systems (computers work together for purpose) joined in networks</li>
+  <li>Packet switching: A packet is spliced into fragment, which are sent along a network path</li>
+  <li>Routers help with packet switching and guide packets along their paths to destinations</li>
+  <li>Bandwidth: Maximum data that can be sent in fixed amount of time through a path/network (measured in bits/second)</li>
+</ul>
+
+<p>Vocabulary</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Path</td>
+      <td>sequence of directly connected computing devices beginning at sender and ending at receiver</td>
+    </tr>
+    <tr>
+      <td>Route</td>
+      <td>Process of finding a path from sender to receiver</td>
+    </tr>
+    <tr>
+      <td>Computer System</td>
+      <td>Group of computing devices/programs working towards common purpose</td>
+    </tr>
+    <tr>
+      <td>Computer Device</td>
+      <td>A physical artifact that can run a program (ex: computers, tablets, servers, routers, smart sensors)</td>
+    </tr>
+    <tr>
+      <td>Bandwidth</td>
+      <td>Maximum amount of data that can be sent in a fixed amount of time</td>
+    </tr>
+    <tr>
+      <td>Computer Network</td>
+      <td>Group of interconnected computing devices capable of sending/receiving data</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="video-2-internet-vs-world-wide-web-protocols-etc">
+<a class="anchor" href="#video-2-internet-vs-world-wide-web-protocols-etc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Video 2: Internet VS World Wide Web, Protocols, etc.</h3>
+
+<p>Packet Review</p>
+<ul>
+  <li>Packet = small amount of data sent over network (with source and destination information)</li>
+  <li>Protocol = set of rules specifying system behaviors</li>
+</ul>
+
+<p>Protocols written by Internet Engineering Task Force (IETF)</p>
+<ul>
+  <li>Made OSI (Open Systems Interconnect) model, connects through 7 layers
+ -TCP (Transmission Control Protocol) - TCP/IP Model</li>
+</ul>
+
+<p>TCP/IP Model</p>
+<ul>
+  <li>Network Access Layer (Data link, Fiber, MAC, Ethernet cable, Network Internet Card, etc.)</li>
+  <li>Related to hardware</li>
+  <li>Each piece of hardware has a unique Media Access Control (MAC) address</li>
+  <li>Packets hop between NICs</li>
+  <li>Internet Layer (IP)</li>
+  <li>Packets have source and destination IPs, metadata, and MAC Addresses</li>
+  <li>Packets go through sequence of routers</li>
+  <li>Multiple paths are possible</li>
+  <li>Internet is scalable, can change size to meet demands</li>
+  <li>IP address required</li>
+  <li>IPv4 address has 4 octets, each 8 bits long</li>
+  <li>Has network bits and device bits; the 32 bits are shared between these two parts</li>
+  <li>Transport Layer (TCP/UDP)</li>
+  <li>TCP is stricter, does 3-way handshake</li>
+  <li>Think about “certified mail” - you learn when/if the recipient received the mail</li>
+  <li>UDP less strict, there’s no verification if the packet reached the destination</li>
+  <li>TCP only uses unicasts, UDP uses unicasts, multicasts, and broadcasts</li>
+  <li>Unicasts = 1 destination</li>
+  <li>Multicasts = multiple destinations (range of IP addresses)</li>
+  <li>Broadcasts = all computers in a LAN are destinations</li>
+  <li>Application Layer (HTTP, DNS)</li>
+  <li>DNS (Domain Name Service) is database mapping IP addresses to domain names (with languages)</li>
+  <li>uses .edu, .com, .org</li>
+  <li>World Wide Web is <strong>not</strong> the Internet, but rather linked datapages</li>
+  <li>Use HTTP (port 80) or HTTPS (port 443) to access web pages</li>
+</ul>
+
+<p>Scalability</p>
+<ul>
+  <li>Lowest layer = Local Area Network (LAN; home level or school level)</li>
+  <li>Multiple LANs make an Intranet; they communicate using Autonomous Systems (AS) controlled by Internet providers</li>
+  <li>The Internet is made up of Autonomous Systems</li>
+</ul>
+
+<p>The Process</p>
+<ul>
+  <li>Computer joins a network, gets IP address from DHCP (Dynamic Host Configuration Protocol)</li>
+  <li>URL (ex: ibm.com) is converted to IP using DNS</li>
+  <li>Packets sent to the router, which can send packets to other routers or web server</li>
+  <li>Use TCP or UDP</li>
+</ul>
+
+<p>Quiz!!!</p>
+<ul>
+  <li>Open standards and protocols <strong>do</strong> enable manufacturers/developers to build hardware/software that communicates with the Internet</li>
+  <li>IETF is a task force, but it <strong>doesn’t</strong> enforce laws to keep manufacturers out of the Internet. It writes protocols.</li>
+  <li>Routes are <strong>not</strong> necessarily determined in advance, so they can be flexible.</li>
+  <li>A protocol <strong>is</strong> an agreed-upon set of rules specifying system behaviors.</li>
+  <li>UDP does <strong>not</strong> guarantee transfers, though it is faster than TCP.</li>
+  <li>The World Wide Web is <strong>not</strong> the Internet.</li>
+  <li>HTTP <strong>is</strong> a protocol used by the World Wide Web.</li>
+</ul>
+
   </div><!-- from https://github.com/utterance/utterances -->
 
 <script type="text/javascript">
@@ -1573,7 +1704,21 @@ ELSE
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/Leonard514" target="_blank" title="Leonard514"><svg class="svg-icon grey"><use xlink:href="/FastPage/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.youtube.com/channel/UCNy-EIC-T3dV6In5aIC04DQ" target="_blank" title="YouTube"><svg class="svg-icon grey"><use xlink:href="/FastPage/assets/minima-social-icons.svg#youtube"></use></svg></a></li></ul>
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://github.com/Leonard514 “" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/FastPage/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://www.youtube.com/channel/UCNy-EIC-T3dV6In5aIC04DQ “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/FastPage/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
 </div>
 
   </div>
