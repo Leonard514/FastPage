@@ -948,3 +948,27 @@ Quiz!!!
 - UDP does **not** guarantee transfers, though it is faster than TCP.
 - The World Wide Web is **not** the Internet.
 - HTTP **is** a protocol used by the World Wide Web.
+
+
+### 3.14-3.15 Notes
+
+##### 3.14: Libraries
+
+- Libraries are pre-existing code used to make programs
+- Procedures (or functions) are examples of re-used code
+ - Procedures can be very long to read, so documentation is needed
+ - Allows for knowledge about what procedure does and what parameters
+ - Ex: **calcAverage** takes a list of integer values (representing grades), outputs the average
+ - File containing such procedures (functions) are libraries
+ - API (application program interface) gives specifications for how procedures in a library can be used. API is the documentation.
+  - Common for large tech companies
+  - Library example: Exam reference sheet
+- To calculate grade point average, a procedure called calcQuotient which takes two positive integers and returns their quotient is useful.
+
+##### Topic 3.15 Video 1: Random Values
+
+- Pseudocode: RANDOM(a, b)
+ - Returns a random integer in [a, b]
+ - Ex: RANDOM(1, 6) will return 1, 2, 3, 4, 5, 6
+ - Is discrete (gives one number at a time)
+- Answ1 ← RANDOM(0, 2)
