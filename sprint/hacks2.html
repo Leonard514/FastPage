@@ -142,7 +142,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      5 min read
     
 </span></p>
 
@@ -165,8 +165,14 @@ document.onkeydown = (e) => {
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#33-hacks-part-1">3.3 Hacks Part 1</a></li>
 <li class="toc-entry toc-h1"><a href="#33-hacks-part-2">3.3 Hacks Part 2</a></li>
-</ul><h1 id="33-hacks-part-2">
+<li class="toc-entry toc-h1"><a href="#33-hacks-part-3">3.3 Hacks Part 3</a></li>
+<li class="toc-entry toc-h1"><a href="#34-hacks">3.4 Hacks</a></li>
+</ul><h1 id="33-hacks-part-1">
+<a class="anchor" href="#33-hacks-part-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 Hacks Part 1</h1>
+
+<h1 id="33-hacks-part-2">
 <a class="anchor" href="#33-hacks-part-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 Hacks Part 2</h1>
 
 <p>1) Given the code segment, give the values of <strong>a</strong>, <strong>b</strong>, <strong>c</strong>, and <strong>d</strong></p>
@@ -203,6 +209,143 @@ cold ⟵ hot
 hot ⟵ cold
 </code></pre></div></div>
 <p>After true was assigned to <strong>hot</strong> and false was assigned to <strong>cold</strong>, <strong>hot8</strong> (true) was assigned to <strong>cold</strong>, making both true. Assigning <strong>cold</strong> to <strong>hot</strong> (true to true) has no effect, so both are true (Answer is 1)</p>
+
+<p>3) <strong>Make two code segments with at least 5 variable definitions. Provide the answer and explain reasoning</strong></p>
+
+<p>I think these are supposed to be sequencing challenges. OK here goes. For reference I’m doing these in <em>Python</em>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var1</span> <span class="o">=</span> <span class="mi">987</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="mi">121</span>
+<span class="n">var3</span> <span class="o">=</span> <span class="mi">1337</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="n">var3</span> <span class="o">-</span> <span class="mi">1211</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="n">var2</span> <span class="o">%</span> <span class="mi">7</span>
+<span class="n">varsum</span> <span class="o">=</span> <span class="n">var1</span> <span class="o">+</span> <span class="n">var2</span> <span class="o">+</span> <span class="n">var3</span>
+<span class="k">print</span><span class="p">(</span><span class="n">varsum</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The first three lines are rather self explanatory. I assigned these variables some values.</p>
+
+<p>Line 4 is simple enough. The new value of <strong>var2</strong> is the value of <strong>var3</strong> minus 1211, which is 1337 - 1211 = 126. I used a calculator to avoid arithmetic errors.</p>
+
+<p>Line 5 involves taking the remainder of 126 divided by 7, since this is a modulus function. Oddly enough, 126/7 is exactly 18, so the value of 0 is assigned to <strong>var1</strong>.</p>
+
+<p>Line 6 involves adding all the variables (taking into account their new values). This is as simple as 0 + 126 + 1337 = 1463.</p>
+
+<p>Line 7 just prints the sum I calculated.</p>
+
+<p>Well here comes another challenge, which I’ll do in pseudocode to demonstrate functionalities from 3.4</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bricks ← "100 million"
+milesDriven ← "fifty thousand"
+natlDebt ← "thirty-one trillion dollars" 
+worldPop ← "8 billion"
+part1 ← substring(milesDriven, 1, 5)
+part2 ← substring(bricks, 5, 7)
+part3 ← substring(worldPop, 3, 7)
+wordSalad ← concat(part1, part2, part3, natlDebt)
+DISPLAY(wordSalad)
+</code></pre></div></div>
+
+<p>Lines 1-4 are simple enough. Assign some values to four variables.</p>
+
+<p>Line 5 assigns the first 5 characters of <strong>milesDriven</strong> (which is “fifty”) to <strong>part1</strong></p>
+
+<p>Line 6 assigns 7 characters from <strong>bricks</strong> to <strong>part2</strong>, starting with the fifth character from <strong>bricks</strong>. This is “million”</p>
+
+<p>Line 7 assigns 7 characters from <strong>worldPop</strong> to <strong>part3</strong>, starting with the third character.  This is “billion”</p>
+
+<p>Line 8 is a monstrosity. It concatenates each of the <strong>part</strong> variables and the <strong>natlDebt</strong> variable. This is assigned to the <strong>wordSalad</strong> variable.</p>
+
+<p>Line 9 outputs <strong>wordSalad</strong>, which is “fifty million billion thirty-one trillion dollars”</p>
+
+<p>To be honest, I don’t know if it’s possible to run commands inside the <strong>concat</strong> parameters, so I assigned each of the substring commands its own variable. In fact, I didn’t find any of the <strong>substr</strong> or <strong>concat</strong> commands on the <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-exam-reference-sheet.pdf">exam reference sheet</a>, which is very peculiar. Of course that only resulted in my code failing to function on an <a href="https://board.dan.onl/">online pseudocode tester</a>.</p>
+
+<p><strong>Sequencing Challenge</strong>: Find <strong>num1</strong> and <strong>num2</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num1</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">num3</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">num1</span> <span class="o">=</span> <span class="n">num2</span> <span class="o">+</span> <span class="n">num3</span>      
+<span class="n">num2</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num3</span>      <span class="c1"># num2 is now the new num1 + num3
+</span></code></pre></div></div>
+
+<ul>
+  <li>Lines 1-3 are just defining variables.</li>
+  <li>Line 4 assigns the sum of <strong>num2</strong> and <strong>num3</strong> to <strong>num1</strong>. The new value of <strong>num1</strong> is 5 + 1 = 6.</li>
+  <li>Line 5 assigns the sum of <strong>num1</strong> and <strong>num3</strong> to <strong>num2</strong>. The new value of <strong>num2</strong> is 6 + 5 = 11.</li>
+</ul>
+
+<h1 id="33-hacks-part-3">
+<a class="anchor" href="#33-hacks-part-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 Hacks Part 3</h1>
+
+<p>Looks like this doesn’t exist.</p>
+
+<h1 id="34-hacks">
+<a class="anchor" href="#34-hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.4 Hacks</h1>
+
+<p><strong>Test 1</strong>. Find the output.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>firstName &lt;- "Bob"
+lastName &lt;- "Smith"
+var &lt;- substring(firstName, 1, 1)
+name &lt;- concat(lastName, var)
+email &lt;- concat(name, "@gmail.com")
+DISPLAY(email)
+</code></pre></div></div>
+
+<ul>
+  <li>Lines 1 and 2 assign values to the <strong>firstName</strong> and <strong>lastName</strong>.</li>
+  <li>Line 3 has a <strong>substring</strong> command, which starts at the first character of the value of <strong>firstName</strong> and moves one character. The result (which is B) is assigned to <strong>var</strong>.</li>
+  <li>Line 4 uses a <strong>concat</strong> command, which will concatenate (or chain) the inputs. It will take the <strong>lastName</strong> (Smith) and the <strong>var</strong> (B). The resulting string “SmithB” is assigned to <strong>name</strong>
+</li>
+  <li>Line 5 cocatenates the <strong>name</strong> variable and the string “@gmail.com” and assigns this to <strong>email</strong>. The value of email is <strong><em>“SmithB@gmail.com”</em></strong> (this is the answer by the way)</li>
+  <li>Line 6 prints the value of <strong>email</strong> to output.</li>
+</ul>
+
+<p><strong>Test2</strong>. Find the output</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>word1 &lt;- "computer"
+word2 &lt;- "textbooks"
+length1 &lt;- len(word1)/2
+length2 &lt;- len(word2)/3
+first &lt;- substring(word1, 2, len1)
+second &lt;- substring(word2, len2+3, len2)
+newWord &lt;- concat(first, second)
+DISPLAY(newWord)
+</code></pre></div></div>
+
+<ul>
+  <li>Lines 1 and 2 assign values to <strong>word1</strong> and <strong>word2</strong>
+</li>
+  <li>Line 3: the <strong>len</strong> command counts the number of characters in a string. There are 8 characters in the value of <strong>word1</strong> (which is “computer”). This divided by 2 is 4, which is assigned to <strong>length1</strong>
+</li>
+  <li>Line 4: There are 9 characters in the value of <strong>word2</strong> (which is “textbooks”). This divided by 3 is 3, which is assigned to <strong>length2</strong>
+ -Line 5 takes a substring command of the value of <strong>word1</strong>, going from the second character and reading however many characters is the value of <strong>len1</strong>. Oops, this variable doesn’t exist!
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> word1 &lt;- "computer"
+word2 &lt;- "textbooks"
+length1 &lt;- len(word1)/2
+length2 &lt;- len(word2)/3
+first &lt;- substring(word1, 2, length1)
+second &lt;- substring(word2, length2+3, length2)
+newWord &lt;- concat(first, second)
+DISPLAY(newWord)
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>-That’s better. The value of <strong>length1</strong> is 4, so it will take 4 characters from “computer” starting from the second character. This will yield “ompu” which is assigned to <strong>first</strong></p>
+
+<ul>
+  <li>
+    <p>Line 6 takes substring of <strong>word2</strong> (which is “textbooks”), starting with the character corresponding to 3 more than <strong>length2</strong>, which is 6. It will then take the amount of characters equal to <strong>length2</strong>, which is 3. Therefore, “ook” will be assigned to <strong>second</strong></p>
+  </li>
+  <li>
+    <p>Line 7 will concatenate <strong>first</strong> and <strong>second</strong>, assigning this to <strong>newWord</strong></p>
+  </li>
+</ul>
+
+<p>-Line 8 prints <strong>newWord</strong>, which is <strong><em>ompuook</em></strong>.</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
