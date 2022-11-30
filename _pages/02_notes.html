@@ -141,7 +141,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      39 min read
+      40 min read
     
 </span></p>
 
@@ -1657,8 +1657,21 @@ ELSE
   <li>Returns a random integer in [a, b]</li>
   <li>Ex: RANDOM(1, 6) will return 1, 2, 3, 4, 5, 6</li>
   <li>Is discrete (gives one number at a time)</li>
-  <li>Answ1 ← RANDOM(0, 2)</li>
 </ul>
+
+<p>Example 1: What is the possible range of results?</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>answ1 ← RANDOM(0, 2)
+answ2 ← RANDOM(1, 5)
+answ3 ← answ1 + answ2
+</code></pre></div></div>
+
+<p><strong>answ1</strong> has minimum value 0; answ2 has minimum value of 1. Therefore the bottom of the range will be 1.</p>
+
+<p>answ2 has maximum value 2; answ2 has maximum value of 5. Therefore the top of the range will be 5 + 2 = 7.</p>
+
+<p>Therefore, the range of results is all integers in [1, 7]</p>
+
 
   </div><!-- from https://github.com/utterance/utterances -->
 

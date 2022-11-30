@@ -142,7 +142,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      8 min read
     
 </span></p>
 
@@ -171,6 +171,68 @@ document.onkeydown = (e) => {
 <li class="toc-entry toc-h1"><a href="#34-hacks">3.4 Hacks</a></li>
 </ul><h1 id="33-hacks-part-1">
 <a class="anchor" href="#33-hacks-part-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 Hacks Part 1</h1>
+
+<p>Label steps of sequence, selection, and iteration for the given examples (at least that’s how I interpreted the question)</p>
+
+<p><strong>Example 1:</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">evens</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">evens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">evens</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>I’ll outline some lines:</p>
+<ol>
+  <li>Assigns a list to <strong>numbers</strong>
+</li>
+  <li>Defines <strong>evens</strong> as an empty list</li>
+  <li>Uses a for loop to iterate through each element in <strong>numbers</strong>. Steps 4-5 repeated for each element in the list <strong>numbers</strong>.</li>
+  <li>Checks if an element’s value divided by 2 has a remainder of 0 (using modulus)</li>
+  <li>If the condition passes, this element is appended to <strong>evens</strong>
+</li>
+  <li>print the <strong>evens</strong> list.</li>
+</ol>
+
+<p>There is sequencing for all lines in this case, since the lines of code are executed in a certain order.</p>
+
+<p>Selection is largely seen in lines 4-5, where elements from <strong>numbers</strong> are conditionally appended to <strong>evens</strong> (elements with values that have a remainder of 0 when divided by 2 are appended.)</p>
+
+<p>Iteration is seen in Line 3, where associated lines of code are executed for each element in a list.</p>
+
+<p><strong>Example 2</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">starString</span> <span class="o">=</span> <span class="s">"*"</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
+  <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">"*"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span> <span class="s">""</span><span class="p">)</span>
+    <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="k">print</span> <span class="p">()</span>
+  <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<p>Here’s line by line explanation</p>
+<ol>
+  <li>Sets variable <strong>i</strong> to 1. This is likely an index.</li>
+  <li>makes a string variable <strong>starString</strong> with “*”</li>
+  <li>Will execute all associated lines of code while the index <strong>i</strong> is less than or equal to 5</li>
+  <li>Sets variable <strong>j</strong> to 1. This is likely an index. <strong>j</strong> is reset to 1 each time line 3 is re-run</li>
+  <li>Will execute all associated lines of code while <strong>j</strong> is less than or equal to <strong>i</strong>.</li>
+  <li>Will print a “*”; the <strong>end= ““</strong> prevents the print statement from creating a new line</li>
+  <li>Increases the index <strong>j</strong> by 1. Keep in mind this change is undone each time line 3 is run.</li>
+  <li>This <strong>print()</strong> statement essentially moves to a new line of code</li>
+  <li>Increases the index <strong>i</strong> by 1.</li>
+</ol>
+
+<p>Sequencing is seen in all lines of code since they are executed in a certain order</p>
+
+<p>Selection is not largely seen in the code</p>
+
+<p>Iteration is seen in Line 3 (which will execute all associated lines below until <strong>i</strong> is greater than 5) and in Line 5 (which executes associated lines 6-7 until <strong>j</strong> is greater than <strong>i</strong>)</p>
 
 <h1 id="33-hacks-part-2">
 <a class="anchor" href="#33-hacks-part-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 Hacks Part 2</h1>
