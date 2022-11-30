@@ -971,4 +971,19 @@ Quiz!!!
  - Returns a random integer in [a, b]
  - Ex: RANDOM(1, 6) will return 1, 2, 3, 4, 5, 6
  - Is discrete (gives one number at a time)
-- Answ1 ← RANDOM(0, 2)
+
+Example 1: What is the possible range of results?
+
+```
+answ1 ← RANDOM(0, 2)
+answ2 ← RANDOM(1, 5)
+answ3 ← answ1 + answ2
+```
+
+**answ1** has minimum value 0; answ2 has minimum value of 1. Therefore the bottom of the range will be 1.
+
+answ2 has maximum value 2; answ2 has maximum value of 5. Therefore the top of the range will be 5 + 2 = 7.
+
+
+Therefore, the range of results is all integers in [1, 7]
+
