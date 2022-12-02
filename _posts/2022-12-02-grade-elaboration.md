@@ -49,4 +49,18 @@ In this case, the final value of **data1** would be 25 since the value of **data
 
 - The last takeaway is that lists can be assigned as variables. These are often put in square brackets ([]) and the entries are separated by commas. The parts of the list are called **elements** and can exhibit the same data types as variables.
 - Each element in a list is assigned an index, a nonnegative integer which is associated with the element in future commands.
- - It is very important to note that different forms of indexing 
+ - It is very important to note that different forms of indexing can exist between programming languages. CollegeBoard pseudocode assigns the first element in a list the index **1**, while other languages (including Python) assign the first element the index **0**.
+
+# Topics 3.3-3.4
+
+- Lines of code in a program are executed in a specific order. This pattern is known as sequencing.
+- Programs often incorporate selection, where associated lines of code are executed if a condition is satisfied. Often, a different set of commands will be executed if a condition is *not* satisfied. These most commonly take the form of **if statements** in python.
+- Sometimes, programs need to execute lines of code on multiple elements in a list. Instead of writing similar lines of code repetitively, an iteration strategy is used. This often consists of a loop (including for loops, while loops, and recursive functions) which executes associated commands on all items in a list or repeatedly until a certain condition is fulfilled (or is not fulfilled).
+
+- There are various operators which can apply mathematical operations on integer/float variables.
+ - Addition (+), Subtraction (-), multiplication (*), and division (/) are identical to the operations learned in arithmetic.
+ - The modulus operator (seen as a **%** in Python) performs a division operation but outputs the remainder instead of the quotient.
+
+- There are certain string-related commands in pseudocode that *are not on the [exam reference sheet](https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-exam-reference-sheet.pdf)*. Their validity and syntax quirks are therefore uncertain.
+ - `substring(string, n, m)` reads a given **string** (or string variable) and starts at the **nth** character of that string. It reads **m** characters from that point.
+ - `concat(string1, string2)` essentially results in an output of **string1string2** (in other words, the strings mashed together without any spaces). This output can be assigned to a variable.
