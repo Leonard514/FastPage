@@ -62,5 +62,5 @@ In this case, the final value of **data1** would be 25 since the value of **data
  - The modulus operator (seen as a **%** in Python) performs a division operation but outputs the remainder instead of the quotient.
 
 - There are certain string-related commands in pseudocode that *are not on the [exam reference sheet](https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-exam-reference-sheet.pdf)*. Their validity and syntax quirks are therefore uncertain.
- - `substring(string, n, m)` reads a given **string** (or string variable) and starts at the **nth** character of that string. It reads **m** characters from that point.
+ - `substring(string, n, m)` reads a given **string** (or string variable) and starts at the **nth** character of that string. It reads **m** characters from that point. This output can be assigned to a variable.
  - `concat(string1, string2)` essentially results in an output of **string1string2** (in other words, the strings mashed together without any spaces). This output can be assigned to a variable.
