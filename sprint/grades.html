@@ -142,7 +142,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -166,6 +166,7 @@ document.onkeydown = (e) => {
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#topics-31-32">Topics 3.1-3.2</a></li>
+<li class="toc-entry toc-h1"><a href="#topics-33-34">Topics 3.3-3.4</a></li>
 </ul><p>I’ll start with a highly informative table.</p>
 
 <table>
@@ -227,7 +228,28 @@ data1 ← data2
 <ul>
   <li>The last takeaway is that lists can be assigned as variables. These are often put in square brackets ([]) and the entries are separated by commas. The parts of the list are called <strong>elements</strong> and can exhibit the same data types as variables.</li>
   <li>Each element in a list is assigned an index, a nonnegative integer which is associated with the element in future commands.</li>
-  <li>It is very important to note that different forms of indexing</li>
+  <li>It is very important to note that different forms of indexing can exist between programming languages. CollegeBoard pseudocode assigns the first element in a list the index <strong>1</strong>, while other languages (including Python) assign the first element the index <strong>0</strong>.</li>
+</ul>
+
+<h1 id="topics-33-34">
+<a class="anchor" href="#topics-33-34" aria-hidden="true"><span class="octicon octicon-link"></span></a>Topics 3.3-3.4</h1>
+
+<ul>
+  <li>Lines of code in a program are executed in a specific order. This pattern is known as sequencing.</li>
+  <li>Programs often incorporate selection, where associated lines of code are executed if a condition is satisfied. Often, a different set of commands will be executed if a condition is <em>not</em> satisfied. These most commonly take the form of <strong>if statements</strong> in python.</li>
+  <li>
+    <p>Sometimes, programs need to execute lines of code on multiple elements in a list. Instead of writing similar lines of code repetitively, an iteration strategy is used. This often consists of a loop (including for loops, while loops, and recursive functions) which executes associated commands on all items in a list or repeatedly until a certain condition is fulfilled (or is not fulfilled).</p>
+  </li>
+  <li>There are various operators which can apply mathematical operations on integer/float variables.</li>
+  <li>Addition (+), Subtraction (-), multiplication (*), and division (/) are identical to the operations learned in arithmetic.</li>
+  <li>
+    <p>The modulus operator (seen as a <strong>%</strong> in Python) performs a division operation but outputs the remainder instead of the quotient.</p>
+  </li>
+  <li>There are certain string-related commands in pseudocode that <em>are not on the <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-exam-reference-sheet.pdf">exam reference sheet</a></em>. Their validity and syntax quirks are therefore uncertain.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">substring(string, n, m)</code> reads a given <strong>string</strong> (or string variable) and starts at the <strong>nth</strong> character of that string. It reads <strong>m</strong> characters from that point.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">concat(string1, string2)</code> essentially results in an output of <strong>string1string2</strong> (in other words, the strings mashed together without any spaces). This output can be assigned to a variable.</li>
 </ul>
 
   </div><!-- from https://github.com/utterance/utterances -->
