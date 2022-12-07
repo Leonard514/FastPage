@@ -165,21 +165,30 @@ document.onkeydown = (e) => {
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#practice-notes-taken-during-class">Practice Notes (taken during class)</a></li>
-</ul><h1 id="practice-notes-taken-during-class">
-<a class="anchor" href="#practice-notes-taken-during-class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice Notes (taken during class)</h1>
+<li class="toc-entry toc-h1"><a href="#practice-notes-lesson-8">Practice Notes: Lesson 8</a></li>
+</ul><h1 id="practice-notes-lesson-8">
+<a class="anchor" href="#practice-notes-lesson-8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice Notes: Lesson 8</h1>
 
-<p>CollegeBoard PseudoCode has while loops and for loops</p>
+<p><strong>1) What is the counter variable and the condition?</strong></p>
 
-<p>For Loop</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REPEAT n TIMES
-{
-    &lt;block of statements&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    for (var i = 10; i &gt; 0; i--) {
+   println(i);
 }
 </code></pre></div></div>
 
-<p>While Loop
-<code class="language-plaintext highlighter-rouge">REPEAT UNTIL(condition)</code></p>
+<p>The counter variable is <strong>i</strong>, which according to a web search keeps track of the number of times commands associated with the for loop are executed. This is essentially an index.</p>
+
+<p>The condition that the for loop would keep running is that <strong>i &gt; 0</strong> given that as long as this remains true, the for loop will keep executing. Keep in mind that every time the for loop executes, the value of the counter variable decreases by one.</p>
+
+<p><strong>2) How many timmes will print(ln) be called?</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   for (var i = 1; i &lt;= 10; i++) {
+  for (var j = 1; j &lt;= 10; j++) {
+    println(i * j);
+  }
+}
+</code></pre></div></div>
+
 
   </div><!-- from https://github.com/utterance/utterances -->
 
