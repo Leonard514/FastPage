@@ -142,7 +142,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      4 min read
     
 </span></p>
 
@@ -166,6 +166,7 @@ document.onkeydown = (e) => {
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#practice-notes-lesson-8">Practice Notes: Lesson 8</a></li>
+<li class="toc-entry toc-h1"><a href="#practice-notes-lesson-10">Practice Notes: Lesson 10</a></li>
 </ul><h1 id="practice-notes-lesson-8">
 <a class="anchor" href="#practice-notes-lesson-8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice Notes: Lesson 8</h1>
 
@@ -180,15 +181,103 @@ document.onkeydown = (e) => {
 
 <p>The condition that the for loop would keep running is that <strong>i &gt; 0</strong> given that as long as this remains true, the for loop will keep executing. Keep in mind that every time the for loop executes, the value of the counter variable decreases by one.</p>
 
-<p><strong>2) How many timmes will print(ln) be called?</strong></p>
+<p><strong>2) How many times will printIn be called?</strong></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   for (var i = 1; i &lt;= 10; i++) {
   for (var j = 1; j &lt;= 10; j++) {
-    println(i * j);
+    printIn(i * j);
   }
 }
 </code></pre></div></div>
 
+<p>Not the best formatting… I’ll assume this second for loop is nested inside of the first for loop.</p>
+
+<p>Both for loops will execute with the index starting at one and increasing by one each time until the index is over 10. Since the j for loop is nested inside the i for loop, <strong>printIn()</strong> will be executed 10 * 10 or 100 times.</p>
+
+<p><strong>3) What is the initial value? What does the while loop check?</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   var numRabbits = 2;
+var numYears = 0;
+while (numRabbits &lt;= 100) {
+    numRabbits += (numRabbits/2 * 30);
+    numYears++;
+}
+</code></pre></div></div>
+
+<p>The initial value of the variable <strong>numRabbits</strong> is 2 simply because that’s what it was defined as on the first line.</p>
+
+<p>The initial value of the variable <strong>numYears</strong> is 0 since this was how it was defined on the second line.</p>
+
+<p>The while loop checks if the value of <strong>numRabbits</strong> is less than or equal to 100. If this condition is satisfied, the executed command will be executed. These commands will increase the variable of <strong>numRabbits</strong> by 15 times its original value (essentially multiplying its value by 16 due to the original value also being additively present) and will increase the variable <strong>numYears</strong> by 1.</p>
+
+<p>Notes After Checking</p>
+
+<ul>
+  <li>Feel free to interpret the code in terms of the situation (ex: the loop will run if the population of rabbits is less than 100)</li>
+</ul>
+
+<h1 id="practice-notes-lesson-10">
+<a class="anchor" href="#practice-notes-lesson-10" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice Notes: Lesson 10</h1>
+
+<p><strong>1) What is the output?</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+    <span class="n">lst</span> <span class="o">=</span>  <span class="p">[</span><span class="s">"your"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"very"</span><span class="p">,</span> <span class="s">"skilled"</span><span class="p">,</span> <span class="s">"individual"</span><span class="p">]</span>
+    <span class="n">lst</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"Person"</span><span class="p">)</span>
+    <span class="n">lst</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+    <span class="n">lst</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"your"</span><span class="p">)</span>
+    <span class="n">lst</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s">"you're"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Line 1 defines the list variable</li>
+  <li>Line 2 adds element “Person” to the end fo the list</li>
+  <li>Line 3 removes the final element from the list, reverting it to its original form</li>
+  <li>Line 4 removes element “your” from the list</li>
+  <li>Line 5 adds element “you’re” to index 0 of the list (first element in Python)</li>
+  <li>Line 6 prints the output: [“you’re”, “a”, “very”, “skilled”, “individual”]</li>
+</ul>
+
+<p>Checker’s note: I’ll have to test if using single quotes and double quotes for string elements in the same list is compatible.</p>
+
+<p><strong>2) Using Lists</strong></p>
+<ol>
+  <li>A sequence of children in order should be represented by a list with each of the children’s names in the list as string elements in order.</li>
+  <li>The number of animals in a zoo does not need a list; only an integer variable <strong>numAnimals</strong> is required.</li>
+  <li>A list would not be required to repeatedly derive a number because this falls under the function of iteration/loops. This is true unless perhaps each of those derivatives needed to be stored. In that case, a list with float/integer elements would be useful and an append command would be added to the loop. <strong>Any such list would be pointless</strong>, however, because the derivative of a number (constant) is zero. This would result in a list with many zeros.</li>
+  <li>Pairs of school classes and the grades of each class would need a special form of list, where each element is a dictionary. This dictionary would probably match the class (type and period) with a corresponding string element and the average grade with a float element. Each class would be one dictionary element in the list.</li>
+</ol>
+
+<p>Note: The fourth part of this question was a little bit vague. I took a bit of creative liberty with it (usually class grades rather than <em>classroom grades</em> are averaged). After a check, it turns out the fourth part was a fourth and fifth part jammed together.</p>
+
+<ul>
+  <li>Part 4: Key value pairs of schools and quantities</li>
+</ul>
+
+<p>To be honest, I’m not sure what the context of the quantities and key value pairs in this question are. This question doesn’t really make too much sense to me so I can’t answer it.</p>
+
+<ul>
+  <li>Part 5: grades of a classroom</li>
+</ul>
+
+<p>This makes a bit more sense. It seems we want to have a collection of the grades of all the students in a classroom. A list would be appropriate to store the student’s grades.</p>
+
+<p><strong>3) Find the missing line</strong>. This is pseudocode</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+mgAmounts ← [50, 230, 63, 98, 80, 120, 71, 158, 41]
+bestAmounts ← []
+mgPerDay ← 360
+mgMin ← mgPerDay * 0.3
+FOR EACH mgAmount IN mgAmounts
+{
+    IF (mgAmount ≥ mgMin)
+    {
+        &lt;MISSING CODE&gt;
+    }
+} 
+}
+</code></pre></div></div>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
