@@ -142,7 +142,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      8 min read
     
 </span></p>
 
@@ -596,6 +596,23 @@ You do not have sufficient resources to make Beef Wellington
 </div>
 </div>
 
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/anonymous/computer-project/FastPage/_notebooks/2022-12-05-3.5-3.7hack.ipynb Cell 11</span> in <span class="ansi-cyan-fg">&lt;cell line: 29&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/anonymous/computer-project/FastPage/_notebooks/2022-12-05-3.5-3.7hack.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=26'&gt;27&lt;/a&gt;</span> lst.pop()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/anonymous/computer-project/FastPage/_notebooks/2022-12-05-3.5-3.7hack.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=27'&gt;28&lt;/a&gt;</span> lst.append('x')
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/anonymous/computer-project/FastPage/_notebooks/2022-12-05-3.5-3.7hack.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=28'&gt;29&lt;/a&gt;</span> lst.insert(lst[0])
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/anonymous/computer-project/FastPage/_notebooks/2022-12-05-3.5-3.7hack.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=30'&gt;31&lt;/a&gt;</span> print(lst.pop())
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/anonymous/computer-project/FastPage/_notebooks/2022-12-05-3.5-3.7hack.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=31'&gt;32&lt;/a&gt;</span> print(lst)
+
+<span class="ansi-red-fg">TypeError</span>: insert expected 2 arguments, got 1</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -630,6 +647,261 @@ You do not have sufficient resources to make Beef Wellington
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">List</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">'lizards'</span><span class="p">,</span> <span class="s1">'snakes'</span><span class="p">,</span> <span class="s1">'salamanders'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'sharks'</span><span class="p">,</span> <span class="s1">'whales'</span><span class="p">,</span> <span class="s1">'fish'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'lions'</span><span class="p">,</span> <span class="s1">'tigers'</span><span class="p">,</span> <span class="s1">'pumas'</span><span class="p">]]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">List</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">i</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>lizards
+snakes
+salamanders
+sharks
+whales
+fish
+lions
+tigers
+pumas
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">List</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">hrar</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">List</span><span class="p">):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">List</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+    <span class="n">hi</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Input quit to stop the code. This is case-sensitive"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">hi</span> <span class="o">==</span> <span class="s2">"quit"</span><span class="p">):</span>
+            <span class="k">return</span>
+    <span class="n">hrar</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">hrar</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">List</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="n">hi</span> <span class="o">=</span> <span class="s2">"hi"</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">hi</span> <span class="o">!=</span> <span class="s2">"quit"</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">List</span><span class="p">):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">List</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">hi</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Input quit to stop the code. This is case-sensitive"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+4
+5
+1
+2
+3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">List</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="n">hi</span> <span class="o">=</span> <span class="s2">"hi"</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">999999999999999</span><span class="p">):</span>
+    <span class="n">mod</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">mod</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">List</span><span class="p">):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">List</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+    <span class="n">hi</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Input quit to stop the code. This is case-sensitive"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">hi</span> <span class="o">==</span> <span class="s2">"quit"</span><span class="p">):</span>
+            <span class="k">break</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+111
+4
+5
+1
+2
+111
+4
+5
+1
+2
+111
+4
+5
+1
+2
+111
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1">#Defines while loop</span>
+<span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> 
+<span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="c1">#Ensures the first entry (where i = 0) is printed</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">-=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1">#Goes to previous entry (rather than next entry)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">IndexError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/anonymous/computer-project/FastPage/_notebooks/2022-12-05-3.5-3.7hack.ipynb Cell 18</span> in <span class="ansi-cyan-fg">&lt;cell line: 5&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/anonymous/computer-project/FastPage/_notebooks/2022-12-05-3.5-3.7hack.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> i = len(list) - 1 
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/anonymous/computer-project/FastPage/_notebooks/2022-12-05-3.5-3.7hack.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span> while i &gt; -1: #Ensures the first entry (where i = 0) is printed
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/anonymous/computer-project/FastPage/_notebooks/2022-12-05-3.5-3.7hack.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span>         record = list[i]
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/anonymous/computer-project/FastPage/_notebooks/2022-12-05-3.5-3.7hack.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span>         print(record)
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/anonymous/computer-project/FastPage/_notebooks/2022-12-05-3.5-3.7hack.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span>         i -= -1
+
+<span class="ansi-red-fg">IndexError</span>: list index out of range</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 

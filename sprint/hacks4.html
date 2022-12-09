@@ -142,7 +142,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      13 min read
     
 </span></p>
 
@@ -167,6 +167,12 @@ document.onkeydown = (e) => {
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#practice-notes-lesson-8">Practice Notes: Lesson 8</a></li>
 <li class="toc-entry toc-h1"><a href="#practice-notes-lesson-10">Practice Notes: Lesson 10</a></li>
+<li class="toc-entry toc-h1"><a href="#hacks">Hacks</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#mcq-quiz">MCQ Quiz</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#coding-hacks">Coding Hacks</a></li>
 </ul><h1 id="practice-notes-lesson-8">
 <a class="anchor" href="#practice-notes-lesson-8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice Notes: Lesson 8</h1>
 
@@ -278,6 +284,303 @@ FOR EACH mgAmount IN mgAmounts
 } 
 }
 </code></pre></div></div>
+
+<p>INSERT(aList, i, value) inserts <strong>value</strong> at index <strong>i</strong> in <strong>aList</strong>. All INSERT commands in the answer choices have incorrect syntax (as they have only two arguments)</p>
+
+<p>APPEND(aList, value) inserts <strong>value</strong> as the final position of <strong>aList</strong>.</p>
+
+<p>Option B (which appends any <strong>mgAmount</strong> satisfying the condition of being less than 120 to <strong>bestAmounts</strong>) functions correctly.</p>
+
+<p><strong>4) Find sevenWonders</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+sevenWonders ← ["Aurora", "Grand Canyon", "Great Barrier Reef", "Guanabara Bay", "Mount Everest", "Parícutin", "Victoria Falls"]
+
+sevenWonders[4] ← "Komodo"
+sevenWonders[6] ← "Table Mountain"
+}
+</code></pre></div></div>
+
+<p>CollegeBoard pseudocode is 1-indexed (the first element of a list has index 1)</p>
+<ul>
+  <li>Replace 4th element with “Komodo” and 6th element with “Table Mountain”</li>
+</ul>
+
+<p>Answer: sevenWonders ← [“Aurora”, “Grand Canyon”, “Great Barrier Reef”, “Komodo”, “Mount Everest”, “Table Mountain”, “Victoria Falls”]</p>
+
+<p><strong>5) Find the output</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+
+<span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">234</span><span class="p">]</span>
+
+<span class="n">lst</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="n">lst</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">'x'</span><span class="p">)</span>
+<span class="n">lst</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">lst</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>I initially though print(lst.pop()) would return an error. But according to some <a href="https://docs.python.org/3/tutorial/datastructures.html">documentation</a>, this actually returns <strong>None</strong>.</p>
+
+<p>Otherwise, knowing list contents will involve incorporating the steps</p>
+<ul>
+  <li>Step 1: remove last element (234) from list</li>
+  <li>Step 2: append string ‘x’ to back of list</li>
+  <li>Step 3: This command is weird because you normally specify the index of insertion before what value is inserted. As a result, running this line gets a TypeError as seen below. Due to the error, the print commands are never executed or the output is never printed to terminal.</li>
+</ul>
+
+<p><img src="images/TypeError.png" alt=""></p>
+
+<p>ANSWER: (no output)</p>
+
+<p>Now I’m fairly certain that in-class someone argued there would be actual output. I’m willing to hold a contrary position due to me running the code in a .ipynb file.</p>
+
+<p><strong>New Question: Programs intended to display total hours. Do they work?</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+totalMins ← 0
+durations ← [32, 56, 28, 27]
+FOR EACH duration IN durations
+{
+   totalMins ← totalMins + duration
+}
+totalHours ← totalMins / 60
+DISPLAY(totalHours)
+}
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+totalMins ← 0
+durations ← [32, 56, 28, 27]
+FOR EACH duration IN durations
+{
+   totalMins ← totalMins + duration
+   totalHours ← totalMins / 60
+}
+DISPLAY(totalHours)
+}
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Program one assigns <strong>totalMins</strong> and <strong>durations</strong>. In the for loop, it adds each element to <strong>totalMins</strong>. After the loop, it divides <strong>totalMins</strong> by 60 to get <strong>totalHours</strong>, then prints <strong>totalHours</strong>. This works as intended.</p>
+  </li>
+  <li>
+    <p>Program two assigns variables in a similar manner to program one, but in the for loop, <strong>totalHours</strong> is also calculated (using the same formula as program one). This does yield the correct <strong>totalHours</strong> but <strong>totalHours</strong> is calculated 4 times in program 2 (as opposed to once in program 1)</p>
+  </li>
+</ul>
+
+<p>Therefore, Answer is D</p>
+
+<p>Javelin thrower writing code to track distance of throws from target. Complexity can be reduced. Choose the best.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+totalDistance ← 0
+targetDistance ← 90
+throw1 ←  85.2
+DISPLAY(targetDistance - throw1)
+totalDistance ← totalDistance + throw1
+throw2 ←  82.8
+DISPLAY(targetDistance - throw2)
+totalDistance ← totalDistance + throw2
+throw3 ←  87.3
+DISPLAY(targetDistance - throw3)
+totalDistance ← totalDistance + throw3
+avgDistance ← totalDistance / 3
+DISPLAY(avgDistance)
+</code></pre></div></div>
+
+<p>A)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>targetDistance ← 90
+throws ← [85.2, 82.8, 87.3]
+totalDistance ← 0
+FOR EACH throw IN throws
+{
+DISPLAY(targetDistance - throw)
+totalDistance ← totalDistance + throw
+}
+avgDistance ← totalDistance / LENGTH(throws)
+DISPLAY(avgDistance)
+</code></pre></div></div>
+
+<p>B)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>targetDistance ← 90
+throws ← [85.2, 82.8, 87.3]
+totalDistance ← 0
+FOR EACH throw IN throws
+{
+DISPLAY(targetDistance - throw)
+totalDistance ← totalDistance + throw
+}
+avgDistance ← totalDistance / 3
+DISPLAY(avgDistance)
+</code></pre></div></div>
+
+<p>C)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>targetDistance ← 90
+throws ← [85.2, 82.8, 87.3]
+totalDistance ← 0
+FOR EACH throw IN throws
+{
+DISPLAY(targetDistance - throw)
+totalDistance ← totalDistance + throw
+avgDistance ← totalDistance / LENGTH(throws)
+}
+DISPLAY(avgDistance)
+</code></pre></div></div>
+
+<p>D)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>targetDistance ← 90
+throws ← [85.2, 82.8, 87.3]
+FOR EACH throw IN throws
+{
+totalDistance ← 0
+DISPLAY(targetDistance - throw)
+totalDistance ← totalDistance + throw
+avgDistance ← totalDistance / LENGTH(throws)
+}
+DISPLAY(avgDistance)
+</code></pre></div></div>
+
+<p>E)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>targetDistance ← 90
+throws ← [85.2, 82.8, 87.3]
+FOR EACH throw IN throws
+{
+totalDistance ← 0
+DISPLAY(targetDistance - throw)
+totalDistance ← totalDistance + throw
+}
+avgDistance ← totalDistance / LENGTH(throws)
+DISPLAY(avgDistance)
+</code></pre></div></div>
+
+<p>Option A is the best</p>
+
+<ul>
+  <li>Defines a list <strong>throws</strong>, <strong>targetDistance</strong>, and <strong>totalDistance</strong>
+</li>
+  <li>For each entry in throws, displays the difference between the throw’s distance and the target distance. Adds the throw’s distance to <strong>totalDistance</strong>
+</li>
+  <li>After the for loop, the <strong>avgDistance</strong> is taken by dividing total distance by the length of the list</li>
+</ul>
+
+<p>Option B is similar to A, except that the <strong>avgDistance</strong> is calculated by dividing 3. This is not as versatile as Option A (ie it doesn’t work for lists with lengths different than 3)</p>
+
+<p>Options C and D recalculate the <strong>avgDistance</strong> on each execution of the for loop (with variations similar to A and B). This would produce the same result but is not as efficient.</p>
+
+<p>Option E has a logic error which sets <strong>totalDistance</strong> equal to zero at the start of each execution of the for loop. This will result in the <strong>avgDistance</strong> being a third of the final element in the list, 87.3/3 = 29.1. This is unquestionably the worst option.</p>
+
+<h1 id="hacks">
+<a class="anchor" href="#hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks</h1>
+
+<h3 id="mcq-quiz">
+<a class="anchor" href="#mcq-quiz" aria-hidden="true"><span class="octicon octicon-link"></span></a>MCQ Quiz</h3>
+
+<p>Question 9 was fun because I managed to prove that all three loops are actually possible! This was the one where a loop should be made to iterate until a user inputs ‘quit’</p>
+
+<p>I have selected the WHILE loops answer and the Recursive loops answer, which were both marked incorrect. I can rebut the claim these answers are incorrect since I have examples of both in python that actually function. The first is recursive (which was the first solution I came up with), and the second is a while loop.</p>
+
+<p>They essentially do the exact same thing: for a list with integer elements 1 through 5, it checks if the index is less than the length; if so, it prints the corresponding element. It executes an opportunity to stop iterating through the list through checking the input for “quit” and executing <strong>return</strong> if it does. It also increases <strong>i</strong> by one for each execution and uses a conditional statement to make sure the index does not stray out of range and iteration can continue.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">List</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">hrar</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="c1"># makes sure index does not leave
+</span>    <span class="c1"># range
+</span>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># prints list elements. Honestly if
+</span>    <span class="c1"># statement not needed since
+</span>    <span class="c1"># commands executed to guard the index
+</span>    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">List</span><span class="p">):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">List</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+    <span class="c1"># allows user to exit iteration if input "quit"
+</span>    <span class="n">hi</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Input quit to stop the code. This is case-sensitive"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">hi</span> <span class="o">==</span> <span class="s">"quit"</span><span class="p">):</span>
+            <span class="k">return</span>
+    <span class="c1"># Iteration!
+</span>    <span class="n">hrar</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">hrar</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    
+</code></pre></div></div>
+
+<p>This is the while loop. At first I thought this wouldn’t work since I believed the variable used in the comparison statement (<strong>hi</strong>) would fail to update… but apparently it works in my notebook file.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Variables!
+</span><span class="n">List</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="n">hi</span> <span class="o">=</span> <span class="s">"hi"</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Iteration!
+</span><span class="k">while</span> <span class="n">hi</span> <span class="o">!=</span> <span class="s">"quit"</span><span class="p">:</span>
+    <span class="c1"># prints element corresponding to index, increases index
+</span>    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">List</span><span class="p">):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">List</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="c1"># Ensures index does not leave range
+</span>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># Opportunity to terminate iteration
+</span>    <span class="n">hi</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Input quit to stop the code. This is case-sensitive"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The intended answer, the for loop, was actually the hardest for me. I needed to come up with a way to prevent the loop from terminating. There was also lots of output errors whenever I changed the contents of the list. Nevertheless, I managed to find a method. However, it does not have infinite capacity; rather, it has a capacity unlikely to be exhausted by human means.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Variables!
+</span><span class="n">List</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">hi</span> <span class="o">=</span> <span class="s">"hi"</span>
+
+<span class="c1"># Has a finite but very high range. Doubt a 
+# human is going to exhaust this. A computer might.
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">999999999999999</span><span class="p">):</span>
+    <span class="c1"># i resets to 0, 1, 2, 3, 4, 5, 6... on each execution.
+</span>    <span class="c1"># This prevents i from leaving the list range.
+</span>    <span class="n">mod</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">mod</span>
+    <span class="c1"># Prints list entry. If statement may not be required.
+</span>    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">List</span><span class="p">):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">List</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+    <span class="c1"># Gives an opportunity to terminate the iteration.
+</span>    <span class="c1"># break is required since this is not a function.
+</span>    <span class="n">hi</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Input quit to stop the code. This is case-sensitive"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">hi</span> <span class="o">==</span> <span class="s">"quit"</span><span class="p">):</span>
+            <span class="k">break</span>
+</code></pre></div></div>
+
+<h1 id="coding-hacks">
+<a class="anchor" href="#coding-hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coding Hacks</h1>
+
+<p><strong>Exercise 1: Reverse List output</strong>*</p>
+
+<p>I tried to recycle a while loop from a previous assignment and learned that unlike for loops, while loops do not reset the index on each iteration. I guess that’s part of the dynamic checking of the conditional statement. Regardless, here’s a for loop:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1">#Index is zero
+</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># For loops reset the index on each iteration. I tried a while loop and found that while loops do not reset the index.
+# This sets the index to the last element, second to last element, etc. by substracting one and the index from the list's length.
+# and making this the new index. It then prints the corresponding element.
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Exercise 2: Bubble Sort</strong></p>
+
+<p>Here’s something from Wikipedia (Dec 9 9:42 AM):</p>
+
+<p><code class="language-plaintext highlighter-rouge">Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the input list element by element, comparing the current element with the one after it, swapping their values if needed.</code></p>
+
+<p>OK, looks like I just need to make a for loop. If a given element is greater than the next element, I swap them (likely using temp variables to catalyze the assignment process)</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
