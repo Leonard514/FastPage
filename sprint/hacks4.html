@@ -142,7 +142,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      12 min read
     
 </span></p>
 
@@ -557,30 +557,7 @@ DISPLAY(avgDistance)
 <h1 id="coding-hacks-see-the-ipynb-file">
 <a class="anchor" href="#coding-hacks-see-the-ipynb-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coding Hacks: See the .ipynb file</h1>
 
-<p><strong>Exercise 1: Reverse List output</strong>*</p>
-
-<p>I tried to recycle a while loop from a previous assignment and learned that unlike for loops, while loops do not reset the index on each iteration. I guess that’s part of the dynamic checking of the conditional statement. Regardless, here’s a for loop:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-
-<span class="c1">#Index is zero
-</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="c1"># For loops reset the index on each iteration. I tried a while loop and found that while loops do not reset the index.
-# This sets the index to the last element, second to last element, etc. by substracting one and the index from the list's length.
-# and making this the new index. It then prints the corresponding element.
-</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-        <span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span>
-        <span class="n">record</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p><strong>Exercise 2: Bubble Sort</strong></p>
-
-<p>Here’s something from Wikipedia (Dec 9 9:42 AM):</p>
-
-<p><code class="language-plaintext highlighter-rouge">Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the input list element by element, comparing the current element with the one after it, swapping their values if needed.</code></p>
-
-<p>OK, looks like I just need to make a for loop. If a given element is greater than the next element, I swap them (likely using temp variables to catalyze the assignment process)</p>
+<p><a href="https://leonard514.github.io/FastPage/sprint/hacks4">ipynb file</a></p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
