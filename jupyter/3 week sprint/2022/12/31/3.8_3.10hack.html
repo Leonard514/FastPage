@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unit 3 Sections 8, 10 Hacks .ipynb file | Leonard Wright</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Unit 3 Sections 8, 10 Hacks .ipynb file" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hacks" />
+<meta property="og:description" content="Hacks" />
+<link rel="canonical" href="https://leonard514.github.io/FastPage/jupyter/3%20week%20sprint/2022/12/31/3.8_3.10hack.html" />
+<meta property="og:url" content="https://leonard514.github.io/FastPage/jupyter/3%20week%20sprint/2022/12/31/3.8_3.10hack.html" />
+<meta property="og:site_name" content="Leonard Wright" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-31T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unit 3 Sections 8, 10 Hacks .ipynb file" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-31T00:00:00-06:00","datePublished":"2022-12-31T00:00:00-06:00","description":"Hacks","headline":"Unit 3 Sections 8, 10 Hacks .ipynb file","mainEntityOfPage":{"@type":"WebPage","@id":"https://leonard514.github.io/FastPage/jupyter/3%20week%20sprint/2022/12/31/3.8_3.10hack.html"},"url":"https://leonard514.github.io/FastPage/jupyter/3%20week%20sprint/2022/12/31/3.8_3.10hack.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/FastPage/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://leonard514.github.io/FastPage/feed.xml" title="Leonard Wright" /><link rel="shortcut icon" type="image/x-icon" href="/FastPage/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/FastPage/">Leonard Wright</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/FastPage/search/">Search</a><a class="page-link" href="/FastPage/_pages/02_notes.html">Notes</a><a class="page-link" href="/FastPage/categories/">Tags</a><a class="page-link" href="/FastPage/about/">About Me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <script type="text/javascript">
+// If you're seeing this, I'm letting you know that you're not supposed to be here.
+// I put a bunch of commands in here limiting certain functionalities of the website.
+// So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+// Namely preventing YOU from copying my code and cheating.
+// Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+// modifying the website's code as you please.
+// And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+// Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+
+// But if you're malicious and will cheat using my code, things will get bad quickly.
+// Life with an academic dishonesty infraction is not fun.
+// And unlike some people who wouldn't have a way to defend themselves, I do.
+// It's this code. Unlike most people, I went out of my way to stop cheaters.
+// This code is evidence of my sincerity.
+// Which will make your intentions undeniable if you copy my code. SO DON'T.
+  document.oncontextmenu = new Function("return false");
+  document.oncut = new Function("return false");
+  document.oncopy = new Function("return false");
+  document.onafterprint = new Function("return false");
+  document.onbeforeprint = new Function("return false");
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('copy', (e) => e.preventDefault());
+document.addEventListener('cut', (e) => e.preventDefault());
+document.addEventListener('afterprint', (e) => e.preventDefault());
+document.addEventListener('beforeprint', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+  )
+    return false;
+};
+</script>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" onmousedown="return false" onselectstart="return false" onkeydown="return false">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 3 Sections 8, 10 Hacks .ipynb file</h1><p class="page-description">Hacks</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-31T00:00:00-06:00" itemprop="datePublished">
+        Dec 31, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      14 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/FastPage/categories/#jupyter">jupyter</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#3 Week Sprint">3 Week Sprint</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Leonard514/FastPage/tree/master/_notebooks/2022-12-31-3.8_3.10hack.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/FastPage/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Leonard514/FastPage/master?filepath=_notebooks%2F2022-12-31-3.8_3.10hack.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/FastPage/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Leonard514/FastPage/blob/master/_notebooks/2022-12-31-3.8_3.10hack.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/FastPage/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FLeonard514%2FFastPage%2Fblob%2Fmaster%2F_notebooks%2F2022-12-31-3.8_3.10hack.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/FastPage/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-12-31-3.8_3.10hack.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Exercise 1: Reverse List output</strong></p>
+<p>I tried to recycle a while loop from a previous assignment and learned that unlike for loops, while loops do not reset the index on each iteration. I guess that's part of the dynamic checking of the conditional statement. Regardless, here's a for loop:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1">#Index is zero</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># For loops reset the index on each iteration. I tried a while loop and found that while loops do not reset the index.</span>
+<span class="c1"># This sets the index to the last element, second to last element, etc. by substracting one and the index from the list's length.</span>
+<span class="c1"># and making this the new index. It then prints the corresponding element.</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+4
+3
+2
+1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Exercise 2: Bubble Sort</strong></p>
+<p>Here's something from Wikipedia (Dec 9 9:42 AM):</p>
+<p><code>Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the input list element by element, comparing the current element with the one after it, swapping their values if needed.</code></p>
+<p>OK, looks like I just need to make a for loop. If a given element is greater than the next element, I swap them (likely using temp variables to catalyze the assignment process)</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="n">prev</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"element number "</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"This is "</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Previous is "</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">prev</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">prev</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">"Switch triggered"</span><span class="p">)</span>
+                        <span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">prev</span><span class="p">)</span>
+                        <span class="n">b</span> <span class="o">=</span> <span class="nb">list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">"a is "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">"b is "</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">a</span><span class="p">]))</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">b</span><span class="p">]))</span>
+                        <span class="c1"># idea from https://stackoverflow.com/questions/2493920/how-to-switch-position-of-two-items-in-a-python-list</span>
+                        <span class="nb">list</span><span class="p">[</span><span class="n">a</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">b</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">b</span><span class="p">]))</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">a</span><span class="p">]))</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+                        <span class="n">prev</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                        <span class="n">prev</span> <span class="o">=</span> <span class="n">i</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"final list is "</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[9, 8, 4, 3, 5, 2, 6, 7, 1, 0]
+element number 0
+This is 9
+Previous is -1
+element number 1
+This is 8
+Previous is 9
+Switch triggered
+a is 0
+b is 1
+9
+8
+9
+8
+[8, 9, 4, 3, 5, 2, 6, 7, 1, 0]
+element number 5
+This is 4
+Previous is 9
+Switch triggered
+a is 1
+b is 2
+9
+4
+9
+4
+[8, 4, 9, 3, 5, 2, 6, 7, 1, 0]
+element number 3
+This is 3
+Previous is 9
+Switch triggered
+a is 2
+b is 3
+9
+3
+9
+3
+[8, 4, 3, 9, 5, 2, 6, 7, 1, 0]
+element number 2
+This is 5
+Previous is 9
+Switch triggered
+a is 3
+b is 4
+9
+5
+9
+5
+[8, 4, 3, 5, 9, 2, 6, 7, 1, 0]
+element number 3
+This is 2
+Previous is 9
+Switch triggered
+a is 4
+b is 5
+9
+2
+9
+2
+[8, 4, 3, 5, 2, 9, 6, 7, 1, 0]
+element number 6
+This is 6
+Previous is 9
+Switch triggered
+a is 5
+b is 6
+9
+6
+9
+6
+[8, 4, 3, 5, 2, 6, 9, 7, 1, 0]
+element number 7
+This is 7
+Previous is 9
+Switch triggered
+a is 6
+b is 7
+9
+7
+9
+7
+[8, 4, 3, 5, 2, 6, 7, 9, 1, 0]
+element number 4
+This is 1
+Previous is 9
+Switch triggered
+a is 7
+b is 8
+9
+1
+9
+1
+[8, 4, 3, 5, 2, 6, 7, 1, 9, 0]
+element number 8
+This is 0
+Previous is 9
+Switch triggered
+a is 8
+b is 9
+9
+0
+9
+0
+[8, 4, 3, 5, 2, 6, 7, 1, 0, 9]
+element number 0
+This is 8
+Previous is -1
+element number 2
+This is 4
+Previous is 8
+Switch triggered
+a is 0
+b is 1
+8
+4
+8
+4
+[4, 8, 3, 5, 2, 6, 7, 1, 0, 9]
+element number 5
+This is 3
+Previous is 8
+Switch triggered
+a is 1
+b is 2
+8
+3
+8
+3
+[4, 3, 8, 5, 2, 6, 7, 1, 0, 9]
+element number 6
+This is 5
+Previous is 8
+Switch triggered
+a is 2
+b is 3
+8
+5
+8
+5
+[4, 3, 5, 8, 2, 6, 7, 1, 0, 9]
+element number 5
+This is 2
+Previous is 8
+Switch triggered
+a is 3
+b is 4
+8
+2
+8
+2
+[4, 3, 5, 2, 8, 6, 7, 1, 0, 9]
+element number 7
+This is 6
+Previous is 8
+Switch triggered
+a is 4
+b is 5
+8
+6
+8
+6
+[4, 3, 5, 2, 6, 8, 7, 1, 0, 9]
+element number 1
+This is 7
+Previous is 8
+Switch triggered
+a is 5
+b is 6
+8
+7
+8
+7
+[4, 3, 5, 2, 6, 7, 8, 1, 0, 9]
+element number 3
+This is 1
+Previous is 8
+Switch triggered
+a is 6
+b is 7
+8
+1
+8
+1
+[4, 3, 5, 2, 6, 7, 1, 8, 0, 9]
+element number 4
+This is 0
+Previous is 8
+Switch triggered
+a is 7
+b is 8
+8
+0
+8
+0
+[4, 3, 5, 2, 6, 7, 1, 0, 8, 9]
+element number 9
+This is 9
+Previous is 8
+element number 6
+This is 4
+Previous is -1
+element number 2
+This is 3
+Previous is 4
+Switch triggered
+a is 0
+b is 1
+4
+3
+4
+3
+[3, 4, 5, 2, 6, 7, 1, 0, 8, 9]
+element number 7
+This is 5
+Previous is 4
+element number 5
+This is 2
+Previous is 5
+Switch triggered
+a is 2
+b is 3
+5
+2
+5
+2
+[3, 4, 2, 5, 6, 7, 1, 0, 8, 9]
+element number 1
+This is 6
+Previous is 5
+element number 0
+This is 7
+Previous is 6
+element number 4
+This is 1
+Previous is 7
+Switch triggered
+a is 5
+b is 6
+7
+1
+7
+1
+[3, 4, 2, 5, 6, 1, 7, 0, 8, 9]
+element number 3
+This is 0
+Previous is 7
+Switch triggered
+a is 6
+b is 7
+7
+0
+7
+0
+[3, 4, 2, 5, 6, 1, 0, 7, 8, 9]
+element number 8
+This is 8
+Previous is 7
+element number 9
+This is 9
+Previous is 8
+element number 5
+This is 3
+Previous is -1
+element number 6
+This is 4
+Previous is 3
+element number 2
+This is 2
+Previous is 4
+Switch triggered
+a is 1
+b is 2
+4
+2
+4
+2
+[3, 2, 4, 5, 6, 1, 0, 7, 8, 9]
+element number 1
+This is 5
+Previous is 4
+element number 0
+This is 6
+Previous is 5
+element number 2
+This is 1
+Previous is 6
+Switch triggered
+a is 4
+b is 5
+6
+1
+6
+1
+[3, 2, 4, 5, 1, 6, 0, 7, 8, 9]
+element number 3
+This is 0
+Previous is 6
+Switch triggered
+a is 5
+b is 6
+6
+0
+6
+0
+[3, 2, 4, 5, 1, 0, 6, 7, 8, 9]
+element number 7
+This is 7
+Previous is 6
+element number 8
+This is 8
+Previous is 7
+element number 9
+This is 9
+Previous is 8
+element number 5
+This is 3
+Previous is -1
+element number 4
+This is 2
+Previous is 3
+Switch triggered
+a is 0
+b is 1
+3
+2
+3
+2
+[2, 3, 4, 5, 1, 0, 6, 7, 8, 9]
+element number 1
+This is 4
+Previous is 3
+element number 0
+This is 5
+Previous is 4
+element number 3
+This is 1
+Previous is 5
+Switch triggered
+a is 3
+b is 4
+5
+1
+5
+1
+[2, 3, 4, 1, 5, 0, 6, 7, 8, 9]
+element number 2
+This is 0
+Previous is 5
+Switch triggered
+a is 4
+b is 5
+5
+0
+5
+0
+[2, 3, 4, 1, 0, 5, 6, 7, 8, 9]
+element number 6
+This is 6
+Previous is 5
+element number 7
+This is 7
+Previous is 6
+element number 8
+This is 8
+Previous is 7
+element number 9
+This is 9
+Previous is 8
+element number 4
+This is 2
+Previous is -1
+element number 1
+This is 3
+Previous is 2
+element number 0
+This is 4
+Previous is 3
+element number 3
+This is 1
+Previous is 4
+Switch triggered
+a is 2
+b is 3
+4
+1
+4
+1
+[2, 3, 1, 4, 0, 5, 6, 7, 8, 9]
+element number 2
+This is 0
+Previous is 4
+Switch triggered
+a is 3
+b is 4
+4
+0
+4
+0
+[2, 3, 1, 0, 4, 5, 6, 7, 8, 9]
+element number 5
+This is 5
+Previous is 4
+element number 6
+This is 6
+Previous is 5
+element number 7
+This is 7
+Previous is 6
+element number 8
+This is 8
+Previous is 7
+element number 9
+This is 9
+Previous is 8
+element number 1
+This is 2
+Previous is -1
+element number 0
+This is 3
+Previous is 2
+element number 3
+This is 1
+Previous is 3
+Switch triggered
+a is 1
+b is 2
+3
+1
+3
+1
+[2, 1, 3, 0, 4, 5, 6, 7, 8, 9]
+element number 2
+This is 0
+Previous is 3
+Switch triggered
+a is 2
+b is 3
+3
+0
+3
+0
+[2, 1, 0, 3, 4, 5, 6, 7, 8, 9]
+element number 4
+This is 4
+Previous is 3
+element number 5
+This is 5
+Previous is 4
+element number 6
+This is 6
+Previous is 5
+element number 7
+This is 7
+Previous is 6
+element number 8
+This is 8
+Previous is 7
+element number 9
+This is 9
+Previous is 8
+element number 0
+This is 2
+Previous is -1
+element number 1
+This is 1
+Previous is 2
+Switch triggered
+a is 0
+b is 1
+2
+1
+2
+1
+[1, 2, 0, 3, 4, 5, 6, 7, 8, 9]
+element number 1
+This is 0
+Previous is 2
+Switch triggered
+a is 1
+b is 2
+2
+0
+2
+0
+[1, 0, 2, 3, 4, 5, 6, 7, 8, 9]
+element number 3
+This is 3
+Previous is 2
+element number 4
+This is 4
+Previous is 3
+element number 5
+This is 5
+Previous is 4
+element number 6
+This is 6
+Previous is 5
+element number 7
+This is 7
+Previous is 6
+element number 8
+This is 8
+Previous is 7
+element number 9
+This is 9
+Previous is 8
+element number 0
+This is 1
+Previous is -1
+element number 1
+This is 0
+Previous is 1
+Switch triggered
+a is 0
+b is 1
+1
+0
+1
+0
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+element number 2
+This is 2
+Previous is 1
+element number 3
+This is 3
+Previous is 2
+element number 4
+This is 4
+Previous is 3
+element number 5
+This is 5
+Previous is 4
+element number 6
+This is 6
+Previous is 5
+element number 7
+This is 7
+Previous is 6
+element number 8
+This is 8
+Previous is 7
+element number 9
+This is 9
+Previous is 8
+element number 0
+This is 0
+Previous is -1
+element number 1
+This is 1
+Previous is 0
+element number 2
+This is 2
+Previous is 1
+element number 3
+This is 3
+Previous is 2
+element number 4
+This is 4
+Previous is 3
+element number 5
+This is 5
+Previous is 4
+element number 6
+This is 6
+Previous is 5
+element number 7
+This is 7
+Previous is 6
+element number 8
+This is 8
+Previous is 7
+element number 9
+This is 9
+Previous is 8
+final list is [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now quite frankly, this was a confusing process for myself. You may notice that my code is actually a for loop nested inside a for loop with an excess of print commands for debugging purposes. Here's what's going on. I'll explain the nested for loop first before explaining why it's necessary to nest it... since that will make sense later.</p>
+<p>Before the nested for loop is created, the variable <strong>prev</strong> is set to negative one. I'll explain why that exists once I introduce the iteration.</p>
+<p>For every element in the list, I print the element number, what the element is, and what the previous element is. This is helpful for debugging. For a reason I'm not aware of, the element number tends to get bugged. But it's only debugging so it should be OK as long as I know what's going on (and with all the other commands functioning as necessary, it's not that hard)</p>
+<p>I then use an if statement with the condition that the present element <strong>i</strong> is less than the previous element <strong>prev</strong>. <strong>prev</strong> was set to negative one initially since the first element in the list cannot be swapped with a previous element, and negative one will always cause the condition to be False.</p>
+<p>In the first iteration, the else statement will always be executed, which sets the variable <strong>prev</strong> to <strong>i</strong> for use in the next iteration.</p>
+<p>If the if condition is fulfilled, a print statement is executed to let me know that this happened. I then set variable <strong>a</strong> to the index of the previous element and <strong>b</strong> to the index of the current element. I print them for good measure, as well as the values of the corresponding elements.
+The next command switches the elements in the actual list (see the source in the comment). I then print the element values in opposite order (the values appearing in the same order verifies that the elements were switched). I then print the list to verify the swap, and then set <strong>prev</strong> to the value of the second element of the pair, which will be the first element of the next pair.</p>
+<p>Now that I've done a line-by-line explanation, I'll make a general summary of the functionality of the nested for loop. The nested for loop iterates through a list and swaps two elements if the first element is greater than the second. On one execution, the loop is very good at moving single elements to the other side of the list (as is the case with element of value 9).</p>
+<p>However, elements of lesser value fall out of focus even if they are not in order. The original for loop was not nested and I was left with the problem of the element with value 8 being stuck at the beginning of my list (since I moved on from it in the first iteration of the loop). As such, I needed to find a way to execute this loop multiple times to move 8 up beside 9. I therefore nested this for loop inside another for loop that was to execute once for each element in the list. This guarantees the loop would execute enough times to move the greater-valued elements to the end of the list. I'll now give a condensed version of the code below</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="n">prev</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">prev</span><span class="p">:</span>
+                        <span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">prev</span><span class="p">)</span>
+                        <span class="n">b</span> <span class="o">=</span> <span class="nb">list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                        <span class="c1"># idea from https://stackoverflow.com/questions/2493920/how-to-switch-position-of-two-items-in-a-python-list</span>
+                        <span class="nb">list</span><span class="p">[</span><span class="n">a</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">b</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+                        <span class="n">prev</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                        <span class="n">prev</span> <span class="o">=</span> <span class="n">i</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"final list is "</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[9, 8, 4, 3, 5, 2, 6, 7, 1, 0]
+final list is [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+
+<script type="text/javascript">
+        // If you're seeing this, I'm letting you know that you're not supposed to be here.
+        // I put a bunch of commands in here limiting certain functionalities of the website.
+        // So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+        // Namely preventing YOU from copying my code and cheating.
+        // Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+        // modifying the website's code as you please.
+        // And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+        // Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+        
+        // But if you're malicious and will cheat using my code, things will get bad quickly.
+        // Life with an academic dishonesty infraction is not fun.
+        // And unlike some people who wouldn't have a way to defend themselves, I do.
+        // It's this code. Unlike most people, I went out of my way to stop cheaters.
+        // This code is evidence of my sincerity.
+        // Which will make your intentions undeniable if you copy my code. SO DON'T.
+          document.oncontextmenu = new Function("return false");
+          document.oncut = new Function("return false");
+          document.oncopy = new Function("return false");
+          document.onafterprint = new Function("return false");
+          document.onbeforeprint = new Function("return false");
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+        document.addEventListener('cut', (e) => e.preventDefault());
+        document.addEventListener('afterprint', (e) => e.preventDefault());
+        document.addEventListener('beforeprint', (e) => e.preventDefault());
+        
+        function ctrlShiftKey(e, keyCode) {
+          return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
+        
+        document.onkeydown = (e) => {
+          if (
+            event.keyCode === 123 ||
+            ctrlShiftKey(e, 'I') ||
+            ctrlShiftKey(e, 'J') ||
+            ctrlShiftKey(e, 'C') ||
+            (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+          )
+            return false;
+        };
+</script>
+
+<script src="https://utteranc.es/client.js"
+        repo="Leonard514/FastPage"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/FastPage/jupyter/3%20week%20sprint/2022/12/31/3.8_3.10hack.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/FastPage/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://leonard514.github.io/FastPage/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/FastPage/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Fastpages blog tracking progress in AP Computer Science Principles</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://github.com/Leonard514 “" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/FastPage/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://www.youtube.com/channel/UCNy-EIC-T3dV6In5aIC04DQ “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/FastPage/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
