@@ -142,7 +142,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      13 min read
     
 </span></p>
 
@@ -168,7 +168,7 @@ document.onkeydown = (e) => {
 <li class="toc-entry toc-h1"><a href="#lesson-312-calling-procedures">Lesson 3.12: Calling Procedures</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#notes-1">Notes 1</a></li>
-<li class="toc-entry toc-h3"><a href="#practice-1">Practice 1</a></li>
+<li class="toc-entry toc-h3"><a href="#practice-1-which-is-also-312-hacks-part-1">Practice 1 (Which is also 3.12 Hacks Part 1)</a></li>
 <li class="toc-entry toc-h3"><a href="#notes-2">Notes 2</a></li>
 <li class="toc-entry toc-h3"><a href="#practice-2">Practice 2</a></li>
 </ul>
@@ -203,8 +203,8 @@ document.onkeydown = (e) => {
 }
 </code></pre></div></div>
 
-<h3 id="practice-1">
-<a class="anchor" href="#practice-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice 1</h3>
+<h3 id="practice-1-which-is-also-312-hacks-part-1">
+<a class="anchor" href="#practice-1-which-is-also-312-hacks-part-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice 1 (Which is also 3.12 Hacks Part 1)</h3>
 
 <p>1) Pick the best procedure based on a real-life calculation: <code class="language-plaintext highlighter-rouge">average speed = total time / total distance</code></p>
 
@@ -374,8 +374,8 @@ Of course this is pseudocode, so I'll be sure to follow the syntax.
 
 Example 1: Update a quiz grade based on a retake
 
-
-PROCEDURE updateQuiz(quizAverage, currentScore, totalPoints)
+</code></pre></div></div>
+<p>PROCEDURE updateQuiz(quizAverage, currentScore, totalPoints)
 {
     tempAverage ← currentScore / totalPoints
     tempAverage ← tempAverage * 100
@@ -385,8 +385,8 @@ PROCEDURE updateQuiz(quizAverage, currentScore, totalPoints)
         quizAverage ← tempAverage
     }
     RETURN(quizAverage)
-}
-
+}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 This procedure checks if a retake percentage is greater than the first percentage. If so, the quiz grade is updated. A few notes of interest:
 - The **round** command does not exist in the [CollegeBoard Pseudocode guide](https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-exam-reference-sheet.pdf). For the purpuses of this exercise, I'll assume it functions equivalently to [Python's round()](https://www.w3schools.com/python/ref_func_round.asp).
 - There is a logic error in this function, where the new grade is rounded before being compared to the old grade. As such, two scores of 87.5% (for example) would result in the new quiz score being rounded to 88% and inflating grades by at most 0.5% when no performance improvement was observed.
@@ -472,7 +472,7 @@ Yeah, **forwardMarch(n)** is pretty simplistic. It moves forward the amount of t
 
 ![](/FastPage/images/fourweeksprint/procedure2.png "Challenge 2")
 
-Here I'll paste my procedure and also try something else
+Here I'll paste my procedure and also try something else. I'll always assume the initial direction is up.
 
 </code></pre></div></div>
 <p>PROCEDURE forwardMarch(n)
@@ -494,10 +494,176 @@ forwardMarch(5)
 moveRight()
 forwardMarch(3)
 ROTATE_LEFT()
+forwardMarch(2)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+The **moveRight()** procedure does what you would think it does. It also preserves original directionality of the robot.
+
+
+Here comes a grade challenge. Update the quiz score with these variables:
+- Initial Score is 50%
+- Retake is 56 of 60 points
+
+This exercise is pretty much a repeat of the updating quiz scores procedure from the lesson. Given procedures are literally meant to be re-used in programs, I'll paste a procedure directly from my notes above (while getting rid of the rounding feature to remove logic errors). Kudos to CollegeBoard for making the procedure (yeah... it was in blocky, so they probably wrote it).
+
+</code></pre></div></div>
+<p>PROCEDURE updateQuiz(quizAverage, currentScore, totalPoints)
+{
+    tempAverage ← currentScore / totalPoints
+    tempAverage ← tempAverage * 100
+    IF(tempAverage &gt; quizAverage)
+    {
+        quizAverage ← tempAverage
+    }
+    RETURN(quizAverage)
+}</p>
+
+<p>newScore ← updateQuiz(50, 56, 60)
+DISPLAY(newScore)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+I explained this procedure in my notes
+
+
+# Final Hacks
+
+### 3.12 Part 2: Basically pulling a bunch of old procedures from the first 3.12 practice but whatever
+
+1) Find the output of the procedure (polished from the original for your convenience)
+
+</code></pre></div></div>
+<p>PROCEDURE find_a()
+{
+    c ← 9
+    b ← 9 * 9
+    a ← b * c
+    DISPLAY(a)
+}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Note: **c** is 9, and **b** is 9 times 9 or 81. **a** is **b** times **c**, or 9 times 81. This yields an output of 729. Note that the procedure was not called, however.
+
+2) Find the output of the procedure (assuming it is called)
+
+</code></pre></div></div>
+<p>itemCost ← 173
+tax ← 10
+PROCEDURE applytax(cost, percentTaxed)
+{
+    temp ← 100 + percentTaxed
+    temp ← temp / 100
+    cost ← cost * temp
+    DISPLAY(cost)
+}
+applytax(itemCost, tax)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Note: some variable names were changed to prevent conflicts. A line was also added to divide **temp** by 100 (second line in the procedure) to adjust percentages to decimals.
+
+What this procedure does is adds the percent tax to 100 and divides by 100 to get the decimal form. It then multiplies the item's cost by this number to get the final cost, which is displayed. In this case, this calculates a 10% tax/price increase on a $173 item. I also executed the procedure. Running this block of code [here](https://board.dan.onl/) yields an output of 190.3
+
+3) (no prompt given, but I would assume it is) Convert 103 degrees Fahrenheit to Celsius using the given procedure
+
+</code></pre></div></div>
+<p>Temper ← 103
+PROCEDURE convert_Fahrenheit(Temper)
+{
+    Celsius ← Temper - 32
+    Celsius ← Celsius * 5 / 9
+    DISPLAY(Celsius)
+}
+convert_Fahrenheit(Temper)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+This procedure is clearly meant to convert Fahrenheit to Celsius. It uses two facts: 0 degrees Celsius is 32 degrees Fahrenheit, and that a 5 degree increase in Celsius is a 9 degree increase in Fahrenheit. To answer the question, 103 degrees Fahrenheit is 39.44444444... degrees Celsius.
+
+### Hacks 3.13
+
+1) `Create a procedure that is meant to replace the top running backs yards per game in one season if the current running back has more yards per game`
+
+Gotta love that sports jargon. Honestly this doesn't make too much sense to me. But in a generic sense, there's a rate and a competitive scenario. Update the top rate if it's beaten. 
+
+</code></pre></div></div>
+<p>PROCEDURE updateTop(toprbyardspg, currentrbyards, totalGames)
+{
+    temp ← currentrbyards / totalGames
+    IF(temp &gt; toprbyardspg)
+    {
+        toprate ← temp
+        RETURN(toprate)
+    }
+}</p>
+
+<p>rate ← updateTop(100, 1260, 12)
+DISPLAY(rate)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+2) Robot Problem 3
+
+![](/FastPage/images/fourweeksprint/homework2.png "Challenge 3")
+
+Not bad. The course was made in such a manner that I can't just use **forwardMarch(n)** to cheese the puzzle. It's not the end of marching though, since I could easily condense left and right marching into their own commands. I'll assume the initial direction is up (since this is not self-evident). Once I set up three procedures, this becomes very easy.
+
+</code></pre></div></div>
+<p>PROCEDURE forwardMarch(n)
+{
+    REPEAT n TIMES
+    {
+        MOVE_FORWARD()
+    }
+}
+PROCEDURE rightMarch(n)
+{
+    ROTATE_RIGHT()
+    forwardMarch(n)
+    ROTATE_LEFT()
+}
+PROCEDURE leftMarch(n)
+{
+    ROTATE_LEFT()
+    forwardMarch(n)
+    ROTATE_RIGHT()
+}</p>
+
+<p>rightMarch(1)
+forwardMarch(2)
+rightMarch(3)
+forwardMarch(2)
+LeftMarch(2)
+MOVE_FORWARD
+LeftMarch(2)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+**RightMarch(n)** essentially moves right for the specified number of squares (as the parameter), and **LeftMarch(n)** does something similar... but to the left instead. Both preserve original directionality.
+
+3) How to define procedures in [CollegeBoard Pseudocode](https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-exam-reference-sheet.pdf)?
+
+Use a PROCEDURE name(param1, param2, param3)...
+
+I assume the PROCEDURE is case-sensitive. As far as I know, you can name them anything you want (functionally), though it is recommended to name them descriptively and concisely.
+
+Option A: PROCEDURE MYLIST
+Option B: PROCEDURE MyList
+Option C: procedure mylist
+
+Option C has issues since **procedure** is not in all-caps; commands are often in all-caps in CollegeBoard Pseudocode. Options A and B have a difference of capitalization (and quite frankly this doesn't make a difference functionally, though variable names and function names are case-sensitive). Usually, the capitalization of B is followed with actual variables, making the first letter of each word capital. However, all the procedure commands fail to define parameters (or specify there are none using **()**)... so in all technicality, none of the options are correct (though B is the closest to convention).
+
+4) Final robot challenge
+
+![](/FastPage/images/fourweeksprint/homework4.png "Challenge 4")
+
+Someone decided to make a convenient, straight path to the goal. Why not use it? As always, I'll assume the initial direction is up.
+
+</code></pre></div></div>
+<p>PROCEDURE forwardMarch(n)
+{
+    REPEAT n TIMES
+    {
+        MOVE_FORWARD()
+    }
+}
+ROTATE_LEFT()
+MOVE_FORWARD()
+ROTATE_RIGHT()
+forwardMarch(6)
+ROTATE_LEFT()
 forwardMarch(2)
 ```</p>
 
-<p>The <strong>moveRight()</strong> procedure does what you would think it does. It also preserves original directionality of the robot.</p>
+<p>We’re all getting the hang of this by now. This is simpler than exercise 3 and nothing new has been introduced. That’s it for this one I guess…</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
