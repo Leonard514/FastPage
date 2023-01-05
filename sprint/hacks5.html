@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>3.12 3.13 Hacks Blog | Leonard Wright</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="3.12 3.13 Hacks Blog" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Includes Questions, Answers, Corrections" />
+<meta property="og:description" content="Includes Questions, Answers, Corrections" />
+<link rel="canonical" href="https://leonard514.github.io/FastPage/sprint/hacks5" />
+<meta property="og:url" content="https://leonard514.github.io/FastPage/sprint/hacks5" />
+<meta property="og:site_name" content="Leonard Wright" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-01-04T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="3.12 3.13 Hacks Blog" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-01-04T00:00:00-06:00","datePublished":"2023-01-04T00:00:00-06:00","description":"Includes Questions, Answers, Corrections","headline":"3.12 3.13 Hacks Blog","mainEntityOfPage":{"@type":"WebPage","@id":"https://leonard514.github.io/FastPage/sprint/hacks5"},"url":"https://leonard514.github.io/FastPage/sprint/hacks5"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/FastPage/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://leonard514.github.io/FastPage/feed.xml" title="Leonard Wright" /><link rel="shortcut icon" type="image/x-icon" href="/FastPage/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/FastPage/">Leonard Wright</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/FastPage/search/">Search</a><a class="page-link" href="/FastPage/_pages/02_notes.html">Notes</a><a class="page-link" href="/FastPage/categories/">Tags</a><a class="page-link" href="/FastPage/about/">About Me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <script type="text/javascript">
+// If you're seeing this, I'm letting you know that you're not supposed to be here.
+// I put a bunch of commands in here limiting certain functionalities of the website.
+// So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+// Namely preventing YOU from copying my code and cheating.
+// Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+// modifying the website's code as you please.
+// And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+// Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+
+// But if you're malicious and will cheat using my code, things will get bad quickly.
+// Life with an academic dishonesty infraction is not fun.
+// And unlike some people who wouldn't have a way to defend themselves, I do.
+// It's this code. Unlike most people, I went out of my way to stop cheaters.
+// This code is evidence of my sincerity.
+// Which will make your intentions undeniable if you copy my code. SO DON'T.
+  document.oncontextmenu = new Function("return false");
+  document.oncut = new Function("return false");
+  document.oncopy = new Function("return false");
+  document.onafterprint = new Function("return false");
+  document.onbeforeprint = new Function("return false");
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('copy', (e) => e.preventDefault());
+document.addEventListener('cut', (e) => e.preventDefault());
+document.addEventListener('afterprint', (e) => e.preventDefault());
+document.addEventListener('beforeprint', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+  )
+    return false;
+};
+</script>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" onmousedown="return false" onselectstart="return false" onkeydown="return false">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">3.12 3.13 Hacks Blog</h1><p class="page-description">Includes Questions, Answers, Corrections</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-01-04T00:00:00-06:00" itemprop="datePublished">
+        Jan 4, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      8 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/FastPage/categories/#markdown">markdown</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#Comp Sci">Comp Sci</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#3 Week Sprint">3 Week Sprint</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#lesson-312-calling-procedures">Lesson 3.12: Calling Procedures</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#notes-1">Notes 1</a></li>
+<li class="toc-entry toc-h3"><a href="#practice-1">Practice 1</a></li>
+<li class="toc-entry toc-h3"><a href="#notes-2">Notes 2</a></li>
+<li class="toc-entry toc-h3"><a href="#practice-2">Practice 2</a></li>
+</ul>
+</li>
+</ul><h1 id="lesson-312-calling-procedures">
+<a class="anchor" href="#lesson-312-calling-procedures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lesson 3.12: Calling Procedures</h1>
+
+<h3 id="notes-1">
+<a class="anchor" href="#notes-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes 1</h3>
+
+<ul>
+  <li>Procedure = group of commands (named) affected by parameter (input)
+    <ul>
+      <li>Can be called a <strong>method</strong> or <strong>function</strong>; meant to be called during program execution (executes procedure before the next lines)</li>
+      <li>Return commands forcefully terminate procedure execution</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example (CollegeBoard Pseudocode; this is robot stuff)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PROCEDURE detourRight()
+{
+    ROTATE_RIGHT()
+    MOVE_FORWARD()
+    ROTATE_LEFT()
+    MOVE_FORWARD()
+    MOVE_FORWARD()
+    ROTATE_LEFT()
+    MOVE_FORWARD()
+    ROTATE_RIGHT()
+}
+</code></pre></div></div>
+
+<h3 id="practice-1">
+<a class="anchor" href="#practice-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice 1</h3>
+
+<p>1) Pick the best procedure based on a real-life calculation: <code class="language-plaintext highlighter-rouge">average speed = total time / total distance</code></p>
+
+<p>i) PROCEDURE calcAvgSpeed (distance, time) { DISPLAY (distance/time) }
+ii) PROCEDURE calcAvgSpeed (distance) { DISPLAY (distance/time) }
+iii) PROCEDURE calcAvgSpeed (distance, time) { DISPLAY (time/distance) }</p>
+
+<p>Notes</p>
+<ul>
+  <li>Option 1 has arguments for both parameters, distance and time, and divides distance by time appropriately in the display command. <strong>This is correct</strong>.</li>
+  <li>Option 2 has arguments for only distance. There is no way to input time into the procedure, so there may be issues with the execution.</li>
+  <li>Option 3 has arguments for both parameters, but divides time by distance. This is not the desired calculation.</li>
+</ul>
+
+<p>2) See the given procedure in CollegeBoard Pseudocode</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PROCEDURE heightenEmotions(myEmotion)
+{ moreEnergy ← CONCAT(myEmotion, "!!!")
+moreVolume ← UPPER(moreEnergy)
+RETURN moreVolume }
+</code></pre></div></div>
+
+<p>Context given: CONCAT concatenates two strings; UPPER converts string to uppercase only. Suppose the following was run:</p>
+
+<p>heightenEmotions(“im mad”)</p>
+
+<p>Will nothing be displayed?</p>
+
+<p>This question is interesting because I cannot verify the existence of the command <strong>UPPER</strong> from the <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-exam-reference-sheet.pdf">college board reference sheet</a>. In fact, this resembles the <strong>upper()</strong> command from <a href="https://www.w3schools.com/python/ref_string_upper.asp">Python</a>. For the purposes of the question, I’ll assume it exists and acts exactly as it does in Python (that is, it does not modify numbers, symbols, and spaces).</p>
+
+<p>From the wording of the prompt “James Hunter then sees this line of code,” it is safe to interpret that the procedure was called after it was defined. As a result, it will execute normally. It will append 3 exclamation marks to the end of the <strong>im mad</strong>, make the letter characters all uppercase, and return this string to the caller. The procedure did not include any display commands, and there were no display commands after the code. Therefore, nothing will be displayed even though the code is running normally.</p>
+
+<p>Answer: <strong>True</strong>.</p>
+
+<p>3) This procedure calculates carbon footprint given a set number of miles and set number of passengers for a flight.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PROCEDURE calcFlightFootprint(numMiles, numPassengers) 
+{
+    CO2_PER_MILE ← 53.29
+    carbonPerFlight ← numMiles * CO2_PER_MILE
+    carbonPerPassenger ← carbonPerFlight / numPassengers
+    RETURN carbonPerPassenger
+}
+</code></pre></div></div>
+
+<p>This code will be used to calculate carbon footprint for one passenger on two flights: a 2451 mile flight with 118 passengers and a 3442 mile flight with 252 passengers. Which calculates the total foodprint?</p>
+
+<p>1) totalFootprint ← calcFlightFootprint(2451, 118) + calcFlightFootprint(3442, 252)
+2) totalFootprint ← calcFlightFootprint(2451, 118 + 3442, 252)
+3) totalFootprint ← calcFlightFootprint((2451, 118) + (3442, 252))
+4)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>laNyCarbon ← calcFlightFootprint(2451, 118) 
+nyLondonCarbon ← calcFlightFootprint(3442, 252) 
+totalFootprint ← laNyCarbon + nyLondonCarbon
+</code></pre></div></div>
+
+<p>Note: The miles parameter goes first, while the passengers parameter goes second. None of the options swap these parameters.</p>
+
+<p>Options 2 and 3 feature strange inputs of the parameters. The parameters must be inputted with the number of miles first, with a comma, a space, then the number of passengers. For syntax, the parameters may not be inputted any other way. As such, options 2 and 3 will not execute the procedure properly.</p>
+
+<p>Options 1 and 4 input the correct corresponding number of miles and number of passengers into the corresponding flights and use the procedure and operators to get the total carbon footprint. Option 4 provides greater clarity as to which flight is responsible for the majority of the carbon footprint through the use of variables for each flight, but both options calculate total carbon footprints successfully.</p>
+
+<h3 id="notes-2">
+<a class="anchor" href="#notes-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes 2</h3>
+
+<ul>
+  <li>Procedures, like other lines of code, have the top lines executed first and the bottom lines executed last</li>
+</ul>
+
+<h3 id="practice-2">
+<a class="anchor" href="#practice-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice 2</h3>
+
+<p>Example: an item receives a 20% discount then an 8% tax. Find the final cost for an $80 item.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PROCEDURE applyDiscount (cost, percentDiscounted) 
+{
+    temp ← 100 - percentDiscounted
+    temp ← temp / 100
+    cost ← cost * temp
+    DISPLAY(cost)
+    RETURN(cost)
+}
+
+PROCEDURE applytax(cost, percentTaxed) 
+{
+    temp ← 100 + percentTaxed
+    temp ← temp / 100
+    cost ← cost * temp
+    DISPLAY(cost)
+}
+
+</code></pre></div></div>
+
+<p>I fixed the display commands (previously python <strong>print()</strong> commands) and polished some variable names to ensure they correspond.</p>
+
+<p>In this case, I would execute the commands in this order:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>input ← applyDiscount(80, 20)
+applytax(input, 8)
+</code></pre></div></div>
+
+<p>Where input will be equivalent to the output of the first command (assuming I’m running these one-by-one in a console and not using a script). If I was to run this as a script, I would be required to add a <strong>RETURN(cost)</strong> command to end of the applyDiscount procedure. The temp variable that is set to the output of applyDiscount must be distinct from any variables used in the procedures (otherwise, the output will override those variables permanently).</p>
+
+<p>The final cost of the item is $69.12</p>
+
+<p>Temperature: Use the procedure to convert 80 degrees Fahrenheit to Celsius</p>
+
+<p>```PROCEDURE convert_Fahrenheit(temperature)
+{
+    Celsius ← temperature - 32
+    Celsius ← Celsius * 5/9
+    DISPLAY(Celsius)
+}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+I polished up a few issues, including spelling and removing spaces from the procedure name. Anyways, execution should be simple.
+
+`convert_Fahrenheit(80)`
+
+This converts to 26.6666666... degrees celsius.
+
+# Lesson 3.13: Developing Procedures
+
+
+### Notes 1
+
+- Procedures can return values, execute statements, or both
+- Procedures should have descriptive yet concise names
+   - Know potential parameters (input)
+
+There was an example I decided not to copy. I'll get on with the practice.
+
+### Practice 1
+
+1) Write a procedure to rotate a robot 180 degrees.
+
+Of course this is pseudocode, so I'll be sure to follow the syntax.
+
+</code></pre></div></div>
+<p>PROCEDURE rotateBack()
+{
+    ROTATE_RIGHT()
+    ROTATE_RIGHT()
+}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+2) Write a procedure to make the robot take a detour while moving left.
+
+</code></pre></div></div>
+<p>PROCEDURE leftDetour()
+{
+    ROTATE_LEFT()
+    MOVE_FORWARD()
+    ROTATE_RIGHT()
+    MOVE_FORWARD()
+    MOVE_FORWARD()
+    ROTATE_RIGHT()
+    MOVE_FORWARD()
+    ROTATE_LEFT()
+}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+### Notes 2 (I'll see what I can do with this)
+
+- Important to give each procedure a purpose.
+- Using procedures is known as procedural abstraction
+- Modularity: Separate a complicated program into simpler modules which can be re-used in varying parts of a program
+- Procedures can have multiple functions
+
+
+Example 1: Update a quiz grade based on a retake
+
+
+PROCEDURE updateQuiz(quizAverage, currentScore, totalPoints)
+{
+    tempAverage ← currentScore / totalPoints
+    tempAverage ← tempAverage * 100
+    tempAverage ← round(tempAverage)
+    IF(tempAverage &gt; quizAverage)
+    {
+        quizAverage ← tempAverage
+    }
+    RETURN(quizAverage)
+}
+
+This procedure checks if a retake percentage is greater than the first percentage. If so, the quiz grade is updated. A few notes of interest:
+- The **round** command does not exist in the [CollegeBoard Pseudocode guide](https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-exam-reference-sheet.pdf). For the purpuses of this exercise, I'll assume it functions equivalently to [Python's round()](https://www.w3schools.com/python/ref_func_round.asp).
+- There is a logic error in this function, where the new grade is rounded before being compared to the old grade. As such, two scores of 87.5% (for example) would result in the new quiz score being rounded to 88% and inflating grades by at most 0.5% when no performance improvement was observed.
+
+### Practice 2
+
+![](/FastPage/images/fourweeksprint/zig.png "The exercise")
+
+Given procedure: 
+</code></pre></div></div>
+<p>PROCEDURE moveSanta()
+{
+    move_left()
+    move_forward()
+    move_forward()
+    move_right()
+    move_right()
+    move_forward()
+    move_forward()
+    move_left()
+    move_left()
+    move_forward()
+    move_forward()
+    move_right()
+}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Note: the commands **move_left(** and **move_right()** do not exist. I'll have to come up with a new procedure which accomplishes the intended movements. I'll then execute code under the assumption that reaching the goal terminates execution.
+
+</code></pre></div></div>
+<p>directionList ← [“r”, “l”, “r”]</p>
+
+<p>PROCEDURE zigZag()
+{
+    FOR EACH item IN directionList
+    {
+        IF(item = “r”)
+        {
+            REPEAT 2 TIMES
+            {
+                ROTATE_RIGHT()
+                MOVE_FORWARD()
+                MOVE_FORWARD()
+            }
+        }
+        ELSE
+        {
+            REPEAT 2 TIMES
+            {
+                ROTATE_LEFT()
+                MOVE_FORWARD()
+                MOVE_FORWARD()
+            }
+        }
+    }
+}</p>
+
+<p>ROTATE_LEFT()
+MOVE_FORWARD()
+zigZag()</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+This should start by rotating Santa left and moving him forward. The procedure has the character make L-shaped movements depending on the given directions. If the given direction is right, Santa will rotate right and move forward two times, which is effectively two spaces to the right and two spaces backward with perspective to the original direction. Having a left directional input works similarly, except all rotations are to the left.
+
+# Hackathon
+
+![](/FastPage/images/fourweeksprint/procedure1.png "Challenge 1")
+
+
+This looks like a challenge of making procedures for line courses without repeating **MOVE_FORWARD()**
+
+</code></pre></div></div>
+<p>PROCEDURE forwardMarch(n)
+{
+    REPEAT n TIMES
+    {
+        MOVE_FORWARD()
+    }
+}</p>
+
+<p>forwardMarch(5)
+ROTATE_RIGHT()
+forwardMarch(3)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Yeah, **forwardMarch(n)** is pretty simplistic. It moves forward the amount of times you want to. Useful if you want to avoid repeating **MOVE_FORWARD()** nine times. For the next challenges including the hacks, I will re-paste **forwardMarch(n)** since it will probably be very useful.
+
+![](/FastPage/images/fourweeksprint/procedure2.png "Challenge 2")
+
+Here I'll paste my procedure and also try something else
+
+</code></pre></div></div>
+<p>PROCEDURE forwardMarch(n)
+{
+    REPEAT n TIMES
+    {
+        MOVE_FORWARD()
+    }
+}
+PROCEDURE moveRight()
+{
+    ROTATE_RIGHT()
+    MOVE_FORWARD()
+    ROTATE_LEFT()
+}</p>
+
+<p>moveRight()
+forwardMarch(5)
+moveRight()
+forwardMarch(3)
+ROTATE_LEFT()
+forwardMarch(2)
+```</p>
+
+<p>The <strong>moveRight()</strong> procedure does what you would think it does. It also preserves original directionality of the robot.</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+
+<script type="text/javascript">
+        // If you're seeing this, I'm letting you know that you're not supposed to be here.
+        // I put a bunch of commands in here limiting certain functionalities of the website.
+        // So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+        // Namely preventing YOU from copying my code and cheating.
+        // Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+        // modifying the website's code as you please.
+        // And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+        // Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+        
+        // But if you're malicious and will cheat using my code, things will get bad quickly.
+        // Life with an academic dishonesty infraction is not fun.
+        // And unlike some people who wouldn't have a way to defend themselves, I do.
+        // It's this code. Unlike most people, I went out of my way to stop cheaters.
+        // This code is evidence of my sincerity.
+        // Which will make your intentions undeniable if you copy my code. SO DON'T.
+          document.oncontextmenu = new Function("return false");
+          document.oncut = new Function("return false");
+          document.oncopy = new Function("return false");
+          document.onafterprint = new Function("return false");
+          document.onbeforeprint = new Function("return false");
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+        document.addEventListener('cut', (e) => e.preventDefault());
+        document.addEventListener('afterprint', (e) => e.preventDefault());
+        document.addEventListener('beforeprint', (e) => e.preventDefault());
+        
+        function ctrlShiftKey(e, keyCode) {
+          return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
+        
+        document.onkeydown = (e) => {
+          if (
+            event.keyCode === 123 ||
+            ctrlShiftKey(e, 'I') ||
+            ctrlShiftKey(e, 'J') ||
+            ctrlShiftKey(e, 'C') ||
+            (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+          )
+            return false;
+        };
+</script>
+
+<script src="https://utteranc.es/client.js"
+        repo="Leonard514/FastPage"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/FastPage/sprint/hacks5" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/FastPage/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://leonard514.github.io/FastPage/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/FastPage/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Fastpages blog tracking progress in AP Computer Science Principles</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://github.com/Leonard514 “" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/FastPage/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://www.youtube.com/channel/UCNy-EIC-T3dV6In5aIC04DQ “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/FastPage/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
