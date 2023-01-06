@@ -142,7 +142,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -165,7 +165,152 @@ document.onkeydown = (e) => {
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#notes">Notes</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#algorithms">Algorithms</a></li>
+<li class="toc-entry toc-h3"><a href="#conditionals-and-booleans">Conditionals and Booleans</a></li>
+<li class="toc-entry toc-h3"><a href="#practice-1">Practice 1</a></li>
+<li class="toc-entry toc-h3"><a href="#notes-2">Notes 2</a></li>
 </ul>
+</li>
+</ul><h1 id="notes">
+<a class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h1>
+
+<ul>
+  <li>Algorithms can be written multiple ways.</li>
+  <li>Sometimes different algorithms can achieve the same results, so it’s good to accept a diversity of approaches to a problem.</li>
+  <li>Algorithms can have their nuances, however. Minor changes in the code can yield major changes in the results.</li>
+  <li>Conditional expressions can be booleans, and vice-versa.</li>
+</ul>
+
+<h3 id="algorithms">
+<a class="anchor" href="#algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms</h3>
+
+<p>Compare python code. Do they yield the same results?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"What did you roll on the dice?"</span><span class="p">)</span>
+<span class="n">diceRoll</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">diceRoll</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Nice roll!"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">diceRoll</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Meh... You can do better"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"That was not a great roll!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"What did you roll on the dice?"</span><span class="p">)</span>
+<span class="n">diceRoll</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">diceRoll</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Nice roll!"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">diceRoll</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Meh... You can do better"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">diceRoll</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"That was not a great roll!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Notes</p>
+<ul>
+  <li>For inputs 4, 5, and 6, the first algorithm will only print <strong>Nice roll!</strong> since it fulfills the if condition of the roll being greater than 4; the else condition is ignored.</li>
+  <li>For inputs 4, 5, and 6, the second algorithm will print <strong>Nice roll!</strong> and also <strong>Meh… You can do better</strong>. This is because these rolls will not only satisfy the if condition for the former statement (the roll is at least 4), but also that of the latter statement (the roll is at least 2).</li>
+  <li>Given the nature of input programs, it is also possible to give negative inputs (which will be treated as less than 2), and integers greater than 6 (where the above notes on 4, 5, and 6 apply). It is also possible to enter strings and numbers with decimals, though this will output an error since the input is not an integer.</li>
+</ul>
+
+<p>The notes then gives a potential adjustment to code block 2 to correct the logic error</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">print</span><span class="p">(</span><span class="s">"What did you roll on the dice?"</span><span class="p">)</span>
+<span class="n">diceRoll</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">diceRoll</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Nice roll!"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">diceRoll</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">diceRoll</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Meh... You can do better"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">diceRoll</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"That was not a great roll!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="conditionals-and-booleans">
+<a class="anchor" href="#conditionals-and-booleans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conditionals and Booleans</h3>
+
+<p>Using AND and NOT operators can be helpful. The following two code blocks (pseudocode) are identical.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IF (isHoliday)
+{
+    school⟵false
+}
+ELSE
+{
+    IF(isWeekday)
+    {
+        school⟵true
+    }
+    ELSE
+    {
+        school⟵false
+    }
+}
+</code></pre></div></div>
+
+<p>This checks if there is a holiday. If this condition is true, the school condition is false. If false, the else condition is executed with a nested if statement about there being a weekday. If true, school is true (and if not, false).</p>
+
+<p>Using AND and NOT can reduce this to a single line of code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>school⟵((NOT (isHoliday)) AND (isWeekday))
+</code></pre></div></div>
+
+<p>Using the AND operator means both conditions must be true to yield true. The following are the conditions:</p>
+<ul>
+  <li>isWeekday (set to True)</li>
+  <li>isHoliday (since there’s a not statement, the desired condition is False)
+If these are met, there’s school (as is logical)</li>
+</ul>
+
+<h3 id="practice-1">
+<a class="anchor" href="#practice-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice 1</h3>
+
+<p>Algorithms to sum all single-digit odd numbers. Do they work as intended?</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sum⟵1
+counter⟵3
+REPEAT 4 TIMES
+{
+    sum⟵sum + counter
+    counter⟵counter + 2 
+}
+DISPLAY sum
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sum⟵0
+counter⟵9
+REPEAT UNTIL counter &lt; 1
+{
+    sum⟵sum + counter
+    counter⟵counter - 2
+}
+DISPLAY sum
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Algorithm 1 starts with 1 as a sum and 3 as a counter, the first two single-digit odd numbers. 4 times, the counter is added to the sum and is increased by 2. The sum is outputted. This yields 1 + 3 + 5 + 7 + 9 (the counter is added 4 times). This seems to work as intended.</p>
+  </li>
+  <li>
+    <p>Algorithm 2 sets the initial sum to 0 and the counter to 9. Until the counter is less than one, the counter is added to the sum and decreases by 2. The sum is outputted. This yields 9 + 7 + 5 + 3 + 1, which is intended.</p>
+  </li>
+</ul>
+
+<p>Using different algorithms to accomplish the same task can instill creativity within a developer, which may allow them to come up with solutions to novel problems later.</p>
+
+<h3 id="notes-2">
+<a class="anchor" href="#notes-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes 2</h3>
+
+<ul>
+  <li>Algorithms can be based off an idea and can be a combination/modification of existing algorithms</li>
+  <li>Iteration: Repeating associated lines of code a set number of times or until a certain condition is fulfilled</li>
+  <li>Selection: Code is run based on a condition; multiple options are often available.</li>
+</ul>
+
+<p>Example algorithm: Robots</p>
+
 
   </div><!-- from https://github.com/utterance/utterances -->
 
