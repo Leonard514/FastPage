@@ -142,7 +142,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      10 min read
     
 </span></p>
 
@@ -171,8 +171,11 @@ document.onkeydown = (e) => {
 <li class="toc-entry toc-h3"><a href="#conditionals-and-booleans">Conditionals and Booleans</a></li>
 <li class="toc-entry toc-h3"><a href="#practice-1">Practice 1</a></li>
 <li class="toc-entry toc-h3"><a href="#notes-2">Notes 2</a></li>
+<li class="toc-entry toc-h3"><a href="#practice-2">Practice 2</a></li>
+<li class="toc-entry toc-h3"><a href="#notes-3">Notes 3</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#final-hacks">Final Hacks</a></li>
 </ul><h1 id="notes">
 <a class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h1>
 
@@ -311,6 +314,280 @@ DISPLAY sum
 
 <p>Example algorithm: Robots</p>
 
+<p><img src="/FastPage/images/fourweeksprint/example1triangle.png" alt="" title="The exercise"></p>
+
+<p>Need to move the robot forward, turn right, move forward, turn left…</p>
+
+<p>Need to reach the goal</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PROCEDURE movemntSeq(n)
+{
+    REPEAT n TIMES
+    {
+        MOVE_FORWARD()
+        ROTATE_RIGHT()
+        MOVE_FORWARD()
+        ROTATE_LEFT()
+    }
+}
+movemntSeq(4)
+</code></pre></div></div>
+
+<h3 id="practice-2">
+<a class="anchor" href="#practice-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice 2</h3>
+
+<p>Display says</p>
+<ul>
+  <li>IF there’s a green tag = 25% off</li>
+  <li>If there’s a red tag = 60% off</li>
+  <li>10% tax</li>
+</ul>
+
+<p>Choose algorithm with selection and iteration to determine correct cost of an item</p>
+
+<p>Option A</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DISPLAY (“What is the cost of the item?”)
+cost←INPUT ()
+IF (greenTag)
+{
+    cost ← 0.75 * Cost
+}
+IF (redTag)
+{
+    cost ← 0.40 * Cost
+}
+cost ← 1.10 * cost
+</code></pre></div></div>
+
+<p>Option B</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DISPLAY (What is the cost of the item)
+cost←INPUT ()
+IF (greenTag)
+{
+    cost ← 0.75 * Cost
+}
+IF (redTag)
+{
+    cost ← 1.10 * cost
+}
+cost ← 0.40 * Cost
+</code></pre></div></div>
+
+<p>Notes</p>
+
+<ul>
+  <li>
+    <p>Option A: If there’s a green tag, cost decreases by 25%. If there’s a red tag, cost decreases by 60%. Regardless, the cost is increased by 10% (the tax)</p>
+  </li>
+  <li>
+    <p>Option B: If there’s a green tag, cost decreases by 25%. If there’s a red tag, cost <em>increases</em> by 10%. Regardless, the cost is decreased by 60%</p>
+  </li>
+</ul>
+
+<p>Option A works as intended</p>
+
+<h3 id="notes-3">
+<a class="anchor" href="#notes-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes 3</h3>
+
+<ul>
+  <li>
+    <p>Modifying existing code can ease the development process</p>
+  </li>
+  <li>
+    <p>Algorithm: Process/rule set followed in calculations/problem solving (includes computers)</p>
+  </li>
+</ul>
+
+<p>Robot Challenge!
+<img src="/FastPage/images/fourweeksprint/incorrectexample.png" alt="" title="The exercise"></p>
+
+<p>Notes</p>
+<ul>
+  <li>The algorithm is programmed so that if the robot cannot move forward, it can move right</li>
+  <li>This will result in the robot getting stuck into a loop without reaching the goal</li>
+  <li>According to the notes, adding a left-turn option should fix this issue. The algorithm should be programmed so the robot turns left when it can.</li>
+</ul>
+
+<p>### Notes 4</p>
+
+<p>Forms of search:</p>
+
+<ul>
+  <li>Sequential search: iterate through all elements in a list (one-by-one). Often what humans do in real-life.</li>
+  <li>Binary search: <strong>must</strong> arrange elements of list in order. The computer starts the search by splitting the list and comparing the middle value. It then does this again for each half of the list, so each search checks 2^(n-1) elements. Requires less searches to compare all the elements.</li>
+</ul>
+
+<p>Practice</p>
+
+<p>1) Which is a plausible way to pattern numbers for a binary search?
+  a. [1,4,5,2,3] 
+  b. [24,22,23,28,30] 
+  c. [5,6,7,8,2] 
+  d. [1,2,3,4,5]</p>
+
+<p>Note: Only Option D is in ascending order. Therefore, this option is correct.</p>
+
+<p>2) How many checks would it take to print 20 with sequential search?</p>
+
+<p>[1, 3, 4, 5, 7, 8, 10 ,20]</p>
+
+<p>It will take 8 searches to print 20, since 20 is the 8th entry of the list. Sequential search will reach this element last.</p>
+
+<p>3) How many checks will it take to print 30 using binary search?</p>
+
+<p>[1, 2, 3, 4, 6, 8, 9, 11, 30]</p>
+
+<p>Let’s use tables. Apparently there’s an even number of entries issue</p>
+
+<p>I checked two simulations and they checked the item to the left of the middle for even numbers of elements.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Check number</th>
+      <th>Numbers checked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2 and 9</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1, 3, 8, and 11</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>4 and 30</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>It will take 4 checks to get 30 using binary search</p>
+
+<p>4) Using Binary Search how many checks would it take to find the word kiwi.</p>
+
+<p>[Apple, Banana, Kiwi, Mango, Strawberry]</p>
+
+<p>Note: Kiwi is the middle entry, so theoretically it will be found first <strong>(in one search)</strong>. The entry “kiwi” will not be found since it’s not in the list (elements are case sensitive). 
+Rap: I did this in-class.</p>
+
+<h1 id="final-hacks">
+<a class="anchor" href="#final-hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Final Hacks</h1>
+
+<p>1) Write this boolean in form of conditional statement (IF/ELSE)
+<code class="language-plaintext highlighter-rouge">stayInside⟵((isCold) OR (isRaining))</code></p>
+
+<p>This is in pseudocode, so I’ll use pseudocode to be consistent.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IF(isCold)
+{
+    stayInside ← True
+}
+ELSE
+{
+    IF(isRaining)
+    {
+        stayInside ← True
+    }
+    ELSE
+    {
+        stayInside ← False
+    }
+}
+</code></pre></div></div>
+<p>2) Make an algorithm utilizing selection/iteration to represent a player’s turn (in a game). Parameters:</p>
+<ul>
+  <li>Each player gets 4 attempts for the highest number</li>
+  <li>For each attempt, use a random number generator to select random integer from 1 to 10</li>
+  <li>After 4 attempts, the greatest number is the score. End the turn.</li>
+</ul>
+
+<p>I’ll use pseudocode again just because that’s the only programming language I’ve seen in the lesson.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PROCEDURE takeTurn()
+{
+    score ← 0
+    REPEAT 4 TIMES
+    {
+        temp ← RANDOM(1, 10)
+        IF (temp &gt; score)
+        {
+            score ← temp
+        }
+    }
+    DISPLAY(score)
+    RETURN(score)
+}
+</code></pre></div></div>
+
+<p>3) Make an algorithm to make the arrow reach the gray square</p>
+
+<p><img src="/FastPage/images/fourweeksprint/examplevideo3.png" alt="" title="The exercise"></p>
+
+<p>The only required movements are forward movement and right turns. This is easier than the example in the notes.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IF(CAN_MOVE(forward))
+{
+    MOVE_FORWARD()
+}
+ELSE
+{
+    IF(CAN_MOVE(right))
+    {
+        ROTATE_RIGHT()
+        MOVE_FORWARD()
+    }
+}
+</code></pre></div></div>
+
+<p>4) Make a binary search tree of the list [1,2,3,4,6,9,11,69]</p>
+
+<p>Even number of entries issue. Assume the entry to the left of the middle is selected. Here’s your png.</p>
+
+<p><img src="/FastPage/images/fourweeksprint/binarysearchdemo.png" alt="" title="Binary search of the given list"></p>
+
+<p>5) Explain how to find the number 69…</p>
+
+<p>There are an even number of elements. According to <a href="https://binary-search-visualization.netlify.app/">two</a> simulations I <a href="https://www.cs.usfca.edu/~galles/visualization/Search.html">found</a>, lists with even numbers of elements start with the element from the left of the middle.</p>
+
+<p>For search 1, select 4. This splits the list into two portions.</p>
+
+<p>The left portion has middle element 2 for search two. The right portion has 4 entries and must select the element left of the middle (9) for search 2.</p>
+
+<p>For search 3, the left portion is split into two portions with one element each. Select 1 and 3. The right portion is split into two portions, one with a single element (6) and one with two elements (pick left element 11)</p>
+
+<p>For search 4, 69 is selected.</p>
+
+<p>6) Make a diagram explaining how you found the list (using equations, not the tree)</p>
+
+<p>I’ll assume this question is referring to element <strong>69</strong>. This is a little bit confusing. Honestly this is just about the same thing as my response to (5), just being formatted in something akin to a flowchart</p>
+
+<p><img src="/FastPage/images/fourweeksprint/BinarySearchDemo1.5.png" alt="" title="Explanation of binary search"></p>
+
+<p>7) Arrange the strings in order used for binary search</p>
+
+<p>[“store”, “Market”, “Walmart”, “Target”, “Ralphs”]</p>
+
+<p>I’ll arrange alphabetically. I don’t know if this is supposed to be case-sensitive.</p>
+
+<p><strong>[“Market”, “Ralphs”, “store”, “Target”, “Walmart”]</strong></p>
+
+<p>Then I found <a href="https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search">Khan Academy</a> and <a href="https://www.cs.princeton.edu/courses/archive/spring14/cos233/www/lib/exe/fetch.php%3Fmedia%3Dcos233-234-lecture2-search-sort.pptx.pdf">Princeton University</a> and even <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm">Wikipedia</a> and apparently I misunderstood binary search. The CollegeBoard makes those search trees to work with all possibilities, but not all the elements in the tree are actually searched in a single instance (only those leading to the desired element). The way binary search works is it compares the list’s element to a desired element. Say the desired element is greater than the element in the list. That element and all other elements are eliminated since they would surely not contain the entry. Repeat. 
+8) Explain why binary search is more efficient than sequential search.</p>
+
+<p>Binary search is more efficient than sequential search since there are less required checks to find a given element of a list. This is because binary search eliminates around half of a list’s (nonmatching) elements per search, whereas sequential search eliminates one nonmatching element per search.</p>
+
+<p>9 (open question)) [64,36,16,11,9] Explain which number you are finding, how many check it would take, and make a binary search tree</p>
+
+<p>Note; The list is sorted in descending order. This is fine.</p>
+
+<p><img src="/FastPage/images/fourweeksprint/binarysearchdemo2.png" alt="" title="Binary search of the given list"></p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 

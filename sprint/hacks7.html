@@ -142,7 +142,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      4 min read
     
 </span></p>
 
@@ -185,7 +185,91 @@ document.onkeydown = (e) => {
 <p>Other notes</p>
 <ul>
   <li>Reduced cost/risk comes with a trade-off of decreased accuracy compared to real-world situations. However, this deviation in conditions may make simulations suitable for situations where experiments aren’t.</li>
+  <li>Many random number generators aren’t actually random. They are meant to simulate imperfections (which may include air resistance influencing dice)</li>
+  <li>ex: not including weather in flight simluations, but instead tweaking speed and visibility options</li>
 </ul>
+
+<p>Techniques from the article</p>
+<ul>
+  <li>Making overarching assumptions about how much time a scan takes, how much time getting to the seller’s line, how much people need to buy tickets, etc. highly simplifies the simulation.</li>
+  <li>There are some functions (procedural abstraction) and some while loops and for loops (iteration)</li>
+  <li>There is selection (if statements)</li>
+</ul>
+
+<p>Final notes:</p>
+<ul>
+  <li>Simulations important as safety measures and are cheaper than building physical systems</li>
+  <li>There are some functions in which simulations are not required since they can be executed by simpler code (ex: finding the highest of a certain quantity)</li>
+</ul>
+
+<p># Final Hacks</p>
+
+<p>3) What is not a reason to use a pseudo-random number generator when making a simulation?</p>
+
+<p>A: To mock imperfections from the real world
+B: To save resources
+C: To make the simulation more accurate</p>
+
+<p>Notes</p>
+<ul>
+  <li>Pseudo-random number generators are <em>made</em> to simulate real-world imperfections</li>
+  <li>Simulations are designed to save resources. Given pseudo-random number generators are needed in simulations, this may be a purpose of these generators</li>
+  <li>Simulations should ideally be as accurate as possible. However, pseudo-random number generators are simplifications. These may introduce inaccuracies to simulations.</li>
+</ul>
+
+<p><strong>Option C</strong> is likely correct</p>
+
+<p>4) Which of the following is the least likely factor to be removed from a flight(air traffic) simulation for functionality?</p>
+
+<p>A: Weather
+B: Other aircraft
+C: Imperfections on aircraft</p>
+
+<ul>
+  <li>The functionality of an aircraft will probably not be affected by other aircraft with the exception of two aircraft crashing into each other. That event is likely better served by a different, dedicated crash simulation.</li>
+  <li>Weather can significantly affect aircraft performance, especially wind and/or flying through clouds and turbulence. This is critical enough to make it to the simulation.</li>
+  <li>Imperfections of aircraft are likely to be simulated indirectly or not at all since they would have negligible effect on aircraft performance</li>
+</ul>
+
+<p><strong>Option A is most likely correct</strong></p>
+
+<p>5) What is not (usually) a difference between a experiment and a simulation?</p>
+
+<p>A: Resources and time needed
+B: Factors considered
+C: Situation considered</p>
+
+<p>Notes:</p>
+<ul>
+  <li>A simulation requires computational power. Experiments will usually require a lot of equipment (which may include a fully-built prototype). In addition, some prospective experiments will take time before the results can be fully attained. Meanwhile, the time inside simulations can be sped up.</li>
+  <li>Situations and Factors can be tested through both simulations and experiments.</li>
+</ul>
+
+<p><strong>Option A is likely correct</strong></p>
+
+<p>6) A car company needs to know how safe it’s customers will be if it’s new car crashes
+A: Simulation
+B: Experiment/calculation</p>
+
+<p>A few notes:</p>
+<ul>
+  <li>An experiment would require constructing and destroying a fully functional prototype. No real lives will be threatened, however, as companies use dummies during crash tests. One prototype will be required for each test. These do occur in real life.</li>
+  <li>A simulation would require writing a computer program to simulate infinitely many crashes This will allow for more thorough safety information compared to experiments (specifically, testing more hazard variables while consuming less resources). This also occurs in real life.</li>
+</ul>
+
+<p>The most feasible option in this case is <strong>Option A</strong> (simulation)</p>
+
+<p>7) A environmental group wants an accurate guess on the impact the greenhouse effect will have on the environment
+A: Simulation
+B: Experiment/calculation</p>
+
+<p><strong>Option A</strong> (a simulation) would be most appropriate for this example. An experiment could have adverse effects on the climate (assuming the amount of greenhouse gasses released is substantial). Even if the greenhouse gasses have negligible environmental effects, it would be expensive to release a significant amount of gas in an experiment and it would be difficult to compare its effect since economies release high quantities of greenhouse gasses independently of the experiment. Meanwhile, the amount of greenhouse gasses in a simulation can be tightly controlled without potentially crippling the energy sector.</p>
+
+<p>9) A teacher want’s to find the average score from a final
+A: Simulation
+B: Experiment/calculation</p>
+
+<p><strong>Option B</strong> (a simple calculation) is most appropriate. This is because all the teacher needs to do to find the average score is to divide the sum of all final scores by the number of test takers.</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
