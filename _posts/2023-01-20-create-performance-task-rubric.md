@@ -16,7 +16,7 @@ Alright, where to start? I got three weeks worth of work here. Apparently I'm su
 | Week 2 | Submissions 3-6 |
 | Week 3 | Submissions 7-10 |
 
-The rubric is [attached](https://apcentral.collegeboard.org/media/pdf/ap22-sg-computer-science-principles.pdf) for reference.
+The rubric is [attached](https://apcentral.collegeboard.org/media/pdf/ap22-sg-computer-science-principles.pdf) for reference. There are also some [prompts](https://apcentral.collegeboard.org/media/pdf/ap-csp-student-task-directions.pdf) to be aware of.
 
 Alright, now I'll start Week 1 I guess
 
@@ -53,3 +53,9 @@ Kind of messy as expected. I guess it's time for Round 2.
 ### Submission 3
 
 | Reporting Category | Student Score | Student Comments | College Board Score | Comments about College Board's Score |
+| Program Purpose and Function | 0 | The video demonstrates input on a screen that appears to be a gaming console, with buttons which appear to be activated on-click (it's clear a web browser is open, after all). There are several animals on the screen, and the student uses an on-screen keyboard (which is arranged in alphabetical order) to type the names of the animals that appeared on the screen using the buttons. The letters typed appears as output, as well as whether the student was right or wrong upon submission. In the written response, the student confuses input and output, as well as program functionality and program purpose (though both are present in the response) | 0 | 
+| Data Abstraction | 0 | There are two program code segments: one with the list **animalImages** with images of animals, and another segment with **animalList** but with the animal names in text form. For the sake of scoring, **animalList** will be considered. The code segments fail to show how the list fulfills the program's purpose since only the list itself was provided, so the student already lost the point before the rest of the response. The student names the list **animallist** and claims the list contains both the animal names and the animal images, which is false. | 
+| Managing Complexity | 0 | The student claims the list allows for storage of more than one variable, and that without the list, defining more variables will be necessary and make the code longer. With the small scale of this project, making more variables is not necessarily harder than making the list. It is unclear if the list manages complexity in the program. |
+| Procedural Abstraction | 0 | The student has two program segments: one with the procedure **evaluateGuess**, and one segment where this procedure is called. The student describes what the procedure does (compare a user's guess to the animals in the list and determine if it is correct). The student tries to state how the function contributes to the program, but this seems like a restatement of what the procedure does.  |
+| Algorithm Implementation | 0 | There is sequencing, selection, and iteration in the procedure. The student's explanation about how the procedure works is even more generalized than that of Submission 2, in that the student fails to reference the code (relying on a general explanation of how it works). |
+| Testing | 1 | The student identifies two calls to the function **dog** and **mouse**, where the condition in each call is the same (if the inputted answer was one of the animals in the list). The outputs are different (the dog output was getting a point, whereas the mouse output was getting a strike), so the differing outputs may be sufficient for getting different code segments to execute. |
