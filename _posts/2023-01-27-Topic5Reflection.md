@@ -26,3 +26,4 @@ Let's use a table to answer the first question.
 | Digital Maps | Added convenience in navigation around unfamiliar areas through automatic route mapping and marking current location. Paper maps require users to orient themselves with their surroundings and plan their own routes, which can consume time. Digital maps can also account for traffic/accidents and adjust routes accordingly (paper maps can't do that) | Digital maps of the entire world could potentially expose important classified sites of national governments (ex: Area 51). This could potentially present national security issues unless those sites are censored on all versions of all digital maps. |
 
 
+Time to address the elephant in the room, namely the second question.
