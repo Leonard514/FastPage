@@ -27,3 +27,28 @@ Let's use a table to answer the first question.
 
 
 Time to address the elephant in the room, namely the second question.
+
+
+
+
+
+# 5.2 Reflection
+
+Before I actually answer the question, I'd like to post some thoughts about the idea of digital empowerment and the potential increase in the divide between the socioeconomic classes. It is true that people with computers have an advantage in terms of the ability to gather information, choose careers, and otherwise perform activities online. However, just because those without computers have a disadvantaged position doesn't mean we should rush to ensure *everyone* has access to the Internet.
+
+There is a far more pressing concern than the inequalities that the classes may experience due to computing, and that problem is the emerging threat of individuals who try to compromise machines. There is a group of individuals who use their knowledge of computers for malicious ends, and in the meantime the general population is not well-versed in securing computer systems. As such, blindly giving the poor access to computers and the Internet could potentially open them up to attacks from individuals within the malicious group. At the present, it is more prudent to raise a generation of individuals who are well-versed in computers and can protect themselves and others from malicious individuals. Now, if there happens to be someone in a socioeconomically unfavorable position who wishes to learn how to secure his/her computer, then there should be societal means for this to occur (ex: public education)
+
+
+
+Here are some questions (copy-pasted for context)
+
+1. How does someone empower themself in a digital world?
+1. How does someone that is empowered help someone that is not empowered? Describe something you could do at Del Norte HS.
+1. Is paper or red tape blocking digital empowerment? Are there such barriers at Del Norte? Elsewhere?
+
+
+For the first question,
+
+For the second question, 
+
+For the third question, Del Norte has done a fair job in distributing chromebooks to students who do not have computers. There are also computer systems available for use in the library. When I took 3D Computer Animation as a Freshman (mainly to get my arts graduation requirement), Mr. Askegreen provided MacOS systems to work on the projects in class (working on projects at home required a personal computer with the software installed, though it was reasonably possible to complete the projects with the given class time if you were paying attention and/or you didn't go overboard). The use of ContentKeeper as a Wi-Fi blocker has legitimate uses (such as preventing students from seeing illicit content online), but it sometimes blocks websites that I try to access when researching how certain commands work (for this class). This can be annoying for students who do not have a VPN and/or a PC. It is imprudent to remove ContentKeeper since this may expose students to malware or other illicit content. If it is possible for the IT team to take steps to allow sites that provide documentation on how harmless commands work (for the purposes of computer science classes), this step could be taken. Otherwise, I do not have alternatives to suggest since an alternative could cause larger problems.
