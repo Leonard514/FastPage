@@ -64,8 +64,21 @@ For the second question, one can teach others how to secure their own systems by
 
 For the third question, Del Norte has done a fair job in distributing chromebooks to students who do not have computers. There are also computer systems available for use in the library. When I took 3D Computer Animation as a Freshman (mainly to get my arts graduation requirement), Mr. Askegreen provided MacOS systems to work on the projects in class (working on projects at home required a personal computer with the software installed, though it was reasonably possible to complete the projects with the given class time if you were paying attention and/or you didn't go overboard; I tend to do the latter). The use of ContentKeeper as a Wi-Fi blocker has legitimate uses (such as preventing students from seeing illicit content online or downloading malicious software), but it sometimes blocks websites that I try to access when researching how certain commands work (for this class). This can be annoying for students who do not have a VPN and/or a PC. It is imprudent to remove ContentKeeper since this may expose students to malware or other illicit content. If it is possible for the IT team to take steps to allow sites that provide documentation on how harmless commands work (for the purposes of computer science classes), this step could be taken. Otherwise, I do not have alternatives to suggest since an alternative could cause larger problems.
 
+
 # 5.3 reflection
 
+I performed some further research into the matter since I'd rather be sure about my conclusions than make guesses in the dark. You're going to need access to web.archive.org to access the content since some URLs have been taken down/become redirects.
 
+HP published [a response](https://web.archive.org/web/20100105082302/http://www.thenextbench.com/t5/Voodoo-Blog/Customer-Feedback-is-Important-to-Us/ba-p/51351) to this video stating that the facial tracking software functions by tracking the color contrast between the eyes and the upper cheek/nose area. As such, it is logical the tracking software fails for people with darker-colored skin since there is a decreased color contrast in this case. In a [followup post](https://web.archive.org/web/20091227181630/http://mashable.com/2009/12/23/hp-computers-are-racist/), the makers of the video admitted that this was meant to be for humor. They were surprised that the video went viral. They believed that the issue is due to a glitch (not racism).
+
+Of course this issue should be fixed since this would allow all to experience equal computer functionality. In order to have provided a better outcome, HP could have tested people with more diverse appearances, especially those people who would most strain the facial recognition technology (ie least color contrast; to ensure the technology works in the most cases possible). If this fails, then a different method of facial recognition is recommended.
 
 # 5.4 reflection
+
+- A potential crowdsource idea for this class could be a compilation of student code sorted by programming language, by project, and by functionality. This could potentially be used for students who are looking for examples or ways to implement desired functions. This may be implemented through a GitHub Repository published by the class instructors.
+- Del Norte can crowdsource computer science projects potentially by coming up with project ideas/requests (which could be posted on a school website after implementation). This website could ideally have a bug-reporting feature so that students can forward any issues to the developers of the code. This would ensure that final projects would function appropriately for all inputs (including extreme/unexpected inputs)
+
+
+# 5.5 Reflection
+
+# 5.6 Reflection
