@@ -81,7 +81,12 @@ Of course this issue should be fixed since this would allow all to experience eq
 
 # 5.5 Reflection
 
-
+1. Types of licenses
+ - Open Source MIT License:
+    - People who come into possession of the software can modify the software for private use or commercial use (the latter for money). People may also distribute the software freely.
+    - The license notice must be attached to all copies of the software
+    - There is no warranty on the software and the developer is not liable for any damages resulting from the software.
+ - Creative Commons Zero v1.0 Universal
 
 
 # 5.6 Reflection
