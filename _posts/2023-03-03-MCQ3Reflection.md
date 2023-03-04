@@ -40,3 +40,36 @@ The email address is somewhat a piece of identifiable information, though if any
 D) Public keys for encryption
 
 This one is difficult because it is not specified if symmetric encryption or asymmetric encryption is used. If the secret key for symmetric encryption is obtained by attackers, the connection is essentially compromised. Attackers can use software to monitor the connection (and extract any data sent over the connection, such as passwords and credit card numbers). They may also be able to get into the connection as part of a man-in-the-middle attack. However, if this is asymmetric, there is no cause for worry since [the *private* key is required to decrypt the connection](https://www.google.com/search?surl=1&q=assymetric+encryption+public+key&rlz=1CADTIH_enUS1045&oq=assymetric+encryption+public+key&aqs=chrome..69i57.4263j0j7&sourceid=chrome&ie=UTF-8&safe=active&ssui=on). Given my Google search called asymmetric cryptogrpahy "Public-Key Cryptography," I think this is relatively safe.
+
+
+Before I move on, I'll say that the [habit of corporations to harvest and sell data](https://itchronicles.com/big-data/how-do-big-companies-collect-customer-data/) is another privacy concern. I believe that cookies are most closely associated with privacy issues.
+
+
+8) What are true about digital certificates for web browsers?
+
+I probably should have paid more attention to the question. When I started looking stuff up I was somewhat surprised to be greeted by stuff I (should) already know.
+
+i) Verify ownership of encrypted keys
+
+This one's a no-brainer. I helped with a certain deployment process, and yeah there was the whole HTTPS certification part for the website. To top it off, here's the [Britannica article](https://www.britannica.com/topic/digital-certificate) about this topic.
+
+2) Ensure fault tolerance of a network connection
+
+Apparently I forgot what fault tolerance was. According to [this article](https://www.imperva.com/learn/availability/fault-tolerance/) I found, it's the ability of a network to remain up despite certain problems (because keeping downtime to the absolute minimum is basically essential in today's environment). To give a bit more context, let's do an HSRP 
+
+
+
+13) In which situation would it be better to use creative commons licenses over copyright for an e-book?
+
+i) Make the e-book freely downloadable
+ii) Prevent people from sharing copies of the book on P2P networks
+iii) Allow people to use and modify the book
+
+The interesting part about creative commons is that [there are multiple licenses](https://creativecommons.org/licenses/). There is a general theme of the following
+
+- Others may distribute and build upon the work
+- Users must give credit to original author
+- Some licenses may restrict to non-commercial purposes
+- Some licenses require remakes/modified works to keep the same license
+- One license prohibits modified works entirely; one license prohibits distribution of modified works
+
