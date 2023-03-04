@@ -1,0 +1,179 @@
+<script type="text/javascript">
+// If you're seeing this, I'm letting you know that you're not supposed to be here.
+// I put a bunch of commands in here limiting certain functionalities of the website.
+// So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+// Namely preventing YOU from copying my code and cheating.
+// Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+// modifying the website's code as you please.
+// And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+// Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+
+// But if you're malicious and will cheat using my code, things will get bad quickly.
+// Life with an academic dishonesty infraction is not fun.
+// And unlike some people who wouldn't have a way to defend themselves, I do.
+// It's this code. Unlike most people, I went out of my way to stop cheaters.
+// This code is evidence of my sincerity.
+// Which will make your intentions undeniable if you copy my code. SO DON'T.
+  document.oncontextmenu = new Function("return false");
+  document.oncut = new Function("return false");
+  document.oncopy = new Function("return false");
+  document.onafterprint = new Function("return false");
+  document.onbeforeprint = new Function("return false");
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('copy', (e) => e.preventDefault());
+document.addEventListener('cut', (e) => e.preventDefault());
+document.addEventListener('afterprint', (e) => e.preventDefault());
+document.addEventListener('beforeprint', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+  )
+    return false;
+};
+</script>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" onmousedown="return false" onselectstart="return false" onkeydown="return false">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Final Exam 2 Reflection</h1><p class="page-description">Includes Important Notes about missed questions and other misconceptions</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-03T00:00:00-06:00" itemprop="datePublished">
+        Mar 3, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/FastPage/categories/#markdown">markdown</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#Comp Sci">Comp Sci</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#integrity-disclaimer">Integrity Disclaimer</a></li>
+<li class="toc-entry toc-h1"><a href="#statement-of-intention">Statement of Intention</a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#question-2-which-has-the-greatest-potential-for-compromising-user-privacy">Question 2: Which has the greatest potential for compromising user privacy?</a></li>
+</ul>
+</li>
+</ul><h1 id="integrity-disclaimer">
+<a class="anchor" href="#integrity-disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Integrity Disclaimer</h1>
+
+<p>The author does not permit copying of any of the reflections contained within this post. Cheating has severe consequences, among them a stain on the academic record and a lack of understanding about the relevant contents of the course. Do your own work please!</p>
+
+<h1 id="statement-of-intention">
+<a class="anchor" href="#statement-of-intention" aria-hidden="true"><span class="octicon octicon-link"></span></a>Statement of Intention</h1>
+
+<p>This blog post is for reflection on multiple choice questions that I found to be particularly difficult. These include questions that I got wrong as well as questions where I utilized a search engine. Mr. Yeung has permitted use of search engines orally on the condition that students are transparent about their methods. Unlike previous posts where I have used a tabular format, I will format each question with a subheading to give me more space to write longer reflections.</p>
+
+<h5 id="question-2-which-has-the-greatest-potential-for-compromising-user-privacy">
+<a class="anchor" href="#question-2-which-has-the-greatest-potential-for-compromising-user-privacy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 2: Which has the greatest potential for compromising user privacy?</h5>
+
+<p>This question is difficult in that all options presented represent significant threats to privacy.</p>
+
+<p>A) <a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer#:~:text=This%20allows%20you%20to%20stay,address%2C%20or%20telephone%20number">Cookies stored by Web Browsers</a>.)</p>
+
+<p>According to this article on Internet cookies by Mozilla (developers of FIrefox), cookies have information relevant to websites a user visits. They may store PID (phone numbers, emails, etc.) if the user entered this information into a website. This could reasonably happen if the user entered information into an online form (ex: applying for membership within a certain group, or even something as simple as sharing contact information with other members of a team). Here are some potential ways this could be a threat to privacy:</p>
+<ul>
+  <li>An attacker compromises a user’s computer system. After establishing control, the attacker goes to the web browser files where the cookies are cached. The attacker extracts information about the user and uses it for his/her ends.</li>
+  <li>As part of a phishing scam, an attacker sets up a fake website that is a convincing mock-up of a legitimate corporate website. The user enters information as is expected. The catch is that the information is actually extracted using Internet cookies. This is known as <a href="https://www.mcafee.com/blogs/privacy-identity-protection/what-are-browser-cookies-and-how-do-i-manage-them/">session hijacking</a>.</li>
+</ul>
+
+<p>B) The IP address of the user’s computer</p>
+
+<p>This question is quite vague in my opinion, because it fails to specify if it’s talking about the private IP address (which is often somewhere in the 192.168.0.0 to 192.168.0.255 range) or the public IP address (which is used to communicate with other machines). When I’ve learned about cybersecurity, I’ve heard that public IPs should be kept a secret at all costs, so I took a look around and found <a href="https://security.stackexchange.com/questions/35160/is-publishing-your-public-ip-address-a-security-threat">this stack exchange</a>, where someone from a large corporation encountered something similar. The accepted answer said that if attackers knew which IP addresses were being used, then they could conduct reconnaissance of their targets without an obvious trail. If the attackers aim to do a data breach, this could be a significant threat to privacy.</p>
+
+<p>C) User email addresses</p>
+
+<p>The email address is somewhat a piece of identifiable information, though if anyone is running their own website or applying for a job with a resume and the like, it’s probably already out there. There are a few ways malicious individuals can use this information to gain private information:</p>
+<ul>
+  <li>Phishing/social engineering emails (as I’ve said before)</li>
+  <li>The attacker may try to crack the password to the email. Many users use insecure passwords, and if that fails, there’s always the security questions used to reset the passwords (with attackers hoping that the users put in true information so a search engine would suffice for information gathering). After the email account is compromised, attackers will have access to private correspondence.</li>
+</ul>
+
+<p>D) Public keys for encryption</p>
+
+<p>This one is difficult because it is not specified if symmetric encryption or asymmetric encryption is used. If the secret key for symmetric encryption is obtained by attackers, the connection is essentially compromised. Attackers can use software to monitor the connection (and extract any data sent over the connection, such as passwords and credit card numbers). They may also be able to get into the connection as part of a man-in-the-middle attack. However, if this is asymmetric, there is no cause for worry since <a href="https://www.google.com/search?surl=1&amp;q=assymetric+encryption+public+key&amp;rlz=1CADTIH_enUS1045&amp;oq=assymetric+encryption+public+key&amp;aqs=chrome..69i57.4263j0j7&amp;sourceid=chrome&amp;ie=UTF-8&amp;safe=active&amp;ssui=on">the <em>private</em> key is required to decrypt the connection</a>. Given my Google search called asymmetric cryptogrpahy “Public-Key Cryptography,” I think this is relatively safe.</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+
+<script type="text/javascript">
+        // If you're seeing this, I'm letting you know that you're not supposed to be here.
+        // I put a bunch of commands in here limiting certain functionalities of the website.
+        // So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+        // Namely preventing YOU from copying my code and cheating.
+        // Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+        // modifying the website's code as you please.
+        // And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+        // Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+        
+        // But if you're malicious and will cheat using my code, things will get bad quickly.
+        // Life with an academic dishonesty infraction is not fun.
+        // And unlike some people who wouldn't have a way to defend themselves, I do.
+        // It's this code. Unlike most people, I went out of my way to stop cheaters.
+        // This code is evidence of my sincerity.
+        // Which will make your intentions undeniable if you copy my code. SO DON'T.
+          document.oncontextmenu = new Function("return false");
+          document.oncut = new Function("return false");
+          document.oncopy = new Function("return false");
+          document.onafterprint = new Function("return false");
+          document.onbeforeprint = new Function("return false");
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+        document.addEventListener('cut', (e) => e.preventDefault());
+        document.addEventListener('afterprint', (e) => e.preventDefault());
+        document.addEventListener('beforeprint', (e) => e.preventDefault());
+        
+        function ctrlShiftKey(e, keyCode) {
+          return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
+        
+        document.onkeydown = (e) => {
+          if (
+            event.keyCode === 123 ||
+            ctrlShiftKey(e, 'I') ||
+            ctrlShiftKey(e, 'J') ||
+            ctrlShiftKey(e, 'C') ||
+            (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+          )
+            return false;
+        };
+</script>
+
+<script src="https://utteranc.es/client.js"
+        repo="Leonard514/FastPage"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/FastPage/notes/MCQ3reflection" hidden></a>
+</article>
