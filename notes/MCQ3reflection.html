@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -118,6 +118,37 @@ document.onkeydown = (e) => {
 <p>D) Public keys for encryption</p>
 
 <p>This one is difficult because it is not specified if symmetric encryption or asymmetric encryption is used. If the secret key for symmetric encryption is obtained by attackers, the connection is essentially compromised. Attackers can use software to monitor the connection (and extract any data sent over the connection, such as passwords and credit card numbers). They may also be able to get into the connection as part of a man-in-the-middle attack. However, if this is asymmetric, there is no cause for worry since <a href="https://www.google.com/search?surl=1&amp;q=assymetric+encryption+public+key&amp;rlz=1CADTIH_enUS1045&amp;oq=assymetric+encryption+public+key&amp;aqs=chrome..69i57.4263j0j7&amp;sourceid=chrome&amp;ie=UTF-8&amp;safe=active&amp;ssui=on">the <em>private</em> key is required to decrypt the connection</a>. Given my Google search called asymmetric cryptogrpahy “Public-Key Cryptography,” I think this is relatively safe.</p>
+
+<p>Before I move on, I’ll say that the <a href="https://itchronicles.com/big-data/how-do-big-companies-collect-customer-data/">habit of corporations to harvest and sell data</a> is another privacy concern. I believe that cookies are most closely associated with privacy issues.</p>
+
+<p>8) What are true about digital certificates for web browsers?</p>
+
+<p>I probably should have paid more attention to the question. When I started looking stuff up I was somewhat surprised to be greeted by stuff I (should) already know.</p>
+
+<p>i) Verify ownership of encrypted keys</p>
+
+<p>This one’s a no-brainer. I helped with a certain deployment process, and yeah there was the whole HTTPS certification part for the website. To top it off, here’s the <a href="https://www.britannica.com/topic/digital-certificate">Britannica article</a> about this topic.</p>
+
+<p>2) Ensure fault tolerance of a network connection</p>
+
+<p>Apparently I forgot what fault tolerance was. According to <a href="https://www.imperva.com/learn/availability/fault-tolerance/">this article</a> I found, it’s the ability of a network to remain up despite certain problems (because keeping downtime to the absolute minimum is basically essential in today’s environment). To give a bit more context, let’s do an HSRP</p>
+
+<p>13) In which situation would it be better to use creative commons licenses over copyright for an e-book?</p>
+
+<p>i) Make the e-book freely downloadable
+ii) Prevent people from sharing copies of the book on P2P networks
+iii) Allow people to use and modify the book</p>
+
+<p>The interesting part about creative commons is that <a href="https://creativecommons.org/licenses/">there are multiple licenses</a>. There is a general theme of the following</p>
+
+<ul>
+  <li>Others may distribute and build upon the work</li>
+  <li>Users must give credit to original author</li>
+  <li>Some licenses may restrict to non-commercial purposes</li>
+  <li>Some licenses require remakes/modified works to keep the same license</li>
+  <li>One license prohibits modified works entirely; one license prohibits distribution of modified works</li>
+</ul>
+
 
   </div><!-- from https://github.com/utterance/utterances -->
 
