@@ -133,7 +133,7 @@ document.onkeydown = (e) => {
 
 <p>Apparently I forgot what fault tolerance was. According to <a href="https://www.imperva.com/learn/availability/fault-tolerance/">this article</a> I found, it’s the ability of a network to remain up despite certain problems (because keeping downtime to the absolute minimum is basically essential in today’s environment). To give a bit more context, let’s talk about HSRP (Hot Standby Routing Protocol)</p>
 
-<p>cisco-hsrp.jpg<img src="/FastPage/images/cisco-hsrp.jpg" alt="" title="Image taken from https://www.networkstraining.com/cisco-router-hsrp-configuration/"></p>
+<p><img src="/FastPage/images/cisco-hsrp.jpg" alt="" title="Image taken from https://www.networkstraining.com/cisco-router-hsrp-configuration/"></p>
 
 <p>Now, this is a network with routers and switches. This might be a bit unfamiliar to some, but I’ll say a few basic things here. All the Internet traffic to the computers at the bottom of the network is usually routed through <strong>Router1</strong> (that’s how to access Internet, and this is denoted by the label <strong>active</strong>). Now, it is possible that <strong>Router1</strong> is unexpectedly powered off, or perhaps there is a system maintenance. If this should happen, all the traffic will be routed through <strong>Router2</strong> instead (as indicated by the <strong>standby</strong> label). This is a demonstration of fault tolerance.</p>
 
