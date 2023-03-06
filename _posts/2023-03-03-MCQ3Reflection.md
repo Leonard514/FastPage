@@ -57,7 +57,7 @@ This one's a no-brainer. I helped with a certain deployment process, and yeah th
 
 Apparently I forgot what fault tolerance was. According to [this article](https://www.imperva.com/learn/availability/fault-tolerance/) I found, it's the ability of a network to remain up despite certain problems (because keeping downtime to the absolute minimum is basically essential in today's environment). To give a bit more context, let's talk about HSRP (Hot Standby Routing Protocol)
 
-cisco-hsrp.jpg![]({{site.baseurl}}/images/cisco-hsrp.jpg "Image taken from https://www.networkstraining.com/cisco-router-hsrp-configuration/")
+![]({{site.baseurl}}/images/cisco-hsrp.jpg "Image taken from https://www.networkstraining.com/cisco-router-hsrp-configuration/")
 
 Now, this is a network with routers and switches. This might be a bit unfamiliar to some, but I'll say a few basic things here. All the Internet traffic to the computers at the bottom of the network is usually routed through **Router1** (that's how to access Internet, and this is denoted by the label **active**). Now, it is possible that **Router1** is unexpectedly powered off, or perhaps there is a system maintenance. If this should happen, all the traffic will be routed through **Router2** instead (as indicated by the **standby** label). This is a demonstration of fault tolerance.
 
