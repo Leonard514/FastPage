@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -74,6 +74,9 @@ document.onkeydown = (e) => {
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#prompt-1-describe-some-of-the-meta-data">Prompt 1: Describe some of the meta data…</a></li>
+<li class="toc-entry toc-h1"><a href="#prompt-2-playing-around-with-provided-sample-code">Prompt 2: Playing around with provided sample code</a></li>
+<li class="toc-entry toc-h1"><a href="#base64-prompt-translate-the-first-3-letters-of-your-name-to-base64">Base64 prompt: Translate the first 3 letters of your name to base64</a></li>
 </ul><p>I’ve been asked to display some images in Jupyter Notebooks. Unfortunately, I do not have a Jupyter editor at the moment so I will have to resort to Markdown.</p>
 
 <p><img src="/FastPage/images/green-square-16.png" alt="" title="The first image is a small green square"></p>
@@ -82,25 +85,60 @@ document.onkeydown = (e) => {
 
 <p><img src="/FastPage/images/lassen-volcano.jpg" alt="" title="The third image is large and depicts volcanoes"></p>
 
-<p>Prompt 1: Describe some of the meta data…</p>
+<h1 id="prompt-1-describe-some-of-the-meta-data">
+<a class="anchor" href="#prompt-1-describe-some-of-the-meta-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 1: Describe some of the meta data…</h1>
 
 <p>The image size, which could be measured by the number of pixels, affects the file size of a given image. If the file size of an image becomes too large, the image could be difficult to transport across the Internet. As such, the image file must be compressed, which decreases its file size. <a href="https://apclassroom.collegeboard.org/103/home?apd=p13chxi8d3&amp;unit=2">According to a College Board video</a>, this is achieved through using an in-file dictionary to decrease the number of characters in a file, thereby decreasing its size. According to this same video, there are two types of compression: Lossless compression (all data is conserved) and lossy compression (not all data is conserved, though there is no need to do so). Generally, lossy compression reduces the file size more effectively.</p>
 
 <p>In terms of images, there are many file extensions that are available. Some of the more common file extensions are the .PNG and the .JPEG extensions. According to <a href="https://www.techtarget.com/whatis/definition/PNG-Portable-Network-Graphics">this source</a>, .JPEG uses lossy compression while .PNG uses lossless compression. When lossy compression is utilized, the change in image colors are not easily perceptible. When I took notes on the 2.2 lesson, the instructor sampled multiple images of smiley faces. One image only used 2-3 colors (a shade of yellow, black, and possibly white), while another image used many shades of green. Lossless compression is more favorable for images with less colors (many pixels with the same color means less dictionary mappings are necessary), while lossy compression is more favorable for images with more colors.</p>
 
-<p>Prompt 2: Playing around with provided sample code</p>
+<h1 id="prompt-2-playing-around-with-provided-sample-code">
+<a class="anchor" href="#prompt-2-playing-around-with-provided-sample-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 2: Playing around with provided sample code</h1>
 
 <p>Lily (my partner) had some issues loading a Jupyter renderer and a dependency. She just reloaded VSCode and everything worked fine. The issue was relatively strange.</p>
 
 <p>As for image paths, paths are important when working with images so that the program can appropriately find the location of the image within its filesystem. If a man doesn’t know where his favorite place is, he can’t use it. In a similar manner, if the program doesn’t know where an image is, the program can’t display it.</p>
 
-<p>Base64 prompt: Translate the first 3 letters of your name to base64</p>
+<h1 id="base64-prompt-translate-the-first-3-letters-of-your-name-to-base64">
+<a class="anchor" href="#base64-prompt-translate-the-first-3-letters-of-your-name-to-base64" aria-hidden="true"><span class="octicon octicon-link"></span></a>Base64 prompt: Translate the first 3 letters of your name to base64</h1>
 
 <p>There are many text-to-base64 converters online, and I’ll be using one <a href="https://base64.guru/converter/encode/text">here</a>. As seen in <a href="https://en.wikipedia.org/wiki/Base64">the Wikipedia article about Base64</a>, the basis of converting ASCII to base64 is that Base64 supports 6 bits (2^6 = 64), while ASCII supports 0 bits. As such, each group of 3 ASCII characters provides 24 bits for 4 Base64 characters; equal signs are used as padding to ensure that the number of characters printed is a multiple of 4 (an ASCII string does not necessarily have a number of characters being a multiple of 3)</p>
 
 <ul>
   <li>Leo –&gt; TGVv</li>
 </ul>
+
+<p>But for the sake of the exercise I’ll also do it manually. <a href="https://pthree.org/2011/04/06/convert-text-to-base-64-by-hand/">This source</a> was very helpful, along with this <a href="https://en.wikipedia.org/wiki/File:ASCII_Code_Chart-Quick_ref_card.png">ASCII code chart</a>. I’ll be re-using information from the chart and the article as I go along. Now, here’s what I’ll do.</p>
+
+<ul>
+  <li>
+    <p>Each ASCII character will have 8 bits. The first bit will always be 0 for some reason. The next three bits will be the bits at the top row in the column of the ASCII character, and the last four bits will be in the left four columns in the same row as the character (feel free to actually click the link to the article). We are essentially converting each character to binary. <strong>Keep in mind that this is case-sensitive.</strong></p>
+  </li>
+  <li>L –&gt; 01001100</li>
+  <li>e –&gt; 01100101</li>
+  <li>o –&gt; 01101111</li>
+</ul>
+
+<p>The article then says that I must group my bits by 6 (I said before that base64 has 6 bits). I’ll go do that real quick.</p>
+
+<p>010011 000110 010101 101111</p>
+
+<p>We must now change our binary to decimal so that we can match the characters via base64. The article goes into detail about how to do the padding, but the administrators decided to ask for 3 letters so we can skip those parts. I omitted zeros in this case. Note that each binary digit is a power of 2.</p>
+
+<p>010011 = 1 + 2 + 16 = 19
+000110 = 2 + 4 = 6
+010101 = 1 + 4 + 16 = 21
+101111 = 1 + 2 + 4 + 8 + 32 = 47</p>
+
+<p>Now we’ll use the base64 chart in the linked Wikipedia article to convert these decimals.</p>
+
+<p>19 –&gt; T
+6 –&gt; G
+21 –&gt; V
+47 –&gt; v</p>
+
+<p>So Leo (ASCII) = TGVv (base64).</p>
+
 
   </div><!-- from https://github.com/utterance/utterances -->
 
