@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -75,8 +75,10 @@ document.onkeydown = (e) => {
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#prompt-1-describe-some-of-the-meta-data">Prompt 1: Describe some of the meta data…</a></li>
-<li class="toc-entry toc-h1"><a href="#prompt-2-playing-around-with-provided-sample-code">Prompt 2: Playing around with provided sample code</a></li>
-<li class="toc-entry toc-h1"><a href="#base64-prompt-translate-the-first-3-letters-of-your-name-to-base64">Base64 prompt: Translate the first 3 letters of your name to base64</a></li>
+<li class="toc-entry toc-h1"><a href="#prompt-2-commands-for-file-paths-in-different-os-and-pathlib">Prompt 2: Commands for file paths in different OS and pathlib</a></li>
+<li class="toc-entry toc-h1"><a href="#prompt-3-playing-around-with-provided-sample-code">Prompt 3: Playing around with provided sample code</a></li>
+<li class="toc-entry toc-h1"><a href="#prompt-4-translate-the-first-3-letters-of-your-name-to-base64">Prompt 4: Translate the first 3 letters of your name to base64</a></li>
+<li class="toc-entry toc-h1"><a href="#prompt-5-buffering">Prompt 5: Buffering</a></li>
 </ul><p>I’ve been asked to display some images in Jupyter Notebooks. Unfortunately, I do not have a Jupyter editor at the moment so I will have to resort to Markdown.</p>
 
 <p><img src="/FastPage/images/green-square-16.png" alt="" title="The first image is a small green square"></p>
@@ -92,15 +94,32 @@ document.onkeydown = (e) => {
 
 <p>In terms of images, there are many file extensions that are available. Some of the more common file extensions are the .PNG and the .JPEG extensions. According to <a href="https://www.techtarget.com/whatis/definition/PNG-Portable-Network-Graphics">this source</a>, .JPEG uses lossy compression while .PNG uses lossless compression. When lossy compression is utilized, the change in image colors are not easily perceptible. When I took notes on the 2.2 lesson, the instructor sampled multiple images of smiley faces. One image only used 2-3 colors (a shade of yellow, black, and possibly white), while another image used many shades of green. Lossless compression is more favorable for images with less colors (many pixels with the same color means less dictionary mappings are necessary), while lossy compression is more favorable for images with more colors.</p>
 
-<h1 id="prompt-2-playing-around-with-provided-sample-code">
-<a class="anchor" href="#prompt-2-playing-around-with-provided-sample-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 2: Playing around with provided sample code</h1>
+<h1 id="prompt-2-commands-for-file-paths-in-different-os-and-pathlib">
+<a class="anchor" href="#prompt-2-commands-for-file-paths-in-different-os-and-pathlib" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 2: Commands for file paths in different OS and pathlib</h1>
+
+<p>Here are some common commands used within a Linux terminal to access files</p>
+
+<p><code class="language-plaintext highlighter-rouge">cat /path/to/file/file.txt</code> - prints the contents of file.txt. Requires read permissions</p>
+
+<p><code class="language-plaintext highlighter-rouge">ls -la</code> - prints all of the files/directories within the current working directory (probably important to see <em>what</em> files there are to work with)</p>
+
+<p><code class="language-plaintext highlighter-rouge">./script.exe</code> - executes a script/executable. Requires execute permissions</p>
+
+<p><code class="language-plaintext highlighter-rouge">nano /path/to/file/file.txt</code> - opens up a text editor to write to file.txt. May require read and/or write permissions. Other common text editors include <strong>gedit</strong> (which has more GUI-focused specifications) and <strong>vim</strong> (which I am less familiar with, though those who often work with Linux will probably be able to tell you more)</p>
+
+<p><code class="language-plaintext highlighter-rouge">cd /path/to/directory</code> - changes working directory to <strong>/path/to/directory</strong></p>
+
+<h1 id="prompt-3-playing-around-with-provided-sample-code">
+<a class="anchor" href="#prompt-3-playing-around-with-provided-sample-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 3: Playing around with provided sample code</h1>
 
 <p>Lily (my partner) had some issues loading a Jupyter renderer and a dependency. She just reloaded VSCode and everything worked fine. The issue was relatively strange.</p>
 
 <p>As for image paths, paths are important when working with images so that the program can appropriately find the location of the image within its filesystem. If a man doesn’t know where his favorite place is, he can’t use it. In a similar manner, if the program doesn’t know where an image is, the program can’t display it.</p>
 
-<h1 id="base64-prompt-translate-the-first-3-letters-of-your-name-to-base64">
-<a class="anchor" href="#base64-prompt-translate-the-first-3-letters-of-your-name-to-base64" aria-hidden="true"><span class="octicon octicon-link"></span></a>Base64 prompt: Translate the first 3 letters of your name to base64</h1>
+<p>I need to answer a question about</p>
+
+<h1 id="prompt-4-translate-the-first-3-letters-of-your-name-to-base64">
+<a class="anchor" href="#prompt-4-translate-the-first-3-letters-of-your-name-to-base64" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 4: Translate the first 3 letters of your name to base64</h1>
 
 <p>There are many text-to-base64 converters online, and I’ll be using one <a href="https://base64.guru/converter/encode/text">here</a>. As seen in <a href="https://en.wikipedia.org/wiki/Base64">the Wikipedia article about Base64</a>, the basis of converting ASCII to base64 is that Base64 supports 6 bits (2^6 = 64), while ASCII supports 0 bits. As such, each group of 3 ASCII characters provides 24 bits for 4 Base64 characters; equal signs are used as padding to ensure that the number of characters printed is a multiple of 4 (an ASCII string does not necessarily have a number of characters being a multiple of 3)</p>
 
@@ -138,6 +157,9 @@ document.onkeydown = (e) => {
 47 –&gt; v</p>
 
 <p>So Leo (ASCII) = TGVv (base64).</p>
+
+<h1 id="prompt-5-buffering">
+<a class="anchor" href="#prompt-5-buffering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 5: Buffering</h1>
 
 
   </div><!-- from https://github.com/utterance/utterances -->
