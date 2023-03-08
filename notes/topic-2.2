@@ -94,6 +94,14 @@ document.onkeydown = (e) => {
 
 <p>As for image paths, paths are important when working with images so that the program can appropriately find the location of the image within its filesystem. If a man doesn’t know where his favorite place is, he can’t use it. In a similar manner, if the program doesn’t know where an image is, the program can’t display it.</p>
 
+<p>Base64 prompt: Translate the first 3 letters of your name to base64</p>
+
+<p>There are many text-to-base64 converters online, and I’ll be using one <a href="https://base64.guru/converter/encode/text">here</a>. As seen in <a href="https://en.wikipedia.org/wiki/Base64">the Wikipedia article about Base64</a>, the basis of converting ASCII to base64 is that Base64 supports 6 bits (2^6 = 64), while ASCII supports 0 bits. As such, each group of 3 ASCII characters provides 24 bits for 4 Base64 characters; equal signs are used as padding to ensure that the number of characters printed is a multiple of 4 (an ASCII string does not necessarily have a number of characters being a multiple of 3)</p>
+
+<ul>
+  <li>Leo –&gt; TGVv</li>
+</ul>
+
   </div><!-- from https://github.com/utterance/utterances -->
 
 <script type="text/javascript">
