@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      8 min read
     
 </span></p>
 
@@ -84,6 +84,7 @@ document.onkeydown = (e) => {
 <li class="toc-entry toc-h2"><a href="#quiz-questions">Quiz Questions</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#quiz-1-data-compression">Quiz 1: Data Compression</a></li>
+<li class="toc-entry toc-h3"><a href="#quiz-2-binary-numbers">Quiz 2: Binary Numbers</a></li>
 </ul>
 </li>
 </ul>
@@ -200,6 +201,59 @@ document.onkeydown = (e) => {
 <p>C) LOssy compression of images provides greater reduction in transmission than lossless: Lossy compression decreases image file size for images of diverse colors more effectively than lossless compression, which in turn decreases transmission time. This seems favorable.</p>
 
 <p>D) Sound clips with lossy compression can be restored to original quality: Lossy compression will result in irreversible loss of data, so this is false.</p>
+
+<h3 id="quiz-2-binary-numbers">
+<a class="anchor" href="#quiz-2-binary-numbers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz 2: Binary Numbers</h3>
+
+<p>1) A programming language has 4-bit binary for nonnegative integers. Programmers try to add 14 and 15 and assign to <strong>total</strong>. What will happen?</p>
+
+<p>The sum of 14 and 15 is 29 in decimal. Must find the maximum displayable decimal number for 4-bits</p>
+
+<p>1111 = 1 + 2 + 4 + 8 = 15</p>
+
+<p>Yeah, this will be an overflow error; the sum is larger than the largest possible number to display with 4 bits.</p>
+
+<p>2) In two versions of a game, the character can face 4 directions in the 1st version and 8 directions in the 2nd version. What is true about storing 8 directions in memory?</p>
+
+<p>(all the answer choices pertain to 4 bits)</p>
+
+<p>The maximum number of values storable in 4 bits is expressed by:</p>
+
+<p>1111 = 1 + 2 + 4 + 8 = 15</p>
+
+<p>Then add 1 (don’t forget the 0) to get 16 possible values</p>
+
+<ul>
+  <li>4 bits is enough to store 8 direction values.</li>
+</ul>
+
+<p>3) What is true?</p>
+
+<p>I) Binary sequences can be used to represent strings
+II) Binary sequences can be used to represent colors
+III) Binary sequences can be used to represent audio recordings</p>
+
+<p>As far as I know, binary sequences represent all data present on a computer/machine.</p>
+
+<p>4) Consider 0011, 0110, and 1111. Which decimal is not equal?</p>
+
+<p>0011 = 1 + 2 = 3
+0110 = 2 + 4 = 6
+1111 = 1 + 2 + 4 + 8 = 15</p>
+
+<p>Answer option <strong>9</strong> doesn’t match</p>
+
+<p>5) Runner’s position is analog data. How is the position of the runner represented digitally (via sensors)?</p>
+
+<p>I could be wrong here. It’s certainly not 0 or 1 depending on if the start or the finish is closer. In my physics class, motion sensors took 20 samples per second of object position using clicking sounds. According to an answer option, these positions should be represented by bits.</p>
+
+<p>6) Sort from least to greatest</p>
+
+<p>Binary 1011 = 1 + 2 + 8 = 11
+Binary 1101 = 1 + 4 + 8 = 13</p>
+
+<p>5 &lt; 11 &lt; 12 &lt; 13
+5 &lt; Binary 1011 &lt; 12 &lt; Binary 1101</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
