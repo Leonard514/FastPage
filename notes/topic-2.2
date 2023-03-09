@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -74,11 +74,20 @@ document.onkeydown = (e) => {
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#prompt-1-describe-some-of-the-meta-data">Prompt 1: Describe some of the meta data…</a></li>
-<li class="toc-entry toc-h1"><a href="#prompt-2-commands-for-file-paths-in-different-os-and-pathlib">Prompt 2: Commands for file paths in different OS and pathlib</a></li>
-<li class="toc-entry toc-h1"><a href="#prompt-3-playing-around-with-provided-sample-code">Prompt 3: Playing around with provided sample code</a></li>
-<li class="toc-entry toc-h1"><a href="#prompt-4-translate-the-first-3-letters-of-your-name-to-base64">Prompt 4: Translate the first 3 letters of your name to base64</a></li>
-<li class="toc-entry toc-h1"><a href="#prompt-5-buffering">Prompt 5: Buffering</a></li>
+<li class="toc-entry toc-h2"><a href="#prompt-1-describe-some-of-the-meta-data">Prompt 1: Describe some of the meta data…</a></li>
+<li class="toc-entry toc-h2"><a href="#prompt-2-commands-for-file-paths-in-different-os-and-pathlib">Prompt 2: Commands for file paths in different OS and pathlib</a></li>
+<li class="toc-entry toc-h2"><a href="#prompt-3-playing-around-with-provided-sample-code">Prompt 3: Playing around with provided sample code</a></li>
+<li class="toc-entry toc-h2"><a href="#prompt-4-translate-the-first-3-letters-of-your-name-to-base64">Prompt 4: Translate the first 3 letters of your name to base64</a></li>
+<li class="toc-entry toc-h2"><a href="#prompt-5-buffering">Prompt 5: Buffering</a></li>
+<li class="toc-entry toc-h1"><a href="#topic-23">Topic 2.3</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#quiz-questions">Quiz Questions</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#quiz-1-data-compression">Quiz 1: Data Compression</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul><p>I’ve been asked to display some images in Jupyter Notebooks. Unfortunately, I do not have a Jupyter editor at the moment so I will have to resort to Markdown.</p>
 
 <p><img src="/FastPage/images/green-square-16.png" alt="" title="The first image is a small green square"></p>
@@ -87,15 +96,15 @@ document.onkeydown = (e) => {
 
 <p><img src="/FastPage/images/lassen-volcano.jpg" alt="" title="The third image is large and depicts volcanoes"></p>
 
-<h1 id="prompt-1-describe-some-of-the-meta-data">
-<a class="anchor" href="#prompt-1-describe-some-of-the-meta-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 1: Describe some of the meta data…</h1>
+<h2 id="prompt-1-describe-some-of-the-meta-data">
+<a class="anchor" href="#prompt-1-describe-some-of-the-meta-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 1: Describe some of the meta data…</h2>
 
 <p>The image size, which could be measured by the number of pixels, affects the file size of a given image. If the file size of an image becomes too large, the image could be difficult to transport across the Internet. As such, the image file must be compressed, which decreases its file size. <a href="https://apclassroom.collegeboard.org/103/home?apd=p13chxi8d3&amp;unit=2">According to a College Board video</a>, this is achieved through using an in-file dictionary to decrease the number of characters in a file, thereby decreasing its size. According to this same video, there are two types of compression: Lossless compression (all data is conserved) and lossy compression (not all data is conserved, though there is no need to do so). Generally, lossy compression reduces the file size more effectively.</p>
 
 <p>In terms of images, there are many file extensions that are available. Some of the more common file extensions are the .PNG and the .JPEG extensions. According to <a href="https://www.techtarget.com/whatis/definition/PNG-Portable-Network-Graphics">this source</a>, .JPEG uses lossy compression while .PNG uses lossless compression. When lossy compression is utilized, the change in image colors are not easily perceptible. When I took notes on the 2.2 lesson, the instructor sampled multiple images of smiley faces. One image only used 2-3 colors (a shade of yellow, black, and possibly white), while another image used many shades of green. Lossless compression is more favorable for images with less colors (many pixels with the same color means less dictionary mappings are necessary), while lossy compression is more favorable for images with more colors.</p>
 
-<h1 id="prompt-2-commands-for-file-paths-in-different-os-and-pathlib">
-<a class="anchor" href="#prompt-2-commands-for-file-paths-in-different-os-and-pathlib" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 2: Commands for file paths in different OS and pathlib</h1>
+<h2 id="prompt-2-commands-for-file-paths-in-different-os-and-pathlib">
+<a class="anchor" href="#prompt-2-commands-for-file-paths-in-different-os-and-pathlib" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 2: Commands for file paths in different OS and pathlib</h2>
 
 <p>Here are some common commands used within a Linux terminal to access files</p>
 
@@ -109,8 +118,8 @@ document.onkeydown = (e) => {
 
 <p><code class="language-plaintext highlighter-rouge">cd /path/to/directory</code> - changes working directory to <strong>/path/to/directory</strong></p>
 
-<h1 id="prompt-3-playing-around-with-provided-sample-code">
-<a class="anchor" href="#prompt-3-playing-around-with-provided-sample-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 3: Playing around with provided sample code</h1>
+<h2 id="prompt-3-playing-around-with-provided-sample-code">
+<a class="anchor" href="#prompt-3-playing-around-with-provided-sample-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 3: Playing around with provided sample code</h2>
 
 <p>Lily (my partner) had some issues loading a Jupyter renderer and a dependency. She just reloaded VSCode and everything worked fine. The issue was relatively strange.</p>
 
@@ -118,8 +127,8 @@ document.onkeydown = (e) => {
 
 <p>I need to answer a question about</p>
 
-<h1 id="prompt-4-translate-the-first-3-letters-of-your-name-to-base64">
-<a class="anchor" href="#prompt-4-translate-the-first-3-letters-of-your-name-to-base64" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 4: Translate the first 3 letters of your name to base64</h1>
+<h2 id="prompt-4-translate-the-first-3-letters-of-your-name-to-base64">
+<a class="anchor" href="#prompt-4-translate-the-first-3-letters-of-your-name-to-base64" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 4: Translate the first 3 letters of your name to base64</h2>
 
 <p>There are many text-to-base64 converters online, and I’ll be using one <a href="https://base64.guru/converter/encode/text">here</a>. As seen in <a href="https://en.wikipedia.org/wiki/Base64">the Wikipedia article about Base64</a>, the basis of converting ASCII to base64 is that Base64 supports 6 bits (2^6 = 64), while ASCII supports 0 bits. As such, each group of 3 ASCII characters provides 24 bits for 4 Base64 characters; equal signs are used as padding to ensure that the number of characters printed is a multiple of 4 (an ASCII string does not necessarily have a number of characters being a multiple of 3)</p>
 
@@ -158,9 +167,39 @@ document.onkeydown = (e) => {
 
 <p>So Leo (ASCII) = TGVv (base64).</p>
 
-<h1 id="prompt-5-buffering">
-<a class="anchor" href="#prompt-5-buffering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 5: Buffering</h1>
+<h2 id="prompt-5-buffering">
+<a class="anchor" href="#prompt-5-buffering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 5: Buffering</h2>
 
+<h1 id="topic-23">
+<a class="anchor" href="#topic-23" aria-hidden="true"><span class="octicon octicon-link"></span></a>Topic 2.3</h1>
+
+<h2 id="quiz-questions">
+<a class="anchor" href="#quiz-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz Questions</h2>
+
+<p>Integrity Disclaimer: The author does not condone use of these quiz reflections to cheat on quizzes. Do your own work!</p>
+
+<h3 id="quiz-1-data-compression">
+<a class="anchor" href="#quiz-1-data-compression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz 1: Data Compression</h3>
+
+<p>1) What is an advantage of lossless compression?</p>
+
+<p>Well, lossless compression preserves all the data. Lossy compression can’t do that. Data security often depends more on the encryption algorithms used during file transmission (not the file compression)</p>
+
+<p>2) A user wants to save a file on a storage site, reduce the file size, and restore the file to its original size.</p>
+
+<p>He should use lossless compression… and only lossless compression.</p>
+
+<p>3) Programmer developing social media software; wants to use compression for attachments sent between users. What is true?</p>
+
+<p>(The answer choices make conjectures about videos, images, and audio files)</p>
+
+<p>A) Lossless compression of videos save more space than lossy compression: Largely circumstantial. If the video file has frames with very few different colors (ex: screen recordings where screen GUI elements have uniform colors), lossless compression may be ideal. However, most videos of real-life settings will have pixels of many colors in the frames. LOssy compression is therefore ideal in most scenarios.</p>
+
+<p>B) Lossless compression of images result in images of equal size to the original file: If this were true, the compression operation would be pointless since it’s meant to decrease file size.</p>
+
+<p>C) LOssy compression of images provides greater reduction in transmission than lossless: Lossy compression decreases image file size for images of diverse colors more effectively than lossless compression, which in turn decreases transmission time. This seems favorable.</p>
+
+<p>D) Sound clips with lossy compression can be restored to original quality: Lossy compression will result in irreversible loss of data, so this is false.</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
