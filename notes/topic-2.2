@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      10 min read
     
 </span></p>
 
@@ -87,6 +87,7 @@ document.onkeydown = (e) => {
 <li class="toc-entry toc-h3"><a href="#quiz-2-binary-numbers">Quiz 2: Binary Numbers</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#quiz-3-extracting-information-from-data">Quiz 3: Extracting Information from Data</a></li>
 </ul>
 </li>
 </ul><p>I’ve been asked to display some images in Jupyter Notebooks. Unfortunately, I do not have a Jupyter editor at the moment so I will have to resort to Markdown.</p>
@@ -254,6 +255,66 @@ Binary 1101 = 1 + 4 + 8 = 13</p>
 
 <p>5 &lt; 11 &lt; 12 &lt; 13
 5 &lt; Binary 1011 &lt; 12 &lt; Binary 1101</p>
+
+<h2 id="quiz-3-extracting-information-from-data">
+<a class="anchor" href="#quiz-3-extracting-information-from-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz 3: Extracting Information from Data</h2>
+
+<p>1) A researcher has access to two databases</p>
+
+<ul>
+  <li>Database with first/last names, grade levels, GPAs</li>
+  <li>Database with first/last names, number of absences (school), number of tardies</li>
+</ul>
+
+<p>Students don’t have ID numbers. What’s the problem?</p>
+
+<p>The answer that fits is: Students with the same name may be confused. This is because names are a form of identification, similarly to ID numbers.</p>
+
+<p>2) Researchers make program to analyze pollution in US counties. What is the challenge?</p>
+
+<p>A few options seem strange, particularly those pertaining to there being too much data. Data files can be very large, so size is no problem. The answer options raise issues due to combining data from different files and different organizations of data between counties. Logically, data files can be combined with ease. If the data is organized differently, it may be difficult to display the data in a uniform manner.</p>
+
+<p>3) Student makes web site to display city info based on inputted city name. What is a challenge?</p>
+
+<p>The first thing that comes to mind (without me looking at the options) is multiple possible city names and case-sensitivity of inputs.</p>
+
+<p>The former option already applies to abbreviated city names and spelling errors.</p>
+
+<p>4) Database of info at concert shows:</p>
+
+<ul>
+  <li>Name of artist at show</li>
+  <li>Show date</li>
+  <li>$ of all tickets</li>
+</ul>
+
+<p>What other info useful for determining artist with greatest attendance?</p>
+
+<ul>
+  <li>Dividing income from tickets by price of tickets will determine number of tickets sold. It is possible that someone will purchase a ticket without going to the show, but I’d guess this applies to few people.</li>
+</ul>
+
+<p>5) Camera mounted on car captures image from driver’s seat every second + metadata (speed, date/time, GPS position). What is best determined without the metadata?</p>
+
+<p>Option, number of bicycles passed, does not require the metadata. It only requires counting each unique bike in the pictures.</p>
+
+<p>6) Teacher sends survey of work habits</p>
+
+<ul>
+  <li>Minutes of HW per night</li>
+  <li>Minutes of test prep per test</li>
+  <li>Enjoy class materials?</li>
+</ul>
+
+<p>Which questions about students can teacher answer?</p>
+
+<p>i) Do students enjoying class material spend more time on HW?
+ii) Do students spending more time on HW spend less time studying for tests?
+iii) Do students spending more time studying for tests earn higher grades?</p>
+
+<p>Grades is not even in the dataset. iii is wrong.</p>
+
+<p>HW time, studying for tests, and class enjoyment are in the dataset. The teacher could sort data in ascending/descending order of one variable and search for a relationship between that variable and a different variable.</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
