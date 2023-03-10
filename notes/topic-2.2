@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      13 min read
     
 </span></p>
 
@@ -87,9 +87,14 @@ document.onkeydown = (e) => {
 <li class="toc-entry toc-h3"><a href="#quiz-2-binary-numbers">Quiz 2: Binary Numbers</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#quiz-3-extracting-information-from-data">Quiz 3: Extracting Information from Data</a></li>
+<li class="toc-entry toc-h2"><a href="#quiz-3-extracting-information-from-data">Quiz 3: Extracting Information from Data</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#quiz-4-using-programs-with-data">Quiz 4: Using Programs with Data</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#items-purchased">items purchased</a></li>
 </ul><p>I’ve been asked to display some images in Jupyter Notebooks. Unfortunately, I do not have a Jupyter editor at the moment so I will have to resort to Markdown.</p>
 
 <p><img src="/FastPage/images/green-square-16.png" alt="" title="The first image is a small green square"></p>
@@ -314,7 +319,94 @@ iii) Do students spending more time studying for tests earn higher grades?</p>
 
 <p>Grades is not even in the dataset. iii is wrong.</p>
 
+<h3 id="quiz-4-using-programs-with-data">
+<a class="anchor" href="#quiz-4-using-programs-with-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz 4: Using Programs with Data</h3>
+
+<p>1) Spreadsheet contains lots of info (I’m not going to copy down the spreadsheet). Count # of books with criteria:</p>
+<ul>
+  <li>Mystery book</li>
+  <li>&lt; $10 cost</li>
+  <li>At least one copy.</li>
+</ul>
+
+<p><strong>genre</strong> is the genre of a book, <strong>num</strong> is number of copies, and <strong>cost</strong> is the cost. Get an expression to evaluate to true only if the criteria are satisfied.</p>
+
+<p>(genre = “mystery”) AND ((num &gt; 0) AND (cost &lt; 10.00))</p>
+
+<p>Yeah, I did that before consulting the answer choices. They did things slightly differently (namely setting <strong>num</strong> to be greater than or equal to 1), but you get the point. Multiple ways to solve the same problem. I probably have to group the right two parameters since I expect boolean operations to work in pairs.</p>
+
 <p>HW time, studying for tests, and class enjoyment are in the dataset. The teacher could sort data in ascending/descending order of one variable and search for a relationship between that variable and a different variable.</p>
+
+<p>2) Clothing store records over 7 days:</p>
+
+<ul>
+  <li>Date transaction</li>
+  <li>Method of payment</li>
+  <li>
+    <h1 id="items-purchased">
+<a class="anchor" href="#items-purchased" aria-hidden="true"><span class="octicon octicon-link"></span></a>items purchased</h1>
+  </li>
+  <li>Transaction cost</li>
+</ul>
+
+<p>Possible methods payment are cash, check, debit card, credit card. What is true?</p>
+
+<p>A) Avg amount spent per day determined by sorting by total transaction, add 7 greatest amounts, divide by 7: This is an average of the 7 most expensive purchases (not for the entire day)</p>
+
+<p>B) Method of payment used most commonly determined by sorting data by method payment, adding # items purchased for each type, then finding max sum: This determines the method of payment used to purchase the greatest number of items (not the method of payment used in most transactions)</p>
+
+<p>C) Most expensive item can be determined by searching data for all items… that operation is not supported in the data. The data is about the transactions, not the items.</p>
+
+<p>D) Total # items purchased in day determined by searching all transactions, adding # of items purchased for each transaction that day: <strong>True</strong>.</p>
+
+<p>3) Company with data files…</p>
+
+<p>(there’s a big table with types of data available)</p>
+
+<p>If a new product with AA batteries is available, how to use data files to send emails to customers who purchased products using AA batteries?</p>
+
+<p>This is a bit invasive. Regardless…</p>
+
+<p>Use <strong>products</strong> to find products IDs with AA batteries. Bridge from Product IDs to Customer IDs using <strong>Purchases</strong>. Bridge from customer IDs to email-addresses using <strong>customers</strong>.</p>
+
+<p>4) Spreadsheet contains photography info</p>
+
+<p>Student makes algorithm to determine name of photographer for oldest photo; ignore unknown photographers and years. Entry will appear in rows of spreadsheet. Actions are available.</p>
+
+<p>Need to filter by photographer, filter by year, and sort by year. I don’t think order matters; if the pictures with unknown years are sorted before being removed, positions will be adjusted as if they weren’t there.</p>
+
+<p>5) There’s a spreadsheet (a portion provided) - for a radio station</p>
+
+<p>Students want to count talk shows on Saturday or Sunday.</p>
+
+<p><strong>genre</strong> is genre of show (string), <strong>day</strong> is day (string). Make an expression to evaluate to true if show meets criteria…</p>
+
+<p>(genre = “talk”) AND ((day = “Saturday”) OR (day = “Sunday))</p>
+
+<p>6) Wildlife preserve makes exhibit. There’s data categories.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Database</th>
+      <th>Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Name, classification, skin type, thermoregulation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Name, lifestyle, life span, top speed</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>How can these databases be used?</p>
+
+<p>Use both; search by name.</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
