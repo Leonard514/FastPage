@@ -113,17 +113,39 @@ document.onkeydown = (e) => {
 <h2 id="prompt-2-commands-for-file-paths-in-different-os-and-pathlib">
 <a class="anchor" href="#prompt-2-commands-for-file-paths-in-different-os-and-pathlib" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 2: Commands for file paths in different OS and pathlib</h2>
 
-<p>Here are some common commands used within a Linux terminal to access files</p>
+<p>Here are some commands used to access files</p>
 
-<p><code class="language-plaintext highlighter-rouge">cat /path/to/file/file.txt</code> - prints the contents of file.txt. Requires read permissions</p>
-
-<p><code class="language-plaintext highlighter-rouge">ls -la</code> - prints all of the files/directories within the current working directory (probably important to see <em>what</em> files there are to work with)</p>
-
-<p><code class="language-plaintext highlighter-rouge">./script.exe</code> - executes a script/executable. Requires execute permissions</p>
-
-<p><code class="language-plaintext highlighter-rouge">nano /path/to/file/file.txt</code> - opens up a text editor to write to file.txt. May require read and/or write permissions. Other common text editors include <strong>gedit</strong> (which has more GUI-focused specifications) and <strong>vim</strong> (which I am less familiar with, though those who often work with Linux will probably be able to tell you more)</p>
-
-<p><code class="language-plaintext highlighter-rouge">cd /path/to/directory</code> - changes working directory to <strong>/path/to/directory</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Linux</th>
+      <th>Windows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Print Files</strong></td>
+      <td>cat /path/to/file.txt</td>
+      <td>cat C:\path\to\file</td>
+    </tr>
+    <tr>
+      <td><strong>Change Directory</strong></td>
+      <td>cd /path/to/directory</td>
+      <td>cd C:\path\to\directory</td>
+    </tr>
+    <tr>
+      <td><strong>Print files/folders in directory</strong></td>
+      <td>ls -la</td>
+      <td>dir</td>
+    </tr>
+    <tr>
+      <td><strong>Edit files</strong></td>
+      <td>nano /path/to/file.txt</td>
+      <td>Notepad “C:\path\to\file.bat”</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="prompt-3-playing-around-with-provided-sample-code">
 <a class="anchor" href="#prompt-3-playing-around-with-provided-sample-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 3: Playing around with provided sample code</h2>
