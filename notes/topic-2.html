@@ -79,7 +79,11 @@ document.onkeydown = (e) => {
 <li class="toc-entry toc-h2"><a href="#prompt-3-playing-around-with-provided-sample-code">Prompt 3: Playing around with provided sample code</a></li>
 <li class="toc-entry toc-h2"><a href="#prompt-4-translate-the-first-3-letters-of-your-name-to-base64">Prompt 4: Translate the first 3 letters of your name to base64</a></li>
 <li class="toc-entry toc-h2"><a href="#prompt-5-buffering">Prompt 5: Buffering</a></li>
-<li class="toc-entry toc-h2"><a href="#prompt-6-images-comment-on-the-code">Prompt 6: Images (comment on the code)</a></li>
+<li class="toc-entry toc-h2"><a href="#prompt-6-images-comment-on-the-code">Prompt 6: Images (comment on the code)</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#prompt-add-images-that-will-likely-utilize-lossy-and-lossless-data-compression">Prompt: Add images that will likely utilize lossy and lossless data compression.</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h1"><a href="#topic-23">Topic 2.3</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#actual-notes">Actual Notes</a></li>
@@ -226,6 +230,11 @@ document.onkeydown = (e) => {
 <p>For the scaling function, a variable <strong>baseWidth</strong> of 320 pixels is defined. A variable <strong>scalePercent</strong> is defined as the the quotient of <strong>baseWidth</strong> divided by (what is likely) the original width of the image (converted to a float variable). The <strong>scaleHeight</strong> variable is the product of the float variable of the original height of the image times the <strong>scalePercent</strong> variable. This is returned as an integer. Then, the scale variable is defined as the dimensions of the image, being the width and the height respectively. The new dimensions are returned. Similar to the grayscaled image, this is run through the function that saves the image/array in a buffer and uses base64 to help display the image.</p>
 
 <p>Scaling images can be viewed as a form of lossy compression. That is, reducing the number of pixels in the image can reduce the image file size. However, it is impossible to recover the original (higher-resolution) image from the scaled (lower-resolution) image. Scaling very high resolution images may not severely affect image quality unless the scaling is highly exaggerated (ex: scaling a 1000x1000 pixel image to a 10x10 pixel image)</p>
+
+<h3 id="prompt-add-images-that-will-likely-utilize-lossy-and-lossless-data-compression">
+<a class="anchor" href="#prompt-add-images-that-will-likely-utilize-lossy-and-lossless-data-compression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt: Add images that will likely utilize lossy and lossless data compression.</h3>
+
+<p>Here you go.</p>
 
 <h1 id="topic-23">
 <a class="anchor" href="#topic-23" aria-hidden="true"><span class="octicon octicon-link"></span></a>Topic 2.3</h1>
