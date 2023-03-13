@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      16 min read
+      17 min read
     
 </span></p>
 
@@ -79,6 +79,7 @@ document.onkeydown = (e) => {
 <li class="toc-entry toc-h2"><a href="#prompt-3-playing-around-with-provided-sample-code">Prompt 3: Playing around with provided sample code</a></li>
 <li class="toc-entry toc-h2"><a href="#prompt-4-translate-the-first-3-letters-of-your-name-to-base64">Prompt 4: Translate the first 3 letters of your name to base64</a></li>
 <li class="toc-entry toc-h2"><a href="#prompt-5-buffering">Prompt 5: Buffering</a></li>
+<li class="toc-entry toc-h2"><a href="#prompt-6-images-comment-on-the-code">Prompt 6: Images (comment on the code)</a></li>
 <li class="toc-entry toc-h1"><a href="#topic-23">Topic 2.3</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#actual-notes">Actual Notes</a></li>
@@ -88,6 +89,7 @@ document.onkeydown = (e) => {
 <li class="toc-entry toc-h3"><a href="#code-segment-2">Code Segment 2</a></li>
 <li class="toc-entry toc-h3"><a href="#code-segment-3">Code Segment 3</a></li>
 <li class="toc-entry toc-h3"><a href="#code-segment-4">Code Segment 4</a></li>
+<li class="toc-entry toc-h3"><a href="#code-segment">Code Segment</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#quiz-questions">Quiz Questions</a>
@@ -212,6 +214,15 @@ document.onkeydown = (e) => {
 
 <p>I have been a consumer of buffering while working with chromebooks. I currently use a chromebook for a lot of computer-related projects. Occasionally, when I type, the inputs for all the characters I type will take a while to appear on the screen. This is probably where the input for all of my characters are queued for the output. The buffering for this is an inconvenience in that it increases the amount of time it takes for me to get my work done. Depending on if there is a severe time constrain, this could be a minor inconvenience or a major inconvenience. These apply to executing functions on images given that, depending on image dimensions, a iteration may have to cycle through millions of pixels. Each of those pixels may have to go through a buffer, and under certain circumstances the functions executed on such images may cost time.</p>
 
+<h2 id="prompt-6-images-comment-on-the-code">
+<a class="anchor" href="#prompt-6-images-comment-on-the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 6: Images (comment on the code)</h2>
+
+<p>If you’re asking about sequencing in code, then all code has sequencing. Lines are executed in a certain order.</p>
+
+<p>For the greyscale function, it is likely that each pixel in the image is converted to an array (likely based on the RGB values - each pixel in an image is determined by red, greeh, and blue values ranging from 0 to 255). A blank list <strong>gray_data</strong> is made for the array of the greyscale image.</p>
+
+<p>Then for each pixel in the original image aray, the average of the RGB values is taken by adding them and dividing by three. If there are more than three values for an element in the array, the average is taken of all values. Regardless, the average is appended to <strong>gray_data</strong>, and if there are more than three elements, the fourth element is preserved. The grayscale array then overrides the image…</p>
+
 <h1 id="topic-23">
 <a class="anchor" href="#topic-23" aria-hidden="true"><span class="octicon octicon-link"></span></a>Topic 2.3</h1>
 
@@ -266,6 +277,19 @@ document.onkeydown = (e) => {
 
 <h3 id="code-segment-4">
 <a class="anchor" href="#code-segment-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Segment 4</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s">'GPA'</span><span class="p">]))</span>
+
+<span class="k">print</span><span class="p">()</span>
+
+<span class="c1">#sort the values in reverse order
+</span><span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s">'GPA'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>The first print statement prints everything again, but this time sorts by GPA. The second substantial print statement includes argument <strong>ascending=False</strong>. When inspecting the output, the first output sorts GPA by ascending order, while the second output sorts GPA by <strong>descending</strong> order. Mr. Yeung posted a question of whether a <strong>descending</strong> argument existed. Here’s <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sort_values.html">documentation</a> of the relevant commands used, and there is no such argument.</p>
+
+<h3 id="code-segment">
+<a class="anchor" href="#code-segment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Segment</h3>
 
 <h2 id="quiz-questions">
 <a class="anchor" href="#quiz-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz Questions</h2>
