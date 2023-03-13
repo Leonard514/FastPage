@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      16 min read
     
 </span></p>
 
@@ -81,6 +81,15 @@ document.onkeydown = (e) => {
 <li class="toc-entry toc-h2"><a href="#prompt-5-buffering">Prompt 5: Buffering</a></li>
 <li class="toc-entry toc-h1"><a href="#topic-23">Topic 2.3</a>
 <ul>
+<li class="toc-entry toc-h2"><a href="#actual-notes">Actual Notes</a></li>
+<li class="toc-entry toc-h2"><a href="#comments-on-all-the-code-segments">Comments on all the code segments.</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#code-segment-1">Code Segment 1</a></li>
+<li class="toc-entry toc-h3"><a href="#code-segment-2">Code Segment 2</a></li>
+<li class="toc-entry toc-h3"><a href="#code-segment-3">Code Segment 3</a></li>
+<li class="toc-entry toc-h3"><a href="#code-segment-4">Code Segment 4</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#quiz-questions">Quiz Questions</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#quiz-1-data-compression">Quiz 1: Data Compression</a></li>
@@ -201,8 +210,62 @@ document.onkeydown = (e) => {
 <h2 id="prompt-5-buffering">
 <a class="anchor" href="#prompt-5-buffering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prompt 5: Buffering</h2>
 
+<p>I have been a consumer of buffering while working with chromebooks. I currently use a chromebook for a lot of computer-related projects. Occasionally, when I type, the inputs for all the characters I type will take a while to appear on the screen. This is probably where the input for all of my characters are queued for the output. The buffering for this is an inconvenience in that it increases the amount of time it takes for me to get my work done. Depending on if there is a severe time constrain, this could be a minor inconvenience or a major inconvenience. These apply to executing functions on images given that, depending on image dimensions, a iteration may have to cycle through millions of pixels. Each of those pixels may have to go through a buffer, and under certain circumstances the functions executed on such images may cost time.</p>
+
 <h1 id="topic-23">
 <a class="anchor" href="#topic-23" aria-hidden="true"><span class="octicon octicon-link"></span></a>Topic 2.3</h1>
+
+<h2 id="actual-notes">
+<a class="anchor" href="#actual-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Actual Notes</h2>
+
+<p>1) What needs to be cleaned in grade.json?</p>
+
+<p>Here is a list of attributes that should be cleaned.</p>
+
+<p>In column <strong>Student ID</strong>, find the actual student ID for that labeled <strong>nil</strong>.</p>
+
+<p>In column <strong>Year in School</strong>, replace <strong>Junior</strong> with <strong>11</strong> and <strong>9th Grade</strong> with <strong>9</strong>. It is important that each column of a data set prove uniform since that makes it easier for each column to search. Search for and verify the grade level of student <strong>313</strong> who has a grade level of <strong>20</strong>.</p>
+
+<p>In column <strong>GPA</strong>, verify that student <strong>324</strong>’s GPA is actually 4.75. This might be obtained through taking lots of honors classes, but 4.75 is unusually high among the sample, which has the highest GPA of 4.00. This suggests a weighted GPA may have been misplaced among unweighted GPAs.</p>
+
+<p>Please see the .ipynb file for the <strong>notes and observations on each code cell</strong>. Oh wait, I forgot I don’t have a Jupyter Editor. That’s why I’m in Markdown. I guess I’ll do it here.</p>
+
+<h2 id="comments-on-all-the-code-segments">
+<a class="anchor" href="#comments-on-all-the-code-segments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comments on all the code segments.</h2>
+
+<h3 id="code-segment-1">
+<a class="anchor" href="#code-segment-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Segment 1</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+</code></pre></div></div>
+
+<p>Just need to import a library before you can use it. That’s really all. I think the <strong>as</strong> portion allows you to define how you’re going to call the library in subsequent code (this allows for some customizability and also avoiding naming conflicts).</p>
+
+<h3 id="code-segment-2">
+<a class="anchor" href="#code-segment-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Segment 2</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_json</span><span class="p">(</span><span class="s">'files/grade.json'</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This prints the dataset. It’s probably important to print or otherwise read a dataset before incorporating it into a computer project to make sure the data columns are relatively uniform (clean) and contains correct data.</p>
+
+<h3 id="code-segment-3">
+<a class="anchor" href="#code-segment-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Segment 3</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s">'GPA'</span><span class="p">]])</span>
+
+<span class="k">print</span><span class="p">()</span>
+
+<span class="c1">#try two columns and remove the index from print statement
+</span><span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s">'Student ID'</span><span class="p">,</span><span class="s">'GPA'</span><span class="p">]].</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>The first print statement prints the data but restricts the information displayed to GPA column. The second print statement adds an <strong>enter</strong> to the output, while the third print command prints the student IDs alongside their GPAs, but not their indexes (as specified by <strong>index=False</strong>)</p>
+
+<h3 id="code-segment-4">
+<a class="anchor" href="#code-segment-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Segment 4</h3>
 
 <h2 id="quiz-questions">
 <a class="anchor" href="#quiz-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz Questions</h2>
@@ -224,7 +287,7 @@ document.onkeydown = (e) => {
 
 <p>(The answer choices make conjectures about videos, images, and audio files)</p>
 
-<p>A) Lossless compression of videos save more space than lossy compression: Largely circumstantial. If the video file has frames with very few different colors (ex: screen recordings where screen GUI elements have uniform colors), lossless compression may be ideal. However, most videos of real-life settings will have pixels of many colors in the frames. LOssy compression is therefore ideal in most scenarios.</p>
+<p>A) Lossless compression of videos save more space than lossy compression: Largely circumstantial. If the video file has frames with very few different colors (ex: screen recordings where screen GUI elements have uniform colors), lossless compression may be ideal. However, most videos of real-life settings will have pixels of many colors in the frames. Lossy compression is therefore ideal in most scenarios.</p>
 
 <p>B) Lossless compression of images result in images of equal size to the original file: If this were true, the compression operation would be pointless since it’s meant to decrease file size.</p>
 
@@ -488,5 +551,5 @@ iii) Do students spending more time studying for tests earn higher grades?</p>
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/FastPage/notes/topic-2.2" hidden></a>
+</script><a class="u-url" href="/FastPage/notes/topic-2" hidden></a>
 </article>
