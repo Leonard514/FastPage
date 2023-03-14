@@ -75,6 +75,12 @@ document.onkeydown = (e) => {
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#class-notes">Class Notes</a></li>
+<li class="toc-entry toc-h1"><a href="#notes-on-all-the-code-blocks">Notes on all the Code Blocks</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#block-1">Block 1</a></li>
+<li class="toc-entry toc-h2"><a href="#block-2">Block 2</a></li>
+</ul>
+</li>
 </ul><h1 id="class-notes">
 <a class="anchor" href="#class-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class Notes</h1>
 
@@ -91,6 +97,19 @@ document.onkeydown = (e) => {
 <p>sqlite database under notebooks &gt; files</p>
 
 <p>It is good to convert data at the end to JSON because this is a universal language; this allows it to be more usable (ex: using APIs)</p>
+
+<h1 id="notes-on-all-the-code-blocks">
+<a class="anchor" href="#notes-on-all-the-code-blocks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes on all the Code Blocks</h1>
+
+<h2 id="block-1">
+<a class="anchor" href="#block-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Block 1</h2>
+
+<p>The first code block starts by importing libraries and starting a flask instance. It finds the sqlite.db file and sets a few configurations related to Flask and SQLAlchemy, including the secret key and where the database file is. THe <strong>SQLALCHEMY_TRACK_MODIFICATIONS</strong> setting is set to false; this saves system resources according to this <a href="https://stackoverflow.com/questions/33738467/how-do-i-know-if-i-can-disable-sqlalchemy-track-modifications">stackexchange</a></p>
+
+<h2 id="block-2">
+<a class="anchor" href="#block-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Block 2</h2>
+
+<p>This imports more libraries and is also where the class <strong>User</strong> is defined.</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
