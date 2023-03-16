@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -154,7 +154,15 @@ Imperative Programming</li>
 
 <p>Executing the first code block output the schema from the <strong>User</strong> class. THe VARCHAR(255) is the character limit. PRAGMA should be in the docs.</p>
 
-<p><strong>conn</strong> and <strong>cursor</strong> is new. See the older methods. They accessed the sqlite.db through the terminal in VSCode.</p>
+<p><strong>conn</strong> and <strong>cursor</strong> is new. See the older methods. They accessed the sqlite.db through the terminal in VSCode. Command <strong>sqlite3 sqlite.db</strong> was executed, then <code class="language-plaintext highlighter-rouge">SELECT * FROM users;</code> which printed out table with all the forms of data defined in the <strong>user</strong> class as previously configured.</p>
+
+<p>In code block 2, the variable <strong>results</strong> was set equal to <strong>cursor.execute(‘SELECT * FROM users’)</strong>. This has equivalent effect to executing the command in parenthesis in the terminal. It seems the cursor exists to execute commands outside of the console. This is an example of abstraction (ease of use). The <strong>results</strong> (the contents of the schema) seems to be an object since there are data in the variable. In addition, there are attributes (names, uid, etc.) for all the data (ex: the methods - the names, uid). The object contains both the data and the functions (CRUD - create, read, update, and delete.</p>
+
+<p>For the create() of both sqlite3 lessons… compare. What is better/worse?</p>
+
+<p>The create function in this lesson 2.4b seems to collect user input about all the attributes (name, uid, password, dob). A connection is then established and a cursor within that connection, and a command is executed to insert all the data into the <strong>users</strong> class, which is then committed. In 2.4a, stored values of the <strong>self</strong> (when running the program) are applied to the table. It seems that the data is collected as create is executed for Lesson 2.4b. This makes all data more long-term. Meanwhile, in 2.4a, create (add attributes to table) is separate of actually defining those attributes. This may allow for short-term data storage (if needed). There is also the option that 2.4b is for smaller-scale operations.</p>
+
+<p>The menu function uses elif statements to check for inputs of c, r, u, d, s… there’s also a <strong>menu()</strong> at the very bottom that causes the function to act recursively. The <strong>menu</strong> function will keep executing until <strong>Esc</strong> is inputted, after which the condition of the operation having a length of 0 would pass. This will result in <strong>return</strong> (leave the function)</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
