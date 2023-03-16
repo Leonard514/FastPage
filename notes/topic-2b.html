@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -129,6 +129,8 @@ document.onkeydown = (e) => {
 
 <h2 id="block-4">
 <a class="anchor" href="#block-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Block 4</h2>
+
+<p>The first function, <strong>find_by_uid</strong>, has parameter <strong>uid</strong>. According to these <a href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/queries/">docs</a>, it will look within the SQLite database for the user with the uid matching the parameter entered (the first() option will probably bring up the first match in the table. It has no effect here since there aren’t duplicate uids). If the user is found, it’s returned outside the function.</p>
 
 <h1 id="class-notes-b">
 <a class="anchor" href="#class-notes-b" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class Notes B</h1>
