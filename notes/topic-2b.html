@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      8 min read
     
 </span></p>
 
@@ -81,6 +81,8 @@ document.onkeydown = (e) => {
 <li class="toc-entry toc-h2"><a href="#block-2">Block 2</a></li>
 <li class="toc-entry toc-h2"><a href="#block-3">Block 3</a></li>
 <li class="toc-entry toc-h2"><a href="#block-4">Block 4</a></li>
+<li class="toc-entry toc-h2"><a href="#block-5">Block 5</a></li>
+<li class="toc-entry toc-h2"><a href="#block-6">Block 6</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#class-notes-b">Class Notes B</a></li>
@@ -111,7 +113,7 @@ document.onkeydown = (e) => {
 
 <p>Here are some notes from the prompts on the blog</p>
 
-<p>The first portion I’ll dedicate to the line <code class="language-plaintext highlighter-rouge">app = Flask(__name__).</code> According to <a href="https://www.geeksforgeeks.org/why-do-we-pass-__name__-to-the-flask-class/">more well-known sources</a>, this command starts a Flask instance, which is used to fetch resources required to run a program. A <a href="https://blog.miguelgrinberg.com/post/why-do-we-pass-name-to-the-flask-class">personal blog</a> went into more specific detail about how that works. According to that blog, a function is called which finds the root path of the application being executed.</p>
+<p>The first portion I’ll dedicate to the line <code class="language-plaintext highlighter-rouge">app = Flask(__name__).</code> According to <a href="https://www.geeksforgeeks.org/why-do-we-pass-__name__-to-the-flask-class/">more well-known sources</a>, this command starts a Flask instance, which is used to fetch resources required to run a program. A <a href="https://blog.miguelgrinberg.com/post/why-do-we-pass-name-to-the-flask-class">personal blog</a> went into more specific detail about how that works. According to that blog, a function is called which finds the root path of the application being executed. The setting of SQLAlchemy() to <strong>db</strong> allows for the creation of an object for the database.</p>
 
 <h2 id="block-2">
 <a class="anchor" href="#block-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Block 2</h2>
@@ -127,10 +129,27 @@ document.onkeydown = (e) => {
 
 <p>After the function was defined, the function is called and executed.</p>
 
+<p>A few notes:</p>
+
+<p><strong>db.create_all()</strong> creates an empty table and database. Data can now be appended to this table.
+Each of the <strong>u#</strong> variables defines a user with each of the attributes in accordance with the user class. After these users are created, the program will attempt to add these users to the table (try), but if there is an error, the program will execute the <strong>except</strong> lines, which prints a debug message.</p>
+
 <h2 id="block-4">
 <a class="anchor" href="#block-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Block 4</h2>
 
-<p>The first function, <strong>find_by_uid</strong>, has parameter <strong>uid</strong>. According to these <a href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/queries/">docs</a>, it will look within the SQLite database for the user with the uid matching the parameter entered (the first() option will probably bring up the first match in the table. It has no effect here since there aren’t duplicate uids). If the user is found, it’s returned outside the function.</p>
+<p>The first function, <strong>find_by_uid</strong>, has parameter <strong>uid</strong>. According to these <a href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/queries/">docs</a>, it will look within the SQLite database for the user with the uid matching the parameter entered (the first() option will probably bring up the first match in the table. It has no effect here since there aren’t duplicate uids). If the user is found, it’s returned outside the function. The function searches the table using the <strong>User.query.filter_by</strong>, which, as the name implies, searches the <strong>User</strong> class based on an attribute.</p>
+
+<p>The second function, <strong>check_credentials</strong>, will take parameters <strong>uid</strong> and <strong>password</strong>. It first searches the table for a matching uid, and tow conditions are checked: first, if there is no match (user == None), and second, if the user’s password matches what is in the database. If the first condition is fulfilled or if no condition is fulfilled, the function will exit with <strong>False</strong>; if the second condition is fulfilled, the function will exit with <strong>True</strong>. This function is likely to be used in authentication checks (signing in).</p>
+
+<h2 id="block-5">
+<a class="anchor" href="#block-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Block 5</h2>
+
+<p>The function <strong>create</strong> starts by setting the <strong>uid</strong> equal to a user input; the user is prompted to enter the ID. If the ID matches anything in the database, the function tells the user that a user was found. This prevents duplicate uids from occurring. If the uid is not present in the table, the function allows the user to create a user with that uid, entering the name and password. These are stored in the <strong>User</strong> object. The user can also enter the date of birth as <strong>dob</strong>; if the user doesn’t follow formatting conventions (the except condition), the birthday is set to the present date. This allows the dates of birth in the table to be uniform, increasing the ease of searching through the data. Afterwards, there is an attempt to create the new object (if this fails, there’s an error message). After the function is defined, it is called and executed.</p>
+
+<h2 id="block-6">
+<a class="anchor" href="#block-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Block 6</h2>
+
+<p>The function <strong>read</strong> is defined; in the app context,</p>
 
 <h1 id="class-notes-b">
 <a class="anchor" href="#class-notes-b" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class Notes B</h1>
