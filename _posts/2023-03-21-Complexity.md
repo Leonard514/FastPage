@@ -52,3 +52,11 @@ Exponential (2^n)
 - Fibonacci sequence, series of numbers and each number is sum of two preceding numbers. Do recursion with CRUD menu...
 - As numbers increase, the function will take a while to execute.
 - Generate subset will print every possible combination of a list of numbers. This will make many additional combinations very quickly. 
+
+# Hacks Response
+
+I guess I'll start with some [sorting algorithms](https://www.bigocheatsheet.com/).
+
+| Sorting Algorithm | Functionality | Worst Case Space | Worst Case Time |
+| QuickSort | A pivot element is selected in the array, and all the other elements are divided into two subarrays so that all elements of one array have value less than the pivot element and all elements of the other array have value greater than the pivot element; the pivot element is then placed in the middle of the array. This process is repeated for all the subarrays until this is sorted. | Logarithmic | Quadratic |
+| 
