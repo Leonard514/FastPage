@@ -55,10 +55,21 @@ Exponential (2^n)
 
 # Hacks Response
 
-I guess I'll start with some [sorting algorithms](https://www.bigocheatsheet.com/).
+I started by testing all the algorithm stuff. I should probably paste this [URL](https://www.w3schools.com/python/trypython.asp?filename=demo_list) here since it'll let me execute python without Jupyter.
+
+Now here's a table
+
+| Algorithm Form | Time | Patterns |
+|-|-|-|
+| Constant | Negligibly small - took 2.622 * 10^-6 seconds to fetch an item from a list of 1000 elements | The time is always negligibly small |
+
+I also have some [sorting algorithms](https://www.bigocheatsheet.com/).
 
 | Sorting Algorithm | Functionality | Worst Case Space Complexity| Worst Case Time Complexity |
+|-|-|-|-|
 | [QuickSort](https://en.wikipedia.org/wiki/Quicksort) | A pivot element is selected in the array, and all the other elements are divided into two subarrays so that all elements of one array have value less than the pivot element and all elements of the other array have value greater than the pivot element; the pivot element is then placed in the middle of the array. This process is repeated for all the subarrays until this is sorted. | Logarithmic | Quadratic |
 | [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort) | Make the unsorted list into sublists with one element. The sublists will be merged together with elements in order until a complete list is made | Linear | O(nln(n)) |
 | [Timsort](https://en.wikipedia.org/wiki/Timsort) | 
-| [Heapsort](https://en.wikipedia.org/wiki/Heapsort) | Divides the data into sorted and unsorted parts (the unsorted part is in a data heap, which is essentially a binary data structure
+| [Heapsort](https://en.wikipedia.org/wiki/Heapsort) | Divides the data into sorted and unsorted parts (the unsorted part is in a data heap, which is essentially a binary data structure where each object is a parent object with two child objects. This allows a targeted element to be obtained more quickly in a process similar to binary search); the algorithm starts by turning the unsorted part into the mentioned heap. For the unsorted part, the algorithm then gets the 
+
+
