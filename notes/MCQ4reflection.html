@@ -1,0 +1,167 @@
+<script type="text/javascript">
+// If you're seeing this, I'm letting you know that you're not supposed to be here.
+// I put a bunch of commands in here limiting certain functionalities of the website.
+// So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+// Namely preventing YOU from copying my code and cheating.
+// Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+// modifying the website's code as you please.
+// And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+// Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+
+// But if you're malicious and will cheat using my code, things will get bad quickly.
+// Life with an academic dishonesty infraction is not fun.
+// And unlike some people who wouldn't have a way to defend themselves, I do.
+// It's this code. Unlike most people, I went out of my way to stop cheaters.
+// This code is evidence of my sincerity.
+// Which will make your intentions undeniable if you copy my code. SO DON'T.
+  document.oncontextmenu = new Function("return false");
+  document.oncut = new Function("return false");
+  document.oncopy = new Function("return false");
+  document.onafterprint = new Function("return false");
+  document.onbeforeprint = new Function("return false");
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('copy', (e) => e.preventDefault());
+document.addEventListener('cut', (e) => e.preventDefault());
+document.addEventListener('afterprint', (e) => e.preventDefault());
+document.addEventListener('beforeprint', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+  )
+    return false;
+};
+</script>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" onmousedown="return false" onselectstart="return false" onkeydown="return false">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Big Idea 2 MCQ Reflection</h1><p class="page-description">Includes Important Notes about missed questions and other misconceptions</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-17T00:00:00-05:00" itemprop="datePublished">
+        Mar 17, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/FastPage/categories/#markdown">markdown</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/FastPage/categories/#Comp Sci">Comp Sci</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#integrity-disclaimer">Integrity Disclaimer</a></li>
+<li class="toc-entry toc-h1"><a href="#statement-of-intention">Statement of Intention</a></li>
+<li class="toc-entry toc-h1"><a href="#reflection">Reflection</a></li>
+</ul><h1 id="integrity-disclaimer">
+<a class="anchor" href="#integrity-disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Integrity Disclaimer</h1>
+
+<p>The author does not permit copying of any of the reflections contained within this post. Cheating has severe consequences, among them a stain on the academic record and a lack of understanding about the relevant contents of the course. Do your own work please!</p>
+
+<h1 id="statement-of-intention">
+<a class="anchor" href="#statement-of-intention" aria-hidden="true"><span class="octicon octicon-link"></span></a>Statement of Intention</h1>
+
+<p>This blog post is for reflection on multiple choice questions that I found to be particularly difficult. These include questions that I got wrong as well as questions that I found to be particularly difficult. I will not go over all of the questions to reduce vulnerabilities in the integrity system.</p>
+
+<h1 id="reflection">
+<a class="anchor" href="#reflection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reflection</h1>
+
+<p>I did get a perfect score. Of all the available questions, one question stood out.</p>
+
+<p>Question Prompt: There are 4 spreadsheets relating to students, GPA, and sports</p>
+
+<p>i) Name, ID, GPA
+ii) ID, names of sports
+iii) Name, ID (only includes 3.5+ GPA)
+iv) Name, ID (only includes 2+ sports)</p>
+
+<p>Goal: Are students that play sports more likely to have greater/lesser GPAs than those who don’t?</p>
+
+<p>Spreadsheet (iv) is irrelevant since this excludes students who play exactly 1 sport. As such, spreadsheet (ii) was necessary. The question was whether to select (i) or (iii). In order to determine this, there should be a method to determine whether a given spreadsheet meets the goal.</p>
+
+<p>In order to reach the goal, ideally we could find the proportion of sports students with a GPA cutoff (# sports students with the GPA / total # sports students). Execute a similar procedure for students who don’t play sports. Then, compare the ratios and see if the sports students have a ratio significantly different from that of the non-sports students. The total number of students who play sports and the total number of students who don’t play sports are required to find this ratio, and this requires Spreadsheet (i); spreadsheet (iii) doesn’t give total students. Therefore, spreadsheet (i) was most appropriate.</p>
+
+<p>All the other questions were relatively quick, and a significant portion of the questions were recycled from previously administered quizzes. That’s why I don’t have too much to say here.</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+
+<script type="text/javascript">
+        // If you're seeing this, I'm letting you know that you're not supposed to be here.
+        // I put a bunch of commands in here limiting certain functionalities of the website.
+        // So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+        // Namely preventing YOU from copying my code and cheating.
+        // Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+        // modifying the website's code as you please.
+        // And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+        // Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+        
+        // But if you're malicious and will cheat using my code, things will get bad quickly.
+        // Life with an academic dishonesty infraction is not fun.
+        // And unlike some people who wouldn't have a way to defend themselves, I do.
+        // It's this code. Unlike most people, I went out of my way to stop cheaters.
+        // This code is evidence of my sincerity.
+        // Which will make your intentions undeniable if you copy my code. SO DON'T.
+          document.oncontextmenu = new Function("return false");
+          document.oncut = new Function("return false");
+          document.oncopy = new Function("return false");
+          document.onafterprint = new Function("return false");
+          document.onbeforeprint = new Function("return false");
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+        document.addEventListener('cut', (e) => e.preventDefault());
+        document.addEventListener('afterprint', (e) => e.preventDefault());
+        document.addEventListener('beforeprint', (e) => e.preventDefault());
+        
+        function ctrlShiftKey(e, keyCode) {
+          return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
+        
+        document.onkeydown = (e) => {
+          if (
+            event.keyCode === 123 ||
+            ctrlShiftKey(e, 'I') ||
+            ctrlShiftKey(e, 'J') ||
+            ctrlShiftKey(e, 'C') ||
+            (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+          )
+            return false;
+        };
+</script>
+
+<script src="https://utteranc.es/client.js"
+        repo="Leonard514/FastPage"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/FastPage/notes/MCQ4reflection" hidden></a>
+</article>
