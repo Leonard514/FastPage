@@ -61,7 +61,10 @@ Now here's a table
 
 | Algorithm Form | Time | Patterns |
 |-|-|-|
-| Constant | Negligibly small - took 2.622 * 10^-6 seconds to fetch an item from a list of 1000 elements | The time is always negligibly small |
+| Constant | Negligibly small - took 2.622 * 10^-6 seconds to fetch an item from a list of 1000 elements. Took 9.536 * 10^-7 seconds to add two large numbers | The time is always negligibly small |
+| Linear | Printing all values in larger list takes progressively more time. Printing a list with 100 elements takes 3.07 * 10^-5 seconds, but printing lists of 1000 elements takes 2.49 * 10^-4 seconds. | Time increases proportionally to the number of elements to perform operations on. |
+| Quadratic | Performing the nested for loop operation took 0.00467 seconds on a list with 100 elements, but 0.0455 seconds on a list with 1000 elements. For a 10-fold increase of elements, the time taken increased by 100-fold | As the number of elements increases by a certain extent, time taken for execution increases by the square of this extent |
+
 
 I also have some [sorting algorithms](https://www.bigocheatsheet.com/).
 
