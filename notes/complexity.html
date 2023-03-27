@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -157,8 +157,18 @@ document.onkeydown = (e) => {
   <tbody>
     <tr>
       <td>Constant</td>
-      <td>Negligibly small - took 2.622 * 10^-6 seconds to fetch an item from a list of 1000 elements</td>
+      <td>Negligibly small - took 2.622 * 10^-6 seconds to fetch an item from a list of 1000 elements. Took 9.536 * 10^-7 seconds to add two large numbers</td>
       <td>The time is always negligibly small</td>
+    </tr>
+    <tr>
+      <td>Linear</td>
+      <td>Printing all values in larger list takes progressively more time. Printing a list with 100 elements takes 3.07 * 10^-5 seconds, but printing lists of 1000 elements takes 2.49 * 10^-4 seconds.</td>
+      <td>Time increases proportionally to the number of elements to perform operations on.</td>
+    </tr>
+    <tr>
+      <td>Quadratic</td>
+      <td>Performing the nested for loop operation took 0.00467 seconds on a list with 100 elements, but 0.0455 seconds on a list with 1000 elements. For a 10-fold increase of elements, the time taken increased by 100-fold</td>
+      <td>As the number of elements increases by a certain extent, time taken for execution increases by the square of this extent</td>
     </tr>
   </tbody>
 </table>
