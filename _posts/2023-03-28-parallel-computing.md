@@ -69,6 +69,7 @@ Distributed Computing
 - Computer has 2 identical processors. Each process must be executed on single processor, each processor can do one at a time. No dependencies. Find the minimum time to execute.
 
 | Process | Execution time |
+|-|-|
 | X | 50 seconds |
 | Y | 10 seconds | 
 | Z | 30 seconds |
@@ -84,6 +85,7 @@ Minimum time of **50 seconds* detected.
 - Computer has two identical processors that can run parallely. No dependencies.
 
 | Process | Execution Time |
+|-|-|
 | A | 25 Seconds |
 | B | 45 Seconds | 
 
@@ -100,3 +102,20 @@ In sequential processing, these processes will be run one after another for a to
 
 The time difference is 70 sec - 45 sec = **25 seconds**.
 
+### Example 2
+
+Computer has two processors. No dependencies. Assign the 4 processes to optimize execution time.
+
+| Process | Execution Time |
+|-|-|
+| A | 25 seconds |
+| B | 25 seconds |
+| C | 10 seconds |
+| D | 40 seconds |
+
+To optimize the execution time, the execution time for each of the parallel processors should theoretically be as close as possible. Here are assignments that would fulfill this aim:
+
+Processor 1: Processes A and B (25 sec + 25 sec = 50 seconds)
+Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)
+
+The execution will take 50 seconds and will have the maximum efficiency possible. Execution time will be optimized.
