@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -75,6 +75,7 @@ document.onkeydown = (e) => {
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#class-notes---parallel-computing">Class Notes - Parallel Computing</a></li>
+<li class="toc-entry toc-h1"><a href="#college-board-notes">College Board Notes</a></li>
 </ul><h1 id="class-notes---parallel-computing">
 <a class="anchor" href="#class-notes---parallel-computing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class Notes - Parallel Computing</h1>
 
@@ -87,6 +88,74 @@ document.onkeydown = (e) => {
 <p><strong>Parallel Processing</strong>: Each of the images are processed simultaneously. Mr. Yeung’s execution took 43.9 seconds rather than 48 seconds. This was largely dependent on the threads. Mr. Yeung observed 110 threads initially/during sequential processing, but 113 threads while the parallel processing was occurring. Mr. Yeung also noted that computers can max out their threads and parallel processing would not be too different. In my opinion, parallel computing should be faster if computing resources are not being strained by other processes</p>
 
 <p>Chinmay asked if it was possible to apply multiple threads to the same loop (iteration operation). Mr. Yeung responded that it is not possible to run multiple threads on one loop, but it is possible to run multiple threads on multiple loops. However, setting up multiple loops would be impractical/inefficient</p>
+
+<h1 id="college-board-notes">
+<a class="anchor" href="#college-board-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>College Board Notes</h1>
+
+<p>I was instructed to provide answers + thoughts about the question form of the college board video. I’ll provide my general notes on the video contents first.</p>
+
+<ul>
+  <li>
+    <p>Sequential/parallel/distributed computing</p>
+  </li>
+  <li>Computers handle many tasks
+    <ul>
+      <li>System: Managing hardware, working with network, etc.</li>
+      <li>User: Executing user programs (google chrome, MS Excel)</li>
+    </ul>
+  </li>
+  <li>Computer needs to balance + schedule all the tasks</li>
+</ul>
+
+<p>Sequential Computing</p>
+<ul>
+  <li>Do tasks one at a time.
+    <ul>
+      <li>Applies to computers with one Core Processor Unit</li>
+      <li>Tasks with dependencies (Task C depends on Task B, Task B depends on Task A, etc.)</li>
+    </ul>
+  </li>
+  <li>Time to execute is the sum of execution times of individual tasks</li>
+</ul>
+
+<p>Parallel Computing</p>
+<ul>
+  <li>Program is segregated into smaller computing operations
+    <ul>
+      <li>Done on same computer. Usually has sequential/parallel portions</li>
+    </ul>
+  </li>
+  <li>Why?
+    <ul>
+      <li>Hardware-driven (1 CPU/GPU has many cores), faster
+        <ul>
+          <li>Ex: Having all students grade their papers is faster</li>
+        </ul>
+      </li>
+      <li>Lots of data can be processed in same way - <a href="https://en.wikipedia.org/wiki/Single_instruction,_multiple_data">Single Instruction, Multiple Data (Wikipedia)</a> (SIMD - processors perform the same operation on multiple pieces of data)</li>
+      <li>More scalable than sequential computing</li>
+      <li>Time taken is longest time of any processor
+        <ul>
+          <li>Works if there aren’t dependencies in tasks</li>
+          <li>Takes as long as all sequential tasks + longest parallel task</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Speedup time</p>
+<ul>
+  <li>Sequential processing time / Parallel Time (proportional comparison)</li>
+  <li>Parallel computing restricted by sequential portions (dependencies). At a point, adding parallel portions won’t increase efficiency</li>
+</ul>
+
+<p>Distributed Computing</p>
+<ul>
+  <li>Uses other computers to run a program</li>
+  <li>Mixes sequential and parallel computing. Allows for execution of programs that would otherwise be impossible with a single computer</li>
+  <li>Ex: Google Search, Beowolf Clusters</li>
+</ul>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
