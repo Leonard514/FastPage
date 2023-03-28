@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -75,7 +75,12 @@ document.onkeydown = (e) => {
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#class-notes---parallel-computing">Class Notes - Parallel Computing</a></li>
-<li class="toc-entry toc-h1"><a href="#college-board-notes">College Board Notes</a></li>
+<li class="toc-entry toc-h1"><a href="#college-board-notes">College Board Notes</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-1">Example 1</a></li>
+<li class="toc-entry toc-h3"><a href="#example-2">Example 2</a></li>
+</ul>
+</li>
 </ul><h1 id="class-notes---parallel-computing">
 <a class="anchor" href="#class-notes---parallel-computing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class Notes - Parallel Computing</h1>
 
@@ -152,10 +157,85 @@ document.onkeydown = (e) => {
 
 <p>Distributed Computing</p>
 <ul>
-  <li>Uses other computers to run a program</li>
+  <li>Uses other computers to run a program (uses more than one computer). Needs network access.</li>
   <li>Mixes sequential and parallel computing. Allows for execution of programs that would otherwise be impossible with a single computer</li>
-  <li>Ex: Google Search, Beowolf Clusters</li>
+  <li>Ex: Google Search, Beowolf Clusters, executing tasks over the web</li>
+  <li>If the network is not down or if responses take a long time, time efficiency may decrease.</li>
 </ul>
+
+<h3 id="example-1">
+<a class="anchor" href="#example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example 1</h3>
+
+<ul>
+  <li>Computer has 2 identical processors. Each process must be executed on single processor, each processor can do one at a time. No dependencies. Find the minimum time to execute.</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Process</td>
+      <td>Execution time</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>50 seconds</td>
+    </tr>
+    <tr>
+      <td>Y</td>
+      <td>10 seconds</td>
+    </tr>
+    <tr>
+      <td>Z</td>
+      <td>30 seconds</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Assign these processes as follows</p>
+<ul>
+  <li>Processor 1: X (50 sec)</li>
+  <li>Processor 2: Y and Z (10 + 30 = 40 sec)</li>
+</ul>
+
+<p>Minimum time of <em>*50 seconds</em> detected.</p>
+
+<h3 id="example-2">
+<a class="anchor" href="#example-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example 2</h3>
+
+<ul>
+  <li>Computer has two identical processors that can run parallely. No dependencies.</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Process</td>
+      <td>Execution Time</td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>25 Seconds</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>45 Seconds</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Find difference in execution time between parallel processing and sequential processing.</p>
+
+<p>In parallel processing, assign the processes as follows:</p>
+
+<p>Processor 1: Process A (25 sec)
+Processor 2: Process B (45 sec)</p>
+
+<p>This will take a total of 45 seconds.</p>
+
+<p>In sequential processing, these processes will be run one after another for a total of (45 sec + 25 sec) 70 sec.</p>
+
+<p>The time difference is 70 sec - 45 sec = <strong>25 seconds</strong>.</p>
+
 
   </div><!-- from https://github.com/utterance/utterances -->
 
