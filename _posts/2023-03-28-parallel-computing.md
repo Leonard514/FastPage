@@ -58,6 +58,45 @@ Speedup time
 
 
 Distributed Computing
-- Uses other computers to run a program
+- Uses other computers to run a program (uses more than one computer). Needs network access.
  - Mixes sequential and parallel computing. Allows for execution of programs that would otherwise be impossible with a single computer
-- Ex: Google Search, Beowolf Clusters
+- Ex: Google Search, Beowolf Clusters, executing tasks over the web
+- If the network is not down or if responses take a long time, time efficiency may decrease.
+
+
+### Example 1
+
+- Computer has 2 identical processors. Each process must be executed on single processor, each processor can do one at a time. No dependencies. Find the minimum time to execute.
+
+| Process | Execution time |
+| X | 50 seconds |
+| Y | 10 seconds | 
+| Z | 30 seconds |
+
+Assign these processes as follows
+- Processor 1: X (50 sec)
+- Processor 2: Y and Z (10 + 30 = 40 sec)
+
+Minimum time of **50 seconds* detected.
+
+### Example 2
+
+- Computer has two identical processors that can run parallely. No dependencies.
+
+| Process | Execution Time |
+| A | 25 Seconds |
+| B | 45 Seconds | 
+
+Find difference in execution time between parallel processing and sequential processing.
+
+In parallel processing, assign the processes as follows:
+
+Processor 1: Process A (25 sec)
+Processor 2: Process B (45 sec)
+
+This will take a total of 45 seconds.
+
+In sequential processing, these processes will be run one after another for a total of (45 sec + 25 sec) 70 sec. 
+
+The time difference is 70 sec - 45 sec = **25 seconds**.
+
