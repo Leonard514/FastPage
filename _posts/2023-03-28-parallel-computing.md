@@ -134,6 +134,12 @@ Here is a [URL](https://www.w3schools.com/python/trypython.asp?filename=demo_lis
 numbers = [i for i in range(100)]
 
 print(numbers)
+
+# List comprehension can be used to filter lists!!!
+
+evenNumbers = [i for i in numbers if i % 2 == 0]
+
+print(evenNumbers)
 ```
 
-![image](https://user-images.githubusercontent.com/92343899/228383272-9a3e19fd-5271-4ef1-ad1f-986c31acd9c4.png)
+![image](https://user-images.githubusercontent.com/92343899/228383636-f13843fa-1a22-40a3-897e-beffc31d9e05.png)
