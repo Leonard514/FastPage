@@ -48,7 +48,7 @@ document.onkeydown = (e) => {
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" onmousedown="return false" onselectstart="return false" onkeydown="return false">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Parallel Computing Notes</h1><p class="page-description">Includes Important Notes about Algorithm Complexity and managing high volumes of complexity</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-28T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Parallel Computing + Hashmaps Notes</h1><p class="page-description">Includes Important Notes about Algorithm Complexity and managing high volumes of complexity</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-28T00:00:00-05:00" itemprop="datePublished">
         Mar 28, 2023
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -74,7 +74,19 @@ document.onkeydown = (e) => {
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-</ul>
+<li class="toc-entry toc-h1"><a href="#class-notes---parallel-computing">Class Notes - Parallel Computing</a></li>
+</ul><h1 id="class-notes---parallel-computing">
+<a class="anchor" href="#class-notes---parallel-computing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class Notes - Parallel Computing</h1>
+
+<p>top -H gives a list of processes! I’ve run this on Linux machines before. You want to run this on a terminal. There is a #TH in Mac and/or the total number of threads at the top. I think number of threads is also available via Windows Task Manager.</p>
+
+<p>When the code affecting the images is run, there is a img.putdata([grey_pixel(pixel) for pixel in image[‘numpy’]]). This is a for loop in one line, with brackets for the list. There is a list comprehension hacks exercise (I’ll have to use the W3Schools Python interpreter for that). You put the list of the for loop into the list.</p>
+
+<p><strong>Sequential Processing</strong> example: Each image is processed <strong>one at a time</strong>. In order to see this more clearly, the class increased the baseWidth to 2000 pixels. Since it took half a minute for each set of images to render on Lily’s computer, it was more obvious that sequential processing was occurring.</p>
+
+<p><strong>Parallel Processing</strong>: Each of the images are processed simultaneously. Mr. Yeung’s execution took 43.9 seconds rather than 48 seconds. This was largely dependent on the threads. Mr. Yeung observed 110 threads initially/during sequential processing, but 113 threads while the parallel processing was occurring. Mr. Yeung also noted that computers can max out their threads and parallel processing would not be too different. In my opinion, parallel computing should be faster if computing resources are not being strained by other processes</p>
+
+<p>Chinmay asked if it was possible to apply multiple threads to the same loop (iteration operation). Mr. Yeung responded that it is not possible to run multiple threads on one loop, but it is possible to run multiple threads on multiple loops. However, setting up multiple loops would be impractical/inefficient</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
