@@ -19,3 +19,45 @@ When the code affecting the images is run, there is a img.putdata([grey_pixel(pi
 **Parallel Processing**: Each of the images are processed simultaneously. Mr. Yeung's execution took 43.9 seconds rather than 48 seconds. This was largely dependent on the threads. Mr. Yeung observed 110 threads initially/during sequential processing, but 113 threads while the parallel processing was occurring. Mr. Yeung also noted that computers can max out their threads and parallel processing would not be too different. In my opinion, parallel computing should be faster if computing resources are not being strained by other processes
 
 Chinmay asked if it was possible to apply multiple threads to the same loop (iteration operation). Mr. Yeung responded that it is not possible to run multiple threads on one loop, but it is possible to run multiple threads on multiple loops. However, setting up multiple loops would be impractical/inefficient 
+
+# College Board Notes
+
+I was instructed to provide answers + thoughts about the question form of the college board video. I'll provide my general notes on the video contents first.
+
+
+- Sequential/parallel/distributed computing
+
+- Computers handle many tasks
+   - System: Managing hardware, working with network, etc.
+   - User: Executing user programs (google chrome, MS Excel)
+- Computer needs to balance + schedule all the tasks
+
+
+Sequential Computing
+- Do tasks one at a time.
+   - Applies to computers with one Core Processor Unit
+   - Tasks with dependencies (Task C depends on Task B, Task B depends on Task A, etc.)
+- Time to execute is the sum of execution times of individual tasks
+
+
+Parallel Computing
+- Program is segregated into smaller computing operations
+  - Done on same computer. Usually has sequential/parallel portions
+- Why?
+  - Hardware-driven (1 CPU/GPU has many cores), faster
+    - Ex: Having all students grade their papers is faster
+  - Lots of data can be processed in same way - [Single Instruction, Multiple Data (Wikipedia)](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data) (SIMD - processors perform the same operation on multiple pieces of data)
+  - More scalable than sequential computing
+  - Time taken is longest time of any processor
+    - Works if there aren't dependencies in tasks
+    - Takes as long as all sequential tasks + longest parallel task
+
+Speedup time
+ - Sequential processing time / Parallel Time (proportional comparison)
+ - Parallel computing restricted by sequential portions (dependencies). At a point, adding parallel portions won't increase efficiency
+
+
+Distributed Computing
+- Uses other computers to run a program
+ - Mixes sequential and parallel computing. Allows for execution of programs that would otherwise be impossible with a single computer
+- Ex: Google Search, Beowolf Clusters
