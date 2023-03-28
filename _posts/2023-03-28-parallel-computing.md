@@ -119,3 +119,21 @@ Processor 1: Processes A and B (25 sec + 25 sec = 50 seconds)
 Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)
 
 The execution will take 50 seconds and will have the maximum efficiency possible. Execution time will be optimized.
+
+
+# Hack 3: Example of List Comprehension
+
+Here is a [URL](https://www.w3schools.com/python/trypython.asp?filename=demo_list) that is particularly important since I need it to execute Python on a chromebook. Anyways, I'll paste in my code and current results for now. I'll be sure to expand on this later.
+
+```python
+# This W3Schools lesson was very helpful. https://www.w3schools.com/python/python_lists_comprehension.asp
+
+
+#Let's start simple. All the numbers from 0 to 99.
+
+numbers = [i for i in range(100)]
+
+print(numbers)
+```
+
+![image](https://user-images.githubusercontent.com/92343899/228383272-9a3e19fd-5271-4ef1-ad1f-986c31acd9c4.png)
