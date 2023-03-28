@@ -79,6 +79,7 @@ document.onkeydown = (e) => {
 <ul>
 <li class="toc-entry toc-h3"><a href="#example-1">Example 1</a></li>
 <li class="toc-entry toc-h3"><a href="#example-2">Example 2</a></li>
+<li class="toc-entry toc-h3"><a href="#example-2-1">Example 2</a></li>
 </ul>
 </li>
 </ul><h1 id="class-notes---parallel-computing">
@@ -171,11 +172,13 @@ document.onkeydown = (e) => {
 </ul>
 
 <table>
-  <tbody>
+  <thead>
     <tr>
-      <td>Process</td>
-      <td>Execution time</td>
+      <th>Process</th>
+      <th>Execution time</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>X</td>
       <td>50 seconds</td>
@@ -207,11 +210,13 @@ document.onkeydown = (e) => {
 </ul>
 
 <table>
-  <tbody>
+  <thead>
     <tr>
-      <td>Process</td>
-      <td>Execution Time</td>
+      <th>Process</th>
+      <th>Execution Time</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>A</td>
       <td>25 Seconds</td>
@@ -236,6 +241,44 @@ Processor 2: Process B (45 sec)</p>
 
 <p>The time difference is 70 sec - 45 sec = <strong>25 seconds</strong>.</p>
 
+<h3 id="example-2-1">
+<a class="anchor" href="#example-2-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example 2</h3>
+
+<p>Computer has two processors. No dependencies. Assign the 4 processes to optimize execution time.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Process</th>
+      <th>Execution Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>25 seconds</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>25 seconds</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>10 seconds</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>40 seconds</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To optimize the execution time, the execution time for each of the parallel processors should theoretically be as close as possible. Here are assignments that would fulfill this aim:</p>
+
+<p>Processor 1: Processes A and B (25 sec + 25 sec = 50 seconds)
+Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
+
+<p>The execution will take 50 seconds and will have the maximum efficiency possible. Execution time will be optimized.</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
