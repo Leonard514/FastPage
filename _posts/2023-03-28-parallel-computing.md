@@ -150,4 +150,119 @@ print(evenNumbers)
 
 In python, the built-in hashtable is a dictionary. Hashtables allow for efficiency in lookup, insertion, deletion. The time complexity for looking up an item in a hashtable is constant O(1) since the known key can be found quickly. Without dictionaries, there are hashing. **There are no duplicates** (can't have multiple values into the same key); collisions can result from different keys mapping to the same hash value.
 
-Set Example: Executing the code results in removal of all duplicate elements within the brackets. The set is printed in curly braces. Sets are in the tech talk along with hash maps likely since they are cleaner versions of hashmaps, which cannot contain duplicate entries associated with a key (this would result in collisions).
+Set Example: Executing the code results in removal of all duplicate elements within the brackets. The set is printed in curly braces. Sets are in the tech talk along with hash maps likely since they are cleaner versions of hashmaps, which cannot contain duplicate entries associated with a key (this would result in collisions). Dictionaries cannot have duplicate keys.
+
+
+Dictionary example about lover album: Within here are string variables (ex: the title of the album and the artist), integer variables (release year), list variables (the genre of the music), and a dictionary variable (the tracks).
+
+
+SAVED WORK BELOW
+
+```python
+# Question 1: What do you notice about the set, and why is this in the tech talk?
+
+my_set = set([1, 2, 3, 2, 1])
+print(my_set)  
+
+
+# Question 2 about the lover album. What data structures are there?
+
+lover_album = {
+    "title": "Lover",
+    "artist": "Taylor Swift",
+    "year": 2019,
+    "genre": ["Pop", "Synth-pop"],
+    "tracks": {
+        1: "I Forgot That You Existed",
+        2: "Cruel Summer",
+        3: "Lover",
+        4: "The Man",
+        5: "The Archer",
+        6: "I Think He Knows",
+        7: "Miss Americana & The Heartbreak Prince",
+        8: "Paper Rings",
+        9: "Cornelia Street",
+        10: "Death By A Thousand Cuts",
+        11: "London Boy",
+        12: "Soon You'll Get Better (feat. Dixie Chicks)",
+        13: "False God",
+        14: "You Need To Calm Down",
+        15: "Afterglow",
+        16: "Me! (feat. Brendon Urie of Panic! At The Disco)",
+        17: "It's Nice To Have A Friend",
+        18: "Daylight"
+    }
+}
+
+# What data structures do you see?
+#
+#
+
+# Printing the dictionary
+print(lover_album)
+
+
+
+
+# CODE BLOCK 3
+
+print(lover_album.get('tracks'))
+# or
+print(lover_album['tracks'])
+
+
+# CODE BLOCK 4
+
+print(lover_album.get('tracks')[4])
+# or
+print(lover_album['tracks'][4])
+
+
+# CODE BLOCK 5
+
+lover_album["producer"] = ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']
+
+# What can you change to make sure there are no duplicate producers?
+# Use set notation!!!
+#
+
+# Printing the dictionary
+print(lover_album)
+
+
+
+# CODE BLOCK 6
+
+lover_album["tracks"].update({19: "All Of The Girls You Loved Before"})
+
+# How would add an additional genre to the dictionary, like electropop? 
+# 
+# 
+
+# Printing the dictionary
+print(lover_album)
+
+# CODE BLOCK 7
+
+for k,v in lover_album.items(): # iterate using a for loop for key and value
+    print(str(k) + ": " + str(v))
+
+# Write your own code to print tracks in readable format
+#
+#
+
+# CODE BLOCK 8
+
+def search():
+    search = input("What would you like to know about the album?")
+    if lover_album.get(search.lower()) == None:
+        print("Invalid Search")
+    else:
+        print(lover_album.get(search.lower()))
+
+search()
+
+# This is a very basic code segment, how can you improve upon this code?
+#
+#
+```
