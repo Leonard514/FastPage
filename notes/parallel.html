@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -289,22 +289,45 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This W3Schools lesson was very helpful. 
 # https://www.w3schools.com/python/python_lists_comprehension.asp
+# I can also do a documentation drop on you if you're more curious about this stuff. 
+# The instructors have only skimmed the surface of the available data structures in Python.
+# Here you go: https://docs.python.org/3/tutorial/datastructures.html
 </span>
-
 <span class="c1">#Let's start simple. All the numbers from 0 to 99.
 </span>
 <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Numbers:"</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
 
 <span class="c1"># List comprehension can be used to filter lists!!!
 </span>
 <span class="n">evenNumbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">evenNumbers</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Evens:"</span><span class="p">,</span> <span class="n">evenNumbers</span><span class="p">)</span>
+
+<span class="c1"># Can also perform operations on each item in a list.
+# See example for changing all these numbers back to the integers
+</span>
+<span class="n">convertedNumbers</span> <span class="o">=</span> <span class="p">[</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">evenNumbers</span><span class="p">]</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Back to integers:"</span><span class="p">,</span> <span class="n">convertedNumbers</span><span class="p">)</span>
+
+
+<span class="c1"># I've created an equivalent to the head function and the tail function using list comprehension.
+# These list the first 10 elements in a list and the last 10 elements in the list, respectively.
+# You can replace the list name with your desired list and you're off!!!
+</span>
+<span class="n">headNumbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Head:"</span><span class="p">,</span> <span class="n">headNumbers</span><span class="p">)</span>
+
+<span class="n">tailNumbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">-</span> <span class="mi">11</span><span class="p">)]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Tail:"</span><span class="p">,</span> <span class="n">tailNumbers</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="https://user-images.githubusercontent.com/92343899/228383636-f13843fa-1a22-40a3-897e-beffc31d9e05.png" alt="image"></p>
+<p><img src="https://user-images.githubusercontent.com/92343899/228683565-a3313dc0-cd16-485d-b435-03658d557cf7.png" alt="image"></p>
+
+<p><img src="https://user-images.githubusercontent.com/92343899/228683592-f0a69e64-27fd-40ff-bbb8-f4527d83c4b0.png" alt="image"></p>
 
 <h1 id="hashmap-notes">
 <a class="anchor" href="#hashmap-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hashmap Notes</h1>
