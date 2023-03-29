@@ -123,7 +123,7 @@ The execution will take 50 seconds and will have the maximum efficiency possible
 
 # Hack 3: Example of List Comprehension
 
-Here is a [URL](https://www.w3schools.com/python/trypython.asp?filename=demo_list) that is particularly important since I need it to execute Python on a chromebook. Anyways, I'll paste in my code and current results for now. I'll be sure to expand on this later.
+Here is a [URL](https://www.w3schools.com/python/trypython.asp?filename=demo_list) that is particularly important since I need it to execute Python on a chromebook. Anyways, I'll paste in my code and current results below so you can take a gander.
 
 ```python
 # This W3Schools lesson was very helpful. 
