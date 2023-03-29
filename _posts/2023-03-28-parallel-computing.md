@@ -126,7 +126,8 @@ The execution will take 50 seconds and will have the maximum efficiency possible
 Here is a [URL](https://www.w3schools.com/python/trypython.asp?filename=demo_list) that is particularly important since I need it to execute Python on a chromebook. Anyways, I'll paste in my code and current results for now. I'll be sure to expand on this later.
 
 ```python
-# This W3Schools lesson was very helpful. https://www.w3schools.com/python/python_lists_comprehension.asp
+# This W3Schools lesson was very helpful. 
+# https://www.w3schools.com/python/python_lists_comprehension.asp
 
 
 #Let's start simple. All the numbers from 0 to 99.
@@ -143,3 +144,10 @@ print(evenNumbers)
 ```
 
 ![image](https://user-images.githubusercontent.com/92343899/228383636-f13843fa-1a22-40a3-897e-beffc31d9e05.png)
+
+
+# Hashmap Notes
+
+In python, the built-in hashtable is a dictionary. Hashtables allow for efficiency in lookup, insertion, deletion. The time complexity for looking up an item in a hashtable is constant O(1) since the known key can be found quickly. Without dictionaries, there are hashing. **There are no duplicates** (can't have multiple values into the same key); collisions can result from different keys mapping to the same hash value.
+
+Set Example: Executing the code results in removal of all duplicate elements within the brackets. The set is printed in curly braces. Sets are in the tech talk along with hash maps likely since they are cleaner versions of hashmaps, which cannot contain duplicate entries associated with a key (this would result in collisions).
