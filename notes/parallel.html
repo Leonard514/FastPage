@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      7 min read
     
 </span></p>
 
@@ -311,7 +311,119 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
 
 <p>In python, the built-in hashtable is a dictionary. Hashtables allow for efficiency in lookup, insertion, deletion. The time complexity for looking up an item in a hashtable is constant O(1) since the known key can be found quickly. Without dictionaries, there are hashing. <strong>There are no duplicates</strong> (can’t have multiple values into the same key); collisions can result from different keys mapping to the same hash value.</p>
 
-<p>Set Example: Executing the code results in removal of all duplicate elements within the brackets. The set is printed in curly braces. Sets are in the tech talk along with hash maps likely since they are cleaner versions of hashmaps, which cannot contain duplicate entries associated with a key (this would result in collisions).</p>
+<p>Set Example: Executing the code results in removal of all duplicate elements within the brackets. The set is printed in curly braces. Sets are in the tech talk along with hash maps likely since they are cleaner versions of hashmaps, which cannot contain duplicate entries associated with a key (this would result in collisions). Dictionaries cannot have duplicate keys.</p>
+
+<p>Dictionary example about lover album: Within here are string variables (ex: the title of the album and the artist), integer variables (release year), list variables (the genre of the music), and a dictionary variable (the tracks).</p>
+
+<p>SAVED WORK BELOW</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Question 1: What do you notice about the set, and why is this in the tech talk?
+</span>
+<span class="n">my_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  
+
+
+<span class="c1"># Question 2 about the lover album. What data structures are there?
+</span>
+<span class="n">lover_album</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"title"</span><span class="p">:</span> <span class="s">"Lover"</span><span class="p">,</span>
+    <span class="s">"artist"</span><span class="p">:</span> <span class="s">"Taylor Swift"</span><span class="p">,</span>
+    <span class="s">"year"</span><span class="p">:</span> <span class="mi">2019</span><span class="p">,</span>
+    <span class="s">"genre"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Pop"</span><span class="p">,</span> <span class="s">"Synth-pop"</span><span class="p">],</span>
+    <span class="s">"tracks"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s">"I Forgot That You Existed"</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s">"Cruel Summer"</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s">"Lover"</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s">"The Man"</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s">"The Archer"</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s">"I Think He Knows"</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s">"Miss Americana &amp; The Heartbreak Prince"</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s">"Paper Rings"</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s">"Cornelia Street"</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s">"Death By A Thousand Cuts"</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s">"London Boy"</span><span class="p">,</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="s">"Soon You'll Get Better (feat. Dixie Chicks)"</span><span class="p">,</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="s">"False God"</span><span class="p">,</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="s">"You Need To Calm Down"</span><span class="p">,</span>
+        <span class="mi">15</span><span class="p">:</span> <span class="s">"Afterglow"</span><span class="p">,</span>
+        <span class="mi">16</span><span class="p">:</span> <span class="s">"Me! (feat. Brendon Urie of Panic! At The Disco)"</span><span class="p">,</span>
+        <span class="mi">17</span><span class="p">:</span> <span class="s">"It's Nice To Have A Friend"</span><span class="p">,</span>
+        <span class="mi">18</span><span class="p">:</span> <span class="s">"Daylight"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># What data structures do you see?
+#
+#
+</span>
+<span class="c1"># Printing the dictionary
+</span><span class="k">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
+
+
+
+
+<span class="c1"># CODE BLOCK 3
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'tracks'</span><span class="p">))</span>
+<span class="c1"># or
+</span><span class="k">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">[</span><span class="s">'tracks'</span><span class="p">])</span>
+
+
+<span class="c1"># CODE BLOCK 4
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'tracks'</span><span class="p">)[</span><span class="mi">4</span><span class="p">])</span>
+<span class="c1"># or
+</span><span class="k">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">[</span><span class="s">'tracks'</span><span class="p">][</span><span class="mi">4</span><span class="p">])</span>
+
+
+<span class="c1"># CODE BLOCK 5
+</span>
+<span class="n">lover_album</span><span class="p">[</span><span class="s">"producer"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Taylor Swift'</span><span class="p">,</span> <span class="s">'Jack Antonoff'</span><span class="p">,</span> <span class="s">'Joel Little'</span><span class="p">,</span> <span class="s">'Taylor Swift'</span><span class="p">,</span> <span class="s">'Louis Bell'</span><span class="p">,</span> <span class="s">'Frank Dukes'</span><span class="p">]</span>
+
+<span class="c1"># What can you change to make sure there are no duplicate producers?
+# Use set notation!!!
+#
+</span>
+<span class="c1"># Printing the dictionary
+</span><span class="k">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
+
+
+
+<span class="c1"># CODE BLOCK 6
+</span>
+<span class="n">lover_album</span><span class="p">[</span><span class="s">"tracks"</span><span class="p">].</span><span class="n">update</span><span class="p">({</span><span class="mi">19</span><span class="p">:</span> <span class="s">"All Of The Girls You Loved Before"</span><span class="p">})</span>
+
+<span class="c1"># How would add an additional genre to the dictionary, like electropop? 
+# 
+# 
+</span>
+<span class="c1"># Printing the dictionary
+</span><span class="k">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
+
+<span class="c1"># CODE BLOCK 7
+</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value
+</span>    <span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+
+<span class="c1"># Write your own code to print tracks in readable format
+#
+#
+</span>
+<span class="c1"># CODE BLOCK 8
+</span>
+<span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
+    <span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"What would you like to know about the album?"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">lover_album</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="p">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Invalid Search"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="p">.</span><span class="n">lower</span><span class="p">()))</span>
+
+<span class="n">search</span><span class="p">()</span>
+
+<span class="c1"># This is a very basic code segment, how can you improve upon this code?
+#
+#
+</span></code></pre></div></div>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
