@@ -132,7 +132,7 @@ Here is a [URL](https://www.w3schools.com/python/trypython.asp?filename=demo_lis
 # The instructors have only skimmed the surface of the available data structures in Python.
 # Here you go: https://docs.python.org/3/tutorial/datastructures.html
 
-#Let's start simple. All the numbers from 0 to 99.
+# Let's start simple. All the numbers from 0 to 99.
 
 numbers = [i for i in range(100)]
 
