@@ -128,23 +128,45 @@ Here is a [URL](https://www.w3schools.com/python/trypython.asp?filename=demo_lis
 ```python
 # This W3Schools lesson was very helpful. 
 # https://www.w3schools.com/python/python_lists_comprehension.asp
-
+# I can also do a documentation drop on you if you're more curious about this stuff. 
+# The instructors have only skimmed the surface of the available data structures in Python.
+# Here you go: https://docs.python.org/3/tutorial/datastructures.html
 
 #Let's start simple. All the numbers from 0 to 99.
 
 numbers = [i for i in range(100)]
 
-print(numbers)
+print("Numbers:", numbers)
 
 # List comprehension can be used to filter lists!!!
 
 evenNumbers = [i for i in numbers if i % 2 == 0]
 
-print(evenNumbers)
+print("Evens:", evenNumbers)
+
+# Can also perform operations on each item in a list.
+# See example for changing all these numbers back to the integers
+
+convertedNumbers = [ int(i/2) for i in evenNumbers]
+
+
+print("Back to integers:", convertedNumbers)
+
+
+# I've created an equivalent to the head function and the tail function using list comprehension.
+# These list the first 10 elements in a list and the last 10 elements in the list, respectively.
+# You can replace the list name with your desired list and you're off!!!
+
+headNumbers = [i for i in numbers if i < 10]
+print("Head:", headNumbers)
+
+tailNumbers = [i for i in numbers if i > (len(numbers) - 11)]
+print("Tail:", tailNumbers)
 ```
 
-![image](https://user-images.githubusercontent.com/92343899/228383636-f13843fa-1a22-40a3-897e-beffc31d9e05.png)
+![image](https://user-images.githubusercontent.com/92343899/228683565-a3313dc0-cd16-485d-b435-03658d557cf7.png)
 
+![image](https://user-images.githubusercontent.com/92343899/228683592-f0a69e64-27fd-40ff-bbb8-f4527d83c4b0.png)
 
 # Hashmap Notes
 
