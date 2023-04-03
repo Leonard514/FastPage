@@ -185,7 +185,7 @@ SAVED WORK BELOW
 
 my_set = set([1, 2, 3, 2, 1])
 print(my_set)  
-
+# The set contains only unique entries.
 
 # Question 2 about the lover album. What data structures are there?
 
@@ -217,7 +217,7 @@ lover_album = {
 }
 
 # What data structures do you see?
-#
+# Data structures include lists, integers, strings, and dictionaries.
 #
 
 # Printing the dictionary
@@ -242,7 +242,7 @@ print(lover_album['tracks'][4])
 
 # CODE BLOCK 5
 
-lover_album["producer"] = ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']
+lover_album["producer"] = set(['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes'])
 
 # What can you change to make sure there are no duplicate producers?
 # Use set notation!!!
@@ -258,7 +258,7 @@ print(lover_album)
 lover_album["tracks"].update({19: "All Of The Girls You Loved Before"})
 
 # How would add an additional genre to the dictionary, like electropop? 
-# 
+lover_album["genre"].append("Lyrical Music")
 # 
 
 # Printing the dictionary
@@ -267,7 +267,10 @@ print(lover_album)
 # CODE BLOCK 7
 
 for k,v in lover_album.items(): # iterate using a for loop for key and value
-    print(str(k) + ": " + str(v))
+	if type(v) == "<class 'list'>":
+		print(str(k) + ": " + str(i for i in v))
+	else:
+    	print(str(k) + ": " + str(v))
 
 # Write your own code to print tracks in readable format
 #
@@ -282,7 +285,7 @@ def search():
     else:
         print(lover_album.get(search.lower()))
 
-search()
+#search()
 
 # This is a very basic code segment, how can you improve upon this code?
 #
