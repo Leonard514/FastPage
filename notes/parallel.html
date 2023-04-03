@@ -344,8 +344,8 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
 </span>
 <span class="n">my_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="k">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  
-
-
+<span class="c1"># The set contains only unique entries.
+</span>
 <span class="c1"># Question 2 about the lover album. What data structures are there?
 </span>
 <span class="n">lover_album</span> <span class="o">=</span> <span class="p">{</span>
@@ -376,7 +376,7 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
 <span class="p">}</span>
 
 <span class="c1"># What data structures do you see?
-#
+# Data structures include lists, integers, strings, and dictionaries.
 #
 </span>
 <span class="c1"># Printing the dictionary
@@ -401,7 +401,7 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
 
 <span class="c1"># CODE BLOCK 5
 </span>
-<span class="n">lover_album</span><span class="p">[</span><span class="s">"producer"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Taylor Swift'</span><span class="p">,</span> <span class="s">'Jack Antonoff'</span><span class="p">,</span> <span class="s">'Joel Little'</span><span class="p">,</span> <span class="s">'Taylor Swift'</span><span class="p">,</span> <span class="s">'Louis Bell'</span><span class="p">,</span> <span class="s">'Frank Dukes'</span><span class="p">]</span>
+<span class="n">lover_album</span><span class="p">[</span><span class="s">"producer"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s">'Taylor Swift'</span><span class="p">,</span> <span class="s">'Jack Antonoff'</span><span class="p">,</span> <span class="s">'Joel Little'</span><span class="p">,</span> <span class="s">'Taylor Swift'</span><span class="p">,</span> <span class="s">'Louis Bell'</span><span class="p">,</span> <span class="s">'Frank Dukes'</span><span class="p">])</span>
 
 <span class="c1"># What can you change to make sure there are no duplicate producers?
 # Use set notation!!!
@@ -417,8 +417,8 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
 <span class="n">lover_album</span><span class="p">[</span><span class="s">"tracks"</span><span class="p">].</span><span class="n">update</span><span class="p">({</span><span class="mi">19</span><span class="p">:</span> <span class="s">"All Of The Girls You Loved Before"</span><span class="p">})</span>
 
 <span class="c1"># How would add an additional genre to the dictionary, like electropop? 
-# 
-# 
+</span><span class="n">lover_album</span><span class="p">[</span><span class="s">"genre"</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="s">"Lyrical Music"</span><span class="p">)</span>
+<span class="c1"># 
 </span>
 <span class="c1"># Printing the dictionary
 </span><span class="k">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
@@ -426,7 +426,10 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
 <span class="c1"># CODE BLOCK 7
 </span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value
-</span>    <span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+</span>	<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="s">"&lt;class 'list'&gt;"</span><span class="p">:</span>
+		<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">v</span><span class="p">))</span>
+	<span class="k">else</span><span class="p">:</span>
+    	<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
 
 <span class="c1"># Write your own code to print tracks in readable format
 #
@@ -441,8 +444,8 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="p">.</span><span class="n">lower</span><span class="p">()))</span>
 
-<span class="n">search</span><span class="p">()</span>
-
+<span class="c1">#search()
+</span>
 <span class="c1"># This is a very basic code segment, how can you improve upon this code?
 #
 #
