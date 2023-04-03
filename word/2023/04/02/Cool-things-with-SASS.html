@@ -1,0 +1,1587 @@
+<script type="text/javascript">
+// If you're seeing this, I'm letting you know that you're not supposed to be here.
+// I put a bunch of commands in here limiting certain functionalities of the website.
+// So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+// Namely preventing YOU from copying my code and cheating.
+// Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+// modifying the website's code as you please.
+// And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+// Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+
+// But if you're malicious and will cheat using my code, things will get bad quickly.
+// Life with an academic dishonesty infraction is not fun.
+// And unlike some people who wouldn't have a way to defend themselves, I do.
+// It's this code. Unlike most people, I went out of my way to stop cheaters.
+// This code is evidence of my sincerity.
+// Which will make your intentions undeniable if you copy my code. SO DON'T.
+  document.oncontextmenu = new Function("return false");
+  document.oncut = new Function("return false");
+  document.oncopy = new Function("return false");
+  document.onafterprint = new Function("return false");
+  document.onbeforeprint = new Function("return false");
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('copy', (e) => e.preventDefault());
+document.addEventListener('cut', (e) => e.preventDefault());
+document.addEventListener('afterprint', (e) => e.preventDefault());
+document.addEventListener('beforeprint', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+  )
+    return false;
+};
+</script>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" onmousedown="return false" onselectstart="return false" onkeydown="return false">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Cool Things With Sass</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-02T00:00:00-05:00" itemprop="datePublished">
+        Apr 2, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      21 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/FastPage/categories/#word">word</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul>
+  <li>
+    <blockquote>
+      <p><a href="https://codebeautify.org/scss-compiler"><span class="underline">Online SCSS →CSS converter</span></a> (may help with running experiments)</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><a href="https://sass-lang.com/documentation/"><span class="underline">Official SASS documentation</span></a></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/syntax/special-functions"><span class="underline">Special Functions (this is tough)</span></a></p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/variables"><span class="underline">Defining variables (pretty basic)</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Use the <strong>$var-name: var-value;</strong> syntax</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>SASS variables are compiled before conversion to CSS; CSS variables kept</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Defining a variable later can override a previously-defined value. If you don’t want a variable to override previously-defined values, use the <strong>!default</strong> flag after the value. This allows variables to be configurable by variable overrides on the local scope. In the example below, the $time variable would be the first defined value, while $seconds will have the given value…</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>$time: 03312023;</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>$time: 04012023 !default;</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>$seconds: 222 !default;</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>You cannot override built-in variables (ex: the value of pi)</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Put variables you want to be used throughout your program at the top to make them global. Variables defined in blocks/selectors will be local to that block. It is possible to override global variables within a block only by defining them locally: this is known as shadowing.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image1.png" alt="" /></p>
+</blockquote>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>If you want a locally-defined variable to override a global variable, use the <strong>!global</strong> flag. For example, if we put the !global flag after the value of the $variable in .content, then this would become global and likely be applied to .sidebar</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Built-in functions</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><strong>meta.variable-exists($var-name)</strong>: Checks if a variable with the given name exists in the corresponding scope (local or global)</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong>meta.global-variable-exists($var-name)</strong>: Checks if a global variable with the given name exists.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!-- end list -->
+
+<ul>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/interpolation"><span class="underline">Interpolation (central concept!!!)</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Very often used with @mixin. Mixins follow very similar purpose/formatting to functions in Python</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image16.png" alt="" /></p>
+</blockquote>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>Interpolation: Wherever the parameter goes into the code, it is surrounded in <strong>#{para1}</strong>.</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Note: Interpolation returns unquoted strings, so you can’t perform numerical operations. However, when defining a variable as a number, you can add units! There are some quirks there though.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Quotes around strings are removed when converting to CSS. However, using the built-in <strong>string.unquote($string)</strong> may be better for code readability purposes</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>On the other hand, if you wanted to preserve the quotes during interpolation, use the <strong>#{meta.inspect($string)}</strong> built-in function</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!-- end list -->
+
+<ul>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/style-rules"><span class="underline">Style notes (more thorough)</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Nest a selector within a selector; the parent selector’s rules applied to the child selectors</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can list selectors</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image10.png" alt="" /><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image15.png" alt="" /></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>Can use combinators (I have no idea what that means)</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Interpolation: Can make @mixin (form of procedural abstraction) and can allow user-inputted parameters to take effect</p>
+    </blockquote>
+  </li>
+</ul>
+
+<!-- end list -->
+
+<ul>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/style-rules/declarations"><span class="underline">Property Declarations</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Here is an example of a property being declared (.circle is property)</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image9.png" alt="" /></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>Can use <a href="https://sass-lang.com/documentation/syntax/structure#expressions"><span class="underline">expressions</span></a> for a declaration value, which can be evaluated using operators</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Expressions include all the data types we’re familiar with (boolean, integers, etc.) The data structure known as dictionaries in Python is known as <strong>maps</strong> in SASS and use normal parenthesis instead of curly brackets.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Can manipulate using operators</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Expressions include variables, calls to functions (including built-in <a href="https://sass-lang.com/documentation/syntax/special-functions"><span class="underline">functions</span></a>)</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Can use interpolation to define properties (reduces redundancy)</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Can use nesting (covered above)</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Hidden declarations: These are basically conditional statements. They’re called as such because the configuration won’t show up in CSS if the condition is not fulfilled. Look for the <strong>if($boolean-condition, setting1, setting2)</strong></p>
+    </blockquote>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image12.png" alt="" /></p>
+</blockquote>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>CSS custom properties: denoted by the double-dash before the variable name (ex:–var-name). If the value is set equal to a $string, the $string is not evaluated to a variable even if one is defined. Interpolation will override this. On the other hand, using one or no dashes for the variable name will result in evaluation of $string.</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>The documentation says this has implication for JavaScript compatibility</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image4.png" alt="" /></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/style-rules/parent-selector"><span class="underline">Parent Selectors</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Whenever you use the <strong>&amp;</strong> within a child class (in a nesting scheme), this is interpreted as the name of the parent class. Basic functions:</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Adding suffixes to classes (ex: .parent__child1 → &amp;__child1)</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Adding a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"><span class="underline">pseudoclass</span></a>, where the styles will change dynamically based on certain conditions</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image5.png" alt="" /></p>
+</blockquote>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>There are some notes for advanced nesting I’m not ready for at the moment</p>
+    </blockquote>
+  </li>
+</ul>
+
+<!-- end list -->
+
+<ul>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/style-rules/placeholder-selectors"><span class="underline">Placeholder Selectors</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>They are denoted using the <strong>%</strong> (ex: <strong>%button-settings</strong>). They are not translated directly into CSS. Instead, you can use <strong>@extend</strong> to import and combine all the styles in placeholder selectors into selectors of your choice.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image14.png" alt="" /></p>
+</blockquote>
+
+<p><a href="https://sass-lang.com/documentation/at-rules"><span class="underline">List of at rules (this will be somewhat comprehensive)</span></a></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/use"><span class="underline">@use</span></a> - essentially a replacement to @import</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Loads all mixins, variables, functions (referred to from here on out as <strong>members</strong>) from the files. Any CSS output that would come from running those files normally could be outputted here. The file will only be loaded once regardless of how many times @use is called</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Variables/mixins from files usually have namespaces to prevent conflicts (<strong>namespace.var-name</strong>). By default, the name space is the file name, though this can be customized. Using * will result in no namespace. @import does not have this option!</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Great if you got a scheme with multiple .scss files. Each .scss file loaded is now known as a <strong>module</strong>. Use @use before any other at-rule in the file.</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>If you don’t want the SASS of a loaded file to be compiled/interpreted individually, start the file name with a <strong>_</strong> (the file is now known as a <strong>partial</strong>)</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Can use variables with <strong>!default</strong> flags in the original file to allow for greater flexibility</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>SASS loads the URL (not the file path). This is for cross-compatibility between Windows (with backslashes) and Linux (with slashes)</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Need to do <strong>@use ‘url/file’;</strong></p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Putting the file extension is optional. Can load .scss, .sass, and .css files. .css files can’t use .sass features, but .css can be extended</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image11.png" alt="" /></p>
+</blockquote>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>Need to look into integration with @mixin</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>It is possible to re-assign variables after the @use is called (but not built-in variables)</p>
+    </blockquote>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image8.png" alt="" /></p>
+</blockquote>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>If there is an _index.scss, then this is loaded when @use is called on the URL of the folder.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Deviations from @import (the predecessor)</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>All the variables, functions, mixins only to the scope of the file (not at global scope)</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Each file loaded once (reduces redundancy)</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Must be at the top of file, with one URL with quotes around it.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p>May exclude variables, mixins, functions by starting the name with an underscore/hyphen (ex: <strong>$-radius</strong>). When @use is called on a file, those members are not loaded and are known as <strong>private members</strong>. This could help with controling what parts of the file are loaded into another file (ex: sensitive info)</p>
+    </blockquote>
+  </li>
+</ul>
+
+<!-- end list -->
+
+<ul>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/forward"><span class="underline">@forward</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Very similar to @use in that it loads the members, making them available as if they were in the module (they aren’t though; that’s what @use is for). With regards to CSS, it functions the same way as @use.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>If you want to combine with @use, do @forward first.</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Useful if you want to load all the variables from one file</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can add variable prefixes to avoid conflicts using <strong>@forward “url” as prefixname-*</strong></p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image6.png" alt="" /></p>
+</blockquote>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>Can do <strong>@forward “url” hide &lt;members&gt;</strong> to exclude specified members or <strong>@forward “url” show &lt;members&gt;</strong> to include only specified members</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Can combine with variables of the <strong>!default</strong> flag</p>
+    </blockquote>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image3.png" alt="" /></p>
+</blockquote>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/import"><span class="underline">@import</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><strong>This will eventually be deprecated</strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>All members defined globally → where did they come from?</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Naming collisions for members is a concern since namespaces aren’t added by default</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Inefficient output (stylesheet converted to CSS upon every import instance, as opposed to once when calling @use. Could result in redundant code)</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>No compatibility for private members</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Functionality: All the file’s members &amp; CSS results replace @import</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Similar to @use, do the URL first. If you want to load based on paths, you can load relative to current file (in same directory as file directory or given load path). Can use commas in the @import call (see below).</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Has all the same functionality as @use with regards to which files are compatible, partials, index files, loading CSS files</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Possible to name your file <strong>filename.import.scss</strong> to make sure it’s only @import compatbile (not @use compatible). If using a file meant for @use, the @import has access to private members but not other loaded modules unless @forward is used. Modules can only be loaded once, meaning the members can’t be changed.</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Since @import was meant to be an improvement on @import from CSS, meaning that @import in CSS had to be supported. Imports with a .css extension, a URL with the http:// or https://, url(url.css), and media queries (see below). Also, CSS @import can include interpolation (ex: based on parameters of mixins; SASS @import can’t have interpolation)</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image13.png" alt="" /><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image2.png" alt="" /></p>
+
+  <p><img src="https://Leonard514.github.io/FastPage/assets/img/2023-04-02-Cool-things-with-SASS/media/image7.png" alt="" /></p>
+</blockquote>
+
+<p>At this point I realized that the concision of my notes was not optimal. I’d probably be returning to the documentation anyways, so I’ll stop providing example code snips here. My notes from here on out will take a more conceptual or feature-focused approach, so if you’re interested in including the features in the lesson, take a gander at the docs (it’ll help you get used to docs, which you’ll be consulting a lot)</p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/mixin"><span class="underline">@mixin, @include</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Allows for definition of re-usable styles based on parameters. Define using <strong>@mixin mixin-name</strong> at the top of the file.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Use <strong>@include mixin-name (arguments);</strong> to use the mixin. It is possible to make arguments optionalto input by defining a default value in the mixin using <strong>$var-name: default-value</strong>. All arguments must be utilized in the code, however.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>It is possible to pass arguments during a mixin call using keywords using similar syntax to optional arguments in the call. This can be useful if the user wants to be sure of how variables are being configured. If you rename an argument, you should tell the users and keep the old name for some time to give them time to adjust.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>You can take the last arguments as a list by doing: <strong>$arg…</strong> All the extra arguments then become elements of a list, and you can do iteration operations accordingly. This also allows you to pass a list variable as the last argument. These arguments are known as <strong>arbitrary arguments</strong>.</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>If users like keyword arguments in their calls, you need to <strong>@use “sass:meta”;</strong> at the top and call <strong>@debug meta.keywords($arguments);</strong>. This converts the user input to a map which allows the code to work with the input.</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>There is an @content rule that is nowhere else in the docs. If you include it in a mix-in, it becomes a <strong>content block.</strong> Content blocks have lexical scope, meaning it will only see its own local variables (and not any of the ones locally defined in the mixin where it is called). For mixins with content blocks, you <strong>must</strong> declare the acceptance of the arguments (<strong>@include mixin(para1, para2) using ($argument) {</strong> )</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/function"><span class="underline">@function</span></a> - <strong>@function function_name (arguments) {code}</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Very similar in function to mixins in that this serves for procedural abstraction. The docs encourages use of functions for computing values and mixins for setting variables dynamically</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can only have <a href="https://sass-lang.com/documentation/syntax/structure#universal-statements"><span class="underline">universal statements</span></a> in the code (declaring variables, @error, @warn, @debug, at rules for flow control)</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Identical functionalities to mixins with regards to default values (optional arguments), final arguments as a list (arbitrary arguments), passing arguments using keywords</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Different in that functions are called using their names and that there must be an <strong>@return</strong> to exit the function with the indicated value.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>There are built-in SASS functions (more on those later). Also, you can call CSS functions, which are not user-defined or built into SASS.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/extend"><span class="underline">@extend</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Call <strong>@extend .selector-name</strong> to make the given selector inherit the style/element rules as the extender referenced. Best to use for semantic (related) selectors/classes</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>@extend updates/overrides any styles as appropriate and reduces redundancy through combination of selectors with the same attributes.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>This will also function for any pseudoclass where the given selector exists.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Since these are compiled towards the end, parent selectors are blind to @extend effects</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can put placeholders (selectors purely developed for extension) using the %, could be private by starting the name with - or _ (can only be extended within its stylesheet)</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>@extend usually has limited scope (only affecting its stylesheet and ones that are loaded with @use or @forward). The exception is @import, where @extend is imported on a global scale.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>@extend requires that the selector exists unless the <strong>!optional</strong> flag is added. In that case, @extend does nothing if the selector doesn’t exist</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>You can’t extend complex selectors like <strong>.complex.selector</strong> the same way as usual. You must extend using <strong>@extend .complex, .selector</strong>. If complex selectors are interleaved, @extend uses a heuristic to avoid using combinations that will not exist in HTML.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>If you want to use an <strong>@media</strong> (CSS at rule), can’t extend selectors outside of @media</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/error"><span class="underline">@error</span></a> - <strong>@error &lt;expression&gt;</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Yeah, this is in case your user gives an unexpected argument or if the argument passed is otherwise unexpected. This could be the case with typos or with deprecated arguments. You give an error message and the stylesheet quits compiling. Probably good for ensuring the integrity of your data structures.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/warn"><span class="underline">@warn</span></a> - <strong>@warn &lt;expression&gt;</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>This discourages users from entering unusual arguments. It has a similar printing functionality to @error, but it doesn’t quit the compilation of SASS.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/debug"><span class="underline">@debug</span></a> - <strong>@debug &lt;expression&gt;</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>This is how you get to see the values of your variables (identical functionality to <strong>print()</strong> in Python). As the name implies, useful for finding out what your program is actually doing.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/at-root"><span class="underline">@at-root</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Everything with regard to the selector referred to in the at-root is compiled at the bottom of CSS rather than following usual nesting rules. This may be required for certain nesting schemes.</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Usually gets rid of style rules only (not CSS rules). Can exclude certain rules with <strong>@at-root (without: rulename)</strong> or include only certain rules using <strong>@at-root (with: rulename</strong>)</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p><strong>Rule</strong> is style rules but not at rules.</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p><strong>All</strong> is all style rules and all at rules.</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p>Flow control rules: These are essentially selection and iteration. The two ways for loops index in Python are separated in SASS.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/control/if"><span class="underline">@if and @else</span></a> - <strong>@if &lt;expression&gt; { code }</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>You guessed it, this is selection. The code associated with @if is evaluated when an associated expression is true, while that associated with @else is evaluated if the expression is false. If you want a chain of conditionals, use <strong>@else if</strong></p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Truthy: Any expression that is not <strong>false</strong> or <strong>null</strong> is true. This includes empty strings/lists and <strong>0</strong>.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/control/each"><span class="underline">@each</span></a> - <strong>@each &lt;var&gt; in &lt;expression&gt; { code }</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Use this when you want to execute code for each element in a list or pairs in maps. For lists, you can assign one variable name for the elements, but in maps, you must have two variable names (one for the keys, and one for the corresponding values)</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Lists of lists are a thing, and if you happen to be working with one you have to assign one variable for each element index (ex: if each list has 4 elements, you must define 4 variables in the @each call)</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/control/for"><span class="underline">@for</span></a> - <strong>@for &lt;variable&gt; from &lt;expression&gt; to &lt;expression&gt; {code}</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>This is for executing a block of code a certain number of times. The expressions are essentially indexes, and SASS counts from the first expression to the second expression. Using <strong>to</strong> makes the final index excluded; use <strong>through</strong> to include this.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/control/while"><span class="underline">@while</span></a> - <strong>@while &lt;expression&gt; {code}</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Will evaluate the code block repeatedly until the expression evaluates to false. Remember the truthy and falsy rules in SASS!</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>The documentation recommends using @each and @for over @while where possible</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/at-rules/css"><span class="underline">CSS rules</span></a> - support for all rules</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>If CSS nested inside style, the CSS at rule is outputted on top for ease of use</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can use @media for queries. According to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#targeting_media_features"><span class="underline">Mozilla</span></a>, this allows for styles to vary based on conditions like screen size. Can use interpolation and use SASS expressions. Nested queries will be merged since some browsers don’t support nested queries.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports"><span class="underline">@supports</span></a> is used to apply styles if the machine supports such styles.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes"><span class="underline">@keyframes</span></a> is used to apply styles to intermediary steps in animated portions of a website.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/values"><span class="underline">Values</span></a>: These are basically all the data types supported in SASS.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/values/numbers"><span class="underline">Numbers</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Can have units and scientific notation (ex: 1.2e4 = 12000). SASS fully expands the numbers since browsers do not consistently support scientific notation.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>SASS can do unit manipulations, though if you have complex units (ex: px<sup>2</sup>), using those as property values will produce errors. This feature is intended because usually complex units indicate calculation errors.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>SASS can convert units, but if you do operations with incompatible units there will be errors. Use <strong>math.comparable($number1, $number2)</strong> to see if the units are compatible.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Do not use interpolation if you want a number, because interpolation gives a string without quotes.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Decimals and percentages are not interchangeable unless using <strong>math.div($percentage, 100%)</strong> or <strong>math.percentage()</strong></p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Has 10-decimal precision. Numbers with negligible differences reaching more than 10 decimals will be considered equivalent, and there are certain rounding conventions (rounding tends to gravitate towards integers where applicable)</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/values/strings"><span class="underline">Strings</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Can be quoted or unquoted. Can convert between these forms using <strong>string.unquote()</strong> and <strong>string.quote()</strong></p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can use backslashes to make characters other than the hex characters part of a character. Could alternatively enter the unicode for any character, and the unicode is replaced by the corresponding character.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Quoted strings can have single quotes or double quotes. Can have interpolation and contain most characters (\, ‘, “, and newlines must be escaped with unicode)</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Guaranteed compilation. At this point we see why interpolation removes quotes (so that quoted strings inserted within another quoted string don’t cause issues)</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Unquoted strings follow a syntax pattern (on-site). It may be a good idea to include dashes or underscores. Some identifiers not parsed as strings are:</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Color names → colors</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>null → the value null</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>true/false → the boolean values</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>not, and, or → boolean operators</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Escapes is weird for unquoted strings. Unicode is converted where appropriate, and characters other than newlines and tabs can be replaced (including the backslash). Sometimes, there is no compilation (especially if non hex characters are involved in the backslash). Honestly I think it’s best to use quoted strings for simplicity</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Each character in a string is indexed. A few quirks:</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>The first character has index 1 (rather than 0). Yep, just like pseudocode.</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>The last character can have index -1, the second to last having -2, etc.</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/values/colors"><span class="underline">Colors</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Supports: sRGB, HSL, colors as hex codes, color names</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Any color can be used with both RGB and HSL)</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>There are built-in functions to modify colors. More on that later</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/values/lists"><span class="underline">Lists</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Elements can be separated with slashes, commas, or spaces (if consisted)</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Forward slashes are also used for division, but this will be deprecated in favor of <strong>math.div()</strong> in the near future (outside of the <strong>calc()</strong> function). This will make forward slashes only function as list separators.</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Brackets are optional. Use square brackets or parenthesis</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Can have one-element lists <strong>(expression,)</strong> or <strong>[expression]</strong> or zero-element lists <strong>()</strong> or <strong>[]</strong></p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Remember that we are using the 1-index (not 0-index)</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Get an element: <strong>@debug list.nth($list, $index)</strong></p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Use @each to do something for each element</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>To append: <strong>@debug list.append($list, $appended-value)</strong></p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>To check if a value exists: <strong>@debug list.index($list, $value)</strong> (returns the index of the value or null if none)</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Lists are immutable (can’t be modified); all the list functions make new lists. It is possible to assign the new list to the same variable and override, however.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>If you make the last parameter of a mixin with …, you can take the last argument as a list.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/values/maps"><span class="underline">Maps</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><strong>(&lt;key&gt;: &lt;value&gt;, &lt;key&gt;: &lt;value&gt;)</strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Keys must be unique. Duplicate values are OK. Put keys in quotes to make sure you’re actually making them string values (and not some other value, like a color value).</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Can use == to determine if keys have the same value</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Lookup a value: <strong>@debug map.get($map, $key)</strong></p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Use <strong>@each</strong> to execute code for each key and value pair</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Add/update key/value pair: <strong>map.set($map, $key, $value)</strong></p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Merge maps: <strong>map.merge($map1, $map2)</strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Duplicate keys: Second map’s values override first map’s values.</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Maps are immutable because they are lists.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/values/booleans"><span class="underline">True/False</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Are booleans. Can be returned by operators or built-in functions.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can be affected by boolean operators (and, or, not, etc.)</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can use booleans in conditionals</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Remember: only <strong>false</strong> and <strong>null</strong> are false.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/values/null"><span class="underline">Null</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Returned by functions when there is no result.</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Properties and list elements with <strong>null</strong> are omitted from CSS during compilation.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://sass-lang.com/documentation/values/calculations"><span class="underline">Calculations</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Use built-in functions (<strong>calc(), min(), max()</strong>) to do calculations. Using / for division will work here.</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Functionally equivalent to CSS <strong>calc()</strong>, but SASS variables and SASS functions can be used.</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Calculation functions can also simplify. Occasionally, simplification is prioritized over calculation</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Calculations can cause errors since some operations can only be used on numbers without units</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Constants can be used. Pi, e, infinity, -infinity, and NaN (not a number) are resolved/parsed automatically.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://www.w3schools.com/sass/sass_intro.php"><span class="underline">W3Schools</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>One of the biggest selling points on the front page of W3Schools SASS is assigning colors (ex: #ffffff) to variables</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Fonts, text size, and image size can also be assigned to <a href="https://www.w3schools.com/sass/sass_variables.php"><span class="underline">variables</span></a>, as can lists/booleans (like in most programming languages)</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can <a href="https://www.w3schools.com/sass/sass_nesting.php"><span class="underline">nest</span></a> variables in SASS (rather than spelling them out one-by-one in CSS)</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>What is SASS:</p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>SASS code needs to later be converted into CSS code as browsers can’t read SASS code</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>A compiler can be used for this conversion</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p>SASS is a lot more concise than CSS and therefore more scalable.</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><a href="https://www.w3schools.com/sass/sass_mixin_include.php"><span class="underline">Alert</span></a>: Hyphens and underscores are considered the same character.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Features available with SASS:</p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Variables</strong>: Variables can be created using a $ sign to store things like different colors that can be referenced in different parts of the SASS code</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>If the thing stored in the variable needs to be changed, it only needs to be changed in the variable rather than every place the thing is used (without SASS) which would be a lot of time consuming</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Nesting</strong>: Nesting can be used to avoid different code segments being repeated various times. Also increases ease of variable definition (ex: font-related variables)</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><a href="https://sass-lang.com/documentation/style-rules#selector-lists"><span class="underline">Selector Lists</span></a>: Selectors that are between commas are nested separately and combined in CSS. Can be combined with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#combinators"><span class="underline">combinators</span></a>. May have quadratic complexity (watch it!)</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>SASS Mixins</strong>: If you find yourself wanting to use the same group of styles for many different classes, the mixins feature can be used to apply a style set anywhere you want</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Conditional Logic</strong>: If and else statements can be used with SASS.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Lists</strong> and <strong>Arrays</strong> can be created with SASS</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Loops</strong>: For, while, and each loops can be implemented with SASS</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Functions</strong>: Reusable functions can be created and the last 3 features mentioned before can be used in them.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://www.w3schools.com/sass/sass_import.php"><span class="underline">Importations</span></a>: Use <strong>@import filename.scss</strong> to import a file and all the variables defined within that file. This allows creating a global cache of variables for the project. This prevents redefinition of variables for every file (that’s redundant!)</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="https://www.w3schools.com/sass/sass_extend.php"><span class="underline">Extensions</span></a>: Another way to increase concision in SASS. You can define a class with some attributes (text size, text alignment, etc.) as a generic class (ex: buttons on your website will be visually similar). In another class, call the generic class using <strong>@extend .class-name;</strong> and all the attributes of that class will be imported into your defined class.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>Syntax:</p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>SCSS:</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>File extension is .scss</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Use this because it is more popular</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>All CSS works in SCSS too</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Uses curly braces and semicolons (whitespace does not matter)</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p>Indented syntax:</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>File extension is .sass</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Same features as SCSS except indentation is used (whitespace does matter)</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example Code:</p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><a href="https://github.com/Leonard514/FastPage/tree/master/_sass/minima"><span class="underline">FastPages (Leonard’s posted here)</span></a></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>dark-mode.scss and fastpages-dracula-highlight.scss has good stuff</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p>Check Lily’s fastpages for SASS examples (will post later)</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>Possible Quiz Questions:</p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>What does SASS stand for?</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Give three reasons why SASS is more scalable than CSS.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>-</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+
+<script type="text/javascript">
+        // If you're seeing this, I'm letting you know that you're not supposed to be here.
+        // I put a bunch of commands in here limiting certain functionalities of the website.
+        // So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+        // Namely preventing YOU from copying my code and cheating.
+        // Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+        // modifying the website's code as you please.
+        // And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+        // Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+        
+        // But if you're malicious and will cheat using my code, things will get bad quickly.
+        // Life with an academic dishonesty infraction is not fun.
+        // And unlike some people who wouldn't have a way to defend themselves, I do.
+        // It's this code. Unlike most people, I went out of my way to stop cheaters.
+        // This code is evidence of my sincerity.
+        // Which will make your intentions undeniable if you copy my code. SO DON'T.
+          document.oncontextmenu = new Function("return false");
+          document.oncut = new Function("return false");
+          document.oncopy = new Function("return false");
+          document.onafterprint = new Function("return false");
+          document.onbeforeprint = new Function("return false");
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+        document.addEventListener('cut', (e) => e.preventDefault());
+        document.addEventListener('afterprint', (e) => e.preventDefault());
+        document.addEventListener('beforeprint', (e) => e.preventDefault());
+        
+        function ctrlShiftKey(e, keyCode) {
+          return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
+        
+        document.onkeydown = (e) => {
+          if (
+            event.keyCode === 123 ||
+            ctrlShiftKey(e, 'I') ||
+            ctrlShiftKey(e, 'J') ||
+            ctrlShiftKey(e, 'C') ||
+            (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+          )
+            return false;
+        };
+</script>
+
+<script src="https://utteranc.es/client.js"
+        repo="Leonard514/FastPage"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/FastPage/word/2023/04/02/Cool-things-with-SASS.html" hidden></a>
+</article>
