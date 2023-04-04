@@ -267,14 +267,24 @@ print(lover_album)
 # CODE BLOCK 7
 
 for k,v in lover_album.items(): # iterate using a for loop for key and value
-	if type(v) == "<class 'list'>":
-		print(str(k) + ": " + str(i for i in v))
+	if str(type(v)) == "<class 'list'>" or str(type(v)) == "<class 'set'>":
+		print(str(k) + ": ", end=''); print(*v, sep=", ")
+	elif str(type(v)) == "<class 'dict'>":
+		print()
+		print(str(k) + ":")
+		for key, value in v.items():
+			print(str(key) + ". " + str(value))
+		print()
 	else:
-    	print(str(k) + ": " + str(v))
+		print(str(k) + ": " + str(v))
 
 # Write your own code to print tracks in readable format
+# Success! (above)
 #
-#
+
+
+
+
 
 # CODE BLOCK 8
 
@@ -292,7 +302,10 @@ def search():
 #
 
 
-# My own album
+# The album of my choice. No lyrics. A solid portion of songs
+# these days have garbage lyrics (profanity, questionable topics, etc.).
+# For a song to even be considered my favorite, it shouldn't have lyrics.
+# So yep, I don't have a favorite Taylor Swift song.
 # https://en.wikipedia.org/wiki/December_(George_Winston_album)
 
 piano_album = {
