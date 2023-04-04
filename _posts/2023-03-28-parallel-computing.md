@@ -348,6 +348,13 @@ piano_album = {
 
 print(piano_album)
 
+# Anyways, I thought it would be a good idea to alphabetize all the tracks.
+# This was essentially a sorting exercise. Merge sort proved to be a bit ambitious, so
+# I decided to go with an insertion sort. We'll probably be coming back to this later.
+# I could have just as easily done something like "the track with the longest name" using length
+# on each string. Anyways...
+
+
 print("Here are the alphabetized tracks:")
 trackList = []
 
