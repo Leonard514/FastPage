@@ -426,15 +426,25 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
 <span class="c1"># CODE BLOCK 7
 </span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value
-</span>	<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="s">"&lt;class 'list'&gt;"</span><span class="p">:</span>
-		<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">v</span><span class="p">))</span>
+</span>	<span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="o">==</span> <span class="s">"&lt;class 'list'&gt;"</span> <span class="ow">or</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="o">==</span> <span class="s">"&lt;class 'set'&gt;"</span><span class="p">:</span>
+		<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s">": "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">);</span> <span class="k">print</span><span class="p">(</span><span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">", "</span><span class="p">)</span>
+	<span class="k">elif</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="o">==</span> <span class="s">"&lt;class 'dict'&gt;"</span><span class="p">:</span>
+		<span class="k">print</span><span class="p">()</span>
+		<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s">":"</span><span class="p">)</span>
+		<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">v</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+			<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">+</span> <span class="s">". "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+		<span class="k">print</span><span class="p">()</span>
 	<span class="k">else</span><span class="p">:</span>
-    	<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+		<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
 
 <span class="c1"># Write your own code to print tracks in readable format
-#
+# Success! (above)
 #
 </span>
+
+
+
+
 <span class="c1"># CODE BLOCK 8
 </span>
 <span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
@@ -451,7 +461,10 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
 #
 </span>
 
-<span class="c1"># My own album
+<span class="c1"># The album of my choice. No lyrics. A solid portion of songs
+# these days have garbage lyrics (profanity, questionable topics, etc.).
+# For a song to even be considered my favorite, it shouldn't have lyrics.
+# So yep, I don't have a favorite Taylor Swift song.
 # https://en.wikipedia.org/wiki/December_(George_Winston_album)
 </span>
 <span class="n">piano_album</span> <span class="o">=</span> <span class="p">{</span>
