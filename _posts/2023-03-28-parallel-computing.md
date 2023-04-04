@@ -8,6 +8,10 @@ permalink: /notes/parallel
 comments: true
 ---
 
+Most important things first. The W3Schools editor is primitive because it breaks when you try to give it input. So [new editor!](https://www.programiz.com/python-programming/online-compiler/)
+
+
+
 # Class Notes - Parallel Computing
 
 top -H gives a list of processes! I've run this on Linux machines before. You want to run this on a terminal. There is a #TH in Mac and/or the total number of threads at the top. I think number of threads is also available via Windows Task Manager.
@@ -265,6 +269,12 @@ lover_album["genre"].append("Lyrical Music")
 print(lover_album)
 
 # CODE BLOCK 7
+# These were helpful for a few of my purposes.
+# https://stackoverflow.com/questions/32796452/printing-a-list-separated-with-commas-without-a-trailing-comma
+# https://stackoverflow.com/questions/493386/how-to-print-without-a-newline-or-space
+# https://www.w3schools.com/python/python_conditions.asp
+
+
 
 for k,v in lover_album.items(): # iterate using a for loop for key and value
 	if str(type(v)) == "<class 'list'>" or str(type(v)) == "<class 'set'>":
@@ -301,10 +311,15 @@ def search():
 #
 #
 
+```
 
+
+
+```python
 # The album of my choice. No lyrics. A solid portion of songs
 # these days have garbage lyrics (profanity, questionable topics, etc.).
 # For a song to even be considered my favorite, it shouldn't have lyrics.
+# That way, I can appreciate the beauty of the music without worrying about what's being said.
 # So yep, I don't have a favorite Taylor Swift song.
 # https://en.wikipedia.org/wiki/December_(George_Winston_album)
 
@@ -323,7 +338,7 @@ piano_album = {
         5: "Carol of the Bells",
         6: "Night, Part One: Snow",
         7: "Night, Part Two: Midnight",
-        8: "Night, Part Two: Midnight",
+        8: "Night, Part Three: Ministrels",
         9: "Variations on the Kanon by Johann Pachelbel",
         10: "The Holly and the Ivy",
         11: "Some Children See Him",
@@ -333,5 +348,39 @@ piano_album = {
 
 print(piano_album)
 
-# Let me think, maybe if I can alphabetize all the tracks that would be a good idea. I should probably do Code Block 7 first.
+print("Here are the alphabetized tracks:")
+trackList = []
+
+
+for key, value in piano_album.items():
+	#print(key, value)
+	if str(type(value)) == "<class 'dict'>":
+		for track, song in value.items():
+			trackList.append(song)
+            
+#print(trackList)
+            
+# I'll decide to do an insertion sort since it seems simpler.
+# Geeks for Geeks also says it's better for smaller data (like this one)
+# https://www.geeksforgeeks.org/insertion-sort/
+# I'll be blunt and say I just took the pseudocode
+# and converted it to Python.
+# Essentially, if one element is greater than the previous element,
+# they are swapped and the previous pair is examined.
+# This is basically a refined version of bubble sort.
+# Don't use these on large datasets.
+# The geeks for geeks article on merge sort suggested that for the
+# lists smaller than 43 elements that insertion sort be used since
+# it will be faster for those smaller pieces...
+# https://www.geeksforgeeks.org/merge-sort/
+
+for i in range (0 , len(trackList)):
+	j = i
+	while j > 0 and trackList[j-1] > trackList[j]:
+		trackList[j-1], trackList[j] = trackList[j], trackList[j-1]
+		j = j - 1
+        
+print(*trackList, sep="\n")
 ```
+
+![image](https://user-images.githubusercontent.com/92343899/229721650-de4c8e93-2a6a-4a16-9ad2-b7a11c1ea267.png)
