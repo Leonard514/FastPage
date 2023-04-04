@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      11 min read
     
 </span></p>
 
@@ -84,7 +84,9 @@ document.onkeydown = (e) => {
 </li>
 <li class="toc-entry toc-h1"><a href="#hack-3-example-of-list-comprehension">Hack 3: Example of List Comprehension</a></li>
 <li class="toc-entry toc-h1"><a href="#hashmap-notes">Hashmap Notes</a></li>
-</ul><h1 id="class-notes---parallel-computing">
+</ul><p>Most important things first. The W3Schools editor is primitive because it breaks when you try to give it input. So <a href="https://www.programiz.com/python-programming/online-compiler/">new editor!</a></p>
+
+<h1 id="class-notes---parallel-computing">
 <a class="anchor" href="#class-notes---parallel-computing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class Notes - Parallel Computing</h1>
 
 <p>top -H gives a list of processes! I’ve run this on Linux machines before. You want to run this on a terminal. There is a #TH in Mac and/or the total number of threads at the top. I think number of threads is also available via Windows Task Manager.</p>
@@ -424,7 +426,13 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
 </span><span class="k">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
 
 <span class="c1"># CODE BLOCK 7
+# These were helpful for a few of my purposes.
+# https://stackoverflow.com/questions/32796452/printing-a-list-separated-with-commas-without-a-trailing-comma
+# https://stackoverflow.com/questions/493386/how-to-print-without-a-newline-or-space
+# https://www.w3schools.com/python/python_conditions.asp
 </span>
+
+
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value
 </span>	<span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="o">==</span> <span class="s">"&lt;class 'list'&gt;"</span> <span class="ow">or</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="o">==</span> <span class="s">"&lt;class 'set'&gt;"</span><span class="p">:</span>
 		<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s">": "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">);</span> <span class="k">print</span><span class="p">(</span><span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">", "</span><span class="p">)</span>
@@ -460,10 +468,12 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
 #
 #
 </span>
+</code></pre></div></div>
 
-<span class="c1"># The album of my choice. No lyrics. A solid portion of songs
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># The album of my choice. No lyrics. A solid portion of songs
 # these days have garbage lyrics (profanity, questionable topics, etc.).
 # For a song to even be considered my favorite, it shouldn't have lyrics.
+# That way, I can appreciate the beauty of the music without worrying about what's being said.
 # So yep, I don't have a favorite Taylor Swift song.
 # https://en.wikipedia.org/wiki/December_(George_Winston_album)
 </span>
@@ -482,7 +492,7 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
         <span class="mi">5</span><span class="p">:</span> <span class="s">"Carol of the Bells"</span><span class="p">,</span>
         <span class="mi">6</span><span class="p">:</span> <span class="s">"Night, Part One: Snow"</span><span class="p">,</span>
         <span class="mi">7</span><span class="p">:</span> <span class="s">"Night, Part Two: Midnight"</span><span class="p">,</span>
-        <span class="mi">8</span><span class="p">:</span> <span class="s">"Night, Part Two: Midnight"</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s">"Night, Part Three: Ministrels"</span><span class="p">,</span>
         <span class="mi">9</span><span class="p">:</span> <span class="s">"Variations on the Kanon by Johann Pachelbel"</span><span class="p">,</span>
         <span class="mi">10</span><span class="p">:</span> <span class="s">"The Holly and the Ivy"</span><span class="p">,</span>
         <span class="mi">11</span><span class="p">:</span> <span class="s">"Some Children See Him"</span><span class="p">,</span>
@@ -492,8 +502,42 @@ Processor 2: Processes C and D (10 sec + 40 sec = 50 seconds)</p>
 
 <span class="k">print</span><span class="p">(</span><span class="n">piano_album</span><span class="p">)</span>
 
-<span class="c1"># Let me think, maybe if I can alphabetize all the tracks that would be a good idea. I should probably do Code Block 7 first.
-</span></code></pre></div></div>
+<span class="k">print</span><span class="p">(</span><span class="s">"Here are the alphabetized tracks:"</span><span class="p">)</span>
+<span class="n">trackList</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">piano_album</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+	<span class="c1">#print(key, value)
+</span>	<span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span> <span class="o">==</span> <span class="s">"&lt;class 'dict'&gt;"</span><span class="p">:</span>
+		<span class="k">for</span> <span class="n">track</span><span class="p">,</span> <span class="n">song</span> <span class="ow">in</span> <span class="n">value</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+			<span class="n">trackList</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">song</span><span class="p">)</span>
+            
+<span class="c1">#print(trackList)
+</span>            
+<span class="c1"># I'll decide to do an insertion sort since it seems simpler.
+# Geeks for Geeks also says it's better for smaller data (like this one)
+# https://www.geeksforgeeks.org/insertion-sort/
+# I'll be blunt and say I just took the pseudocode
+# and converted it to Python.
+# Essentially, if one element is greater than the previous element,
+# they are swapped and the previous pair is examined.
+# This is basically a refined version of bubble sort.
+# Don't use these on large datasets.
+# The geeks for geeks article on merge sort suggested that for the
+# lists smaller than 43 elements that insertion sort be used since
+# it will be faster for those smaller pieces...
+# https://www.geeksforgeeks.org/merge-sort/
+</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span> <span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">trackList</span><span class="p">)):</span>
+	<span class="n">j</span> <span class="o">=</span> <span class="n">i</span>
+	<span class="k">while</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">trackList</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">trackList</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+		<span class="n">trackList</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">trackList</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">trackList</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">trackList</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+		<span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span>
+        
+<span class="k">print</span><span class="p">(</span><span class="o">*</span><span class="n">trackList</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="https://user-images.githubusercontent.com/92343899/229721650-de4c8e93-2a6a-4a16-9ad2-b7a11c1ea267.png" alt="image"></p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
