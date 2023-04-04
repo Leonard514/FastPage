@@ -290,4 +290,35 @@ def search():
 # This is a very basic code segment, how can you improve upon this code?
 #
 #
+
+
+# My own album
+# https://en.wikipedia.org/wiki/December_(George_Winston_album)
+
+piano_album = {
+    "title": "December",
+    "artist": "George Winston",
+    "year": 1982,
+    "genre": ["Christmas", "Ambient", "New Age", "Folk"],
+    "notes": "Lots of piano stuff with classics. No lyrics!",
+    "Top Billboard Rank": 54,
+    "tracks": {
+        1: "Thanksgiving",
+        2: "Jesus, Jesus, Rest Your Head",
+        3: "Joy",
+        4: "Prelude",
+        5: "Carol of the Bells",
+        6: "Night, Part One: Snow",
+        7: "Night, Part Two: Midnight",
+        8: "Night, Part Two: Midnight",
+        9: "Variations on the Kanon by Johann Pachelbel",
+        10: "The Holly and the Ivy",
+        11: "Some Children See Him",
+        12: "Peace"
+    }
+}
+
+print(piano_album)
+
+# Let me think, maybe if I can alphabetize all the tracks that would be a good idea. I should probably do Code Block 7 first.
 ```
