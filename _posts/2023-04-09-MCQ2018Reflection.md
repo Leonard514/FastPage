@@ -20,6 +20,12 @@ This blog post is for reflection on multiple choice questions that I found to be
 
 Here are a few of the questions that were of interest.
 
+## Question 3: Citizen Science!!!
+
+Apparently citizen science exists. I've never heard of this before. If there's anything I'm guessing this has something to do with involving a group of people representative of the population.
+
+## Iterative and Incremental Processes of Development
+
 ## Question 16 and the Digital Millenium Copyright Act
 
 I was 50% certain when I was taking the test that this was legislation that was proposed, protested against, and ultimately never happened. Regardless, the music seller was licensed, so I thought copyright infringement was unlikely.
