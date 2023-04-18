@@ -26,7 +26,7 @@ Apparently citizen science exists. I've never heard of this before. I thought th
 
 ## Question 9: Iterative and Incremental Processes of Development
 
-By far the hardest since I actually guessed this one.
+By far the hardest since I actually guessed this one. Conceptually, this was taking small steps in the development process by coding various components of a program sequentially. This allows for easier debugging since the time when an error appears can be matched with the development timeline.
 
 ## Question 16 and the Digital Millenium Copyright Act
 
@@ -42,7 +42,7 @@ According to [IBM](https://www.ibm.com/topics/machine-learning), machine learnin
 
 ## Question 58: Crowdsourcing
 
-As I said before, I watched the MyAP video. Other than distributed computing, I also learned about platforms where people can go to upload code and have other people download and modify the code. This can facilitate troubleshooting for bugs.
+As I said before, I watched the MyAP video. Other than distributed computing, I also learned about platforms where people can go to upload code and have other people download and modify the code. This can facilitate troubleshooting for bugs. There are some problems that cannot be solved in a reasonable time regardless of distributed computing, and my failure to account for this issue led to mistakes.
 
 ## Question 64: Cloud Computing
 
