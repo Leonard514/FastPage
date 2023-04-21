@@ -126,3 +126,12 @@ def game():
         print('guesses: ', gues)
 game()
 ```
+
+
+## Logic Gates
+
+This is NOT, AND, OR gates. They are summarized in the table towards the top. There's a few notes:
+
+NAND Gate is a NOT performed on the AND (outputs false if both inputs are true)
+
+NOR gate - NOT performed on the OR??? (output true if both inputs false) 
