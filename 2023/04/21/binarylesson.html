@@ -1,0 +1,288 @@
+<script type="text/javascript">
+// If you're seeing this, I'm letting you know that you're not supposed to be here.
+// I put a bunch of commands in here limiting certain functionalities of the website.
+// So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+// Namely preventing YOU from copying my code and cheating.
+// Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+// modifying the website's code as you please.
+// And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+// Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+
+// But if you're malicious and will cheat using my code, things will get bad quickly.
+// Life with an academic dishonesty infraction is not fun.
+// And unlike some people who wouldn't have a way to defend themselves, I do.
+// It's this code. Unlike most people, I went out of my way to stop cheaters.
+// This code is evidence of my sincerity.
+// Which will make your intentions undeniable if you copy my code. SO DON'T.
+  document.oncontextmenu = new Function("return false");
+  document.oncut = new Function("return false");
+  document.oncopy = new Function("return false");
+  document.onafterprint = new Function("return false");
+  document.onbeforeprint = new Function("return false");
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('copy', (e) => e.preventDefault());
+document.addEventListener('cut', (e) => e.preventDefault());
+document.addEventListener('afterprint', (e) => e.preventDefault());
+document.addEventListener('beforeprint', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+    (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+  )
+    return false;
+};
+</script>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" onmousedown="return false" onselectstart="return false" onkeydown="return false">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">April 21 Binary Lesson</h1><p class="page-description">Application of Binary Math</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-21T00:00:00-05:00" itemprop="datePublished">
+        Apr 21, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#lesson-prompts">Lesson Prompts</a></li>
+<li class="toc-entry toc-h2"><a href="#notes-on-code-block-1">Notes on Code Block 1</a></li>
+<li class="toc-entry toc-h2"><a href="#code-block-2-notes">Code Block 2 Notes</a></li>
+<li class="toc-entry toc-h2"><a href="#code-block-3-notes">Code Block 3 Notes</a></li>
+</ul><h2 id="lesson-prompts">
+<a class="anchor" href="#lesson-prompts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lesson Prompts</h2>
+
+<p>Prompt 1: Record 5 things you already knew about binary before this lecture</p>
+<ol>
+  <li>Binary is a base 2 numeric system with digits 0 and 1</li>
+  <li>An IPv4 address uses 8 binary bits for each octet ranging from 0 to 255</li>
+  <li>Other characters in computers are represented by binary bits</li>
+  <li>Boolean variables have a binary behavior (only two possible values of true and false)</li>
+  <li>
+</ol>
+
+<p>Prompt 2: Think of three applications that rely on binary</p>
+
+<p>Now the funny thing is, all things related to computers rely on binary. So I can essentially list three programs of my choice here.</p>
+
+<ol>
+  <li>Cisco Packet Tracer</li>
+  <li>Github</li>
+  <li>Discord</li>
+</ol>
+
+<p>Why is binary effective for storing information?</p>
+
+<p>Binary is effective since having no/little electrical signal can be 0 and having electrical signal is 1.
+Having a base-2 number system reduces time complexity of operations</p>
+
+<p>Bitwise Operations (table!)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&amp;</td>
+      <td>AND</td>
+      <td>Returns true (or 1) if both boolean operations are true (or 1)</td>
+    </tr>
+    <tr>
+      <td>pipe/vertical bar</td>
+      <td>OR</td>
+      <td>Returns true (or 1) at least one of two boolean operations return true (or 1)</td>
+    </tr>
+    <tr>
+      <td>^</td>
+      <td>XOR</td>
+      <td>Returns true (or 1) if exactly one of two boolean operations return true (or 1)</td>
+    </tr>
+    <tr>
+      <td>~</td>
+      <td>NOT</td>
+      <td>Returns true (or 1) for a false operation (or 0), returns false for true</td>
+    </tr>
+    <tr>
+      <td>«</td>
+      <td>Left Shift</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>»</td>
+      <td>Right Shift</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>»&gt;</td>
+      <td>Zero-fill Right Shift</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="notes-on-code-block-1">
+<a class="anchor" href="#notes-on-code-block-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes on Code Block 1</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_operations</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+    <span class="c1"># Perform the binary operations
+</span>    <span class="n">and_result_decimal</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">&amp;</span> <span class="n">num2</span>
+    <span class="n">or_result_decimal</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">|</span> <span class="n">num2</span>
+    <span class="n">xor_result_decimal</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">^</span> <span class="n">num2</span>
+    <span class="n">not_result_decimal</span> <span class="o">=</span> <span class="o">~</span><span class="n">num1</span>
+
+    <span class="c1"># Convert results to binary
+</span>    <span class="n">and_result_binary</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">and_result_decimal</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="n">or_result_binary</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">or_result_decimal</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="n">xor_result_binary</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">xor_result_decimal</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="n">not_result_binary</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">not_result_decimal</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
+
+    <span class="c1"># Return the results as a tuple of tuples
+</span>    <span class="k">return</span> <span class="p">((</span><span class="n">and_result_decimal</span><span class="p">,</span> <span class="n">and_result_binary</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">or_result_decimal</span><span class="p">,</span> <span class="n">or_result_binary</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">xor_result_decimal</span><span class="p">,</span> <span class="n">xor_result_binary</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">not_result_decimal</span><span class="p">,</span> <span class="n">not_result_binary</span><span class="p">))</span>
+
+<span class="c1"># Ask the user for input
+</span><span class="n">num1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter the first number: "</span><span class="p">))</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter the second number: "</span><span class="p">))</span>
+
+<span class="c1"># Call the binary_operations function and print the results
+</span><span class="n">and_result</span><span class="p">,</span> <span class="n">or_result</span><span class="p">,</span> <span class="n">xor_result</span><span class="p">,</span> <span class="n">not_result</span> <span class="o">=</span> <span class="n">binary_operations</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"AND result: decimal ="</span><span class="p">,</span> <span class="n">and_result</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s">", binary ="</span><span class="p">,</span> <span class="n">and_result</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"OR result: decimal ="</span><span class="p">,</span> <span class="n">or_result</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s">", binary ="</span><span class="p">,</span> <span class="n">or_result</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"XOR result: decimal ="</span><span class="p">,</span> <span class="n">xor_result</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s">", binary ="</span><span class="p">,</span> <span class="n">xor_result</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"NOT result: decimal ="</span><span class="p">,</span> <span class="n">not_result</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s">", binary ="</span><span class="p">,</span> <span class="n">not_result</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>The AND operation seems to execute something similar to what I’ve seen with my subnetting experience in the school cyber team. It seems to take all the bits and compare left-to-right. When the operation fails the first time, the operation terminates and all the bits to the left will be zeros. OR and XOR seems a bit more flexible with the bits</p>
+
+<h2 id="code-block-2-notes">
+<a class="anchor" href="#code-block-2-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Block 2 Notes</h2>
+
+<p>I modified it so I can run it multiple times in one session</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">string_to_binary</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="n">binary</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span>
+        <span class="n">binary</span> <span class="o">+=</span> <span class="nb">format</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">char</span><span class="p">),</span> <span class="s">'08b'</span><span class="p">)</span>  <span class="c1"># Convert the character to binary and append to the binary string
+</span>    <span class="k">return</span> <span class="n">binary</span>
+
+<span class="c1"># Example usage
+</span><span class="k">def</span> <span class="nf">hrar</span><span class="p">():</span>
+    <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter a word to convert to binary: "</span><span class="p">)</span>
+    <span class="n">binary_word</span> <span class="o">=</span> <span class="n">string_to_binary</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The binary representation of '</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s">' is </span><span class="si">{</span><span class="n">binary_word</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="n">hrar</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>It seems the binary conversions of each ASCII character are printed one on top of the other. I would prefer that a space be added between each character’s binary conversion for clarity purposes.</p>
+
+<h2 id="code-block-3-notes">
+<a class="anchor" href="#code-block-3-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Block 3 Notes</h2>
+
+<p>This is an example of binary search. Keep splitting the list in half and adjusting guesses based on if the number is higher or lower.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span> 
+
+<span class="n">hid</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">gues</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">def</span> <span class="nf">game</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">gues</span>
+    <span class="n">gues</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'Pick a number'</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="n">hid</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'higher'</span><span class="p">)</span>
+        <span class="n">game</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="n">hid</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'lower'</span><span class="p">)</span>
+        <span class="n">game</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="n">hid</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">hid</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'You Win !!!'</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'guesses: '</span><span class="p">,</span> <span class="n">gues</span><span class="p">)</span>
+<span class="n">game</span><span class="p">()</span>
+</code></pre></div></div>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+
+<script type="text/javascript">
+        // If you're seeing this, I'm letting you know that you're not supposed to be here.
+        // I put a bunch of commands in here limiting certain functionalities of the website.
+        // So if you noticed that you can't right-click, select stuff, and copy text, that has a function.
+        // Namely preventing YOU from copying my code and cheating.
+        // Now if you're sincere, now is my warning. You're not supposed to be in an inspect element window, 
+        // modifying the website's code as you please.
+        // And if you're extra sincere, you can even email me at leonardalwright@gmail.com
+        // Tell me how you opened this. Because I need to disable that functionality as a safeguard.
+        
+        // But if you're malicious and will cheat using my code, things will get bad quickly.
+        // Life with an academic dishonesty infraction is not fun.
+        // And unlike some people who wouldn't have a way to defend themselves, I do.
+        // It's this code. Unlike most people, I went out of my way to stop cheaters.
+        // This code is evidence of my sincerity.
+        // Which will make your intentions undeniable if you copy my code. SO DON'T.
+          document.oncontextmenu = new Function("return false");
+          document.oncut = new Function("return false");
+          document.oncopy = new Function("return false");
+          document.onafterprint = new Function("return false");
+          document.onbeforeprint = new Function("return false");
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+        document.addEventListener('cut', (e) => e.preventDefault());
+        document.addEventListener('afterprint', (e) => e.preventDefault());
+        document.addEventListener('beforeprint', (e) => e.preventDefault());
+        
+        function ctrlShiftKey(e, keyCode) {
+          return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
+        
+        document.onkeydown = (e) => {
+          if (
+            event.keyCode === 123 ||
+            ctrlShiftKey(e, 'I') ||
+            ctrlShiftKey(e, 'J') ||
+            ctrlShiftKey(e, 'C') ||
+            (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+            (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+          )
+            return false;
+        };
+</script>
+
+<script src="https://utteranc.es/client.js"
+        repo="Leonard514/FastPage"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/FastPage/2023/04/21/binarylesson.html" hidden></a>
+</article>
