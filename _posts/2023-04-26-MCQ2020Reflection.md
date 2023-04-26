@@ -27,3 +27,5 @@ Floating point has nothing to do with overflow errors, but let's look up what th
 [Wikipedia](https://en.wikipedia.org/wiki/Floating-point_arithmetic)
 
 Apparently sig figs are back. Last time I interacted with them was the beginning of this school year.
+
+That actually makes sense based on what floating points are. It's essentially the way computers do scientific notations with a limited capacity for digits.
