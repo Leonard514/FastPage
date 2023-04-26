@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      5 min read
     
 </span></p>
 
@@ -64,7 +64,303 @@ document.onkeydown = (e) => {
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h4"><a href="#code-block-1">Code Block 1</a></li>
+<li class="toc-entry toc-h1"><a href="#variable-of-type-string">variable of type string</a></li>
+<li class="toc-entry toc-h1"><a href="#variable-of-type-integer">variable of type integer</a></li>
+<li class="toc-entry toc-h1"><a href="#variable-of-type-float">variable of type float</a></li>
+<li class="toc-entry toc-h1"><a href="#variable-of-type-list-many-values-in-one-variable">variable of type list (many values in one variable)</a></li>
+<li class="toc-entry toc-h1"><a href="#variable-of-type-dictionary-a-group-of-keys-and-values">variable of type dictionary (a group of keys and values)</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#selection">Selection</a></li>
+<li class="toc-entry toc-h4"><a href="#binary-search">Binary Search</a></li>
+<li class="toc-entry toc-h4"><a href="#hack-write-program-using-conditionals-or-nested-conditionals">HACK: Write program using conditionals or nested conditionals</a></li>
+<li class="toc-entry toc-h4"><a href="#algorithms-and-data-structures">algorithms and data structures</a></li>
+<li class="toc-entry toc-h4"><a href="#simulations-and-iterations">Simulations and Iterations</a></li>
+<li class="toc-entry toc-h4"><a href="#list-comprehensions">List Comprehensions</a></li>
+<li class="toc-entry toc-h4"><a href="#recursive-loops">Recursive Loops</a></li>
+<li class="toc-entry toc-h4"><a href="#nesting-loops-increase-time-complexity">Nesting Loops (increase time complexity)</a></li>
+<li class="toc-entry toc-h4"><a href="#while-loop">While Loop</a></li>
+<li class="toc-entry toc-h4"><a href="#randomization">Randomization</a></li>
+<li class="toc-entry toc-h4"><a href="#databases">Databases</a></li>
+<li class="toc-entry toc-h4"><a href="#hacks-db">Hacks DB</a></li>
 </ul>
+</li>
+</ul><p>Lists</p>
+<ul>
+  <li>Ordered sequence elements</li>
+  <li>Index has integers (not string keys)</li>
+  <li>Starts at 1 for AP exam (usually 0 for Python)</li>
+  <li>Helpful for data storage in one list (rather than lots of variables)
+    <ul>
+      <li>Can perform iterative functions on each list (for loops, etc.)</li>
+    </ul>
+
+    <h4 id="code-block-1">
+<a class="anchor" href="#code-block-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Block 1</h4>
+
+    <p>```python</p>
+    <h1 id="variable-of-type-string">
+<a class="anchor" href="#variable-of-type-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>variable of type string</h1>
+    <p>name = “Sri Kotturi”
+print(“name”, name, type(name))</p>
+  </li>
+</ul>
+
+<h1 id="variable-of-type-integer">
+<a class="anchor" href="#variable-of-type-integer" aria-hidden="true"><span class="octicon octicon-link"></span></a>variable of type integer</h1>
+<p>age = 16
+print(“age”, age, type(age))</p>
+
+<h1 id="variable-of-type-float">
+<a class="anchor" href="#variable-of-type-float" aria-hidden="true"><span class="octicon octicon-link"></span></a>variable of type float</h1>
+<p>score = 90.0
+print(“score”, score, type(score))</p>
+
+<p>print()</p>
+
+<h1 id="variable-of-type-list-many-values-in-one-variable">
+<a class="anchor" href="#variable-of-type-list-many-values-in-one-variable" aria-hidden="true"><span class="octicon octicon-link"></span></a>variable of type list (many values in one variable)</h1>
+<p>langs = [“Python”, “JavaScript”, “Java”, “Bash”, “html”]
+print(“langs”, langs, type(langs))
+print(“- langs[2]”, langs[2], type(langs[2]))</p>
+
+<p>print()</p>
+
+<h1 id="variable-of-type-dictionary-a-group-of-keys-and-values">
+<a class="anchor" href="#variable-of-type-dictionary-a-group-of-keys-and-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>variable of type dictionary (a group of keys and values)</h1>
+<p>person = {
+    “name”: name,
+    “age”: age,
+    “score”: score,
+    “langs”: langs
+}
+print(“person”, person, type(person))
+print(‘- person[“name”]’, person[“name”], type(person[“name”]))</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+#### Mathematical Expressions
+
+- + addition
+- - subtraction
+- * multiplication
+- / division
+- % modulo
+- ** raise to power
+
+#### Code Block 2
+
+```python3
+num1 = 2
+num2 = 4
+num3 = 6
+num1 = num2 ** num3
+num3 = num1 % 5
+num2 = (num1 + num3) // 9
+
+print(num1)
+print(num2)
+print(num3)
+</code></pre></div></div>
+
+<p>num1 is 4^6 or 4096
+num3 is</p>
+
+<h4 id="selection">
+<a class="anchor" href="#selection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selection</h4>
+
+<ul>
+  <li>Execute code based on conditional statements
+    <ul>
+      <li>Conditional allows code to execute if a condition true/false</li>
+      <li>If, Elif, Else</li>
+    </ul>
+  </li>
+</ul>
+
+<p>If: If a condition is true or not (any boolean expression)</p>
+<ul>
+  <li>If true, executes the block
+Else: Executes code block if the condition is false
+Elif: Checks multiple conditions in sequence, executes if any is true</li>
+  <li>Nested Conditional: Conditional statement inside another conditional statement. For more complex conditions that depend on each other.</li>
+</ul>
+
+<p>Indentation is important for conditionals in Python to allow Python to tell which code is conditionally executed</p>
+
+<h4 id="binary-search">
+<a class="anchor" href="#binary-search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Search</h4>
+
+<ul>
+  <li>Efficient Search algorithm to find and select element in sorted list</li>
+  <li>Divides search interval in half for the middle element, compares to target. Continues to lower/upper half based on greater than/less than</li>
+  <li>Has O(log(N)) time complexity (max iterations is # of times list can be divided into half)</li>
+</ul>
+
+<h4 id="hack-write-program-using-conditionals-or-nested-conditionals">
+<a class="anchor" href="#hack-write-program-using-conditionals-or-nested-conditionals" aria-hidden="true"><span class="octicon octicon-link"></span></a>HACK: Write program using conditionals or nested conditionals</h4>
+
+<pre><code class="language-python3">
+</code></pre>
+
+<h4 id="algorithms-and-data-structures">
+<a class="anchor" href="#algorithms-and-data-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>algorithms and data structures</h4>
+
+<p>Algorithms rely on sequential steps with input and output</p>
+<ul>
+  <li>
+    <p>Algorithms rely on data structures (ex: sorting algorithm needs lists, arrays, etc)</p>
+  </li>
+  <li>Algorithm: Finite set instructions to accomplish task</li>
+  <li>Sequencing: Order to task completion (lines code)</li>
+  <li>Selection: Choose from two outcomes based on decisions</li>
+  <li>Iteration: Repeat until condition met</li>
+  <li>
+    <p>Procedure: Sequence of instructions to perform tasks</p>
+  </li>
+  <li>Call procedure with arguments. Parameters passed to function, can perform tasks/calculations.</li>
+  <li>Can store results in variables, print, etc.</li>
+  <li>Can be defined in external files (libraries)</li>
+</ul>
+
+<p>Avoid errors:</p>
+<ul>
+  <li>Use proper syntax</li>
+</ul>
+
+<p>Algorithmic Efficiency</p>
+<ul>
+  <li>Time/resources required for execution
+    <ul>
+      <li>Time complexity: Time to complete tasks</li>
+      <li>Space Complexity: Memory needed to complete task</li>
+      <li>Use Big O notation</li>
+    </ul>
+  </li>
+</ul>
+
+<pre><code class="language-python3">a = 0
+for i in range(N):
+  for j in reversed(range(i, N)):
+    a = a + i + j
+</code></pre>
+
+<p>Time complexity: likely polynomial O(N*N) because for each number in a range, an operation must be performed for each number once again… this results in a number of operations totalling around N squared.</p>
+
+<pre><code class="language-python3">value = 0
+for i in range(n): #iterates "n" times, with "i" taking on values from 0 to n-1.
+  for j in range(i): # iterates "i" times, with "j" taking on values from 0 to i-1.
+    value=value+1
+</code></pre>
+
+<p>Time Complexity: For each i in a range: the second line runs n times while the third line runs n+1 times. This makes for n(n+1) complexity.</p>
+
+<p>Efficiency is required to make sure the algorithms run in a reasonable amount of time</p>
+
+<h4 id="simulations-and-iterations">
+<a class="anchor" href="#simulations-and-iterations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulations and Iterations</h4>
+
+<p>Simulations needed to model complex phenomena while efficiently using resources</p>
+
+<pre><code class="language-python3">numlist = [3, 5, 68, 203]
+
+for key, num in enumerate(numlist):
+    print(f"This entry's index is {str(key)}, but its value is {str(num)}.")
+    print(f"The difference between the value and the index is {num - key}.")
+</code></pre>
+
+<p>Note: this prints indexes. <strong>Key, num</strong> is similar to a dictionary since a dictionary uses <strong>key, value</strong>. The key gives access to the items/numbers. The index of the list in this case is similar to the key in the dictionary.</p>
+
+<h4 id="list-comprehensions">
+<a class="anchor" href="#list-comprehensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>List Comprehensions</h4>
+
+<pre><code class="language-python3">player_hand = [] # the player's hand is represented as a list
+# because lists are mutable (can change), they can be added to, like drawing a card
+
+# assume the deck below is a a deck of shuffled cards
+deck = [Card("Hearts", 3), Card("Spades", 12), Card("Diamonds", 11)]
+def draw_card(hand, deck):
+    hand.append(deck.pop())
+
+#try it out
+draw_card(player_hand, deck)
+print([card.show() for card in player_hand])
+</code></pre>
+
+<h4 id="recursive-loops">
+<a class="anchor" href="#recursive-loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursive Loops</h4>
+
+<pre><code class="language-python3">def fibonacci(terms):
+    if terms &lt;= 1:
+        return terms
+    return fibonacci(terms-1) + fibonacci(terms-2)
+
+fibonacci(5)
+</code></pre>
+
+<p>Recursive loops are good for functions that call themselves with diff arguments</p>
+
+<h4 id="nesting-loops-increase-time-complexity">
+<a class="anchor" href="#nesting-loops-increase-time-complexity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nesting Loops (increase time complexity)</h4>
+
+<pre><code class="language-python3">def build(deck):
+        for suit in ["Spades", "Clubs", "Diamonds", "Hearts"]:
+            for val in range(2, 15): #HINT: try replacing this function
+                deck.append(Card(suit, val))
+</code></pre>
+
+<h4 id="while-loop">
+<a class="anchor" href="#while-loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>While Loop</h4>
+
+<pre><code class="language-python3">def build(deck):
+        for suit in ["Spades", "Clubs", "Diamonds", "Hearts"]:
+            for val in range(2, 15):
+                deck.append(Card(suit, val))
+
+#HINT: you may want to make an incrementing i variable
+</code></pre>
+
+<p>Can occur to make functions execute until something happens</p>
+
+<pre><code class="language-python3">import random
+i = 0
+
+while True:
+    i += 1
+    ch = random.randint(1, 11)
+    if ch == 10:
+        print(f"It took {str(i)} random generations to get 10.")
+        break
+</code></pre>
+
+<h4 id="randomization">
+<a class="anchor" href="#randomization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Randomization</h4>
+
+<pre><code class="language-python3">def shuffle(deck):
+    random.shuffle(deck)
+</code></pre>
+
+<h4 id="databases">
+<a class="anchor" href="#databases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Databases</h4>
+
+<p>Contains columns and rows. Do SQLite stuff… ok.</p>
+
+<p>Model file: Make new databases + standardizes database formatting. Objects are made.</p>
+
+<p>Init function initializes the attributes</p>
+
+<p>Setters: Set/change values of attributes in class
+Getter: Access attributes in a class
+API File: Messenger to allow programs to access the databases</p>
+
+<p>Important for Flask repositories. Do initUsers()</p>
+
+<h4 id="hacks-db">
+<a class="anchor" href="#hacks-db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks DB</h4>
+
+<p>Class with at least 4 attributes (if no cursor)
+Setters/getters
+CRUD functions
+init function with 4 entries
+Screenshot of SQLite file</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
