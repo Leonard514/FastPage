@@ -29,3 +29,11 @@ Floating point has nothing to do with overflow errors, but let's look up what th
 Apparently sig figs are back. Last time I interacted with them was the beginning of this school year.
 
 That actually makes sense based on what floating points are. It's essentially the way computers do scientific notations with a limited capacity for digits.
+
+
+## Question 54: Insert vs Append
+
+According to the [College Board Pseudocode Guide](https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-exam-reference-sheet.pdf):
+
+- INSERT(aList, i, value) will insert the **value** at index **i** in the **aList**. All values at that index and the right are moved one index to the right. *This operation does not overwrite elements**.
+- APPEND(aList, value) will append the **value** to the end (right) of the **aList**.
