@@ -11,15 +11,13 @@ Fill in the blanks: Copy-pasted from the lessons. Paragraphs 1 and 3 are duplica
 
 In Python, classes are templates used to create objects, which are instances of those classes. Classes define the data elements (**attributes**) and methods that describe the behavior of the objects. Let's explore how to define a class and create objects in Python.
 
-In the context of backend functionality, this class can be used to **create** , **manipulate**, and **manage** user data. For example, when a new user signs up for an account, you could create a new User object with their username and email. This object can then be used to perform various operations, such as validating the user's input, storing the user's data in a database, or processing user-related requests.
+In the context of backend functionality, this class can be used to **create** , **manipulate**, and **manage** user data. For example, when a new user signs up for an account, you could create a new User object with their username and email. This object can then be used to perform various operations, such as validating the user's input, storing the user's data in a database, or **processing user-related requests**.
 
-In Python, classes are templates used to create objects, which are instances of those classes. Classes define the data elements (attributes) and methods that describe the behavior of the objects. Let's explore how to define a class and create objects in Python.
+In Python, classes are **templates** used to create **objects**, which are **instances** of those **classes**. Classes define the data elements (attributes) and methods that describe the behavior of the objects. Let's explore how to define a class and create objects in Python.
 
-Property Decorators allow developers to access and modify instance data more concisely. The @property decorator creates a getter method, while the @attribute.setter decorator creates a setter method.
+**Property Decorators** allow developers to access and modify instance data more concisely. The @property decorator creates a getter method, while the @attribute.setter decorator creates a setter method.
 
-In the context of backend functionality, this Employee class can be used to model employees within an application. You can create instances of this class to store and manage employee data, and the getter and setter methods can be used to access and modify employee information in a controlled way.
-
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+In the context of backend functionality, this Employee class can be used to model employees within an application. You can create instances of this class to store and manage employee data, and the getter and setter methods can be used to access and modify employee information in a **controlled way**.
 
 In the context of **backend functionality**, this Car class can be used to model cars within an application. You can create instances of this class to store and manage car data, and the getter and setter methods can be used to access and modify car information in a controlled way.
 
@@ -27,7 +25,7 @@ SQLite is a **software** library that provides a relational database management 
 
 In this lesson, we will be demonstrating how to set up a SQLite database in Flask, which provides an easy-to-use interface for interacting with SQLite databases, and we'll walk through the process of setting up a new database, creating tables, and adding data. We'll also cover some basic SQL commands that you can use to interact with your database, including CREATE TABLE, INSERT, SELECT, UPDATE, and DELETE. By the end of this lesson, you'll have a good understanding of how to work with SQLite databases in Flask and be ready to start building your own **applications**.
 
-One of the key features of **Flask** is its ability to work seamlessly with ~~ , including SQLite. A database is a collection of data stored in an organized manner that can be easily accessed, managed, and updated.
+One of the key features of **Flask** is its ability to work seamlessly with **databases** , including SQLite. A database is a collection of data stored in an organized manner that can be easily accessed, managed, and updated.
 
 **SQL** is really useful because it helps people do a bunch of things with the data stored in databases. For example, they can use it to create new tables to organize data, add new data to a table, update data that's already there, or delete data that's no longer needed.
 
