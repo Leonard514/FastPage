@@ -135,3 +135,23 @@ This is NOT, AND, OR gates. They are summarized in the table towards the top. Th
 NAND Gate is a NOT performed on the AND (outputs false if both inputs are true)
 
 NOR gate - NOT performed on the OR??? (output true if both inputs false) 
+
+
+## Binary Calculator Hacks
+
+Code pasted for reference at the moment. I will be working this out a bit later.
+
+```python3
+def binary_math(num1, num2, operator):
+    # Write your calculator function here
+
+
+# Ask the user for input
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+operator = input("Enter the operator (+, -, *, /): ")
+
+# Call the binary_math function and print the result
+result = binary_math(num1, num2, operator)
+print("Result:", result)
+```
