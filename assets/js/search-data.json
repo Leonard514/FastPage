@@ -645,24 +645,14 @@
   
 
   
-
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
+      ,"page4": {
+          "title": "April 25 Numpy/Pandas Lesson",
+          "content": "Notes . Predictive analysis . Use lots of data + machine learning to draw predictions . ex: Predicting which products will be popular to start a marketing campaign | ex: Find ways to attack the Chain of Transmission (for diseases) | . Is important for corporate competition . Follows steps: . Establish problem, know where to get data | Get + refine data | Find patterns in data | Find algorithm for predictions | Train the algorithm/model (this is machine learning!) | Make predictions | Refine the algorithm/model over time | .",
+          "url": "https://leonard514.github.io/FastPage/2023-04-25-numpypandas.html",
+          "relUrl": "/2023-04-25-numpypandas.html",
+          "date": ""
+      }
+      
   
 
   
@@ -673,7 +663,28 @@
   
 
   
-      ,"page15": {
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+      ,"page16": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://leonard514.github.io/FastPage/robots.txt",
