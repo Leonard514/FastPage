@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -64,6 +64,7 @@ document.onkeydown = (e) => {
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#notes-on-frontend-and-backend">Notes on frontend and backend</a></li>
 </ul><p>Why Github?</p>
 
 <ul>
@@ -105,6 +106,72 @@ etc</li>
 <ul>
   <li>git fork - make your own copy of someone’s repository</li>
   <li>git checkout - commit to a test branch (not the main branch)</li>
+</ul>
+
+<h3 id="notes-on-frontend-and-backend">
+<a class="anchor" href="#notes-on-frontend-and-backend" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes on frontend and backend</h3>
+
+<p>CRUD - create, read, update, delete</p>
+
+<p>Create: Make new entries to database
+Read: Get info from database
+Update: Overwrite data from database
+Delete: Remove data</p>
+
+<p>Films API: LIst of fillms someone watched</p>
+
+<p>Includes youtube trailer, episode, etc.</p>
+
+<p>Create: Makes films
+Read: Returns films
+UPdate: New episodes
+Delete: Deletes films</p>
+
+<p>Note: CRUD was integrated into frontend</p>
+
+<p>Example was given for home alone in <a href="https://tanayp327.github.io/Quintic5/films.html">API</a></p>
+
+<p>Scripts</p>
+<ul>
+  <li>Takes URL of localhost to create, update, delete, etc.</li>
+</ul>
+
+<p>ConverttoEmbedUrl function
+To embed a Youtube Video in HTML, you need an embed link. String manipulation is used to change the usual URL to the embed URL.</p>
+
+<p>CRUD - name, year, language, etc.</p>
+<ul>
+  <li>Gets all the attributes for create</li>
+</ul>
+
+<p>Delete has 2 options</p>
+<ul>
+  <li>Delete 1</li>
+  <li>Delete All</li>
+</ul>
+
+<p>Update</p>
+<ul>
+  <li>Can add new episodes (in case a show is ongoing)</li>
+</ul>
+
+<p>Cleaning (garbage checking)</p>
+<ul>
+  <li>Input boxes: Should have at least 2 characters</li>
+  <li>Year: After 1800, should be a number</li>
+  <li>List: AT least 1 element</li>
+  <li>Trailer: Error handling with rickroll as placeholder</li>
+</ul>
+
+<p>Fetching (from 3rd party API)</p>
+
+<ul>
+  <li>Retrieve data from server/database</li>
+  <li>GET/POST/PUT/DELETE or HTTP methods</li>
+  <li>Can use AJAX, etc. Use FETCH API</li>
+  <li>Sends request to server using URL with location of what is requested</li>
+  <li>Can do formats (JSON) allowing for easy JS manipulation</li>
+  <li>Use Pandas to make the data readable in a dataframe</li>
 </ul>
 
   </div><!-- from https://github.com/utterance/utterances -->
