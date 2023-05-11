@@ -33,4 +33,24 @@ Can't send different data types to the same procedure in Java... this may not ap
 Class: Used to define databases... has methods/functions inside. Make new objects from the classes
 
 
-New features: Can sort in ascending/descending order and also search list entries
+New features: Can sort in ascending/descending order and also search list entries - can do 4 lines like import lines.
+
+JavaScript of import lines is link and script tags
+
+
+```
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+```
+
+Do inspect mode > console
+
+Double-arrow to re-run the whole notebook - console logs messages on the right - the table then happens. There aren't any sorting and searching, but there's a temporary fix. There's a type error with the DataTable.
+
+There are <th> and <td> - table headings and table data
+  
+  
+There is a little bug where you can install the ChatGPT plugin, and a comment for the ChatGPT review
+  
+When running the class Classroom, you can open up the object using the arrows in the console in inspect. There's lots of nesting inside the object
