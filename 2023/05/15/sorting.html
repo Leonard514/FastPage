@@ -54,7 +54,7 @@ document.onkeydown = (e) => {
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      5 min read
     
 </span></p>
 
@@ -66,6 +66,10 @@ document.onkeydown = (e) => {
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#warm-up">Warm Up</a></li>
 <li class="toc-entry toc-h1"><a href="#explore-sorting-algorithms">Explore Sorting Algorithms</a></li>
+<li class="toc-entry toc-h1"><a href="#practice">Practice</a></li>
+<li class="toc-entry toc-h1"><a href="#sorting-words">Sorting Words</a></li>
+<li class="toc-entry toc-h1"><a href="#which-algorithm-is-best">Which algorithm is best?</a></li>
+<li class="toc-entry toc-h1"><a href="#hacks---do-an-insertion-sort-with-the-new-list-make-actual-code-here">Hacks - Do an insertion sort with the new list (make actual code here)</a></li>
 </ul><p>Why Sort?</p>
 
 <ul>
@@ -91,6 +95,107 @@ document.onkeydown = (e) => {
 
 <h1 id="explore-sorting-algorithms">
 <a class="anchor" href="#explore-sorting-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explore Sorting Algorithms</h1>
+
+<p>Notes on insertion sort:</p>
+
+<ul>
+  <li>Array has sorted region, unsorted region</li>
+  <li>Elements from unsorted region are put into positions in sorted region</li>
+</ul>
+
+<p>Start by comparing first two elements and arranging in order –&gt; create the sorted region (in a sub-array)</p>
+
+<p>Then iterate by comparing the next element of the unsorted array with the largest element of the sorted array. If the unsorted element is largest, the unsorted element is at the end of the array. If not, the unsorted element is swapped below the largest element of the sorted array and compared with the next largest element of the sorted array until the newly-sorted element is in its proper position.</p>
+
+<p>Merge Sort:</p>
+
+<p>Split array into smaller arrays until you get 1 element list</p>
+
+<p>Compare elements of smaller lists, merge them, sort them. Do this until you have one list.</p>
+
+<p>Here’s what Lily said about combining the arrays once they have more than one element:</p>
+<ol>
+  <li>Compare the first index of the first array with the first index of the second array (note: these are guaranteed to be the least values of the array since they’re sorted arrays). The least value becomes the first index of the new subarray. Then, the next value of that array and the least value of the other subarray is compared, and iteration is employed…</li>
+</ol>
+
+<p>Selection Sort:</p>
+
+<p>Has sorted and unsorted arrays. Minimum value is placed at the first index for each pass, which becomes the sorted region. The next smallest value is switched to be put in the second index. Put the third smallest element in the third index. Do this until the list is sorted.</p>
+
+<h1 id="practice">
+<a class="anchor" href="#practice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice</h1>
+
+<p>[75, 17, 46, 80, 67, 45, 69, 79, 40, 0]</p>
+
+<p>Selection Sort:</p>
+<ul>
+  <li>1st Pass: 0 is the least element. Swap 0 with the element of the 1st index, 75 - [0, 17, 46, 80, 67, 45, 69, 79, 40, 75]</li>
+  <li>2nd Pass: 17 is the next least element. It is already in the 2nd index.</li>
+  <li>3rd Pass: 40 is the next least element. Swap this with the 3rd index 46 - [0, 17, 40, 80, 67, 45, 69, 79, 46, 75]</li>
+</ul>
+
+<p>etc</p>
+
+<p>Bubble Sort:</p>
+<ul>
+  <li>1st Iteration: 17 is less than 75. Swap them - [17, 75, 46, 80, 67, 45, 69, 79, 40, 0]</li>
+  <li>2nd Iteration: 46 is less than 75. Swap them - [17, 46, 75, 80, 67, 45, 69, 79, 40, 0]</li>
+  <li>3rd Iteration: 80 is more than 75. Do nothing.</li>
+  <li>4th Iteration: 67 is less than 80. Swap them - [17, 46, 75, 67, 80, 45, 69, 79, 40, 0]</li>
+</ul>
+
+<p>etc</p>
+
+<p>[88, 39, 53, 39, 58, 43, 74, 81, 71, 51]</p>
+
+<p>Insertion Sort:</p>
+
+<ol>
+  <li>88 is less than 39, swap them - [39, 88, 53, 39, 58, 43, 74, 81, 71, 51]</li>
+  <li>53 is less than 88, swap them. 53 is greater than 39 - [39, 53, 88, 39, 58, 43, 74, 81, 71, 51]</li>
+  <li>39 is less than 88, swap them. 39 is also less than 53, so swap again - [39, 39, 53, 88, 58, 43, 74, 81, 71, 51]</li>
+</ol>
+
+<p>etc</p>
+
+<p>Merge Sort:</p>
+
+<ol>
+  <li>Split the list into subarrays –&gt; [88], [39], [53], [39], …</li>
+  <li>Merge subarrays [88] and [39] –&gt; [39, 88]</li>
+  <li>Merge subarrays [53], [39] –&gt; [39, 53]</li>
+  <li>Merge subarrays [58], [43] –&gt; [43, 58]</li>
+  <li>[74, 81]</li>
+  <li>[51, 71]</li>
+  <li>Merge subarrays [39, 88] and [39, 53] –&gt; [39, 39, 53, 88]</li>
+  <li>Merge subarrays [43, 58] and [74, 81] –&gt; [43, 58, 74, 81]</li>
+  <li>Merge subarrays [39, 39, 53, 88] and [43, 58, 74, 81] –&gt; [39, 39, 43, 53, 74, 81, 88]</li>
+  <li>Merge subarrays [51, 71] and [39, 39, …] –&gt; [39, 39, 43, 51, 53, 71, 74, 81, 88]</li>
+</ol>
+
+<h1 id="sorting-words">
+<a class="anchor" href="#sorting-words" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sorting Words</h1>
+
+<p>[‘taqua’, ‘radknight’, ‘gonococcal’, ‘unreproducible’, ‘blastogranitic’, ‘polyoecism’, ‘ulrichite’, ‘geosyncline’, ‘entomologist’, ‘kilnrib’]</p>
+
+<p>Use selection sort
+–&gt; [‘blastogranitic’, ‘entomologist’, ‘geosyncline’, ‘gonococcal’, ‘kilnrib’, ‘polyoecism’, ‘radknight’, ‘taqua’, ‘ulrichite’, ‘unreproducible’]</p>
+
+<h1 id="which-algorithm-is-best">
+<a class="anchor" href="#which-algorithm-is-best" aria-hidden="true"><span class="octicon octicon-link"></span></a>Which algorithm is best?</h1>
+
+<p>[0, 2, 6, 4, 8, 10] - insertion sort - swap 4 and 6 to complete the list! All other checks will result in no swaps.</p>
+
+<p>[Elephant, Banana, Cat, Dog, Apple] - use selection sort. The check will swap Elephant and Apple; no other checks will result in swaps.</p>
+
+<p>[29, 13, 83, 47, 32, 78, 100, 60, 65, 15, 24, 9, 40, 68, 53, 8, 90, 58, 39, 32, 34, 91, 74, 94, 49, 87, 34, 87, 23, 17, 27, 2, 38, 58, 84, 15, 9, 46, 74, 40, 44, 8, 55, 28, 81, 92, 81, 88, 53, 38, 19, 21, 9, 54, 21, 67, 3, 41, 3, 74, 13, 71, 70, 45, 5, 36, 80, 64, 97, 86, 73, 74, 94, 79, 49, 32, 20, 68, 64, 69, 1, 77, 31, 56, 100, 80, 48, 75, 85, 93, 67, 57, 26, 56, 43, 53, 59, 28, 67, 50] - use merge sort. This is a long list! Insertion sort and selection sort could be very long due to this. Split the list and merge the lists together.</p>
+
+<p>Insertion sort, selection sort, and bubble sort has n^2 time complexity, whereas merge sort has nlog(n) time complexity.</p>
+
+<h1 id="hacks---do-an-insertion-sort-with-the-new-list-make-actual-code-here">
+<a class="anchor" href="#hacks---do-an-insertion-sort-with-the-new-list-make-actual-code-here" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks - Do an insertion sort with the new list (make actual code here)</h1>
+
+<p>Using: Geeks for Geeks</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 
