@@ -2,8 +2,8 @@
 toc: true
 comments: true
 layout: post
-title: April 28 Github Lesson
-description: Includes all the important stuffs about Github and Git
+title: JavaScript Lesson
+description: Includes all the important stuffs about JavaScript
 ---
 
 JavaScript is most important web dev language. Need to do the hacks
