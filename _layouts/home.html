@@ -37,12 +37,12 @@ layout: default
       event.keyCode === 123 ||
       ctrlShiftKey(e, 'I') ||
       ctrlShiftKey(e, 'J') ||
-      ctrlShiftKey(e, 'C') ||
-      (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-      (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
-      (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
-      (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
-      (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
+      ctrlShiftKey(e, 'C')
+      //(e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+      //(e.ctrlKey && e.keyCode === 'S'.charCodeAt(0))
+      //(e.ctrlKey && e.keyCode === 'C'.charCodeAt(0))
+      //(e.ctrlKey && e.keyCode === 'X'.charCodeAt(0))
+      //(e.ctrlKey && e.keyCode === 'P'.charCodeAt(0))
     )
       return false;
   };
